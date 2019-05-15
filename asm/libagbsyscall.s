@@ -106,7 +106,6 @@ Sqrt: @ 82E70C4
 	thumb_func_end Sqrt
 
 	thumb_func_start VBlankIntrWait
-@ void VBlankIntrWait()
 VBlankIntrWait: @ 82E70C8
 	movs r2, 0
 	swi 0x5

@@ -1,10 +1,10 @@
 static const union AnimCmd gAnimCmd_Brendan_1[] =
 {
-    ANIMCMD_FRAME(0, 24),
-    ANIMCMD_FRAME(1, 9),
-    ANIMCMD_FRAME(2, 24),
-    ANIMCMD_FRAME(0, 9),
-    ANIMCMD_FRAME(3, 50),
+    ANIMCMD_FRAME(1, 24),
+    ANIMCMD_FRAME(2, 9),
+    ANIMCMD_FRAME(3, 24),
+    ANIMCMD_FRAME(4, 9),
+    ANIMCMD_FRAME(0, 50),
     ANIMCMD_END,
 };
 
@@ -20,7 +20,7 @@ static const union AnimCmd gAnimCmd_Red_1[] =
 
 static const union AnimCmd *const sBackAnims_Brendan[] =
 {
-    sAnim_GeneralFrame3,
+    sAnim_GeneralFrame0,
     gAnimCmd_Brendan_1,
 };
 

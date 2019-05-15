@@ -118,12 +118,6 @@ static const union AnimCmd sAnim_GeneralFrame0[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_GeneralFrame3[] =
-{
-    ANIMCMD_FRAME(3, 0),
-    ANIMCMD_END,
-};
-
 static const union AffineAnimCmd gUnknown_082FF548[] =
 {
     AFFINEANIMCMD_FRAME(0x0100, 0x0100, 0x00, 0x00),
