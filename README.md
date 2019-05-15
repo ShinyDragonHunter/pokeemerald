@@ -7,7 +7,7 @@ removed to provide a cleaner and more organised workspace for people whilst tryi
 
 * Duplicate and unused code, sprite animations and text strings will be completely removed
 
-* Code will eventually be functionally equivalent but smaller to vanilla code`
+* Code will eventually be functionally equivalent but smaller to vanilla code
 
 * The story and link capability features will remain untouched to keep compatibility with vanilla games
 
