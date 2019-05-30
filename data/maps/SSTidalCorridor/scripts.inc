@@ -266,7 +266,7 @@ SSTidalCorridor_Movement_23C28B: @ 823C28B
 
 SSTidalCorridor_Text_23C28F: @ 823C28F
 	.string "SCOTT: Well, hi, hi!\n"
-	.string "{PLAYER}{KUN}, {PLAYER}{KUN}!\p"
+	.string "{PLAYER}, {PLAYER}!\p"
 	.string "Something's come up, so I have to\n"
 	.string "disembark, but am I glad to see you!\p"
 	.string "Congratulations, LEAGUE CHAMPION!\p"
@@ -281,7 +281,7 @@ SSTidalCorridor_Text_23C28F: @ 823C28F
 	.string "The next time you take a ferry,\n"
 	.string "you should be able to sail to\l"
 	.string "the BATTLE FRONTIER.\p"
-	.string "Okay, {PLAYER}{KUN}, I'll be waiting for you\n"
+	.string "Okay, {PLAYER}, I'll be waiting for you\n"
 	.string "at the BATTLE FRONTIER!$"
 
 SSTidalCorridor_Text_23C462: @ 823C462
@@ -328,7 +328,7 @@ SSTidalCorridor_Text_23C6C3: @ 823C6C3
 	.string "the porthole.$"
 
 SSTidalCorridor_Text_23C6EC: @ 823C6EC
-	.string "MR. BRINEY: Welcome aboard, {PLAYER}{KUN}!\p"
+	.string "MR. BRINEY: Welcome aboard, {PLAYER}!\p"
 	.string "They made me honorary captain of\n"
 	.string "the S.S. TIDAL!\p"
 	.string "You can call me CAPTAIN BRINEY now!\p"

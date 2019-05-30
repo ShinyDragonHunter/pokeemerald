@@ -30,14 +30,14 @@ PacifidlogTown_House4_EventScript_203F89:: @ 8203F89
 	end
 
 PacifidlogTown_House4_Text_203F93: @ 8203F93
-	.string "People were saying they saw a POKéMON\n"
+	.string "People were saying they saw a {P}MON\n"
 	.string "flying high above HOENN.\p"
 	.string "Is it flying around all the time?\n"
 	.string "Doesn't it need to rest somewhere?$"
 
 PacifidlogTown_House4_Text_204017: @ 8204017
-	.string "A sky POKéMON!\n"
-	.string "A sky POKéMON!$"
+	.string "A sky {P}MON!\n"
+	.string "A sky {P}MON!$"
 
 PacifidlogTown_House4_Text_204035: @ 8204035
 	.string "Where did you come from?$"

@@ -161,17 +161,17 @@ BattleFrontier_Lounge1_EventScript_25E956:: @ 825E956
 	end
 
 BattleFrontier_Lounge1_Text_25E95F: @ 825E95F
-	.string "For 70 years I have raised POKéMON!\n"
+	.string "For 70 years I have raised {P}MON!\n"
 	.string "I am the man they revere as\l"
-	.string "the legendary top POKéMON BREEDER!\p"
+	.string "the legendary top {P}MON BREEDER!\p"
 	.string "If you ever become as seasoned as me,\n"
-	.string "you'll see the abilities of POKéMON\l"
+	.string "you'll see the abilities of {P}MON\l"
 	.string "at a glance.\p"
 	.string "You're a TRAINER. Doesn't it interest\n"
-	.string "you to know your own POKéMON's\l"
+	.string "you to know your own {P}MON's\l"
 	.string "abilities?\p"
 	.string "Here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Let's have a look at your {P}MON!$"
 
 BattleFrontier_Lounge1_Text_25EA92: @ 825EA92
 	.string "…Hmm…\p"
@@ -245,23 +245,23 @@ BattleFrontier_Lounge1_Text_25EEA6: @ 825EEA6
 	.string "Save it for next time!$"
 
 BattleFrontier_Lounge1_Text_25EEF6: @ 825EEF6
-	.string "Ah, youngster! Do your POKéMON's\n"
+	.string "Ah, youngster! Do your {P}MON's\n"
 	.string "abilities intrigue you?\p"
 	.string "Here, here!\n"
-	.string "Let's have a look at your POKéMON!$"
+	.string "Let's have a look at your {P}MON!$"
 
 BattleFrontier_Lounge1_Text_25EF5E: @ 825EF5E
 	.string "An expert I am, but even I can't tell\n"
-	.string "anything about an unhatched POKéMON!\p"
-	.string "Show me a POKéMON!\n"
-	.string "A POKéMON is what I need to see!$"
+	.string "anything about an unhatched {P}MON!\p"
+	.string "Show me a {P}MON!\n"
+	.string "A {P}MON is what I need to see!$"
 
 BattleFrontier_Lounge1_Text_25EFDD: @ 825EFDD
-	.string "He said my POKéMON is outstanding!\n"
+	.string "He said my {P}MON is outstanding!\n"
 	.string "I'm glad I raised it carefully!$"
 
 BattleFrontier_Lounge1_Text_25F020: @ 825F020
-	.string "He said my POKéMON is outstanding!\n"
+	.string "He said my {P}MON is outstanding!\n"
 	.string "But I didn't do anything special\l"
 	.string "raising it…$"
 

@@ -313,7 +313,7 @@ BattleFrontier_OutsideWest_Text_23D6F7: @ 823D6F7
 
 BattleFrontier_OutsideWest_Text_23D737: @ 823D737
 	.string "This is the BATTLE FACTORY!\n"
-	.string "Seek out the toughest POKéMON!$"
+	.string "Seek out the toughest {P}MON!$"
 
 BattleFrontier_OutsideWest_Text_23D772: @ 823D772
 	.string "This is the BATTLE PIKE!\n"
@@ -322,7 +322,7 @@ BattleFrontier_OutsideWest_Text_23D772: @ 823D772
 BattleFrontier_OutsideWest_Text_23D7A6: @ 823D7A6
 	.string "This is the BATTLE TOWER.\p"
 	.string "TRAINERS bring their best-raised\n"
-	.string "POKéMON for elimination-style matches.$"
+	.string "{P}MON for elimination-style matches.$"
 
 BattleFrontier_OutsideWest_Text_23D808: @ 823D808
 	.string "Hello, are you here for the ferry?\n"
@@ -383,20 +383,20 @@ BattleFrontier_OutsideWest_Text_23DABF: @ 823DABF
 BattleFrontier_OutsideWest_Text_23DB7D: @ 823DB7D
 	.string "Hey, bro…\p"
 	.string "Are you sure we can make challenges\n"
-	.string "even if we don't have any POKéMON?$"
+	.string "even if we don't have any {P}MON?$"
 
 BattleFrontier_OutsideWest_Text_23DBCE: @ 823DBCE
 	.string "Uh…\n"
 	.string "I'm sure it'll be okay.\p"
 	.string "I think…\p"
 	.string "But remember that big scary guy?\n"
-	.string "He said, “I'll lend you POKéMON!”$"
+	.string "He said, “I'll lend you {P}MON!”$"
 
 BattleFrontier_OutsideWest_Text_23DC36: @ 823DC36
 	.string "That's the BATTLE FACTORY.\n"
-	.string "You can rent strong POKéMON there.\p"
+	.string "You can rent strong {P}MON there.\p"
 	.string "But it makes me wonder.\n"
-	.string "Who's raising those rental POKéMON?$"
+	.string "Who's raising those rental {P}MON?$"
 
 BattleFrontier_OutsideWest_Text_23DCB0: @ 823DCB0
 	.string "I'm scared of going into the BATTLE\n"
@@ -518,7 +518,7 @@ BattleFrontier_OutsideWest_Text_23E410: @ 823E410
 
 BattleFrontier_OutsideWest_Text_23E5A5: @ 823E5A5
 	.string "I heard a rumor that someone saw\n"
-	.string "a POKéMON with an unusually long tail\l"
+	.string "a {P}MON with an unusually long tail\l"
 	.string "somewhere in the BATTLE FRONTIER.\p"
 	.string "It must be adorable. I'm sure of it…\p"
 	.string "Oh, challenges can wait. I feel driven\n"

@@ -139,6 +139,6 @@ RustboroCity_DevonCorp_1F_Text_211722: @ 8211722
 	.string "DEVON now markets sundries and\l"
 	.string "pharmaceuticals for better lifestyles.\p"
 	.string "“Recently, DEVON has begun marketing\n"
-	.string "tools for POKéMON TRAINERS, including\l"
-	.string "POKé BALLS and POKéNAV systems.”$"
+	.string "tools for {P}MON TRAINERS, including\l"
+	.string "{P} BALLS and {P}NAV systems.”$"
 

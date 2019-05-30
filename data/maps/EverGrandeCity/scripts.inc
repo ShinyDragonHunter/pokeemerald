@@ -27,11 +27,11 @@ EverGrandeCity_Text_1E7D4F: @ 81E7D4F
 	.string "ENTERING VICTORY ROAD$"
 
 EverGrandeCity_Text_1E7D65: @ 81E7D65
-	.string "ENTERING POKéMON LEAGUE\n"
+	.string "ENTERING {P}MON LEAGUE\n"
 	.string "CENTER GATE$"
 
 EverGrandeCity_Text_1E7D89: @ 81E7D89
 	.string "EVER GRANDE CITY\p"
 	.string "“The paradise of flowers, the sea,\n"
-	.string "and POKéMON.”$"
+	.string "and {P}MON.”$"
 

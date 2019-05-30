@@ -367,7 +367,7 @@ BattleFrontier_BattlePikeThreePathRoom_Text_25CF64: @ 825CF64
 
 BattleFrontier_BattlePikeThreePathRoom_Text_25CFA3: @ 825CFA3
 	.string "It seems to have the distinct aroma\n"
-	.string "of POKéMON wafting around it…$"
+	.string "of {P}MON wafting around it…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_25CFE5: @ 825CFE5
 	.string "Is it… A TRAINER?\n"

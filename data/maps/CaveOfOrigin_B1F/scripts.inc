@@ -60,7 +60,7 @@ CaveOfOrigin_B1F_EventScript_23584D:: @ 823584D
 	end
 
 CaveOfOrigin_B1F_Text_23586E: @ 823586E
-	.string "Ah, so you are {PLAYER}{KUN}?\n"
+	.string "Ah, so you are {PLAYER}?\n"
 	.string "I've heard tales of your exploits.\p"
 	.string "My name is WALLACE.\p"
 	.string "I was once the GYM LEADER of\n"
@@ -69,14 +69,14 @@ CaveOfOrigin_B1F_Text_23586E: @ 823586E
 	.string "with the GYM's operation.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "GROUDON and KYOGRE, the two POKéMON\n"
+	.string "GROUDON and KYOGRE, the two {P}MON\n"
 	.string "wreaking havoc here, are considered\l"
-	.string "to be super-ancient POKéMON.\p"
+	.string "to be super-ancient {P}MON.\p"
 	.string "But there aren't just two super-\n"
-	.string "ancient POKéMON.\p"
+	.string "ancient {P}MON.\p"
 	.string "There is one more somewhere.\p"
 	.string "Somewhere, there is a super-\n"
-	.string "ancient POKéMON named RAYQUAZA.\p"
+	.string "ancient {P}MON named RAYQUAZA.\p"
 	.string "It's said that it was RAYQUAZA that\n"
 	.string "becalmed the two combatants in\l"
 	.string "the distant past.\p"
@@ -84,7 +84,7 @@ CaveOfOrigin_B1F_Text_23586E: @ 823586E
 	.string "RAYQUAZA's whereabouts…$"
 
 CaveOfOrigin_B1F_Text_235ACE: @ 8235ACE
-	.string "WALLACE: {PLAYER}{KUN}, do you perhaps\n"
+	.string "WALLACE: {PLAYER}, do you perhaps\n"
 	.string "know where RAYQUAZA is now?\p"
 	.string "If you do, please tell me.$"
 
@@ -101,7 +101,7 @@ CaveOfOrigin_B1F_Text_235BBF: @ 8235BBF
 	.string "earlier, she made no mention of it.\p"
 	.string "I very much doubt that the old lady\n"
 	.string "would try to hide something from me…\p"
-	.string "{PLAYER}{KUN}, could you think about this\n"
+	.string "{PLAYER}, could you think about this\n"
 	.string "more carefully for me?$"
 
 CaveOfOrigin_B1F_Text_235C99: @ 8235C99
@@ -113,6 +113,6 @@ CaveOfOrigin_B1F_Text_235CEE: @ 8235CEE
 	.string "WALLACE: The SKY PILLAR?\p"
 	.string "That's it!\n"
 	.string "It must be the SKY PILLAR!\p"
-	.string "{PLAYER}{KUN}, there's not a moment to lose!\n"
+	.string "{PLAYER}, there's not a moment to lose!\n"
 	.string "We'll head to the SKY PILLAR right away!$"
 

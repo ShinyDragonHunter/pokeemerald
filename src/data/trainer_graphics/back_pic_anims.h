@@ -4,7 +4,7 @@ static const union AnimCmd gAnimCmd_Brendan_1[] =
     ANIMCMD_FRAME(2, 9),
     ANIMCMD_FRAME(3, 24),
     ANIMCMD_FRAME(1, 9),
-    ANIMCMD_FRAME(0, 50),
+    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 

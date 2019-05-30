@@ -575,37 +575,37 @@ SlateportCity_BattleTentLobby_Text_259743: @ 8259743
 
 BattleFrontier_BattleFactoryLobby_Text_259766: @ 8259766
 	.string "In a Battle Swap event, you may use\n"
-	.string "only three POKéMON.\p"
+	.string "only three {P}MON.\p"
 	.string "Whether you are renting or swapping,\n"
 	.string "your team may not have two or more\l"
-	.string "of the same POKéMON.$"
+	.string "of the same {P}MON.$"
 
 BattleFrontier_BattleFactoryLobby_Text_2597FB: @ 82597FB
-	.string "You may swap POKéMON only with\n"
+	.string "You may swap {P}MON only with\n"
 	.string "the TRAINER you have just defeated.\p"
-	.string "You may swap for only those POKéMON\n"
+	.string "You may swap for only those {P}MON\n"
 	.string "used by the beaten TRAINER.$"
 
 BattleFrontier_BattleFactoryLobby_Text_25987E: @ 825987E
 	.string "After every battle you win, you may\n"
 	.string "swap for one of your defeated\l"
-	.string "opponent's POKéMON.\p"
-	.string "You will not be able to swap POKéMON\n"
+	.string "opponent's {P}MON.\p"
+	.string "You will not be able to swap {P}MON\n"
 	.string "with the seventh TRAINER in the event.$"
 
 BattleFrontier_BattleFactoryLobby_Text_259920: @ 8259920
 	.string "There are two key points to be aware\n"
-	.string "of when swapping POKéMON.\p"
+	.string "of when swapping {P}MON.\p"
 	.string "First, when swapping, you can't check\n"
 	.string "the stats of the POKéMON you are\l"
 	.string "about to receive.\p"
-	.string "Second, the POKéMON on your team\n"
+	.string "Second, the {P}MON on your team\n"
 	.string "are lined up in sequence, depending on\l"
 	.string "the order in which you rented them.\p"
 	.string "This sequence remains unchanged\n"
 	.string "even when swaps are made.$"
 
 BattleFrontier_BattleFactoryLobby_Text_259A5E: @ 8259A5E
-	.string "In the Open Level, the rental POKéMON\n"
-	.string "and the opposing TRAINERS' POKéMON\l"
+	.string "In the Open Level, the rental {P}MON\n"
+	.string "and the opposing TRAINERS' {P}MON\l"
 	.string "are all Level 100.$"

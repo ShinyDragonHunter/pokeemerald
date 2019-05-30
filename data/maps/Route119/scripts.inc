@@ -496,26 +496,26 @@ Route119_EventScript_1F49EC:: @ 81F49EC
 	end
 
 Route119_Text_1F49FD: @ 81F49FD
-	.string "MAY: {PLAYER}{KUN}!\n"
+	.string "{RIVAL}: {PLAYER}!\n"
 	.string "Where were you? I was looking for you!\p"
 	.string "How much stronger have you gotten?\n"
 	.string "Let me check for you!\p"
-	.string "Ready with your POKéMON?\n"
+	.string "Ready with your {P}MON?\n"
 	.string "Of course you are! Go!$"
 
 Route119_Text_1F4A98: @ 81F4A98
 	.string "Achah!\n"
-	.string "{PLAYER}{KUN}, you're strong!\p"
+	.string "{PLAYER}, you're strong!\p"
 	.string "I was worried that you might be\n"
 	.string "struggling with your training.$"
 
 Route119_Text_1F4AF3: @ 81F4AF3
-	.string "MAY: But I had absolutely nothing to\n"
+	.string "{RIVAL}: But I had absolutely nothing to\n"
 	.string "worry about! Keep it up!\p"
 	.string "And, here! I have a present for you.$"
 
 Route119_Text_1F4B56: @ 81F4B56
-	.string "MAY: Use FLY, and your POKéMON will\n"
+	.string "{RIVAL}: Use FLY, and your {P}MON will\n"
 	.string "instantly carry you to any town you've\l"
 	.string "already visited.\p"
 	.string "But, to use FLY, you have to get\n"
@@ -524,12 +524,12 @@ Route119_Text_1F4B56: @ 81F4B56
 	.string "You should FLY home and visit\n"
 	.string "LITTLEROOT for a change.\p"
 	.string "I bet your mom's worried about you,\n"
-	.string "{PLAYER}{KUN}.\p"
+	.string "{PLAYER}.\p"
 	.string "Well, let's meet again somewhere!$"
 
 Route119_Text_1F4C9A: @ 81F4C9A
-	.string "BRENDAN: {PLAYER}! So this is where\n"
-	.string "you've been looking for POKéMON?\p"
+	.string "{RIVAL}: {PLAYER}! So this is where\n"
+	.string "you've been looking for {P}MON?\p"
 	.string "Let me see how good you got.\n"
 	.string "I'll test you!\p"
 	.string "Now!\n"
@@ -540,13 +540,13 @@ Route119_Text_1F4D24: @ 81F4D24
 	.string "You've gotten pretty darn decent.$"
 
 Route119_Text_1F4D4B: @ 81F4D4B
-	.string "BRENDAN: I'd say you're good enough\n"
-	.string "to search for POKéMON anywhere.\p"
+	.string "{RIVAL}: I'd say you're good enough\n"
+	.string "to search for {P}MON anywhere.\p"
 	.string "Here, I'll give you this.\n"
 	.string "Try it out.$"
 
 Route119_Text_1F4DB5: @ 81F4DB5
-	.string "BRENDAN: Use FLY, and your POKéMON\n"
+	.string "{RIVAL}: Use FLY, and your {P}MON\n"
 	.string "instantly carries you to any town\l"
 	.string "you've already visited.\p"
 	.string "But you need the FORTREE GYM BADGE \n"
@@ -555,7 +555,7 @@ Route119_Text_1F4DB5: @ 81F4DB5
 
 Route119_Text_1F4E60: @ 81F4E60
 	.string "SCOTT: Hahahah!\n"
-	.string "Way to go, {PLAYER}{KUN}!\p"
+	.string "Way to go, {PLAYER}!\p"
 	.string "I just passed by a TRAINER riding\n"
 	.string "a BIKE.\p"
 	.string "You just beat that TRAINER, didn't you?\n"
@@ -571,7 +571,7 @@ Route119_Text_1F4E60: @ 81F4E60
 Route119_Text_1F4FBA: @ 81F4FBA
 	.string "… … … … … …\n"
 	.string "… … … … … Beep!\p"
-	.string "SCOTT: Hiya, {PLAYER}{KUN}, it's me!\p"
+	.string "SCOTT: Hiya, {PLAYER}, it's me!\p"
 	.string "Just as I thought, you won at\n"
 	.string "the FORTREE GYM.\p"
 	.string "Your strength…\n"
@@ -595,7 +595,7 @@ Route119_Text_1F5147: @ 81F5147
 
 Route119_Text_1F51A2: @ 81F51A2
 	.string "I thought you FLY by catching a whole\n"
-	.string "flock of BIRD POKéMON, and then\l"
+	.string "flock of BIRD {P}MON, and then\l"
 	.string "hanging on to them somehow.\p"
 	.string "But it turns out there's an HM move\n"
 	.string "called FLY!\p"
@@ -609,7 +609,7 @@ Route119_Text_1F5261: @ 81F5261
 	.string "There's no way you can cycle here.$"
 
 Route119_Text_1F52B9: @ 81F52B9
-	.string "Can your POKéMON use its SECRET POWER\n"
+	.string "Can your {P}MON use its SECRET POWER\n"
 	.string "on a big pile of grass and make a\l"
 	.string "SECRET BASE?$"
 

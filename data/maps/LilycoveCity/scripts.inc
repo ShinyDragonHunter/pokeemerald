@@ -421,93 +421,93 @@ LilycoveCity_EventScript_1E3058:: @ 81E3058
 	return
 
 LilycoveCity_Text_1E3061: @ 81E3061
-	.string "MAY: Oh, hey?\n"
-	.string "{PLAYER}{KUN}, are you shopping, too?\p"
+	.string "{RIVAL}: Oh, hey?\n"
+	.string "{PLAYER}, are you shopping, too?\p"
 	.string "I bought a whole bunch of DOLLS and\n"
 	.string "POSTERS.\p"
 	.string "Of course, I've also caught a lot of\n"
-	.string "POKéMON, and I'm raising them\l"
+	.string "{P}MON, and I'm raising them\l"
 	.string "properly, too.\p"
 	.string "Actually, I'm more worried if you're\n"
-	.string "raising POKéMON properly, {PLAYER}{KUN}.\p"
+	.string "raising {P}MON properly, {PLAYER}.\p"
 	.string "I'll battle with you, so you can show\n"
-	.string "me your POKéMON, {PLAYER}{KUN}.$"
+	.string "me your {P}MON, {PLAYER}.$"
 
 LilycoveCity_Text_1E318D: @ 81E318D
-	.string "MAY: Oh, why? {PLAYER}{KUN}, haven't you\n"
-	.string "been raising your POKéMON?\p"
+	.string "{RIVAL}: Oh, why? {PLAYER}, haven't you\n"
+	.string "been raising your {P}MON?\p"
 	.string "That's not a very good showing as a\n"
 	.string "TRAINER…$"
 
 LilycoveCity_Text_1E31F5: @ 81E31F5
-	.string "MAY: Come on, battle with me, so I can\n"
-	.string "check out your POKéMON!$"
+	.string "{RIVAL}: Come on, battle with me, so I can\n"
+	.string "check out your {P}MON!$"
 
 LilycoveCity_Text_1E3234: @ 81E3234
-	.string "MAY: The POKéMON I raised won't be\n"
-	.string "beaten by your POKéMON, {PLAYER}{KUN}!$"
+	.string "{RIVAL}: The {P}MON I raised won't be\n"
+	.string "beaten by your {P}MON, {PLAYER}!$"
 
 LilycoveCity_Text_1E3275: @ 81E3275
 	.string "… … … … … … … …\p"
 	.string "I remember the battle I had with you,\n"
-	.string "{PLAYER}{KUN}, on ROUTE 103.\p"
+	.string "{PLAYER}, on ROUTE 103.\p"
 	.string "That battle helped you become this\n"
-	.string "strong, {PLAYER}{KUN}, didn't it?$"
+	.string "strong, {PLAYER}, didn't it?$"
 
 LilycoveCity_Text_1E32FB: @ 81E32FB
-	.string "MAY: I'm thinking of going back to\n"
+	.string "{RIVAL}: I'm thinking of going back to\n"
 	.string "LITTLEROOT soon.\p"
-	.string "I've caught a decent group of POKéMON,\n"
-	.string "and my POKéDEX is coming along, so\l"
+	.string "I've caught a decent group of {P}MON,\n"
+	.string "and my {P}DEX is coming along, so\l"
 	.string "I'm going home to show my dad.$"
 
 LilycoveCity_Text_1E3398: @ 81E3398
-	.string "{PLAYER}{KUN}, what are you going to do?\p"
+	.string "{PLAYER}, what are you going to do?\p"
 	.string "Collect all the GYM BADGES and take\n"
-	.string "the POKéMON LEAGUE challenge?\p"
+	.string "the {P}MON LEAGUE challenge?\p"
 	.string "Well, while you're collecting BADGES,\n"
-	.string "{PLAYER}{KUN}, I'm going to work on my\l"
-	.string "POKéDEX. I'll complete it before you!\p"
+	.string "{PLAYER}, I'm going to work on my\l"
+	.string "{P}DEX. I'll complete it before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_1E346D: @ 81E346D
-	.string "{PLAYER}{KUN}, what are you going to do?\p"
-	.string "Are you taking the POKéMON LEAGUE\n"
+	.string "{PLAYER}, what are you going to do?\p"
+	.string "Are you taking the {P}MON LEAGUE\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "{P}DEX?\p"
 	.string "I might've lost to you in battling,\n"
-	.string "but I'll finish my POKéDEX before you!\p"
+	.string "but I'll finish my {P}DEX before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_1E353A: @ 81E353A
-	.string "{PLAYER}{KUN}, what are you going to do?\p"
+	.string "{PLAYER}, what are you going to do?\p"
 	.string "Are you taking the BATTLE FRONTIER\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "{P}DEX?\p"
 	.string "I might've lost to you in battling,\n"
-	.string "but I'll finish my POKéDEX before you!\p"
+	.string "but I'll finish my {P}DEX before you!\p"
 	.string "See you!$"
 
 LilycoveCity_Text_1E3608: @ 81E3608
-	.string "BRENDAN: Oh, hey, it's {PLAYER}.\p"
+	.string "{RIVAL}: Oh, hey, it's {PLAYER}.\p"
 	.string "I'm running an errand for my dad.\n"
 	.string "No, I'm not buying any DOLLS.\p"
 	.string "Anyways, it's been a while.\p"
 	.string "Want to have a battle to see who's been\n"
-	.string "raising POKéMON better?$"
+	.string "raising {P}MON better?$"
 
 LilycoveCity_Text_1E36BF: @ 81E36BF
-	.string "BRENDAN: Oh, what's the matter?\n"
+	.string "{RIVAL}: Oh, what's the matter?\n"
 	.string "Don't have the confidence?$"
 
 LilycoveCity_Text_1E36FA: @ 81E36FA
-	.string "BRENDAN: Want to battle to see who's\n"
-	.string "been raising POKéMON better?$"
+	.string "{RIVAL}: Want to battle to see who's\n"
+	.string "been raising {P}MON better?$"
 
 LilycoveCity_Text_1E373C: @ 81E373C
-	.string "BRENDAN: Aww, but you know I'm not\n"
+	.string "{RIVAL}: Aww, but you know I'm not\n"
 	.string "going to lose to no {PLAYER}.$"
 
 LilycoveCity_Text_1E3777: @ 81E3777
@@ -517,24 +517,24 @@ LilycoveCity_Text_1E3777: @ 81E3777
 	.string "on you as a TRAINER…$"
 
 LilycoveCity_Text_1E37D7: @ 81E37D7
-	.string "BRENDAN: I…\n"
+	.string "{RIVAL}: I…\n"
 	.string "I plan on going home to LITTLEROOT.\p"
 	.string "You know I'm helping out my dad on his\n"
-	.string "POKéDEX. It's coming together pretty\l"
+	.string "{P}DEX. It's coming together pretty\l"
 	.string "decently, so I should go show him.$"
 
 LilycoveCity_Text_1E3876: @ 81E3876
 	.string "{PLAYER}, what are you going to do?\p"
 	.string "Collect all the GYM BADGES and take\n"
-	.string "the POKéMON LEAGUE challenge?\p"
+	.string "the {P}MON LEAGUE challenge?\p"
 	.string "Maybe I'll do that, too…\p"
 	.string "Well, anyway, hang in there!$"
 
 LilycoveCity_Text_1E390C: @ 81E390C
 	.string "{PLAYER}, what are you going to do?\p"
 	.string "Since you're that strong, are you\n"
-	.string "taking the POKéMON LEAGUE challenge?\p"
-	.string "Heh, even me--if I trained my POKéMON\n"
+	.string "taking the {P}MON LEAGUE challenge?\p"
+	.string "Heh, even me--if I trained my {P}MON\n"
 	.string "a bit more, I should be stronger than\l"
 	.string "you, {PLAYER}.\p"
 	.string "Well, anyway, hang in there!$"
@@ -544,10 +544,10 @@ LilycoveCity_Text_1E39E3: @ 81E39E3
 	.string "Are you taking the BATTLE FRONTIER\n"
 	.string "challenge?\p"
 	.string "Or, are you going to complete your\n"
-	.string "POKéDEX?\p"
+	.string "{P}DEX?\p"
 	.string "Since you're that strong, you should\n"
 	.string "consider the BATTLE FRONTIER.\p"
-	.string "Heh, if I train my POKéMON a bit more,\n"
+	.string "Heh, if I train my {P}MON a bit more,\n"
 	.string "I'll get stronger than you, {PLAYER}.\p"
 	.string "Maybe I should go to the BATTLE\n"
 	.string "FRONTIER.\p"
@@ -577,7 +577,7 @@ LilycoveCity_Text_1E3C46: @ 81E3C46
 LilycoveCity_Text_1E3CBE: @ 81E3CBE
 	.string "If this whole wide world becomes ours,\n"
 	.string "TEAM AQUA's, it will be a happier\l"
-	.string "place for POKéMON, too.$"
+	.string "place for {P}MON, too.$"
 
 LilycoveCity_Text_1E3D1F: @ 81E3D1F
 	.string "There! WAILMER!\n"
@@ -589,9 +589,9 @@ LilycoveCity_Text_1E3D4A: @ 81E3D4A
 	.string "so can you, like, get lost?$"
 
 LilycoveCity_Text_1E3D9E: @ 81E3D9E
-	.string "There's a POKéMON CONTEST HALL\n"
+	.string "There's a {P}MON CONTEST HALL\n"
 	.string "right in this here town. \p"
-	.string "That means well-raised POKéMON will\n"
+	.string "That means well-raised {P}MON will\n"
 	.string "come from all over the country.\p"
 	.string "My heart swells with excitement!$"
 
@@ -600,7 +600,7 @@ LilycoveCity_Text_1E3E3C: @ 81E3E3C
 	.string "the cove at the edge of town?$"
 
 LilycoveCity_Text_1E3E7D: @ 81E3E7D
-	.string "I'm going to teach my POKéMON some new\n"
+	.string "I'm going to teach my {P}MON some new\n"
 	.string "moves for entering a CONTEST.\p"
 	.string "So, I'm going to see the MOVE DELETER\n"
 	.string "and make it forget HM moves.$"
@@ -610,7 +610,7 @@ LilycoveCity_Text_1E3F05: @ 81E3F05
 	.string "The HOENN region is beautiful with\n"
 	.string "all its water and verdant nature.\p"
 	.string "Hunh? Wait a second…\p"
-	.string "Could there be rare POKéMON that live\n"
+	.string "Could there be rare {P}MON that live\n"
 	.string "only in this area?$"
 
 LilycoveCity_Text_1E3FAB: @ 81E3FAB
@@ -629,12 +629,12 @@ LilycoveCity_Text_1E4020: @ 81E4020
 LilycoveCity_Text_1E40AD: @ 81E40AD
 	.string "I was taking a relaxing snooze at the\n"
 	.string "seaside inn to the sound of waves…\p"
-	.string "When someone stole my POKéMON!\p"
+	.string "When someone stole my {P}MON!\p"
 	.string "Who's the abductor?\n"
 	.string "TEAM AQUA? Is it TEAM AQUA?$"
 
 LilycoveCity_Text_1E4145: @ 81E4145
-	.string "My missing POKéMON…\n"
+	.string "My missing {P}MON…\n"
 	.string "It came back without me noticing!$"
 
 LilycoveCity_Text_1E417B: @ 81E417B
@@ -680,7 +680,7 @@ LilycoveCity_Text_1E448B: @ 81E448B
 	.string "sea begins.”$"
 
 LilycoveCity_Text_1E44C3: @ 81E44C3
-	.string "POKéMON CONTEST HALL\n"
+	.string "{P}MON CONTEST HALL\n"
 	.string "“The gathering place for TRAINERS!”$"
 
 LilycoveCity_Text_1E44FC: @ 81E44FC
@@ -690,12 +690,12 @@ LilycoveCity_Text_1E44FC: @ 81E44FC
 
 LilycoveCity_Text_1E4534: @ 81E4534
 	.string "LILYCOVE MUSEUM\p"
-	.string "“POKéMON Masterpiece Collection\n"
+	.string "“{P}MON Masterpiece Collection\n"
 	.string "on exhibit!”$"
 
 LilycoveCity_Text_1E4571: @ 81E4571
 	.string "LILYCOVE MUSEUM\p"
-	.string "“{PLAYER}'s POKéMON Collection\n"
+	.string "“{PLAYER}'s {P}MON Collection\n"
 	.string "on exhibit!”$"
 
 LilycoveCity_Text_1E45A7: @ 81E45A7
@@ -711,7 +711,7 @@ LilycoveCity_Text_1E4624: @ 81E4624
 	.string "the ferry S.S. TIDAL.”$"
 
 LilycoveCity_Text_1E466E: @ 81E466E
-	.string "POKéMON TRAINER FAN CLUB\p"
+	.string "{P}MON TRAINER FAN CLUB\p"
 	.string "The names of TRAINERS are scribbled\n"
 	.string "all over the sign…$"
 
@@ -724,7 +724,7 @@ LilycoveCity_Text_1E46BE: @ 81E46BE
 
 LilycoveCity_Text_1E473D: @ 81E473D
 	.string "MOVE DELETER'S HOUSE\p"
-	.string "“Unwanted POKéMON moves deleted.”$"
+	.string "“Unwanted {P}MON moves deleted.”$"
 
 LilycoveCity_Text_1E4774: @ 81E4774
 	.string "Do you know about the machine\n"
@@ -739,7 +739,7 @@ LilycoveCity_Text_1E47A1: @ 81E47A1
 LilycoveCity_Text_1E4824: @ 81E4824
 	.string "It's used for making a kind of candy\n"
 	.string "called a {POKEBLOCK}.\p"
-	.string "If you give a good {POKEBLOCK} to a POKéMON,\n"
+	.string "If you give a good {POKEBLOCK} to a {P}MON,\n"
 	.string "its condition will improve by a lot.$"
 
 LilycoveCity_Text_1E48A5: @ 81E48A5
@@ -756,14 +756,14 @@ LilycoveCity_Text_1E494D: @ 81E494D
 	.string "We just arrived here on our\n"
 	.string "honeymoon vacation.\p"
 	.string "We happened to see a DRAGON-type\n"
-	.string "POKéMON flying way up in the sky.\p"
-	.string "Do cool POKéMON like that live in\n"
+	.string "{P}MON flying way up in the sky.\p"
+	.string "Do cool {P}MON like that live in\n"
 	.string "the HOENN region?$"
 
 LilycoveCity_Text_1E49F4: @ 81E49F4
 	.string "On our honeymoon, we vowed to see as\n"
-	.string "many rare POKéMON as we can.\p"
+	.string "many rare {P}MON as we can.\p"
 	.string "So we were delighted to see a rare\n"
-	.string "POKéMON as soon as we arrived.\p"
+	.string "{P}MON as soon as we arrived.\p"
 	.string "I mean, we are totally happy!$"
 

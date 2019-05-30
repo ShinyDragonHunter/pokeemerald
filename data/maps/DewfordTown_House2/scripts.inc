@@ -46,7 +46,7 @@ DewfordTown_House2_Text_1FE3D1: @ 81FE3D1
 	.string "The SILK SCARF raises the power of\n"
 	.string "NORMAL-type moves.\p"
 	.string "It's a marvelous SCARF that will go\n"
-	.string "with almost all POKéMON!$"
+	.string "with almost all {P}MON!$"
 
 DewfordTown_House2_Text_1FE444: @ 81FE444
 	.string "Wow, you bothered to cross the sea\n"

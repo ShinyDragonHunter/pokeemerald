@@ -962,7 +962,7 @@ SlateportCity_Text_1DD702: @ 81DD702
 
 SlateportCity_Text_1DD722: @ 81DD722
 	.string "You have to go for it a little harder.\p"
-	.string "If you do, I'll give your POKéMON\n"
+	.string "If you do, I'll give your {P}MON\n"
 	.string "something nice.$"
 
 SlateportCity_Text_1DD77B: @ 81DD77B
@@ -972,7 +972,7 @@ SlateportCity_Text_1DD77B: @ 81DD77B
 SlateportCity_Text_1DD7AD: @ 81DD7AD
 	.string "The light of the lighthouse reaches\n"
 	.string "dozens of miles away.\p"
-	.string "I wonder if it doesn't startle POKéMON\n"
+	.string "I wonder if it doesn't startle {P}MON\n"
 	.string "in the sea.$"
 
 SlateportCity_Text_1DD81A: @ 81DD81A
@@ -1005,7 +1005,7 @@ SlateportCity_Text_1DDA34: @ 81DDA34
 	.string "Wroooar! I'm going to compete in\n"
 	.string "the BATTLE TENT, too!\p"
 	.string "But before that, I need to catch\n"
-	.string "some POKéMON!$"
+	.string "some {P}MON!$"
 
 SlateportCity_Text_1DDA9A: @ 81DDA9A
 	.string "Whew… I'm just bushed…\p"
@@ -1096,35 +1096,35 @@ SlateportCity_Text_1DDF8D: @ 81DDF8D
 SlateportCity_Text_1DDFF7: @ 81DDFF7
 	.string "The sea is just so vast…\p"
 	.string "Could the sea have been made by\n"
-	.string "the tears shed by POKéMON?$"
+	.string "the tears shed by {P}MON?$"
 
 SlateportCity_Text_1DE04B: @ 81DE04B
 	.string "Do you know what they do with old\n"
 	.string "ships that become too creaky to sail?\p"
 	.string "They sink them in the sea so they\n"
-	.string "become habitats for POKéMON.$"
+	.string "become habitats for {P}MON.$"
 
 SlateportCity_Text_1DE0D2: @ 81DE0D2
 	.string "Whenever I visit here, I get carried\n"
 	.string "away and buy too much.$"
 
 SlateportCity_Text_1DE10E: @ 81DE10E
-	.string "If you want to change your POKéMON's\n"
+	.string "If you want to change your {P}MON's\n"
 	.string "nickname, you'll have to get the NAME\l"
 	.string "RATER to help you.$"
 
 SlateportCity_Text_1DE16C: @ 81DE16C
-	.string "Any POKéMON you get in a trade,\n"
+	.string "Any {P}MON you get in a trade,\n"
 	.string "you can't change its nickname.\p"
 	.string "The original TRAINER's love for that\n"
-	.string "POKéMON is in the nickname.$"
+	.string "{P}MON is in the nickname.$"
 
 SlateportCity_Text_1DE1EC: @ 81DE1EC
 	.string "Recently, a BATTLE TENT was built\n"
 	.string "in SLATEPORT.\p"
 	.string "GYMS are fun, but the BATTLE TENT's\n"
 	.string "awesome in its own way.\p"
-	.string "You should go find tough POKéMON\n"
+	.string "You should go find tough {P}MON\n"
 	.string "for the BATTLE TENT!$"
 
 SlateportCity_Text_1DE28E: @ 81DE28E
@@ -1183,13 +1183,13 @@ SlateportCity_Text_1DE5F7: @ 81DE5F7
 	.string "TV. That was nerve-wracking.$"
 
 SlateportCity_Text_1DE64F: @ 81DE64F
-	.string "Oh! {PLAYER}{KUN}!\n"
+	.string "Oh! {PLAYER}!\n"
 	.string "You're looking great!\p"
 	.string "We made a huge discovery on our last\n"
 	.string "seafloor exploration.\p"
 	.string "We found an underwater cavern on\n"
 	.string "ROUTE 128.\p"
-	.string "We think it's the habitat of a POKéMON\n"
+	.string "We think it's the habitat of a {P}MON\n"
 	.string "that's said to have been long extinct.$"
 
 SlateportCity_Text_1DE724: @ 81DE724
@@ -1215,12 +1215,12 @@ SlateportCity_Text_1DE860: @ 81DE860
 	.string "They're trying to take it!$"
 
 SlateportCity_Text_1DE8A0: @ 81DE8A0
-	.string "{PLAYER}{KUN}!\n"
+	.string "{PLAYER}!\n"
 	.string "Please, come with me!$"
 
 SlateportCity_Text_1DE8BC: @ 81DE8BC
 	.string "BATTLE TENT SLATEPORT SITE\n"
-	.string "“Find it! The ultimate POKéMON!”$"
+	.string "“Find it! The ultimate {P}MON!”$"
 
 SlateportCity_Text_1DE8F8: @ 81DE8F8
 	.string "STERN'S SHIPYARD\p"
@@ -1240,8 +1240,8 @@ SlateportCity_Text_1DE9AA: @ 81DE9AA
 	.string "HARBOR.”$"
 
 SlateportCity_Text_1DEA0B: @ 81DEA0B
-	.string "POKéMON FAN CLUB\n"
-	.string "“Calling all fans of POKéMON!”$"
+	.string "{P}MON FAN CLUB\n"
+	.string "“Calling all fans of {P}MON!”$"
 
 SlateportCity_Text_1DEA3B: @ 81DEA3B
 	.string "“The endless sea sustains\n"
@@ -1250,7 +1250,7 @@ SlateportCity_Text_1DEA3B: @ 81DEA3B
 
 SlateportCity_Text_1DEA6F: @ 81DEA6F
 	.string "SLATEPORT CITY\p"
-	.string "“The port where people and POKéMON\n"
+	.string "“The port where people and {P}MON\n"
 	.string "cross paths.”$"
 
 SlateportCity_Text_1DEAAF: @ 81DEAAF
@@ -1271,10 +1271,10 @@ SlateportCity_Text_1DEB5A: @ 81DEB5A
 
 SlateportCity_Text_1DEBA0: @ 81DEBA0
 	.string "NAME RATER'S HOUSE\n"
-	.string "“POKéMON nicknames rated.”$"
+	.string "“{P}MON nicknames rated.”$"
 
 SlateportCity_Text_1DEBCE: @ 81DEBCE
-	.string "If a wild POKéMON gets hurt, it heals\n"
+	.string "If a wild {P}MON gets hurt, it heals\n"
 	.string "itself by chewing on BERRIES.\p"
 	.string "Did you know that?\p"
 	.string "Somebody saw that and got the idea\n"
@@ -1290,7 +1290,7 @@ SlateportCity_Text_1DEBCE: @ 81DEBCE
 
 SlateportCity_Text_1DED27: @ 81DED27
 	.string "I recently had machines installed at\n"
-	.string "POKéMON CENTERS for crushing BERRIES.\p"
+	.string "{P}MON CENTERS for crushing BERRIES.\p"
 	.string "The BERRY CRUSH machines are at\n"
 	.string "the DIRECT CORNER upstairs.\p"
 	.string "Did you know?\p"
@@ -1348,12 +1348,12 @@ SlateportCity_Text_1DF12B: @ 81DF12B
 	.string "SCOTT: All right! I think you're going\n"
 	.string "to become a good friend.\p"
 	.string "So, let's register each other in our\n"
-	.string "POKéNAVS.\p"
+	.string "{P}NAVS.\p"
 	.string "… … … … … …$"
 
 SlateportCity_Text_1DF1A6: @ 81DF1A6
 	.string "Registered this SCOTT person\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 SlateportCity_Text_1DF1D3: @ 81DF1D3
 	.string "SCOTT: What I'd like to do is tag along\n"
@@ -1361,12 +1361,12 @@ SlateportCity_Text_1DF1D3: @ 81DF1D3
 	.string "on the talents of other people, too.\p"
 	.string "So, I'll be off to roam other towns\n"
 	.string "a bit more.\p"
-	.string "Be seeing you, {PLAYER}{KUN}!$"
+	.string "Be seeing you, {PLAYER}!$"
 
 SlateportCity_Text_1DF28C: @ 81DF28C
 	.string "SCOTT: Oh, hey!\n"
-	.string "If it isn't {PLAYER}{KUN}!\p"
-	.string "{PLAYER}{KUN}, let me guess--you're going\n"
+	.string "If it isn't {PLAYER}!\p"
+	.string "{PLAYER}, let me guess--you're going\n"
 	.string "to take the BATTLE TENT challenge?\p"
 	.string "Yeah! That's a good idea!\n"
 	.string "That's a really great idea!\p"

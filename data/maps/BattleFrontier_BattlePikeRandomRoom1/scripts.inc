@@ -701,7 +701,7 @@ BattleFrontier_BattlePikeRandomRoom1_Movement_25D9B3: @ 825D9B3
 BattleFrontier_BattlePikeRandomRoom1_Text_25D9B6: @ 825D9B6
 	.string "Welcome…\n"
 	.string "You must be commended for your luck…\p"
-	.string "Your POKéMON shall be restored\n"
+	.string "Your {P}MON shall be restored\n"
 	.string "to full health…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DA13: @ 825DA13
@@ -711,7 +711,7 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25DA13: @ 825DA13
 BattleFrontier_BattlePikeRandomRoom1_Text_25DA51: @ 825DA51
 	.string "Ah, you're a lucky one.\n"
 	.string "I'm in somewhat-good spirits now.\p"
-	.string "I will restore one of your POKéMON\n"
+	.string "I will restore one of your {P}MON\n"
 	.string "to full health.$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DABE: @ 825DABE
@@ -721,7 +721,7 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25DABE: @ 825DABE
 BattleFrontier_BattlePikeRandomRoom1_Text_25DAE1: @ 825DAE1
 	.string "Excuse me…\p"
 	.string "Would you care for a battle?\n"
-	.string "I'll restore your POKéMON if you win.$"
+	.string "I'll restore your {P}MON if you win.$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DB2F: @ 825DB2F
 	.string "Very well…\n"
@@ -734,7 +734,7 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25DB49: @ 825DB49
 BattleFrontier_BattlePikeRandomRoom1_Text_25DB67: @ 825DB67
 	.string "Magnificent…\p"
 	.string "As promised, I shall restore your\n"
-	.string "POKéMON to full health.$"
+	.string "{P}MON to full health.$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DBAE: @ 825DBAE
 	.string "The best of luck to you.\n"
@@ -785,11 +785,11 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25DD06: @ 825DD06
 BattleFrontier_BattlePikeRandomRoom1_Text_25DD3F: @ 825DD3F
 	.string "It attacks without warning if it is\n"
 	.string "startled by another person…\p"
-	.string "Are you and your POKéMON all right?$"
+	.string "Are you and your {P}MON all right?$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DDA3: @ 825DDA3
 	.string "I do apologize for what happened…\n"
-	.string "I do hope your POKéMON are fine.$"
+	.string "I do hope your {P}MON are fine.$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DDE6: @ 825DDE6
 	.string "… … … … … …\n"
@@ -802,7 +802,7 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25DDFE: @ 825DDFE
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DE3F: @ 825DE3F
 	.string "How wonderful…\p"
-	.string "To honor your victory, your POKéMON\n"
+	.string "To honor your victory, your {P}MON\n"
 	.string "shall be restored to full health…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25DE94: @ 825DE94
@@ -865,24 +865,24 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25E15D: @ 825E15D
 	.string "Giggle…\n"
 	.string "You seem to be bereft of luck…\p"
 	.string "If only you hadn't chosen this room,\n"
-	.string "your POKéMON could have been healed…$"
+	.string "your {P}MON could have been healed…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25E1DD: @ 825E1DD
 	.string "I welcome you…\p"
 	.string "Since you have chosen this room, I will\n"
-	.string "restore one POKéMON to full health…$"
+	.string "restore one {P}MON to full health…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25E238: @ 825E238
 	.string "I welcome you…\p"
 	.string "Since you have chosen this room, I will\n"
-	.string "restore two POKéMON to full health…$"
+	.string "restore two {P}MON to full health…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25E293: @ 825E293
 	.string "I welcome you…\p"
 	.string "Giggle…\n"
 	.string "You should thank your lucky stars…\p"
 	.string "Since you have chosen this room,\n"
-	.string "all your POKéMON will be restored…$"
+	.string "all your {P}MON will be restored…$"
 
 BattleFrontier_BattlePikeRandomRoom1_Text_25E311: @ 825E311
 	.string "I shall go fetch our master…$"
@@ -890,6 +890,6 @@ BattleFrontier_BattlePikeRandomRoom1_Text_25E311: @ 825E311
 BattleFrontier_BattlePikeRandomRoom1_Text_25E32E: @ 825E32E
 	.string "Ah, you're a lucky one!\n"
 	.string "I'm in good spirits now.\p"
-	.string "I will restore two of your POKéMON\n"
+	.string "I will restore two of your {P}MON\n"
 	.string "to full health!$"
 

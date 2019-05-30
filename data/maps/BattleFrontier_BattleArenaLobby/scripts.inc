@@ -429,12 +429,12 @@ BattleFrontier_BattleArenaLobby_Text_25624C: @ 825624C
 	.string "In the BATTLE ARENA, we undertake\n"
 	.string "the Set KO Tourney.\p"
 	.string "All participants enter with a team of\n"
-	.string "three POKéMON.\p"
-	.string "The three POKéMON must be lined up in\n"
+	.string "three {P}MON.\p"
+	.string "The three {P}MON must be lined up in\n"
 	.string "the order in which they are to appear.\p"
-	.string "During battle, the POKéMON will appear\n"
+	.string "During battle, the {P}MON will appear\n"
 	.string "one at a time in the preset order.\p"
-	.string "Once a POKéMON enters battle, it must\n"
+	.string "Once a {P}MON enters battle, it must\n"
 	.string "remain out until the match is decided.\p"
 	.string "If a match remains undecided in\n"
 	.string "three turns, it goes to judging.\p"
@@ -457,14 +457,14 @@ BattleFrontier_BattleArenaLobby_Text_256513: @ 8256513
 
 BattleFrontier_BattleArenaLobby_Text_256573: @ 8256573
 	.string "Very well, now select your\n"
-	.string "three POKéMON, please.$"
+	.string "three {P}MON, please.$"
 
 BattleFrontier_BattleArenaLobby_Text_2565A5: @ 82565A5
 	.string "My dear challenger!\p"
-	.string "You do not have the three POKéMON\n"
+	.string "You do not have the three {P}MON\n"
 	.string "required for entry.\p"
 	.string "To qualify, you must bring three\n"
-	.string "different kinds of POKéMON.\p"
+	.string "different kinds of {P}MON.\p"
 	.string "They also must not hold the same\n"
 	.string "kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
@@ -473,11 +473,11 @@ BattleFrontier_BattleArenaLobby_Text_2565A5: @ 82565A5
 
 BattleFrontier_BattleArenaLobby_Text_2566A8: @ 82566A8
 	.string "My dear challenger!\p"
-	.string "You do not have the three POKéMON\n"
+	.string "You do not have the three {P}MON\n"
 	.string "required for entry.\p"
 	.string "To qualify, you must bring three\n"
-	.string "different kinds of POKéMON.\p"
-	.string "The three different POKéMON\n"
+	.string "different kinds of {P}MON.\p"
+	.string "The three different {P}MON\n"
 	.string "must all be Level 50 or lower.\p"
 	.string "They also must not hold the same\n"
 	.string "kinds of items.\p"
@@ -548,20 +548,20 @@ BattleFrontier_BattleArenaLobby_Text_256B5C: @ 8256B5C
 BattleFrontier_BattleArenaLobby_Text_256BCB: @ 8256BCB
 	.string "I won in judging!\p"
 	.string "Landing hits consistently on\n"
-	.string "the opponent's POKéMON worked!$"
+	.string "the opponent's {P}MON worked!$"
 
 BattleFrontier_BattleArenaLobby_Text_256C19: @ 8256C19
 	.string "Our match was declared a draw.\p"
 	.string "When we ran out of time, both my\n"
-	.string "POKéMON and the opponent's had about\l"
+	.string "{P}MON and the opponent's had about\l"
 	.string "the same amount of HP left.$"
 
 BattleFrontier_BattleArenaLobby_Text_256C9A: @ 8256C9A
 	.string "In the BATTLE ARENA, the order of\n"
 	.string "POKéMON is totally important.\p"
-	.string "For example, if your first POKéMON\n"
+	.string "For example, if your first {P}MON\n"
 	.string "has certain type disadvantages,\l"
-	.string "try making your second POKéMON one\l"
+	.string "try making your second {P}MON one\l"
 	.string "with moves that are super effective\l"
 	.string "against the first one.\p"
 	.string "I think that will be a good way of\n"
@@ -584,8 +584,8 @@ FallarborTown_BattleTentLobby_Text_256E02: @ 8256E02
 	.string "If the outcome is not decided after\n"
 	.string "three turns, it goes to judging.\p"
 	.string "The REFEREE will choose the winner\n"
-	.string "based on how the POKéMON battled.\p"
-	.string "Also, a POKéMON cannot be switched out\n"
+	.string "based on how the {P}MON battled.\p"
+	.string "Also, a {P}MON cannot be switched out\n"
 	.string "until its battle's outcome is decided.$"
 
 BattleFrontier_BattleArenaLobby_Text_256F43: @ 8256F43
@@ -601,7 +601,7 @@ BattleFrontier_BattleArenaLobby_Text_256FF2: @ 8256FF2
 FallarborTown_BattleTentLobby_Text_256FF2: @ 8256FF2
 	.string "The second judging factor is “Skill.”\n"
 	.string "This factor evaluates how effectively\l"
-	.string "POKéMON moves were used.\p"
+	.string "{P}MON moves were used.\p"
 	.string "If a move worked successfully,\n"
 	.string "the Skill rating goes up.\p"
 	.string "If a move failed, the Skill rating\n"
@@ -613,7 +613,7 @@ FallarborTown_BattleTentLobby_Text_256FF2: @ 8256FF2
 	.string "The Skill rating will not go up for\n"
 	.string "moves such as PROTECT and DETECT.\p"
 	.string "If the opponent used PROTECT or\n"
-	.string "DETECT, and your POKéMON failed to\l"
+	.string "DETECT, and your {P}MON failed to\l"
 	.string "hit with a move, its Skill rating will not\l"
 	.string "go down.$"
 
@@ -623,7 +623,7 @@ FallarborTown_BattleTentLobby_Text_257202: @ 8257202
 	.string "This factor is based on how much HP\l"
 	.string "remained at the end of a battle.\p"
 	.string "The rating takes into account how much\n"
-	.string "HP a POKéMON had at the start of\l"
+	.string "HP a {P}MON had at the start of\l"
 	.string "battle, and what remained at the end.$"
 
 BattleFrontier_BattleArenaLobby_Text_2572D9: @ 82572D9

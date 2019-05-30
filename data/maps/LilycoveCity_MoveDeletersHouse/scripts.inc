@@ -74,11 +74,11 @@ LilycoveCity_MoveDeletersHouse_EventScript_21EAF0:: @ 821EAF0
 LilycoveCity_MoveDeletersHouse_Text_21EAFD: @ 821EAFD
 	.string "Uh…\n"
 	.string "Oh, yes, I'm the MOVE DELETER.\p"
-	.string "I can make POKéMON forget their moves.\p"
+	.string "I can make {P}MON forget their moves.\p"
 	.string "Would you like me to do that?$"
 
 LilycoveCity_MoveDeletersHouse_Text_21EB65: @ 821EB65
-	.string "Which POKéMON should forget a move?$"
+	.string "Which {P}MON should forget a move?$"
 
 LilycoveCity_MoveDeletersHouse_Text_21EB89: @ 821EB89
 	.string "Which move should be forgotten?$"

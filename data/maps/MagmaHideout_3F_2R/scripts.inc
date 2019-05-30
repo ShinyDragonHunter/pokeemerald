@@ -9,8 +9,8 @@ MagmaHideout_3F_2R_EventScript_23A3D5:: @ 823A3D5
 MagmaHideout_3F_2R_Text_23A3EC: @ 823A3EC
 	.string "I understand everything our leader\n"
 	.string "says. But you know what?\p"
-	.string "Doing stuff like digging up a super-\n"
-	.string "ancient POKéMON and ripping off\l"
+	.string "Doing stuff like digging{P} up a super-\n"
+	.string "ancient {P}MON and ripping off\l"
 	.string "someone's METEORITE…\p"
 	.string "I think we're going a little too far.\n"
 	.string "What do you think?$"

@@ -242,7 +242,7 @@ BattleFrontier_OutsideEast_Text_242E11: @ 8242E11
 
 BattleFrontier_OutsideEast_Text_242E58: @ 8242E58
 	.string "This is the BATTLE PALACE!\n"
-	.string "Keep your eyes on POKéMON battles!$"
+	.string "Keep your eyes on {P}MON battles!$"
 
 BattleFrontier_OutsideEast_Text_242E96: @ 8242E96
 	.string "This is the BATTLE ARENA!\n"
@@ -268,7 +268,7 @@ BattleFrontier_OutsideEast_Text_242F8C: @ 8242F8C
 
 BattleFrontier_OutsideEast_Text_242FDC: @ 8242FDC
 	.string "My grand ambition is to conquer both\n"
-	.string "the BATTLE FRONTIER and the POKéMON\l"
+	.string "the BATTLE FRONTIER and the {P}MON\l"
 	.string "LEAGUE.\p"
 	.string "And if my dream comes true…\p"
 	.string "I… I'm going to ask MIMI next door\n"
@@ -333,7 +333,7 @@ BattleFrontier_OutsideEast_Text_2434A0: @ 82434A0
 
 BattleFrontier_OutsideEast_Text_243504: @ 8243504
 	.string "I'm better than my daddy\n"
-	.string "at POKéMON.$"
+	.string "at {P}MON.$"
 
 BattleFrontier_OutsideEast_Text_243529: @ 8243529
 	.string "Go on, my baby sweetie!\n"
@@ -353,7 +353,7 @@ BattleFrontier_OutsideEast_Text_243598: @ 8243598
 BattleFrontier_OutsideEast_Text_243668: @ 8243668
 	.string "I sometimes see this really important-\n"
 	.string "looking old man going in there.\p"
-	.string "He has these really awesome POKéMON.\n"
+	.string "He has these really awesome {P}MON.\n"
 	.string "He seems really nice, though.$"
 
 BattleFrontier_OutsideEast_Text_2436F2: @ 82436F2
@@ -435,7 +435,7 @@ BattleFrontier_OutsideEast_Text_243CA3: @ 8243CA3
 BattleFrontier_OutsideEast_Text_243D0B: @ 8243D0B
 	.string "I…\n"
 	.string "I saw it!\p"
-	.string "There was a sticky sort of a POKéMON\n"
+	.string "There was a sticky sort of a {P}MON\n"
 	.string "with a long tail up ahead!\p"
 	.string "It was hiding under a boulder, and\n"
 	.string "it kept staring at me!$"

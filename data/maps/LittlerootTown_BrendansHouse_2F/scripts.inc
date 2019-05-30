@@ -95,7 +95,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_1F8507:: @ 81F8507
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_Text_1F97B4, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_1F_Text_1F90B4, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_1F85CF
 	applymovement 1, LittlerootTown_BrendansHouse_2F_Movement_1F85C6
@@ -107,7 +107,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_1F8536:: @ 81F8536
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_Text_1F97B4, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_1F_Text_1F90B4, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_1F85E2
 	applymovement 1, LittlerootTown_BrendansHouse_2F_Movement_1F85DB
@@ -119,7 +119,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_1F8565:: @ 81F8565
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceRight
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_Text_1F97B4, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_1F_Text_1F90B4, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_BrendansHouse_2F_Movement_1F85F6
 	applymovement 1, LittlerootTown_BrendansHouse_2F_Movement_1F85ED
@@ -131,7 +131,7 @@ LittlerootTown_BrendansHouse_2F_EventScript_1F8594:: @ 81F8594
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	msgbox LittlerootTown_BrendansHouse_2F_Text_1F97B4, MSGBOX_DEFAULT
+	msgbox LittlerootTown_BrendansHouse_1F_Text_1F90B4, MSGBOX_DEFAULT
 	closemessage
 	applymovement 1, LittlerootTown_BrendansHouse_2F_Movement_1F8604
 	waitmovement 0
@@ -295,7 +295,7 @@ LittlerootTown_BrendansHouse_2F_Text_1F869A: @ 81F869A
 	.string "Good! Everything's put away neatly!\p"
 	.string "They finished moving everything in\n"
 	.string "downstairs, too.\p"
-	.string "POKéMON movers are so convenient!\p"
+	.string "{P}MON movers are so convenient!\p"
 	.string "Oh, you should make sure that\n"
 	.string "everything's all there on your desk.$"
 

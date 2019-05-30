@@ -25,17 +25,7 @@ static const s32 sPowersOfTen[] =
 };
 
 extern const u8 gExpandedPlaceholder_Empty[];
-extern const u8 gExpandedPlaceholder_Kun[];
-extern const u8 gExpandedPlaceholder_Chan[];
-extern const u8 gExpandedPlaceholder_Sapphire[];
-extern const u8 gExpandedPlaceholder_Ruby[];
-extern const u8 gExpandedPlaceholder_Emerald[];
-extern const u8 gExpandedPlaceholder_Aqua[];
-extern const u8 gExpandedPlaceholder_Magma[];
-extern const u8 gExpandedPlaceholder_Archie[];
-extern const u8 gExpandedPlaceholder_Maxie[];
-extern const u8 gExpandedPlaceholder_Kyogre[];
-extern const u8 gExpandedPlaceholder_Groudon[];
+extern const u8 gExpandedPlaceholder_Poke[];
 extern const u8 gExpandedPlaceholder_Brendan[];
 extern const u8 gExpandedPlaceholder_May[];
 
@@ -448,12 +438,9 @@ static const u8 *ExpandPlaceholder_StringVar3(void)
     return gStringVar3;
 }
 
-static const u8 *ExpandPlaceholder_KunChan(void)
+static const u8 *ExpandPlaceholder_Poke(void)
 {
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        return gExpandedPlaceholder_Kun;
-    else
-        return gExpandedPlaceholder_Chan;
+    return gExpandedPlaceholder_Poke;
 }
 
 static const u8 *ExpandPlaceholder_RivalName(void)
@@ -462,41 +449,6 @@ static const u8 *ExpandPlaceholder_RivalName(void)
         return gExpandedPlaceholder_May;
     else
         return gExpandedPlaceholder_Brendan;
-}
-
-static const u8 *ExpandPlaceholder_Version(void)
-{
-    return gExpandedPlaceholder_Emerald;
-}
-
-static const u8 *ExpandPlaceholder_Aqua(void)
-{
-    return gExpandedPlaceholder_Aqua;
-}
-
-static const u8 *ExpandPlaceholder_Magma(void)
-{
-    return gExpandedPlaceholder_Magma;
-}
-
-static const u8 *ExpandPlaceholder_Archie(void)
-{
-    return gExpandedPlaceholder_Archie;
-}
-
-static const u8 *ExpandPlaceholder_Maxie(void)
-{
-    return gExpandedPlaceholder_Maxie;
-}
-
-static const u8 *ExpandPlaceholder_Kyogre(void)
-{
-    return gExpandedPlaceholder_Kyogre;
-}
-
-static const u8 *ExpandPlaceholder_Groudon(void)
-{
-    return gExpandedPlaceholder_Groudon;
 }
 
 const u8 *GetExpandedPlaceholder(u32 id)
@@ -510,15 +462,8 @@ const u8 *GetExpandedPlaceholder(u32 id)
         ExpandPlaceholder_StringVar1,
         ExpandPlaceholder_StringVar2,
         ExpandPlaceholder_StringVar3,
-        ExpandPlaceholder_KunChan,
+        ExpandPlaceholder_Poke,
         ExpandPlaceholder_RivalName,
-        ExpandPlaceholder_Version,
-        ExpandPlaceholder_Aqua,
-        ExpandPlaceholder_Magma,
-        ExpandPlaceholder_Archie,
-        ExpandPlaceholder_Maxie,
-        ExpandPlaceholder_Kyogre,
-        ExpandPlaceholder_Groudon,
     };
 
     if (id >= ARRAY_COUNT(funcs))

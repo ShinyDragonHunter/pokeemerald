@@ -97,19 +97,19 @@ PacifidlogTown_House2_EventScript_2038AC:: @ 82038AC
 
 PacifidlogTown_House2_Text_2038C7: @ 82038C7
 	.string "Er-hem!\p"
-	.string "I am the POKéMON FAN CLUB's most\n"
+	.string "I am the {P}MON FAN CLUB's most\n"
 	.string "important person, the CHAIRMAN's\l"
 	.string "younger brother.\p"
 	.string "I'm here enjoying my vacation with\n"
-	.string "POKéMON, yes, indeed.$"
+	.string "{P}MON, yes, indeed.$"
 
 PacifidlogTown_House2_Text_20395B: @ 820395B
 	.string "Ah!\n"
-	.string "Your POKéMON…$"
+	.string "Your {P}MON…$"
 
 PacifidlogTown_House2_Text_20396D: @ 820396D
 	.string "It clearly likes you very much.\p"
-	.string "A POKéMON that adoring and adorable\n"
+	.string "A {P}MON that adoring and adorable\n"
 	.string "deserves a TM like this, no?$"
 
 PacifidlogTown_House2_Text_2039CE: @ 82039CE
@@ -120,11 +120,11 @@ PacifidlogTown_House2_Text_2039CE: @ 82039CE
 
 PacifidlogTown_House2_Text_203A2F: @ 8203A2F
 	.string "It has a vicious look to it.\p"
-	.string "A frightening POKéMON like that\n"
+	.string "A frightening {P}MON like that\n"
 	.string "deserves a TM like this.$"
 
 PacifidlogTown_House2_Text_203A85: @ 8203A85
-	.string "If a POKéMON likes you a lot, RETURN's\n"
+	.string "If a {P}MON likes you a lot, RETURN's\n"
 	.string "power is enhanced.\p"
 	.string "If it doesn't like you, FRUSTRATION's\n"
 	.string "power goes up.$"
@@ -134,7 +134,7 @@ PacifidlogTown_House2_Text_203AF4: @ 8203AF4
 	.string "I should be getting a good TM or two.\p"
 	.string "You should come see me then.\n"
 	.string "I'll give you a TM that's suitable for\l"
-	.string "your POKéMON.$"
+	.string "your {P}MON.$"
 
 PacifidlogTown_House2_Text_203B8D: @ 8203B8D
 	.string "AZURILL: Rurii.$"

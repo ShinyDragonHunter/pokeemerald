@@ -186,14 +186,14 @@ Route114_EventScript_1F27F2:: @ 81F27F2
 	end
 
 Route114_Text_1F2809: @ 81F2809
-	.string "All my POKéMON does is ROAR…\n"
+	.string "All my {P}MON does is ROAR…\n"
 	.string "No one dares to come near me…\p"
 	.string "Sigh… If you would, please take\n"
 	.string "this TM away…$"
 
 Route114_Text_1F2872: @ 81F2872
 	.string "TM05 contains ROAR.\n"
-	.string "A ROAR sends POKéMON scurrying.$"
+	.string "A ROAR sends {P}MON scurrying.$"
 
 Route114_Text_1F28A6: @ 81F28A6
 	.string "Bow! Bowwow!$"

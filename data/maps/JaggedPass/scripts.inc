@@ -164,7 +164,7 @@ JaggedPass_Text_2308FF: @ 82308FF
 	.string "Losing left me bitter!$"
 
 JaggedPass_Text_230916: @ 8230916
-	.string "Yes, I did lose at POKéMON…\p"
+	.string "Yes, I did lose at {P}MON…\p"
 	.string "But, when it comes to the love of\n"
 	.string "the mountains, I have you beat!$"
 
@@ -187,7 +187,7 @@ JaggedPass_Text_230A2C: @ 8230A2C
 
 JaggedPass_Text_230A76: @ 8230A76
 	.string "Picnics are fun wherever you go.\n"
-	.string "Just like POKéMON!$"
+	.string "Just like {P}MON!$"
 
 JaggedPass_Text_230AAA: @ 8230AAA
 	.string "I only lost because the ground is\n"
@@ -212,7 +212,7 @@ JaggedPass_Text_230B93: @ 8230B93
 JaggedPass_Text_230BC6: @ 8230BC6
 	.string "When I get more used to this bumpiness,\n"
 	.string "I'll be sure to win!\p"
-	.string "Can you register me in your POKéNAV?$"
+	.string "Can you register me in your {P}NAV?$"
 
 JaggedPass_Text_230C28: @ 8230C28
 	.string "I got used to this bumpiness.\n"

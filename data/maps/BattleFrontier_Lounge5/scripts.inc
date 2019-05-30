@@ -46,9 +46,9 @@ BattleFrontier_Lounge5_EventScript_264629:: @ 8264629
 
 BattleFrontier_Lounge5_Text_264632:: @ 8264632
 	.string "Ehehe!\n"
-	.string "I can tell what POKéMON are thinking!\p"
+	.string "I can tell what {P}MON are thinking!\p"
 	.string "Please!\n"
-	.string "Can I see your POKéMON?$"
+	.string "Can I see your {P}MON?$"
 
 BattleFrontier_Lounge5_Text_26467F:: @ 826467F
 	.string "Boo!\n"
@@ -193,7 +193,7 @@ BattleFrontier_Lounge5_Text_264EEE:: @ 8264EEE
 BattleFrontier_Lounge5_Text_264F22:: @ 8264F22
 	.string "How charming!\n"
 	.string "That little lady claims she can\l"
-	.string "understand POKéMON!$"
+	.string "understand {P}MON!$"
 
 BattleFrontier_Lounge5_Text_264F64:: @ 8264F64
 	.string "I have this feeling that the little girl\n"

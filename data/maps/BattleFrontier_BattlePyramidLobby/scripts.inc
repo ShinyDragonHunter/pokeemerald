@@ -616,8 +616,8 @@ BattleFrontier_BattlePyramidLobby_Text_25100C: @ 825100C
 	.string "the PYRAMID and try to reach the top.\p"
 	.string "In the PYRAMID are seven floors of\n"
 	.string "mazes, all of them filled with not only\l"
-	.string "skilled TRAINERS but also wild POKéMON.\p"
-	.string "You must enter with three POKéMON,\n"
+	.string "skilled TRAINERS but also wild {P}MON.\p"
+	.string "You must enter with three {P}MON,\n"
 	.string "none of them holding an item.\p"
 	.string "On your ascent, you will be provided\n"
 	.string "with a BATTLE BAG for items.\p"
@@ -636,14 +636,14 @@ BattleFrontier_BattlePyramidLobby_Text_251248: @ 8251248
 
 BattleFrontier_BattlePyramidLobby_Text_251297: @ 8251297
 	.string "Very good. Now, please select the three\n"
-	.string "POKéMON you wish to accompany you.$"
+	.string "{P}MON you wish to accompany you.$"
 
 BattleFrontier_BattlePyramidLobby_Text_2512E2: @ 82512E2
 	.string "A slight problem, adventurer!\p"
 	.string "You seem to not have the three\n"
-	.string "POKéMON qualified for the challenge.\p"
+	.string "{P}MON qualified for the challenge.\p"
 	.string "Please also remember to take all\n"
-	.string "items from your POKéMON.\p"
+	.string "items from your {P}MON.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
 	.string "When you are ready, please have\n"
 	.string "a word with me.$"
@@ -651,11 +651,11 @@ BattleFrontier_BattlePyramidLobby_Text_2512E2: @ 82512E2
 BattleFrontier_BattlePyramidLobby_Text_2513C1: @ 82513C1
 	.string "A slight problem, adventurer!\p"
 	.string "You seem to not have the three\n"
-	.string "POKéMON qualified for the challenge.\p"
-	.string "The three POKéMON must be different\n"
+	.string "{P}MON qualified for the challenge.\p"
+	.string "The three {P}MON must be different\n"
 	.string "and each no higher than Level 50.\p"
 	.string "Please also remember to take all\n"
-	.string "items from your POKéMON.\p"
+	.string "items from your {P}MON.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
 	.string "When you are ready, please have\n"
 	.string "a word with me.$"
@@ -708,32 +708,32 @@ BattleFrontier_BattlePyramidLobby_Text_2517B5: @ 82517B5
 
 BattleFrontier_BattlePyramidLobby_Text_2517FC: @ 82517FC
 	.string "Ah, a slight problem.\p"
-	.string "At least one POKéMON is holding\n"
+	.string "At least one {P}MON is holding\n"
 	.string "an item.\p"
 	.string "I'm sorry to say, items obtained in\n"
 	.string "the PYRAMID cannot be taken away.$"
 
 BattleFrontier_BattlePyramidLobby_Text_251881: @ 8251881
-	.string "All items held by your POKéMON will be\n"
+	.string "All items held by your {P}MON will be\n"
 	.string "moved to your BATTLE BAG, {PLAYER}.$"
 
 BattleFrontier_BattlePyramidLobby_Text_2518C6: @ 82518C6
 	.string "The BATTLE BAG cannot hold all your\n"
 	.string "items, I'm sorry to say.\p"
 	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your POKéMON.$"
+	.string "BATTLE BAG, and with your {P}MON.$"
 
 BattleFrontier_BattlePyramidLobby_Text_25194F: @ 825194F
-	.string "At least one POKéMON is still\n"
+	.string "At least one {P}MON is still\n"
 	.string "holding an item.$"
 
 BattleFrontier_BattlePyramidLobby_Text_25197E: @ 825197E
 	.string "Please pick the items you'll keep in the\n"
-	.string "BATTLE BAG, and with your POKéMON.$"
+	.string "BATTLE BAG, and with your {P}MON.$"
 
 BattleFrontier_BattlePyramidLobby_Text_2519CA: @ 82519CA
 	.string "{PLAYER} returned everything that\n"
-	.string "the POKéMON held.$"
+	.string "the {P}MON held.$"
 
 BattleFrontier_BattlePyramidLobby_Text_2519F8: @ 82519F8
 	.string "The BATTLE BAG you used will be kept\n"
@@ -788,100 +788,100 @@ BattleFrontier_BattlePyramidLobby_Text_251C8A: @ 8251C8A
 
 BattleFrontier_BattlePyramidLobby_Text_251CB3: @ 8251CB3
 	.string "I see a shower of sparks…\p"
-	.string "…And in it, I see your POKéMON\n"
+	.string "…And in it, I see your {P}MON\n"
 	.string "struggling with paralysis…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251D07: @ 8251D07
 	.string "I see poison…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from the effects of poison…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251D54: @ 8251D54
 	.string "I see bright red flames…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from burns…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251D9C: @ 8251D9C
 	.string "I sense the tremendous pressure of\n"
 	.string "unrequited anger…\p"
 	.string "It is a curse…\p"
-	.string "…And, I see your POKéMON drained of\n"
+	.string "…And, I see your {P}MON drained of\n"
 	.string "Power Points and having no recourse\l"
 	.string "but to use STRUGGLE…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251E3D: @ 8251E3D
-	.string "I see POKéMON loftily airborne…\p"
-	.string "…And, I see your POKéMON frustrated\n"
+	.string "I see {P}MON loftily airborne…\p"
+	.string "…And, I see your {P}MON frustrated\n"
 	.string "by powerless GROUND-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251EA1: @ 8251EA1
 	.string "I sense terrific energy rising from\n"
 	.string "the ground below…\p"
-	.string "…And, I see your POKéMON unable to\n"
+	.string "…And, I see your {P}MON unable to\n"
 	.string "escape the power's clutches…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251F17: @ 8251F17
-	.string "I see ICE-type POKéMON…\p"
-	.string "…And, I see your POKéMON fighting\n"
+	.string "I see ICE-type {P}MON…\p"
+	.string "…And, I see your {P}MON fighting\n"
 	.string "the freezing effects of ice…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251F6E: @ 8251F6E
 	.string "I see a flurry of moves that imperil\n"
 	.string "the user…\p"
-	.string "…And, I see your POKéMON falling\n"
+	.string "…And, I see your {P}MON falling\n"
 	.string "to them…$"
 
 BattleFrontier_BattlePyramidLobby_Text_251FC7: @ 8251FC7
-	.string "I see PSYCHIC-type POKéMON…\p"
-	.string "…And, I see your POKéMON in torment\n"
+	.string "I see PSYCHIC-type {P}MON…\p"
+	.string "…And, I see your {P}MON in torment\n"
 	.string "from PSYCHIC moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_25201B: @ 825201B
-	.string "I see ROCK-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see ROCK-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from ROCK moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252068: @ 8252068
-	.string "I see FIGHTING-type POKéMON…\p"
-	.string "…And, I see your POKéMON pummeled\n"
+	.string "I see FIGHTING-type {P}MON…\p"
+	.string "…And, I see your {P}MON pummeled\n"
 	.string "by FIGHTING moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_2520BA: @ 82520BA
 	.string "RAIN DANCE… SUNNY DAY…\n"
 	.string "SANDSTORM… HAIL…\p"
-	.string "I see POKéMON that become stronger\n"
+	.string "I see {P}MON that become stronger\n"
 	.string "with the weather…\p"
-	.string "…And, I see your POKéMON confounded\n"
+	.string "…And, I see your {P}MON confounded\n"
 	.string "by different types of moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252158: @ 8252158
-	.string "I see BUG-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see BUG-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from different kinds of attacks…$"
 
 BattleFrontier_BattlePyramidLobby_Text_2521B4: @ 82521B4
-	.string "I see DARK-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see DARK-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from DARK-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252206: @ 8252206
-	.string "I see WATER-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see WATER-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from WATER-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_25225A: @ 825225A
-	.string "I see GHOST-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see GHOST-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from GHOST-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_2522AE: @ 82522AE
-	.string "I see STEEL-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see STEEL-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from enormously powerful moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_25230B: @ 825230B
-	.string "I see flying POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see flying {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from enormously powerful moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252364: @ 8252364
@@ -889,12 +889,12 @@ BattleFrontier_BattlePyramidLobby_Text_252364: @ 8252364
 	.string "the power of stones…\p"
 	.string "I also sense fire, water,\n"
 	.string "and electricity…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from those three powers…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252403: @ 8252403
-	.string "I see NORMAL-type POKéMON…\p"
-	.string "…And, I see your POKéMON suffering\n"
+	.string "I see NORMAL-type {P}MON…\p"
+	.string "…And, I see your {P}MON suffering\n"
 	.string "from enormously powerful moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_252461: @ 8252461
@@ -936,10 +936,10 @@ BattleFrontier_BattlePyramidLobby_Text_2526D9: @ 82526D9
 
 BattleFrontier_BattlePyramidLobby_Text_2526FC: @ 82526FC
 	.string "When the PYRAMID is conquered,\n"
-	.string "the wild POKéMON that appear in it\l"
+	.string "the wild {P}MON that appear in it\l"
 	.string "are replaced by different kinds.\p"
 	.string "Explore, observe, and learn what kinds\n"
-	.string "of wild POKéMON you may encounter.$"
+	.string "of wild {P}MON you may encounter.$"
 
 BattleFrontier_BattlePyramidLobby_Text_2527A9: @ 82527A9
 	.string "TRAINERS are lying in wait for you\n"
@@ -955,7 +955,7 @@ BattleFrontier_BattlePyramidLobby_Text_25285A: @ 825285A
 	.string "The mazes are poorly lit.\n"
 	.string "You must advance with caution.\p"
 	.string "The light grows brighter whenever you\n"
-	.string "defeat a wild POKéMON or a TRAINER.$"
+	.string "defeat a wild {P}MON or a TRAINER.$"
 
 BattleFrontier_BattlePyramidLobby_Text_252924: @ 8252924
 	.string "The BATTLE BAG serves as your BAG\n"

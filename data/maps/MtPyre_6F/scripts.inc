@@ -37,13 +37,13 @@ MtPyre_6F_Text_231DE2: @ 8231DE2
 
 MtPyre_6F_Text_231DFC: @ 8231DFC
 	.string "Perhaps the power is from the spirits\n"
-	.string "of POKéMON in fitful sleep here…$"
+	.string "of {P}MON in fitful sleep here…$"
 
 MtPyre_6F_Text_231E43: @ 8231E43
 	.string "Fufufu… I lost the match, but…\n"
 	.string "I have this little ability…\p"
 	.string "Without ever laying my hands on\n"
-	.string "your POKéNAV… Hiyah!$"
+	.string "your {P}NAV… Hiyah!$"
 
 MtPyre_6F_Text_231EB3: @ 8231EB3
 	.string "Behind you…\n"
@@ -53,7 +53,7 @@ MtPyre_6F_Text_231ECB: @ 8231ECB
 	.string "Something faded away…$"
 
 MtPyre_6F_Text_231EE1: @ 8231EE1
-	.string "The POKéMON at rest here…\n"
+	.string "The {P}MON at rest here…\n"
 	.string "Sometimes, they play…$"
 
 MtPyre_6F_Text_231F11: @ 8231F11

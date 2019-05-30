@@ -643,7 +643,7 @@ BattleFrontier_BattlePointExchangeServiceCorner_Text_25FFD0: @ 825FFD0
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_26002E: @ 826002E
 	.string "If I can get hold of the items here,\n"
-	.string "my POKéMON will get tougher.\p"
+	.string "my {P}MON will get tougher.\p"
 	.string "You bet they will!\n"
 	.string "No question about it!$"
 
@@ -706,26 +706,26 @@ BattleFrontier_BattlePointExchangeServiceCorner_Text_26036C:: @ 826036C
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_260397:: @ 8260397
 	.string "Raises the stat ATTACK of one\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_2603BE:: @ 82603BE
 	.string "Raises the stat SP. ATK of one\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_2603E6:: @ 82603E6
 	.string "Raises the stat DEFENSE of one\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_26040E:: @ 826040E
 	.string "Raises the stat SP. DEF of one\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_260436:: @ 8260436
 	.string "Raises the stat SPEED of one\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_26045C:: @ 826045C
-	.string "Raises the HP of one POKéMON.$"
+	.string "Raises the HP of one {P}MON.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_26047A:: @ 826047A
 	.string "A hold item that gradually restores\n"
@@ -740,7 +740,7 @@ BattleFrontier_BattlePointExchangeServiceCorner_Text_2604D8:: @ 82604D8
 	.string "the first strike.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_26050F:: @ 826050F
-	.string "A hold item that snaps POKéMON out\n"
+	.string "A hold item that snaps {P}MON out\n"
 	.string "of infatuation.$"
 
 BattleFrontier_BattlePointExchangeServiceCorner_Text_260542:: @ 8260542

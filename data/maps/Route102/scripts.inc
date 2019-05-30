@@ -77,7 +77,7 @@ Route102_EventScript_1EC1E1:: @ 81EC1E1
 
 PetalburgCity_Text_1EC1F8: @ 81EC1F8
 	.string "WALLY: {PLAYER}…\n"
-	.string "POKéMON hide in tall grass like this,\l"
+	.string "{P}MON hide in tall grass like this,\l"
 	.string "don't they?\p"
 	.string "Please watch me and see if I can\n"
 	.string "catch one properly.\p"
@@ -85,7 +85,7 @@ PetalburgCity_Text_1EC1F8: @ 81EC1F8
 
 PetalburgCity_Text_1EC271: @ 81EC271
 	.string "WALLY: I did it… It's my…\n"
-	.string "My POKéMON!$"
+	.string "My {P}MON!$"
 
 PetalburgCity_Text_1EC297: @ 81EC297
 	.string "{PLAYER}, thank you!\n"
@@ -100,7 +100,7 @@ Route102_Text_1EC2C0: @ 81EC2C0
 
 Route102_Text_1EC32E: @ 81EC32E
 	.string "I'm going to catch a whole bunch of\n"
-	.string "POKéMON!$"
+	.string "{P}MON!$"
 
 Route102_Text_1EC35B: @ 81EC35B
 	.string "ROUTE 102\n"

@@ -324,9 +324,9 @@ PetalburgWoods_Text_22E332: @ 822E332
 	.string "Not a one to be found…$"
 
 PetalburgWoods_Text_22E34F: @ 822E34F
-	.string "Hello, have you seen any POKéMON\n"
+	.string "Hello, have you seen any {P}MON\n"
 	.string "called SHROOMISH around here?\p"
-	.string "I really love that POKéMON.$"
+	.string "I really love that {P}MON.$"
 
 PetalburgWoods_Text_22E3AA: @ 822E3AA
 	.string "I was going to ambush you, but you\n"
@@ -340,7 +340,7 @@ PetalburgWoods_Text_22E428: @ 822E428
 
 PetalburgWoods_Text_22E457: @ 822E457
 	.string "Aiyeeeh!\p"
-	.string "You're a POKéMON TRAINER, aren't you?\n"
+	.string "You're a {P}MON TRAINER, aren't you?\n"
 	.string "You've got to help me, please!$"
 
 PetalburgWoods_Text_22E4A5: @ 822E4A5
@@ -358,7 +358,7 @@ PetalburgWoods_Text_22E563: @ 822E563
 	.string "meddling with TEAM AQUA!\l"
 	.string "Come on and battle me again!\p"
 	.string "I wish I could say that, but I'm out of\n"
-	.string "POKéMON…\p"
+	.string "{P}MON…\p"
 	.string "And, hey, we of TEAM AQUA are also\n"
 	.string "after something in RUSTBORO.\p"
 	.string "I'll let you go today!$"
@@ -385,41 +385,41 @@ PetalburgWoods_Text_22E741: @ 822E741
 	.string "I can't give you this GREAT BALL.$"
 
 PetalburgWoods_Text_22E77D: @ 822E77D
-	.string "I caught a whole bunch of POKéMON!\p"
+	.string "I caught a whole bunch of {P}MON!\p"
 	.string "Go, go, go!\n"
-	.string "My BUG POKéMON team!$"
+	.string "My BUG {P}MON team!$"
 
 PetalburgWoods_Text_22E7C1: @ 822E7C1
-	.string "I have all these POKéMON,\n"
+	.string "I have all these {P}MON,\n"
 	.string "but I couldn't win…$"
 
 PetalburgWoods_Text_22E7EF: @ 822E7EF
-	.string "I caught a bunch of POKéMON.\n"
-	.string "Now I'm out of POKé BALLS.$"
+	.string "I caught a bunch of {P}MON.\n"
+	.string "Now I'm out of {P} BALLS.$"
 
 PetalburgWoods_Text_22E827: @ 822E827
-	.string "If you take BUG POKéMON to school,\n"
+	.string "If you take BUG {P}MON to school,\n"
 	.string "you get to be instantly popular!$"
 
 PetalburgWoods_Text_22E86B: @ 822E86B
 	.string "I can't be popular if I lose.$"
 
 PetalburgWoods_Text_22E889: @ 822E889
-	.string "If you have a big BUG POKéMON,\n"
+	.string "If you have a big BUG {P}MON,\n"
 	.string "people respect you for it.$"
 
 PetalburgWoods_Text_22E8C3: @ 822E8C3
 	.string "I want a rematch when my BUG\n"
-	.string "POKéMON grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "{P}MON grow up!\p"
+	.string "I'm registering you in my {P}NAV!$"
 
 PetalburgWoods_Text_22E914: @ 822E914
 	.string "I want a rematch when my BUG \n"
-	.string "POKéMON grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "{P}MON grow up!\p"
+	.string "I'm registering you in my {P}NAV!$"
 
 PetalburgWoods_Text_22E966: @ 822E966
-	.string "My BUG POKéMON have grown.\n"
+	.string "My BUG {P}MON have grown.\n"
 	.string "I'll be popular again.$"
 
 PetalburgWoods_Text_22E998: @ 822E998
@@ -427,13 +427,13 @@ PetalburgWoods_Text_22E998: @ 822E998
 
 PetalburgWoods_Text_22E9B6: @ 822E9B6
 	.string "You get to be popular if you have\n"
-	.string "strong POKéMON, right?\l"
+	.string "strong {P}MON, right?\l"
 	.string "So, I've been training hard.$"
 
 PetalburgWoods_Text_22EA0C: @ 822EA0C
 	.string "Yo, there!\n"
-	.string "Your POKéMON doing okay?\p"
-	.string "If your POKéMON are weak and you want\n"
+	.string "Your {P}MON doing okay?\p"
+	.string "If your {P}MON are weak and you want\n"
 	.string "to avoid battles, you should stay out\l"
 	.string "of tall grass.$"
 
@@ -451,17 +451,17 @@ PetalburgWoods_Text_22EAFE: @ 822EAFE
 
 PetalburgWoods_Text_22EB63: @ 822EB63
 	.string "It's a MIRACLE SEED.\n"
-	.string "If a POKéMON holds that item, its\l"
+	.string "If a {P}MON holds that item, its\l"
 	.string "GRASS-type moves become stronger.\p"
 	.string "Besides MIRACLE SEED, I think there are\n"
-	.string "other convenient items for POKéMON\l"
+	.string "other convenient items for {P}MON\l"
 	.string "to hold.$"
 
 PetalburgWoods_Text_22EC10: @ 822EC10
 	.string "TRAINER TIPS\p"
-	.string "Any POKéMON that appears even once\n"
+	.string "Any {P}MON that appears even once\n"
 	.string "in a battle is awarded EXP Points.\p"
-	.string "To raise a weak POKéMON, put it at the\n"
+	.string "To raise a weak {P}MON, put it at the\n"
 	.string "left of the team list.\p"
 	.string "As soon as a battle starts, switch it\n"
 	.string "out. It will earn EXP Points without\l"
@@ -469,9 +469,9 @@ PetalburgWoods_Text_22EC10: @ 822EC10
 
 PetalburgWoods_Text_22ED07: @ 822ED07
 	.string "TRAINER TIPS\p"
-	.string "In addition to Hit Points (HP), POKéMON\n"
+	.string "In addition to Hit Points (HP), {P}MON\n"
 	.string "have Power Points (PP) that are used to\l"
 	.string "make moves during battle.\p"
-	.string "If a POKéMON runs out of PP, it must be\n"
-	.string "taken to a POKéMON CENTER.$"
+	.string "If a {P}MON runs out of PP, it must be\n"
+	.string "taken to a {P}MON CENTER.$"
 

@@ -574,7 +574,7 @@ MtChimney_Text_22F32E: @ 822F32E
 	.string "That is why TEAM MAGMA is dedicated\n"
 	.string "to the expansion of the land mass.\p"
 	.string "It is for further advancement of\n"
-	.string "humankind and POKéMON!\p"
+	.string "humankind and {P}MON!\p"
 	.string "And for that, we need the power of\n"
 	.string "what sleeps within this mountain…\p"
 	.string "Oh! There was no need for you to\n"
@@ -705,7 +705,7 @@ MtChimney_Text_22FD1F: @ 822FD1F
 
 MtChimney_Text_22FD5B: @ 822FD5B
 	.string "If they expand the land, there'll be\n"
-	.string "less habitats for WATER POKéMON!$"
+	.string "less habitats for WATER {P}MON!$"
 
 MtChimney_Text_22FDA1: @ 822FDA1
 	.string "We're TEAM AQUA!\p"
@@ -779,7 +779,7 @@ MtChimney_Text_2300E3: @ 82300E3
 
 MtChimney_Text_230153: @ 8230153
 	.string "If you can mesh your heart with those\n"
-	.string "of your POKéMON, why, you should be\l"
+	.string "of your {P}MON, why, you should be\l"
 	.string "able to achieve great things.$"
 
 MtChimney_Text_2301BB: @ 82301BB
@@ -788,7 +788,7 @@ MtChimney_Text_2301BB: @ 82301BB
 
 MtChimney_Text_2301E7: @ 82301E7
 	.string "Perhaps your heart has become one\n"
-	.string "with the hearts of your POKéMON.$"
+	.string "with the hearts of your {P}MON.$"
 
 MtChimney_Text_23022A: @ 823022A
 	.string "I've got the fire in me, baby.\n"
@@ -803,7 +803,7 @@ MtChimney_Text_230292: @ 8230292
 
 MtChimney_Text_2302BD: @ 82302BD
 	.string "I've finally made it to MT. CHIMNEY.\n"
-	.string "I want to make my POKéMON battle!$"
+	.string "I want to make my {P}MON battle!$"
 
 MtChimney_Text_230304: @ 8230304
 	.string "The way you battle…\n"
@@ -843,7 +843,7 @@ MtChimney_Text_230519: @ 8230519
 
 MtChimney_Text_230557: @ 8230557
 	.string "I like little fireballs like you.\n"
-	.string "Let me register you in my POKéNAV.$"
+	.string "Let me register you in my {P}NAV.$"
 
 MtChimney_Text_23059C: @ 823059C
 	.string "I'm happily surrounded by hot people\n"

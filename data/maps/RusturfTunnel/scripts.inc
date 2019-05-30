@@ -438,7 +438,7 @@ RusturfTunnel_Text_22D1F7: @ 822D1F7
 
 RusturfTunnel_Text_22D20A: @ 822D20A
 	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
+	.string "That hostage {P}MON turned out to\n"
 	.string "be worthless!\p"
 	.string "And to think I made a getaway…\n"
 	.string "In this tunnel to nowhere!\p"
@@ -468,7 +468,7 @@ RusturfTunnel_Text_22D3BA: @ 822D3BA
 	.string "And, you are?\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
-	.string "Ah, so you are {PLAYER}{KUN}!\n"
+	.string "Ah, so you are {PLAYER}!\n"
 	.string "I sincerely thank you!\p"
 	.string "Now, if there's anything that troubles\n"
 	.string "you, don't hesitate to tell me!\p"
@@ -503,7 +503,7 @@ RusturfTunnel_Text_22D65C: @ 822D65C
 
 RusturfTunnel_Text_22D6D2: @ 822D6D2
 	.string "That HM contains STRENGTH.\p"
-	.string "If a muscular POKéMON were to learn\n"
+	.string "If a muscular {P}MON were to learn\n"
 	.string "that, it would be able to move even\l"
 	.string "large boulders.$"
 
@@ -524,15 +524,15 @@ RusturfTunnel_Text_22D7A3: @ 822D7A3
 RusturfTunnel_Text_22D84D: @ 822D84D
 	.string "What do you call a wild man up in the\n"
 	.string "mountains? A mountain man, right?\p"
-	.string "So why don't they call a POKéMON in\n"
-	.string "the mountains a mountain POKéMON?$"
+	.string "So why don't they call a {P}MON in\n"
+	.string "the mountains a mountain {P}MON?$"
 
 RusturfTunnel_Text_22D8DB: @ 822D8DB
-	.string "My POKéMON…\n"
+	.string "My {P}MON…\n"
 	.string "Ran out of power…$"
 
 RusturfTunnel_Text_22D8F9: @ 822D8F9
 	.string "They halted development here to\n"
-	.string "protect POKéMON, right?\l"
+	.string "protect {P}MON, right?\l"
 	.string "There's a feel-good story!$"
 

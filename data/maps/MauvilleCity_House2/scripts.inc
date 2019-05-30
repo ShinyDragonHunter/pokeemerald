@@ -47,7 +47,7 @@ MauvilleCity_House2_Text_210CEE: @ 8210CEE
 	.string "If I had a BIKE, it'd be easy to cycle to\n"
 	.string "SLATEPORT for some shopping.\p"
 	.string "I'd be able to buy HARBOR MAIL at the\n"
-	.string "POKéMON MART in SLATEPORT…$"
+	.string "{P}MON MART in SLATEPORT…$"
 
 MauvilleCity_House2_Text_210D76: @ 8210D76
 	.string "Oh! You have HARBOR MAIL?\n"

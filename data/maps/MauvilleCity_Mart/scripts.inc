@@ -39,7 +39,7 @@ MauvilleCity_Mart_EventScript_211125:: @ 8211125
 
 MauvilleCity_Mart_Text_21112E: @ 821112E
 	.string "There are items that temporarily\n"
-	.string "elevate the stats of POKéMON.\p"
+	.string "elevate the stats of {P}MON.\p"
 	.string "The ones I know you use in battle\n"
 	.string "are X ATTACK and X DEFEND…\p"
 	.string "I do believe that there are others\n"

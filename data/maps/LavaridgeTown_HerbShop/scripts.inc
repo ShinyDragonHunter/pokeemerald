@@ -56,12 +56,12 @@ LavaridgeTown_HerbShop_Text_1FE5EB: @ 81FE5EB
 	.string "That CHARCOAL I gave you, it's used\n"
 	.string "for making herbal medicine.\p"
 	.string "It also does wonders when held by\n"
-	.string "a POKéMON.\p"
+	.string "a {P}MON.\p"
 	.string "It intensifies the power of FIRE-type\n"
 	.string "moves.$"
 
 LavaridgeTown_HerbShop_Text_1FE685: @ 81FE685
 	.string "Herbal medicine works impressively well.\n"
-	.string "But your POKéMON will dislike you for it.\l"
+	.string "But your {P}MON will dislike you for it.\l"
 	.string "It must be horribly bitter!$"
 

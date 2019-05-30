@@ -70,12 +70,6 @@ static const u8 sSwarmDescription[] = _("Ups BUG moves in a pinch.");
 static const u8 sRockHeadDescription[] = _("Prevents recoil damage.");
 static const u8 sDroughtDescription[] = _("Summons sunlight in battle.");
 static const u8 sArenaTrapDescription[] = _("Prevents fleeing.");
-static const u8 sVitalSpiritDescription[] = _("Prevents sleep.");
-static const u8 sWhiteSmokeDescription[] = _("Prevents ability reduction.");
-static const u8 sPurePowerDescription[] = _("Raises ATTACK.");
-static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
-static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
-static const u8 sAirLockDescription[] = _("Negates weather effects.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -233,10 +227,10 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ROCK_HEAD] = sRockHeadDescription,
     [ABILITY_DROUGHT] = sDroughtDescription,
     [ABILITY_ARENA_TRAP] = sArenaTrapDescription,
-    [ABILITY_VITAL_SPIRIT] = sVitalSpiritDescription,
-    [ABILITY_WHITE_SMOKE] = sWhiteSmokeDescription,
-    [ABILITY_PURE_POWER] = sPurePowerDescription,
-    [ABILITY_SHELL_ARMOR] = sShellArmorDescription,
-    [ABILITY_CACOPHONY] = sCacophonyDescription,
-    [ABILITY_AIR_LOCK] = sAirLockDescription,
+    [ABILITY_VITAL_SPIRIT] = sInsomniaDescription,
+    [ABILITY_WHITE_SMOKE] = sClearBodyDescription,
+    [ABILITY_PURE_POWER] = sHugePowerDescription,
+    [ABILITY_SHELL_ARMOR] = sBattleArmorDescription,
+    [ABILITY_CACOPHONY] = sSoundproofDescription,
+    [ABILITY_AIR_LOCK] = sCloudNineDescription,
 };

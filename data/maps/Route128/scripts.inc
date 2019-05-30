@@ -275,12 +275,12 @@ Route128_Text_1F6F1E: @ 81F6F1E
 
 Route128_Text_1F704F: @ 81F704F
 	.string "MAXIE: This defies belief…\p"
-	.string "Those super-ancient POKéMON…\p"
+	.string "Those super-ancient {P}MON…\p"
 	.string "Their power is unbelievable.\n"
 	.string "They've upset the balance of nature…$"
 
 Route128_Text_1F70C9: @ 81F70C9
-	.string "STEVEN: {PLAYER}{KUN}!\n"
+	.string "STEVEN: {PLAYER}!\n"
 	.string "What is happening?$"
 
 Route128_Text_1F70EA: @ 81F70EA
@@ -296,7 +296,7 @@ Route128_Text_1F70EA: @ 81F70EA
 	.string "SOOTOPOLIS might provide answers…$"
 
 Route128_Text_1F721B: @ 81F721B
-	.string "{PLAYER}{KUN}…\n"
+	.string "{PLAYER}…\n"
 	.string "I don't know what you intend to do,\l"
 	.string "but don't do anything reckless.\p"
 	.string "Okay.\n"

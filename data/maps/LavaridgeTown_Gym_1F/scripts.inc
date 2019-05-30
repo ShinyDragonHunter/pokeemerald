@@ -205,8 +205,8 @@ LavaridgeTown_Gym_1F_Text_1FE9BF: @ 81FE9BF
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "LAVARIDGE's GYM LEADER FLANNERY\n"
-	.string "uses FIRE-type POKéMON.\p"
-	.string "Her passion for POKéMON burns stronger\n"
+	.string "uses FIRE-type {P}MON.\p"
+	.string "Her passion for {P}MON burns stronger\n"
 	.string "and hotter than a volcano.\p"
 	.string "Don't get too close to her--you'll burn!\n"
 	.string "Hose her down with water and then\l"
@@ -258,7 +258,7 @@ LavaridgeTown_Gym_B1F_Text_1FED02: @ 81FED02
 	.string "burned seriously.$"
 
 LavaridgeTown_Gym_1F_Text_1FED72: @ 81FED72
-	.string "Can your POKéMON withstand\n"
+	.string "Can your {P}MON withstand\n"
 	.string "392-degree heat?$"
 
 LavaridgeTown_Gym_1F_Text_1FED9E: @ 81FED9E
@@ -267,7 +267,7 @@ LavaridgeTown_Gym_1F_Text_1FED9E: @ 81FED9E
 LavaridgeTown_Gym_1F_Text_1FEDBB: @ 81FEDBB
 	.string "The temperature of magma is\n"
 	.string "392 degrees.\p"
-	.string "Your POKéMON beat me, so they should\n"
+	.string "Your {P}MON beat me, so they should\n"
 	.string "easily survive in magma.$"
 
 LavaridgeTown_Gym_1F_Text_1FEE22: @ 81FEE22
@@ -342,7 +342,7 @@ LavaridgeTown_Gym_1F_Text_1FF233: @ 81FF233
 	.string "I tried too hard to be someone\n"
 	.string "I'm not.\p"
 	.string "I have to do things my natural way. If\n"
-	.string "I don't, my POKéMON will be confused.\p"
+	.string "I don't, my {P}MON will be confused.\p"
 	.string "Thanks for teaching me that.\n"
 	.string "For that, you deserve this.$"
 
@@ -351,11 +351,11 @@ LavaridgeTown_Gym_1F_Text_1FF32F: @ 81FF32F
 	.string "from FLANNERY.$"
 
 LavaridgeTown_Gym_1F_Text_1FF359: @ 81FF359
-	.string "If you have a HEAT BADGE, all POKéMON\n"
+	.string "If you have a HEAT BADGE, all {P}MON\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"
-	.string "And, it lets POKéMON use the HM move\n"
+	.string "And, it lets {P}MON use the HM move\n"
 	.string "STRENGTH outside of battle.\p"
 	.string "This is a token of my appreciation.\n"
 	.string "Don't be shy about taking it!$"
@@ -365,12 +365,12 @@ LavaridgeTown_Gym_1F_Text_1FF45C: @ 81FF45C
 	.string "That move inflicts serious damage on\n"
 	.string "the opponent.\p"
 	.string "But it also sharply cuts the SP. ATK\n"
-	.string "of the POKéMON using it. It might not\l"
+	.string "of the {P}MON using it. It might not\l"
 	.string "be suitable for longer battles.$"
 
 LavaridgeTown_Gym_1F_Text_1FF517: @ 81FF517
 	.string "Registered GYM LEADER FLANNERY\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 LavaridgeTown_Gym_1F_Text_1FF546: @ 81FF546
 	.string "Your power reminds me of someone…\p"
@@ -378,17 +378,17 @@ LavaridgeTown_Gym_1F_Text_1FF546: @ 81FF546
 	.string "the GYM LEADER of PETALBURG.$"
 
 LavaridgeTown_Gym_1F_Text_1FF5A9: @ 81FF5A9
-	.string "LAVARIDGE TOWN POKéMON GYM$"
+	.string "LAVARIDGE TOWN {P}MON GYM$"
 
 LavaridgeTown_Gym_1F_Text_1FF5C4: @ 81FF5C4
-	.string "LAVARIDGE TOWN POKéMON GYM\p"
+	.string "LAVARIDGE TOWN {P}MON GYM\p"
 	.string "FLANNERY'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_1FF601: @ 81FF601
 	.string "FLANNERY: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
-	.string "I love POKéMON.\n"
+	.string "I love {P}MON.\n"
 	.string "I love to battle.\l"
 	.string "And… I love this GYM!\p"
 	.string "Let's exchange superhot moves\n"
@@ -409,12 +409,12 @@ LavaridgeTown_Gym_1F_Text_1FF6BF: @ 81FF6BF
 LavaridgeTown_Gym_1F_Text_1FF75E: @ 81FF75E
 	.string "FLANNERY: Losing a battle isn't going\n"
 	.string "to deflate me.\p"
-	.string "I love POKéMON.\n"
+	.string "I love {P}MON.\n"
 	.string "I love to battle.\l"
 	.string "And… I love this GYM!\p"
 	.string "Let's exchange superhot moves\n"
 	.string "in another battle!\p"
-	.string "Oh, wait. Do you only have one POKéMON\n"
+	.string "Oh, wait. Do you only have one {P}MON\n"
 	.string "that can battle?\p"
 	.string "I hate to say this, but when you come\n"
-	.string "see me, bring at least two POKéMON.$"
+	.string "see me, bring at least two {P}MON.$"

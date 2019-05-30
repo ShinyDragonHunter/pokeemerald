@@ -294,11 +294,11 @@ SlateportCity_OceanicMuseum_1F_Text_20B2A2: @ 820B2A2
 SlateportCity_OceanicMuseum_1F_Text_20B302: @ 820B302
 	.string "The sea is vast without end, and\n"
 	.string "infinitely deep…\p"
-	.string "There must be many POKéMON that\n"
+	.string "There must be many {P}MON that\n"
 	.string "we don't know about.$"
 
 SlateportCity_OceanicMuseum_1F_Text_20B369: @ 820B369
-	.string "I want a sea POKéMON.\p"
+	.string "I want a sea {P}MON.\p"
 	.string "I think it would feel cool and nice\n"
 	.string "to hug.$"
 

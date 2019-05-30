@@ -29,6 +29,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/species.h"
+extern const u8 gExpandedPlaceholder_Poke[];
 
 // EWRAM
 static EWRAM_DATA struct PokedexView *sPokedexView = NULL;

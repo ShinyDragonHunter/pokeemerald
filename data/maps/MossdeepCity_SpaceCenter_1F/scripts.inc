@@ -337,7 +337,7 @@ MossdeepCity_SpaceCenter_1F_Text_223664: @ 8223664
 	.string "strolls on the beach aren't safe.$"
 
 MossdeepCity_SpaceCenter_1F_Text_2236A6: @ 82236A6
-	.string "Some people claim that POKéMON came\n"
+	.string "Some people claim that {P}MON came\n"
 	.string "from space. Could it be true?$"
 
 MossdeepCity_SpaceCenter_1F_Text_2236E8: @ 82236E8
@@ -359,7 +359,7 @@ MossdeepCity_SpaceCenter_1F_Text_2237B5: @ 82237B5
 	.string "I'm not having any of that!$"
 
 MossdeepCity_SpaceCenter_1F_Text_223849: @ 8223849
-	.string "STEVEN: {PLAYER}{KUN}, have you read that\n"
+	.string "STEVEN: {PLAYER}, have you read that\n"
 	.string "proclamation already?\p"
 	.string "TEAM MAGMA is coming after the rocket\n"
 	.string "fuel on this island.\p"

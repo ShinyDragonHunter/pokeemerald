@@ -40,7 +40,7 @@ Route114_FossilManiacsHouse_Text_22AD85: @ 822AD85
 	.string "holes just like my big brother…$"
 
 Route114_FossilManiacsHouse_Text_22AE48: @ 822AE48
-	.string "If you make a POKéMON DIG inside a\n"
+	.string "If you make a {P}MON DIG inside a\n"
 	.string "cave, you're returned to the entrance…$"
 
 Route114_FossilManiacsHouse_Text_22AE92: @ 822AE92

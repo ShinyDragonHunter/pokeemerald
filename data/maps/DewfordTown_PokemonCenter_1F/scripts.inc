@@ -31,7 +31,7 @@ DewfordTown_PokemonCenter_1F_Text_1FC557: @ 81FC557
 	.string "there.$"
 
 DewfordTown_PokemonCenter_1F_Text_1FC5AE: @ 81FC5AE
-	.string "Even if a POKéMON faints and can't\n"
+	.string "Even if a {P}MON faints and can't\n"
 	.string "battle, it can still use a move learned\l"
 	.string "from a HIDDEN MACHINE (HM).$"
 

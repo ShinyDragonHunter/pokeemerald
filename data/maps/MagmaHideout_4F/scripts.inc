@@ -210,7 +210,7 @@ MagmaHideout_4F_Text_23AB33: @ 823AB33
 
 MagmaHideout_4F_Text_23ABB5: @ 823ABB5
 	.string "What makes you so adept at handling\n"
-	.string "POKéMON?$"
+	.string "{P}MON?$"
 
 MagmaHideout_4F_Text_23ABE2: @ 823ABE2
 	.string "MAXIE: There has to be some reason\n"

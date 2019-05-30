@@ -101,19 +101,19 @@ GraniteCave_StevensRoom_Text_22DDBD: @ 822DDBD
 	.string "STEEL WING.$"
 
 GraniteCave_StevensRoom_Text_22DE6B: @ 822DE6B
-	.string "STEVEN: Your POKéMON appear quite\n"
+	.string "STEVEN: Your {P}MON appear quite\n"
 	.string "capable.\p"
 	.string "If you keep training, you could even\n"
-	.string "become the CHAMPION of the POKéMON\l"
+	.string "become the CHAMPION of the {P}MON\l"
 	.string "LEAGUE one day. That's what I think.\p"
 	.string "I know, since we've gotten to know each\n"
 	.string "other, let's register one another in\l"
-	.string "our POKéNAVS.\p"
+	.string "our {P}NAVS.\p"
 	.string "… … … … … …$"
 
 GraniteCave_StevensRoom_Text_22DF6A: @ 822DF6A
 	.string "Registered STEVEN\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 GraniteCave_StevensRoom_Text_22DF8C: @ 822DF8C
 	.string "Now, I've got to hurry along.$"

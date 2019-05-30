@@ -48,9 +48,9 @@ FallarborTown_BattleTentCorridor_Text_200704: @ 8200704
 
 FallarborTown_BattleTentCorridor_Text_200791: @ 8200791
 	.string "See!\n"
-	.string "My POKéMON won all these RIBBONS!\p"
-	.string "Have your POKéMON earned any RIBBONS?\n"
-	.string "You can check them on your POKéNAV.$"
+	.string "My {P}MON won all these RIBBONS!\p"
+	.string "Have your {P}MON earned any RIBBONS?\n"
+	.string "You can check them on your {P}NAV.$"
 
 FallarborTown_BattleTentCorridor_Text_200802: @ 8200802
 	.string "I can't beat GYM LEADERS…\p"
@@ -59,6 +59,6 @@ FallarborTown_BattleTentCorridor_Text_200802: @ 8200802
 	.string "and it's all for naught…$"
 
 FallarborTown_BattleTentCorridor_Text_200876: @ 8200876
-	.string "POKéMON CONTESTS\n"
+	.string "{P}MON CONTESTS\n"
 	.string "SUPER RANK STAGE!$"
 

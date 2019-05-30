@@ -1,11 +1,11 @@
 LilycoveCity_DepartmentStore_1F_Text_2A6390: @ 82A6390
-	.string "This is the POKéMON LOTTERY CORNER.\p"
+	.string "This is the {P}MON LOTTERY CORNER.\p"
 	.string "All shoppers at our DEPARTMENT STORE\n"
-	.string "get to draw a POKéMON LOTO TICKET.\p"
+	.string "get to draw a {P}MON LOTO TICKET.\p"
 	.string "If the LOTO TICKET's number matches\n"
-	.string "the ID number of any of your POKéMON,\l"
+	.string "the ID number of any of your {P}MON,\l"
 	.string "you will receive a fabulous gift.\p"
-	.string "Would you like to draw a POKéMON\n"
+	.string "Would you like to draw a {P}MON\n"
 	.string "LOTO TICKET?$"
 
 LilycoveCity_DepartmentStore_1F_Text_2A6496: @ 82A6496
@@ -22,7 +22,7 @@ LilycoveCity_DepartmentStore_1F_Text_2A650B: @ 82A650B
 	.string "The LOTO TICKET number is {STR_VAR_1}.\p"
 	.string "I need to run a check on this number\n"
 	.string "to see if it matches any of your\l"
-	.string "POKéMON's ID numbers. Please wait.$"
+	.string "{P}MON's ID numbers. Please wait.$"
 
 LilycoveCity_DepartmentStore_1F_Text_2A6592: @ 82A6592
 	.string "Congratulations!\p"
@@ -72,6 +72,3 @@ LilycoveCity_DepartmentStore_1F_Text_2A67E1: @ 82A67E1
 	.string "Yes, I've been expecting you.\p"
 	.string "This is the prize we've been holding\n"
 	.string "for you.$"
-
-LilycoveCity_DepartmentStore_1F_Text_2A6831: @ 82A6831
-	.string "Please do visit again.$"

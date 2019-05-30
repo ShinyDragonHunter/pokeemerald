@@ -58,7 +58,7 @@ SootopolisCity_Mart_EventScript_22680C:: @ 822680C
 SootopolisCity_Mart_Text_226816: @ 8226816
 	.string "PP UP is great!\p"
 	.string "It raises the POWER POINTS, the PP,\n"
-	.string "of a POKéMON move.$"
+	.string "of a {P}MON move.$"
 
 SootopolisCity_Mart_Text_22685D: @ 822685D
 	.string "What…\n"

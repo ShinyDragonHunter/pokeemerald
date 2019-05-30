@@ -467,7 +467,7 @@ MauvilleCity_EventScript_1DF7BA:: @ 81DF7BA
 	end
 
 MauvilleCity_Text_1DF7DC: @ 81DF7DC
-	.string "UNCLE: It's because of POKéMON that\n"
+	.string "UNCLE: It's because of {P}MON that\n"
 	.string "this boy's got more pep, I suppose…\l"
 	.string "But he's become a bit too peppy…$"
 
@@ -479,7 +479,7 @@ MauvilleCity_Text_1DF845: @ 81DF845
 
 MauvilleCity_Text_1DF8B9: @ 81DF8B9
 	.string "UNCLE: Now hold on, WALLY.\p"
-	.string "Since you started living with POKéMON,\n"
+	.string "Since you started living with {P}MON,\n"
 	.string "you have grown quite a lot stronger.\p"
 	.string "But don't you think you're pushing it\n"
 	.string "to suddenly challenge a GYM?$"
@@ -504,7 +504,7 @@ MauvilleCity_Text_1DFA4A: @ 81DFA4A
 	.string "become really strong.$"
 
 MauvilleCity_Text_1DFAA5: @ 81DFAA5
-	.string "UNCLE: {PLAYER}{KUN}, was it?\n"
+	.string "UNCLE: {PLAYER}, was it?\n"
 	.string "On WALLY's behalf, can I ask you to\l"
 	.string "battle with him just this once?\p"
 	.string "I don't think he's going to listen to\n"
@@ -530,7 +530,7 @@ MauvilleCity_Text_1DFBC3: @ 81DFBC3
 MauvilleCity_Text_1DFBED: @ 81DFBED
 	.string "{PLAYER}, thank you.\n"
 	.string "Being a TRAINER is tough, isn't it?\p"
-	.string "It's not enough just to have POKéMON\n"
+	.string "It's not enough just to have {P}MON\n"
 	.string "and make them battle. That isn't what\l"
 	.string "being a real TRAINER is about.$"
 
@@ -543,10 +543,10 @@ MauvilleCity_Text_1DFC8A: @ 81DFC8A
 	.string "Everyone's waiting for you.$"
 
 MauvilleCity_Text_1DFD34: @ 81DFD34
-	.string "UNCLE: {PLAYER}{KUN}, it just dawned on me\n"
+	.string "UNCLE: {PLAYER}, it just dawned on me\n"
 	.string "that you must be the TRAINER who kept\l"
 	.string "an eye out for WALLY when he caught\l"
-	.string "his POKéMON.\p"
+	.string "his {P}MON.\p"
 	.string "Why don't you visit us in VERDANTURF\n"
 	.string "sometime?\l"
 	.string "I'm sure WALLY would enjoy it.$"
@@ -557,7 +557,7 @@ MauvilleCity_Text_1DFDFB: @ 81DFDFB
 	.string "… … … … … Beep!\p"
 	.string "WALLY: Oh, hello, {PLAYER}!\p"
 	.string "I just wanted to tell you that\n"
-	.string "my uncle bought me a POKéNAV!\p"
+	.string "my uncle bought me a {P}NAV!\p"
 	.string "Now I can get in touch with you\n"
 	.string "anytime, {PLAYER}!\p"
 	.string "… … … … … …\n"
@@ -565,7 +565,7 @@ MauvilleCity_Text_1DFDFB: @ 81DFDFB
 
 MauvilleCity_Text_1DFEB4: @ 81DFEB4
 	.string "Registered WALLY\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 MauvilleCity_Text_1DFED5: @ 81DFED5
 	.string "SCOTT: Hehe…\n"
@@ -574,21 +574,21 @@ MauvilleCity_Text_1DFED5: @ 81DFED5
 	.string "aren't you?\p"
 	.string "But you didn't hold anything back\n"
 	.string "and beat him impressively.\p"
-	.string "Yeah! That's what a real POKéMON\n"
+	.string "Yeah! That's what a real {P}MON\n"
 	.string "battle is all about!\p"
 	.string "I idolize TRAINERS like that!\p"
 	.string "… … … … … …\n"
 	.string "I'll be cheering for you!$"
 
 MauvilleCity_Text_1DFFE4: @ 81DFFE4
-	.string "WATTSON: Oh, {PLAYER}{KUN}!\n"
+	.string "WATTSON: Oh, {PLAYER}!\n"
 	.string "You look like you have a lot of zip!\l"
 	.string "That's a good thing, wahahahaha!\p"
 	.string "Fine! I've decided!\n"
-	.string "I need a favor, {PLAYER}{KUN}!\p"
+	.string "I need a favor, {PLAYER}!\p"
 	.string "MAUVILLE CITY has an underground\n"
 	.string "sector called NEW MAUVILLE.\p"
-	.string "{PLAYER}{KUN}, I'd like you to go there and\n"
+	.string "{PLAYER}, I'd like you to go there and\n"
 	.string "switch off the GENERATOR.\p"
 	.string "The GENERATOR has been running a bit\n"
 	.string "haywire. It's getting unsafe.\p"
@@ -605,7 +605,7 @@ MauvilleCity_Text_1E0154: @ 81E0154
 
 MauvilleCity_Text_1E020E: @ 81E020E
 	.string "WATTSON: Wahahahaha!\p"
-	.string "I knew it, {PLAYER}{KUN}! I knew I'd made\n"
+	.string "I knew it, {PLAYER}! I knew I'd made\n"
 	.string "the right choice asking you!\p"
 	.string "This is my thanks--a TM containing\n"
 	.string "THUNDERBOLT!\p"
@@ -617,9 +617,9 @@ MauvilleCity_Text_1E02AA: @ 81E02AA
 	.string "the young step up and take charge!$"
 
 MauvilleCity_Text_1E0301: @ 81E0301
-	.string "You know, it's cool to have POKéMON\n"
+	.string "You know, it's cool to have {P}MON\n"
 	.string "battles and stuff…\p"
-	.string "But if your POKéMON gets hurt,\n"
+	.string "But if your {P}MON gets hurt,\n"
 	.string "you have to nurse it back to health.$"
 
 MauvilleCity_Text_1E037C: @ 81E037C
@@ -635,14 +635,14 @@ MauvilleCity_Text_1E03FB: @ 81E03FB
 
 MauvilleCity_Text_1E044A: @ 81E044A
 	.string "Even if you're riding a BIKE,\n"
-	.string "wild POKéMON could jump you.$"
+	.string "wild {P}MON could jump you.$"
 
 MauvilleCity_Text_1E0485: @ 81E0485
 	.string "MAUVILLE CITY\n"
 	.string "“The bright and shiny city of fun!”$"
 
 MauvilleCity_Text_1E04B7: @ 81E04B7
-	.string "MAUVILLE CITY POKéMON GYM\n"
+	.string "MAUVILLE CITY {P}MON GYM\n"
 	.string "LEADER: WATTSON\l"
 	.string "“The cheerfully electrifying man!”$"
 

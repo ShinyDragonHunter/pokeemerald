@@ -387,8 +387,8 @@ TrainerHill_Entrance_Text_2687C3: @ 82687C3
 
 TrainerHill_Entrance_Text_26890D: @ 826890D
 	.string "Oh, I'm sorry, but you appear to have\n"
-	.string "only one POKéMON with you.\p"
-	.string "You will need at least two POKéMON\n"
+	.string "only one {P}MON with you.\p"
+	.string "You will need at least two {P}MON\n"
 	.string "to enter this event.$"
 
 TrainerHill_Roof_Text_268986: @ 8268986
@@ -445,7 +445,7 @@ TrainerHill_Entrance_Text_268D47: @ 8268D47
 
 TrainerHill_Entrance_Text_268D5A: @ 8268D5A
 	.string "Who knows what sort of TRAINERS\n"
-	.string "and POKéMON combos are ahead?\p"
+	.string "and {P}MON combos are ahead?\p"
 	.string "All I know is that I'll knock aside\n"
 	.string "anyone that stands in my way!$"
 

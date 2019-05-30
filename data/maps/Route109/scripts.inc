@@ -523,7 +523,7 @@ Route109_Text_1EEF08: @ 81EEF08
 	.string "Little kids can dart around so quickly…\p"
 	.string "You don't dare take your eyes off them\n"
 	.string "for an instant. It's very taxing.\p"
-	.string "Mine are with my POKéMON, so they\n"
+	.string "Mine are with my {P}MON, so they\n"
 	.string "should be okay, but…$"
 
 Route109_Text_1EEFB0: @ 81EEFB0
@@ -559,7 +559,7 @@ Route109_Text_1EF185: @ 81EF185
 
 Route109_Text_1EF1D5: @ 81EF1D5
 	.string "TRAINER TIPS\p"
-	.string "POKéMON at the same level may not\n"
+	.string "{P}MON at the same level may not\n"
 	.string "always have identical stats.\p"
-	.string "POKéMON raised by TRAINERS are said\n"
-	.string "to grow stronger than wild POKéMON.$"
+	.string "{P}MON raised by TRAINERS are said\n"
+	.string "to grow stronger than wild {P}MON.$"

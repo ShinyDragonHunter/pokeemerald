@@ -20,7 +20,7 @@ RustboroCity_House3_EventScript_2161A3:: @ 82161A3
 	end
 
 RustboroCity_House3_Text_2161B6: @ 82161B6
-	.string "For my own POKéMON, I give them\n"
+	.string "For my own {P}MON, I give them\n"
 	.string "perfectly suited nicknames!\p"
 	.string "It's my expression of, uh…\n"
 	.string "originality, yes, that's it!$"

@@ -70,7 +70,7 @@ LilycoveCity_CoveLilyMotel_2F_EventScript_21876A:: @ 821876A
 LilycoveCity_CoveLilyMotel_2F_Text_218774: @ 8218774
 	.string "I'm the GAME DESIGNER.\p"
 	.string "Oh, is that right?\n"
-	.string "You're working on a POKéDEX?\p"
+	.string "You're working on a {P}DEX?\p"
 	.string "It's tough trying to complete it,\n"
 	.string "but don't give up.\p"
 	.string "If you do complete it, please come\n"
@@ -79,8 +79,8 @@ LilycoveCity_CoveLilyMotel_2F_Text_218774: @ 8218774
 LilycoveCity_CoveLilyMotel_2F_Text_21881C: @ 821881C
 	.string "Wow! That's awesome!\n"
 	.string "Yep, it's totally awesome!\p"
-	.string "This POKéDEX is completely filled!\n"
-	.string "You really must love POKéMON!\p"
+	.string "This {P}DEX is completely filled!\n"
+	.string "You really must love {P}MON!\p"
 	.string "I'm so impressed!\p"
 	.string "Let me give you something in\n"
 	.string "recognition of your feat!$"
@@ -93,7 +93,7 @@ LilycoveCity_CoveLilyMotel_2F_Text_2188D6: @ 82188D6
 
 LilycoveCity_CoveLilyMotel_2F_Text_21892B: @ 821892B
 	.string "I'm the GRAPHIC ARTIST! Aren't the\n"
-	.string "POKéMON of HOENN interesting?$"
+	.string "{P}MON of HOENN interesting?$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_21896C: @ 821896C
 	.string "The girl TUBERS, they're cute, hey?\n"
@@ -118,14 +118,14 @@ LilycoveCity_CoveLilyMotel_2F_Text_218ACF: @ 8218ACF
 	.string "… … … … … Zzz…\p"
 	.string "… … … … … Huh?!\n"
 	.string "Oh, sorry, sorry! I was snoozing!\p"
-	.string "I came to check out this POKéMON\n"
+	.string "I came to check out this {P}MON\n"
 	.string "CONTEST thing.\p"
 	.string "I have to admit, it does look quite\n"
 	.string "entertaining, but…\p"
 	.string "Consider me a purist--I prefer\n"
 	.string "battles and tough TRAINERS.\p"
 	.string "But that's just me.\p"
-	.string "{PLAYER}{KUN}, I hope you'll enjoy everything\n"
+	.string "{PLAYER}, I hope you'll enjoy everything\n"
 	.string "like the GYMS, CONTESTS, BATTLE TENT,\l"
 	.string "the whole works!$"
 

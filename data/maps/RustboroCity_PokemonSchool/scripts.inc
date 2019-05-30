@@ -204,22 +204,22 @@ RustboroCity_PokemonSchool_EventScript_2140A8:: @ 82140A8
 
 RustboroCity_PokemonSchool_Text_2140B2: @ 82140B2
 	.string "The blackboard lists status changes\n"
-	.string "that may affect POKéMON in battle.$"
+	.string "that may affect {P}MON in battle.$"
 
 RustboroCity_PokemonSchool_Text_2140F9: @ 82140F9
 	.string "Which topic do you want to read?$"
 
 RustboroCity_PokemonSchool_Text_21411A: @ 821411A
-	.string "If a POKéMON is poisoned, it will\n"
+	.string "If a {P}MON is poisoned, it will\n"
 	.string "steadily lose HP.\p"
 	.string "The effects of poison remain after\n"
 	.string "a battle.\p"
-	.string "A poisoned POKéMON's HP will drop\n"
+	.string "A poisoned {P}MON's HP will drop\n"
 	.string "while it is traveling.\p"
 	.string "Heal a poisoning using an ANTIDOTE.$"
 
 RustboroCity_PokemonSchool_Text_2141D8: @ 82141D8
-	.string "If a POKéMON becomes paralyzed,\n"
+	.string "If a {P}MON becomes paralyzed,\n"
 	.string "its SPEED drops.\p"
 	.string "It may also not be able to move while\n"
 	.string "it is in battle.\p"
@@ -227,9 +227,9 @@ RustboroCity_PokemonSchool_Text_2141D8: @ 82141D8
 	.string "Cure it using a PARLYZ HEAL.$"
 
 RustboroCity_PokemonSchool_Text_21427D: @ 821427D
-	.string "If a POKéMON falls asleep, it will be\n"
+	.string "If a {P}MON falls asleep, it will be\n"
 	.string "unable to attack.\p"
-	.string "A POKéMON may wake up on its own,\n"
+	.string "A {P}MON may wake up on its own,\n"
 	.string "but if a battle ends while it is\l"
 	.string "sleeping, it will stay asleep.\p"
 	.string "Wake it up using an AWAKENING.$"
@@ -241,7 +241,7 @@ RustboroCity_PokemonSchool_Text_214336: @ 8214336
 	.string "Cure a burn using a BURN HEAL.$"
 
 RustboroCity_PokemonSchool_Text_2143B8: @ 82143B8
-	.string "If a POKéMON is frozen, it becomes\n"
+	.string "If a {P}MON is frozen, it becomes\n"
 	.string "completely helpless.\p"
 	.string "It will remain frozen after battle.\n"
 	.string "Thaw it out using an ICE HEAL.$"
@@ -254,16 +254,16 @@ RustboroCity_PokemonSchool_Text_214433: @ 8214433
 	.string "this item.$"
 
 RustboroCity_PokemonSchool_Text_2144C8: @ 82144C8
-	.string "A POKéMON holding the QUICK CLAW will\n"
+	.string "A {P}MON holding the QUICK CLAW will\n"
 	.string "occasionally speed up and get to move\l"
 	.string "before its opponent.\p"
 	.string "There are many other items that are\n"
-	.string "meant to be held by POKéMON.\p"
+	.string "meant to be held by {P}MON.\p"
 	.string "Just those alone will give you many\n"
 	.string "topics to study!$"
 
 RustboroCity_PokemonSchool_Text_21459F: @ 821459F
-	.string "I'm trading POKéMON with my friend\n"
+	.string "I'm trading {P}MON with my friend\n"
 	.string "right now.$"
 
 RustboroCity_PokemonSchool_Text_2145CD: @ 82145CD
@@ -271,38 +271,38 @@ RustboroCity_PokemonSchool_Text_2145CD: @ 82145CD
 	.string "I'm finally getting one!$"
 
 RustboroCity_PokemonSchool_Text_214604: @ 8214604
-	.string "POKéMON can hold items, but they\n"
+	.string "{P}MON can hold items, but they\n"
 	.string "don't know what to do with man-made\l"
 	.string "items like POTION and ANTIDOTE.$"
 
 RustboroCity_PokemonSchool_Text_214669: @ 8214669
-	.string "You know how some POKéMON moves can\n"
-	.string "confuse a POKéMON?\p"
-	.string "A confused POKéMON will sometimes\n"
+	.string "You know how some {P}MON moves can\n"
+	.string "confuse a {P}MON?\p"
+	.string "A confused {P}MON will sometimes\n"
 	.string "attack itself without meaning to.\p"
 	.string "But once it leaves battle, it will\n"
 	.string "return to normal.$"
 
 RustboroCity_PokemonSchool_Text_214719: @ 8214719
-	.string "A POKéMON holding a BERRY will heal\n"
+	.string "A {P}MON holding a BERRY will heal\n"
 	.string "itself…\p"
 	.string "There are many kinds of items that\n"
-	.string "POKéMON can hold…\p"
+	.string "{P}MON can hold…\p"
 	.string "Boy, it sure is hard taking notes\n"
 	.string "down…$"
 
 RustboroCity_PokemonSchool_Text_2147A2: @ 82147A2
 	.string "It's this student's notebook…\p"
-	.string "POKéMON are to be caught using\n"
-	.string "POKé BALLS.\p"
-	.string "Up to six POKéMON can accompany\n"
+	.string "{P}MON are to be caught using\n"
+	.string "{P} BALLS.\p"
+	.string "Up to six {P}MON can accompany\n"
 	.string "a TRAINER.\p"
 	.string "A TRAINER is someone who catches\n"
-	.string "POKéMON, raises them, and battles\l"
+	.string "{P}MON, raises them, and battles\l"
 	.string "with them.\p"
 	.string "A TRAINER's mission is to defeat\n"
 	.string "the strong TRAINERS who await\l"
-	.string "challengers in POKéMON GYMS.$"
+	.string "challengers in {P}MON GYMS.$"
 
 RustboroCity_PokemonSchool_Text_2148C0: @ 82148C0
 	.string "Hello? Didn't we meet before?\n"
@@ -312,11 +312,11 @@ RustboroCity_PokemonSchool_Text_2148C0: @ 82148C0
 	.string "I've been traveling everywhere in\n"
 	.string "search of outstanding TRAINERS.\p"
 	.string "More specifically, I'm looking for\n"
-	.string "POKéMON battle experts.\p"
+	.string "{P}MON battle experts.\p"
 	.string "So, what brings you to this SCHOOL?\n"
 	.string "Are you a TRAINER, too?\p"
 	.string "The first thing you should do is to\n"
-	.string "have a POKéMON learn the move CUT.\p"
+	.string "have a {P}MON learn the move CUT.\p"
 	.string "If I remember correctly, someone in\n"
 	.string "this town has CUT.$"
 
@@ -342,7 +342,7 @@ RustboroCity_PokemonSchool_Text_214B8A: @ 8214B8A
 	.string "I've been traveling everywhere in\n"
 	.string "search of outstanding TRAINERS.\p"
 	.string "More specifically, I'm looking for\n"
-	.string "POKéMON battle experts.\p"
+	.string "{P}MON battle experts.\p"
 	.string "Oh, what's that?\n"
 	.string "It's a STONE BADGE, isn't it?\p"
 	.string "That's pretty impressive, I'd say, for\n"

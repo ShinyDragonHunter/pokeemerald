@@ -47,7 +47,7 @@ MossdeepCity_House4_Text_222E31: @ 8222E31
 MossdeepCity_House4_Text_222E73: @ 8222E73
 	.string "My little brother says he likes to\n"
 	.string "visit people's SECRET BASES and have\l"
-	.string "POKéMON battles.$"
+	.string "{P}MON battles.$"
 
 MossdeepCity_House4_Text_222ECC: @ 8222ECC
 	.string "Was it you who made a SECRET BASE\n"

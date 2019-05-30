@@ -89,7 +89,7 @@ SootopolisCity_Gym_B1F_Text_225F67: @ 8225F67
 	.string "The grace you bring to battle is\n"
 	.string "fabulous.\p"
 	.string "Oh… I'm so fortunate to have found\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 SootopolisCity_Gym_B1F_Text_225FBE: @ 8225FBE
 	.string "I should teach you how harsh battles\n"
@@ -105,7 +105,7 @@ SootopolisCity_Gym_B1F_Text_225FFE: @ 8225FFE
 	.string "need to walk on each floor tile once.$"
 
 SootopolisCity_Gym_B1F_Text_226061: @ 8226061
-	.string "The POKéMON GYM of the highest level\n"
+	.string "The {P}MON GYM of the highest level\n"
 	.string "in the HOENN region…\p"
 	.string "That's the SOOTOPOLIS GYM.$"
 
@@ -119,7 +119,7 @@ SootopolisCity_Gym_B1F_Text_2260D1: @ 82260D1
 	.string "But above all, it looks more fun.$"
 
 SootopolisCity_Gym_B1F_Text_226164: @ 8226164
-	.string "I train my POKéMON together with\n"
+	.string "I train my {P}MON together with\n"
 	.string "JUAN.\p"
 	.string "Don't think I'm a pushover.$"
 
@@ -145,7 +145,7 @@ SootopolisCity_Gym_B1F_Text_226286: @ 8226286
 	.string "with how young or old you are.$"
 
 SootopolisCity_Gym_B1F_Text_2262F3: @ 82262F3
-	.string "When I'm with my POKéMON, the time\n"
+	.string "When I'm with my {P}MON, the time\n"
 	.string "flies by before you can say, “Oops!”$"
 
 SootopolisCity_Gym_B1F_Text_22633B: @ 822633B
@@ -156,16 +156,16 @@ SootopolisCity_Gym_B1F_Text_226341: @ 8226341
 	.string "before I can manage an “Oops!”$"
 
 SootopolisCity_Gym_B1F_Text_226388: @ 8226388
-	.string "I can battle with really rare POKéMON\n"
+	.string "I can battle with really rare {P}MON\n"
 	.string "if you'd like.$"
 
 SootopolisCity_Gym_B1F_Text_2263BD: @ 82263BD
 	.string "Oh, there now! Did you have a good look\n"
-	.string "at my POKéMON?$"
+	.string "at my {P}MON?$"
 
 SootopolisCity_Gym_B1F_Text_2263F4: @ 82263F4
 	.string "I came to this GYM because JUAN\n"
-	.string "praised me for my darling POKéMON.\p"
+	.string "praised me for my darling {P}MON.\p"
 	.string "Oh, if only I'd met JUAN years ago\n"
 	.string "when I was younger…$"
 

@@ -28,20 +28,20 @@ VictoryRoad_B1F_EventScript_236541:: @ 8236541
 
 VictoryRoad_B1F_Text_236558: @ 8236558
 	.string "The thought that I'm getting closer to\n"
-	.string "the POKéMON LEAGUE…\p"
+	.string "the {P}MON LEAGUE…\p"
 	.string "I'm getting stage fright…$"
 
 VictoryRoad_B1F_Text_2365AD: @ 82365AD
 	.string "I couldn't do a thing…$"
 
 VictoryRoad_B1F_Text_2365C4: @ 82365C4
-	.string "The POKéMON LEAGUE became distant\n"
+	.string "The {P}MON LEAGUE became distant\n"
 	.string "again… What a letdown…$"
 
 VictoryRoad_B1F_Text_2365FD: @ 82365FD
-	.string "To win your way through the POKéMON\n"
+	.string "To win your way through the {P}MON\n"
 	.string "LEAGUE, you need the trust of your\l"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 VictoryRoad_B1F_Text_23664D: @ 823664D
 	.string "Your relationship is based on\n"
@@ -49,21 +49,21 @@ VictoryRoad_B1F_Text_23664D: @ 823664D
 
 VictoryRoad_B1F_Text_236678: @ 8236678
 	.string "By being together all the time, trust\n"
-	.string "grows between POKéMON and TRAINERS.$"
+	.string "grows between {P}MON and TRAINERS.$"
 
 VictoryRoad_B1F_Text_2366C2: @ 82366C2
 	.string "This isn't the goal. It's only a place\n"
-	.string "on the way to the POKéMON LEAGUE.$"
+	.string "on the way to the {P}MON LEAGUE.$"
 
 VictoryRoad_B1F_Text_23670B: @ 823670B
 	.string "That's the way!$"
 
 VictoryRoad_B1F_Text_23671B: @ 823671B
 	.string "You'll do fine, for sure!\n"
-	.string "Your POKéMON are all eager to go!$"
+	.string "Your {P}MON are all eager to go!$"
 
 VictoryRoad_B1F_Text_236757: @ 8236757
-	.string "My POKéMON are cosmically\n"
+	.string "My {P}MON are cosmically\n"
 	.string "awe inspiring!$"
 
 VictoryRoad_B1F_Text_236780: @ 8236780
@@ -72,7 +72,7 @@ VictoryRoad_B1F_Text_236780: @ 8236780
 VictoryRoad_B1F_Text_2367A7: @ 82367A7
 	.string "Even outside of battle, I sense\n"
 	.string "incredible power emanating from you\l"
-	.string "and your POKéMON.$"
+	.string "and your {P}MON.$"
 
 VictoryRoad_B1F_Text_2367FD: @ 82367FD
 	.string "Okay, no need to get your back up!\n"

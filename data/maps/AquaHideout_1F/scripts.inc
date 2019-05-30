@@ -63,7 +63,7 @@ AquaHideout_1F_Text_2335E3: @ 82335E3
 	.string "What? What?\n"
 	.string "Are you a TEAM MAGMA grunt?\p"
 	.string "I hear that TEAM MAGMA is trying to\n"
-	.string "awaken an awesome POKéMON at their\l"
+	.string "awaken an awesome {P}MON at their\l"
 	.string "HIDEOUT.\p"
 	.string "But where might their HIDEOUT be?$"
 
@@ -91,8 +91,8 @@ AquaHideout_1F_Text_2337FA: @ 82337FA
 	.string "What? What?\n"
 	.string "Are you a TEAM MAGMA grunt?\p"
 	.string "I hear that TEAM MAGMA is after\n"
-	.string "an awesome POKéMON at MT. CHIMNEY.\p"
-	.string "But what is that POKéMON like?$"
+	.string "an awesome {P}MON at MT. CHIMNEY.\p"
+	.string "But what is that {P}MON like?$"
 
 AquaHideout_1F_Text_233884: @ 8233884
 	.string "What? What? What do you want with\n"

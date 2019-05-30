@@ -139,7 +139,7 @@ FortreeCity_Gym_Text_216785: @ 8216785
 	.string "Yo, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "FORTREE GYM LEADER WINONA is\n"
-	.string "a master of FLYING-type POKéMON.\p"
+	.string "a master of FLYING-type {P}MON.\p"
 	.string "She's waiting at the back of this GYM,\n"
 	.string "behind the rotating doors.\p"
 	.string "She's waiting for new challengers\n"
@@ -152,7 +152,7 @@ FortreeCity_Gym_Text_21687D: @ 821687D
 
 FortreeCity_Gym_Text_2168A2: @ 82168A2
 	.string "Behold the elegant battle style of\n"
-	.string "BIRD POKéMON!$"
+	.string "BIRD {P}MON!$"
 
 FortreeCity_Gym_Text_2168D3: @ 82168D3
 	.string "You…\n"
@@ -165,7 +165,7 @@ FortreeCity_Gym_Text_2168E7: @ 82168E7
 	.string "our LEADER?$"
 
 FortreeCity_Gym_Text_21695A: @ 821695A
-	.string "The lovers of BIRD POKéMON aspire\n"
+	.string "The lovers of BIRD {P}MON aspire\n"
 	.string "to join this GYM.\p"
 	.string "As a member of the FORTREE GYM,\n"
 	.string "I'm not allowed to lose!$"
@@ -222,7 +222,7 @@ FortreeCity_Gym_Text_216C32: @ 8216C32
 
 FortreeCity_Gym_Text_216C96: @ 8216C96
 	.string "You'd better know that there are all\n"
-	.string "sorts of FLYING-type POKéMON.\p"
+	.string "sorts of FLYING-type {P}MON.\p"
 	.string "You do know that, right?$"
 
 FortreeCity_Gym_Text_216CF2: @ 8216CF2
@@ -231,21 +231,21 @@ FortreeCity_Gym_Text_216CF2: @ 8216CF2
 FortreeCity_Gym_Text_216D0F: @ 8216D0F
 	.string "Sure, you beat me all right.\n"
 	.string "But you'd better watch it! Our LEADER\l"
-	.string "WINONA's POKéMON are all business.$"
+	.string "WINONA's {P}MON are all business.$"
 
 FortreeCity_Gym_Text_216D75: @ 8216D75
 	.string "I am WINONA. I am the LEADER of\n"
-	.string "the FORTREE POKéMON GYM.\p"
-	.string "I have become one with BIRD POKéMON\n"
+	.string "the FORTREE {P}MON GYM.\p"
+	.string "I have become one with BIRD {P}MON\n"
 	.string "and have soared the skies…\p"
 	.string "However grueling the battle, we have\n"
 	.string "triumphed with grace…\p"
 	.string "Witness the elegant choreography\n"
-	.string "of BIRD POKéMON and I!$"
+	.string "of BIRD {P}MON and I!$"
 
 FortreeCity_Gym_Text_216E60: @ 8216E60
 	.string "Never before have I seen a TRAINER\n"
-	.string "command POKéMON with more grace\l"
+	.string "command {P}MON with more grace\l"
 	.string "than I…\p"
 	.string "In recognition of your prowess,\n"
 	.string "I present to you this GYM BADGE.$"
@@ -255,7 +255,7 @@ FortreeCity_Gym_Text_216EEC: @ 8216EEC
 	.string "from WINONA.$"
 
 FortreeCity_Gym_Text_216F17: @ 8216F17
-	.string "With the FEATHER BADGE, all POKéMON up\n"
+	.string "With the FEATHER BADGE, all {P}MON up\n"
 	.string "to LV 70, even those received through\l"
 	.string "trades, will obey your every command.\p"
 	.string "You will also be able to use\n"
@@ -266,22 +266,22 @@ FortreeCity_Gym_Text_216F17: @ 8216F17
 FortreeCity_Gym_Text_216FEC: @ 8216FEC
 	.string "TM40 contains AERIAL ACE.\p"
 	.string "Its speed…\n"
-	.string "No POKéMON should be able to avoid it.\p"
+	.string "No {P}MON should be able to avoid it.\p"
 	.string "… … … … … …$"
 
 FortreeCity_Gym_Text_217044: @ 8217044
 	.string "Registered GYM LEADER WINONA\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 FortreeCity_Gym_Text_217071: @ 8217071
 	.string "Though I fell to you, I will remain\n"
-	.string "devoted to BIRD POKéMON.$"
+	.string "devoted to BIRD {P}MON.$"
 
 FortreeCity_Gym_Text_2170AE: @ 82170AE
-	.string "FORTREE CITY POKéMON GYM$"
+	.string "FORTREE CITY {P}MON GYM$"
 
 FortreeCity_Gym_Text_2170C7: @ 82170C7
-	.string "FORTREE CITY POKéMON GYM\p"
+	.string "FORTREE CITY {P}MON GYM\p"
 	.string "WINONA'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
@@ -315,6 +315,6 @@ FortreeCity_Gym_Text_217292: @ 8217292
 	.string "Please, allow me to see your power\n"
 	.string "at full flight!\p"
 	.string "Oh, no… Do you have but one\n"
-	.string "POKéMON with you?\p"
-	.string "Please return with two POKéMON\n"
+	.string "{P}MON with you?\p"
+	.string "Please return with two {P}MON\n"
 	.string "at the very least.$"

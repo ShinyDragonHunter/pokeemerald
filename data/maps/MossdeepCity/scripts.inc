@@ -376,7 +376,7 @@ MossdeepCity_Text_1E5135: @ 81E5135
 
 MossdeepCity_Text_1E5213: @ 81E5213
 	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
+	.string "But crossing the sea with {P}MON\n"
 	.string "using SURF…\p"
 	.string "Now that's an exhilarating trip!\n"
 	.string "Wouldn't you agree, youngster?$"
@@ -395,20 +395,20 @@ MossdeepCity_Text_1E5396: @ 81E5396
 	.string "It's a white rock.$"
 
 MossdeepCity_Text_1E53A9: @ 81E53A9
-	.string "MOSSDEEP CITY POKéMON GYM\n"
+	.string "MOSSDEEP CITY {P}MON GYM\n"
 	.string "LEADERS: LIZA & TATE\p"
 	.string "“The mystic combination!”$"
 
 MossdeepCity_Text_1E53F2: @ 81E53F2
 	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "“Our slogan: Cherish {P}MON!”$"
 
 MossdeepCity_Text_1E541F: @ 81E541F
 	.string "MOSSDEEP SPACE CENTER\n"
 	.string "“The closest place to space.”$"
 
 MossdeepCity_Text_1E5453: @ 81E5453
-	.string "SCOTT: {PLAYER}{KUN}, feeling good?\n"
+	.string "SCOTT: {PLAYER}, feeling good?\n"
 	.string "I'm doing great!\p"
 	.string "I'd heard MOSSDEEP's GYM LEADER is\n"
 	.string "pretty strong, so I decided to come\l"

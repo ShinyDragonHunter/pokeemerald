@@ -153,7 +153,7 @@ MossdeepCity_StevensHouse_EventScript_222926:: @ 8222926
 	end
 
 MossdeepCity_StevensHouse_Text_222936: @ 8222936
-	.string "STEVEN: {PLAYER}{KUN}…\p"
+	.string "STEVEN: {PLAYER}…\p"
 	.string "As you can see, there's not much here,\n"
 	.string "but this is my home.\p"
 	.string "Thank you for all that you've done.\p"
@@ -180,34 +180,34 @@ MossdeepCity_StevensHouse_Text_222B11: @ 8222B11
 	.string "found in his submarine.$"
 
 MossdeepCity_StevensHouse_Text_222B9E: @ 8222B9E
-	.string "{PLAYER} checked the POKé BALL.\p"
-	.string "It contained the POKéMON\n"
+	.string "{PLAYER} checked the {P} BALL.\p"
+	.string "It contained the {P}MON\n"
 	.string "BELDUM.\p"
-	.string "Take the POKé BALL?$"
+	.string "Take the {P} BALL?$"
 
 MossdeepCity_StevensHouse_Text_222BED: @ 8222BED
 	.string "{PLAYER} obtained a BELDUM.$"
 
 MossdeepCity_StevensHouse_Text_222C03: @ 8222C03
-	.string "There is no space for another POKéMON.$"
+	.string "There is no space for another {P}MON.$"
 
 MossdeepCity_StevensHouse_Text_222C2A: @ 8222C2A
-	.string "{PLAYER} left the POKé BALL where\n"
+	.string "{PLAYER} left the {P} BALL where\n"
 	.string "it was.$"
 
 MossdeepCity_StevensHouse_Text_222C4E: @ 8222C4E
 	.string "It's a letter.\p"
 	.string "… … … … … …\p"
-	.string "To {PLAYER}{KUN}…\p"
+	.string "To {PLAYER}…\p"
 	.string "I've decided to do a little soul-\n"
 	.string "searching and train on the road.\p"
 	.string "I don't plan to return home for some\n"
 	.string "time.\p"
 	.string "I have a favor to ask of you.\p"
-	.string "I want you to take the POKé BALL on\n"
+	.string "I want you to take the {P} BALL on\n"
 	.string "the desk.\p"
 	.string "Inside it is a BELDUM, my favorite\n"
-	.string "POKéMON.\p"
+	.string "{P}MON.\p"
 	.string "I'm counting on you.\p"
 	.string "May our paths cross someday.\p"
 	.string "STEVEN STONE$"

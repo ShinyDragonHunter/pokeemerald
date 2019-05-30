@@ -681,12 +681,12 @@ Text_StyleUnrestrained: @ 825AAE6
 BattleFrontier_BattleFactoryPreBattleRoom_Text_25AB2E: @ 825AB2E
 SlateportCity_BattleTentCorridor_Text_25AB2E: @ 825AB2E
 	.string "Before starting the battle, would you\n"
-	.string "like to swap a POKéMON?$"
+	.string "like to swap a {P}MON?$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_25AB6C: @ 825AB6C
 SlateportCity_BattleTentCorridor_Text_25AB6C: @ 825AB6C
 	.string "Thank you!\n"
-	.string "Your POKéMON swap is complete.$"
+	.string "Your {P}MON swap is complete.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_25AB96: @ 825AB96
 SlateportCity_BattleTentCorridor_Text_25AB96: @ 825AB96

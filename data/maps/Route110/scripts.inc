@@ -784,9 +784,9 @@ Route110_Text_1EFC0D: @ 81EFC0D
 	.string "smiles to people's faces!$"
 
 Route110_Text_1EFC48: @ 81EFC48
-	.string "MAY: Hi, {PLAYER}{KUN}, long time no see!\p"
+	.string "{RIVAL}: Hi, {PLAYER}, long time no see!\p"
 	.string "While I was searching for other\n"
-	.string "POKéMON, my POKéMON grew stronger.\p"
+	.string "{P}MON, my {P}MON grew stronger.\p"
 	.string "So…\n"
 	.string "How about a little battle?$"
 
@@ -795,25 +795,25 @@ Route110_Text_1EFCCB: @ 81EFCCB
 	.string "You're better than I expected!$"
 
 Route110_Text_1EFCF1: @ 81EFCF1
-	.string "MAY: {PLAYER}{KUN}, you've been busy\n"
+	.string "{RIVAL}: {PLAYER}, you've been busy\n"
 	.string "training, too, haven't you?\p"
 	.string "I think you deserve a reward!\n"
 	.string "This is from me!$"
 
 Route110_Text_1EFD58: @ 81EFD58
-	.string "MAY: That's an ITEMFINDER.\p"
+	.string "{RIVAL}: That's an ITEMFINDER.\p"
 	.string "Try it out. If there is an item that's\n"
 	.string "not visible, it emits a sound.\p"
-	.string "Okay, {PLAYER}{KUN}, let's meet again!\p"
+	.string "Okay, {PLAYER}, let's meet again!\p"
 	.string "I know it's a little silly coming from\n"
 	.string "me, but I think you should train a lot\l"
 	.string "harder for the next time.$"
 
 Route110_Text_1EFE3F: @ 81EFE3F
-	.string "BRENDAN: Hey, {PLAYER}.\n"
+	.string "{RIVAL}: Hey, {PLAYER}.\n"
 	.string "So this is where you were.\l"
 	.string "How's it going?\p"
-	.string "Have you been raising your POKéMON?\n"
+	.string "Have you been raising your {P}MON?\n"
 	.string "I'll check for you.$"
 
 Route110_Text_1EFEB4: @ 81EFEB4
@@ -821,19 +821,19 @@ Route110_Text_1EFEB4: @ 81EFEB4
 	.string "You're pretty good.$"
 
 Route110_Text_1EFECD: @ 81EFECD
-	.string "BRENDAN: {PLAYER}, you've trained\n"
+	.string "{RIVAL}: {PLAYER}, you've trained\n"
 	.string "without me noticing…\p"
 	.string "Good enough!\n"
 	.string "Here, take this.$"
 
 Route110_Text_1EFF1C: @ 81EFF1C
-	.string "BRENDAN: That's an ITEMFINDER.\p"
+	.string "{RIVAL}: That's an ITEMFINDER.\p"
 	.string "Use it to root around for items that\n"
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"
 	.string "a sound.\p"
 	.string "Anyway, I'm off to look for new\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"
 
 Route110_Text_1EFFC3: @ 81EFFC3
 	.string "Wouldn't it be great to ride a BIKE\n"
@@ -863,7 +863,7 @@ Route110_Text_1F006A: @ 81F006A
 
 Route110_Text_1F0261: @ 81F0261
 	.string "The two roads, one above, one below…\p"
-	.string "A road each for people and POKéMON.\n"
+	.string "A road each for people and {P}MON.\n"
 	.string "Perhaps that is right and fair.$"
 
 Route110_Text_1F02CA: @ 81F02CA
@@ -880,7 +880,7 @@ Route110_Text_1F0390: @ 81F0390
 	.string "Which should I choose?\p"
 	.string "Make a beeline for MAUVILLE on\n"
 	.string "CYCLING ROAD, or take the low road\l"
-	.string "and look for POKéMON?$"
+	.string "and look for {P}MON?$"
 
 Route110_Text_1F03FF: @ 81F03FF
 	.string "Number of collisions:\n"
@@ -967,7 +967,7 @@ Route110_Text_1F090D: @ 81F090D
 	.string "The foe can be made helpless by\n"
 	.string "paralyzing it or causing it to sleep.\p"
 	.string "It is an important technique for\n"
-	.string "POKéMON battles.$"
+	.string "{P}MON battles.$"
 
 Route110_Text_1F0992: @ 81F0992
 	.string "TRAINER TIPS\p"
@@ -989,7 +989,7 @@ Route110_Text_1F0A5E: @ 81F0A5E
 	.string "challenge. There is no record…$"
 
 Route110_Text_1F0AB5: @ 81F0AB5
-	.string "PROF. BIRCH: Oh, {PLAYER}{KUN}!\n"
+	.string "PROF. BIRCH: Oh, {PLAYER}!\n"
 	.string "Imagine seeing you here!\p"
 	.string "And where might my {RIVAL} be?$"
 
@@ -997,22 +997,22 @@ Route110_Text_1F0AFF: @ 81F0AFF
 	.string "Oh, I see!\n"
 	.string "You two are running separately.\l"
 	.string "Well, that's fine.\p"
-	.string "Oh, yes, I heard that your POKéNAV\n"
+	.string "Oh, yes, I heard that your {P}NAV\n"
 	.string "had the MATCH CALL system installed.\p"
 	.string "Well, then, I should register you in\n"
-	.string "my POKéNAV as well.\p"
+	.string "my {P}NAV as well.\p"
 	.string "That way, even when we're apart,\n"
-	.string "I can rate your POKéDEX anytime.\p"
+	.string "I can rate your {P}DEX anytime.\p"
 	.string "… … … … … …$"
 
 Route110_Text_1F0C0C: @ 81F0C0C
 	.string "Registered PROF. BIRCH\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 Route110_Text_1F0C33: @ 81F0C33
-	.string "PROF. BIRCH: {PLAYER}{KUN}…\p"
+	.string "PROF. BIRCH: {PLAYER}…\p"
 	.string "Please keep an eye out for my {RIVAL}.\n"
 	.string "… … … … … …\p"
 	.string "Well, I had better get going.\n"
-	.string "See you again, {PLAYER}{KUN}!$"
+	.string "See you again, {PLAYER}!$"
 

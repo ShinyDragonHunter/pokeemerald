@@ -96,7 +96,7 @@ LittlerootTown_MaysHouse_2F_EventScript_1F93BA:: @ 81F93BA
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_Text_1F959C, MSGBOX_DEFAULT
+	msgbox LittlerootTown_MaysHouse_1F_Text_1F8EC6, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_1F9483
 	applymovement 1, LittlerootTown_MaysHouse_2F_Movement_1F9479
@@ -108,7 +108,7 @@ LittlerootTown_MaysHouse_2F_EventScript_1F93E9:: @ 81F93E9
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_Text_1F959C, MSGBOX_DEFAULT
+	msgbox LittlerootTown_MaysHouse_1F_Text_1F8EC6, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_1F9497
 	applymovement 1, LittlerootTown_MaysHouse_2F_Movement_1F948F
@@ -120,7 +120,7 @@ LittlerootTown_MaysHouse_2F_EventScript_1F9418:: @ 81F9418
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_Text_1F959C, MSGBOX_DEFAULT
+	msgbox LittlerootTown_MaysHouse_1F_Text_1F8EC6, MSGBOX_DEFAULT
 	closemessage
 	applymovement 1, LittlerootTown_MaysHouse_2F_Movement_1F94A4
 	waitmovement 0
@@ -131,7 +131,7 @@ LittlerootTown_MaysHouse_2F_EventScript_1F9440:: @ 81F9440
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceLeft
 	waitmovement 0
-	msgbox LittlerootTown_MaysHouse_2F_Text_1F959C, MSGBOX_DEFAULT
+	msgbox LittlerootTown_MaysHouse_1F_Text_1F8EC6, MSGBOX_DEFAULT
 	closemessage
 	applymovement EVENT_OBJ_ID_PLAYER, LittlerootTown_MaysHouse_2F_Movement_1F94BB
 	applymovement 1, LittlerootTown_MaysHouse_2F_Movement_1F94B2
@@ -328,91 +328,47 @@ LittlerootTown_MaysHouse_2F_EventScript_1F958F:: @ 81F958F
 	releaseall
 	end
 
-LittlerootTown_MaysHouse_2F_Text_1F959C: @ 81F959C
-	.string "Huh?\n"
-	.string "Who… Who are you?\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
-	.string "Oh, you're {PLAYER}{KUN}.\n"
-	.string "So your move was today.\p"
-	.string "Um… I'm MAY.\n"
-	.string "Glad to meet you!\p"
-	.string "I…\n"
-	.string "I have this dream of becoming friends\l"
-	.string "with POKéMON all over the world.\p"
-	.string "I… I heard about you, {PLAYER}{KUN}, from\n"
-	.string "my dad, PROF. BIRCH.\p"
-	.string "I was hoping that you would be nice,\n"
-	.string "{PLAYER}{KUN}, and that we could be friends.\p"
-	.string "Oh, this is silly, isn't it?\n"
-	.string "I… I've just met you, {PLAYER}{KUN}.\p"
-	.string "Eheheh…\p"
-	.string "Oh, no! I forgot!\p"
-	.string "I was supposed to go help Dad catch\n"
-	.string "some wild POKéMON!\p"
-	.string "{PLAYER}{KUN}, I'll catch you later!$"
-
 LittlerootTown_BrendansHouse_2F_Text_1F978A: @ 81F978A
-	.string "POKéMON fully restored!\n"
+	.string "{P}MON fully restored!\n"
 	.string "Items ready, and…$"
 
-LittlerootTown_BrendansHouse_2F_Text_1F97B4: @ 81F97B4
-	.string "Hey!\n"
-	.string "You…\p"
-	.string "Who are you?\p"
-	.string "Oh, you're {PLAYER}, aren't you?\n"
-	.string "Moved in next door, right?\p"
-	.string "I didn't know that you're a girl.\p"
-	.string "Dad, PROF. BIRCH, said that our new\n"
-	.string "next-door neighbor is a GYM LEADER's\l"
-	.string "kid, so I assumed you'd be a guy.\p"
-	.string "My name's BRENDAN.\n"
-	.string "So, hi, neighbor!\p"
-	.string "Huh? Hey, {PLAYER}, don't you have\n"
-	.string "a POKéMON?\p"
-	.string "Do you want me to go catch you one?\p"
-	.string "Aw, darn, I forgot…\p"
-	.string "I'm supposed to go help my dad catch\n"
-	.string "some wild POKéMON.\p"
-	.string "Some other time, okay?$"
-
 LittlerootTown_BrendansHouse_2F_Text_1F9962: @ 81F9962
-	.string "POKéMON fully restored…\n"
+	.string "{P}MON fully restored…\n"
 	.string "Items all packed, and…$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F9991: @ 81F9991
 LittlerootTown_MaysHouse_2F_Text_1F9991: @ 81F9991
-	.string "It's {RIVAL}'s POKé BALL!\p"
+	.string "It's {RIVAL}'s {P} BALL!\p"
 	.string "Better leave it right where it is.$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F99C9: @ 81F99C9
-	.string "MAY: {PLAYER}{KUN}!\p"
-	.string "I was just checking my POKéDEX.\p"
-	.string "There's still a lot of POKéMON that\n"
+	.string "{RIVAL}: {PLAYER}!\p"
+	.string "I was just checking my {P}DEX.\p"
+	.string "There's still a lot of {P}MON that\n"
 	.string "I've seen but haven't caught.\p"
 	.string "And there are many others that\n"
 	.string "I think will evolve.\p"
 	.string "I wonder where I should go catch\n"
-	.string "some POKéMON next?$"
+	.string "some {P}MON next?$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F9A9E: @ 81F9A9E
-	.string "MAY: I wonder where I should go catch\n"
-	.string "some POKéMON next?\p"
+	.string "{RIVAL}: I wonder where I should go catch\n"
+	.string "some {P}MON next?\p"
 	.string "Wouldn't it be funny if we ran into each\n"
-	.string "other, {PLAYER}{KUN}?$"
+	.string "other, {PLAYER}?$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F9B0D: @ 81F9B0D
-	.string "BRENDAN: Hey, it's {PLAYER}.\p"
-	.string "I was just checking out my POKéDEX.\p"
-	.string "There are still many POKéMON that\n"
+	.string "{RIVAL}: Hey, it's {PLAYER}.\p"
+	.string "I was just checking out my {P}DEX.\p"
+	.string "There are still many {P}MON that\n"
 	.string "I need to catch, I know, but this\l"
 	.string "is looking pretty good.\p"
-	.string "Checking this POKéDEX out gives me\n"
+	.string "Checking this {P}DEX out gives me\n"
 	.string "the urge to hit the road again.$"
 
 LittlerootTown_BrendansHouse_2F_Text_1F9BE7: @ 81F9BE7
-	.string "BRENDAN: I'm having a hard time deciding\n"
-	.string "where I should catch POKéMON next.\p"
+	.string "{RIVAL}: I'm having a hard time deciding\n"
+	.string "where I should catch {P}MON next.\p"
 	.string "Hey, {PLAYER}, if I see you while I'm out\n"
-	.string "catching POKéMON, I can pitch you a\l"
+	.string "catching {P}MON, I can pitch you a\l"
 	.string "battle if you'd like.$"

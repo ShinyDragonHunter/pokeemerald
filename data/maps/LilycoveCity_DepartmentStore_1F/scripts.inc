@@ -52,7 +52,7 @@ LilycoveCity_DepartmentStore_1F_EventScript_21F69C:: @ 821F69C
 	compare VAR_RESULT, 0
 	goto_if_eq LilycoveCity_DepartmentStore_1F_EventScript_21F7DD
 	special sub_80EE2CC
-	goto LilycoveCity_DepartmentStore_1F_EventScript_21F7AF
+	goto LilycoveCity_DepartmentStore_1F_EventScript_21F797
 	end
 
 LilycoveCity_DepartmentStore_1F_EventScript_21F77B:: @ 821F77B
@@ -75,12 +75,7 @@ LilycoveCity_DepartmentStore_1F_EventScript_21F797:: @ 821F797
 
 LilycoveCity_DepartmentStore_1F_EventScript_21F7A1:: @ 821F7A1
 	msgbox LilycoveCity_DepartmentStore_1F_Text_2A663C, MSGBOX_DEFAULT
-	goto LilycoveCity_DepartmentStore_1F_EventScript_21F7AF
-	end
-
-LilycoveCity_DepartmentStore_1F_EventScript_21F7AF:: @ 821F7AF
-	msgbox LilycoveCity_DepartmentStore_1F_Text_2A6831, MSGBOX_DEFAULT
-	release
+	goto LilycoveCity_DepartmentStore_1F_EventScript_21F797
 	end
 
 LilycoveCity_DepartmentStore_1F_EventScript_21F7B9:: @ 821F7B9
@@ -174,7 +169,7 @@ LilycoveCity_DepartmentStore_1F_Text_21F98A: @ 821F98A
 	.string "2F: TRAINER'S ZONE\p"
 	.string "3F: BATTLE COLLECTION\p"
 	.string "4F: TM CORNER\p"
-	.string "5F: POKé DOLL FLOOR\p"
+	.string "5F: {P} DOLL FLOOR\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
 
 LilycoveCity_DepartmentStore_1F_Text_21FA13: @ 821FA13

@@ -1209,7 +1209,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_24D232: @ 824D232
 
 BattleFrontier_BattleDomeBattleRoom_Text_24D26C: @ 824D26C
 	.string "Ladies and gentlemen!\n"
-	.string "Boys, girls, and POKéMON!\p"
+	.string "Boys, girls, and {P}MON!\p"
 	.string "Finally!\n"
 	.string "Finally, the legend has returned!\p"
 	.string "Yes, the name of that legend!\n"

@@ -118,7 +118,7 @@ Route104_EventScript_1ECD4B:: @ 81ECD4B
 	msgbox Route104_Text_1EDCED, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Route104_EventScript_1ECDED
-	msgbox Route104_Text_1EDD2A, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1BD3, MSGBOX_DEFAULT
 	call Route104_EventScript_1ECE31
 	releaseall
 	end
@@ -138,15 +138,15 @@ Route104_Movement_1ECDCD: @ 81ECDCD
 	step_end
 
 Route104_EventScript_1ECDD0:: @ 81ECDD0
-	msgbox Route104_Text_1EDD9F, MSGBOX_YESNO
+	msgbox RustboroCity_Text_1E1C48, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Route104_EventScript_1ECDED
-	msgbox Route104_Text_1EDD2A, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1BD3, MSGBOX_DEFAULT
 	releaseall
 	end
 
 Route104_EventScript_1ECDED:: @ 81ECDED
-	msgbox Route104_Text_1EDDDB, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1C84, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route104_EventScript_1ECE36
 	case 1, Route104_EventScript_1ECE49
@@ -166,19 +166,19 @@ Route104_EventScript_1ECE31:: @ 81ECE31
 	return
 
 Route104_EventScript_1ECE36:: @ 81ECE36
-	trainerbattle_no_intro TRAINER_MAY_14, Route104_Text_1EDE18
+	trainerbattle_no_intro TRAINER_MAY_14, RustboroCity_Text_1E1CC1
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECE1C
 	end
 
 Route104_EventScript_1ECE49:: @ 81ECE49
-	trainerbattle_no_intro TRAINER_MAY_15, Route104_Text_1EDE18
+	trainerbattle_no_intro TRAINER_MAY_15, RustboroCity_Text_1E1CC1
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECE1C
 	end
 
 Route104_EventScript_1ECE5C:: @ 81ECE5C
-	trainerbattle_no_intro TRAINER_MAY_10, Route104_Text_1EDE18
+	trainerbattle_no_intro TRAINER_MAY_10, RustboroCity_Text_1E1CC1
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECE1C
 	end
@@ -191,7 +191,7 @@ Route104_EventScript_1ECE6F:: @ 81ECE6F
 	closemessage
 	delay 30
 	playfanfare MUS_ME_TORE_EYE
-	msgbox Route104_Text_1EDFA0, MSGBOX_DEFAULT
+	msgbox Route104_Text_1EDC8F, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
 	delay 30
@@ -207,21 +207,21 @@ Route104_EventScript_1ECE6F:: @ 81ECE6F
 	msgbox Route104_Text_1EE009, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Route104_EventScript_1ECF09
-	msgbox Route104_Text_1EE04D, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1F2F, MSGBOX_DEFAULT
 	call Route104_EventScript_1ECE31
 	releaseall
 	end
 
 Route104_EventScript_1ECEEC:: @ 81ECEEC
-	msgbox Route104_Text_1EE094, MSGBOX_YESNO
+	msgbox RustboroCity_Text_1E1F76, MSGBOX_YESNO
 	compare VAR_RESULT, 1
 	goto_if_eq Route104_EventScript_1ECF09
-	msgbox Route104_Text_1EE04D, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1F2F, MSGBOX_DEFAULT
 	releaseall
 	end
 
 Route104_EventScript_1ECF09:: @ 81ECF09
-	msgbox Route104_Text_1EE0C7, MSGBOX_DEFAULT
+	msgbox RustboroCity_Text_1E1FA9, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route104_EventScript_1ECF4D
 	case 1, Route104_EventScript_1ECF60
@@ -236,19 +236,19 @@ Route104_EventScript_1ECF38:: @ 81ECF38
 	end
 
 Route104_EventScript_1ECF4D:: @ 81ECF4D
-	trainerbattle_no_intro TRAINER_BRENDAN_10, Route104_Text_1EE107
+	trainerbattle_no_intro TRAINER_BRENDAN_10, RustboroCity_Text_1E1FE9
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECF38
 	end
 
 Route104_EventScript_1ECF60:: @ 81ECF60
-	trainerbattle_no_intro TRAINER_BRENDAN_12, Route104_Text_1EE107
+	trainerbattle_no_intro TRAINER_BRENDAN_12, RustboroCity_Text_1E1FE9
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECF38
 	end
 
 Route104_EventScript_1ECF73:: @ 81ECF73
-	trainerbattle_no_intro TRAINER_BRENDAN_11, Route104_Text_1EE107
+	trainerbattle_no_intro TRAINER_BRENDAN_11, RustboroCity_Text_1E1FE9
 	setflag FLAG_DEFEATED_RIVAL_ROUTE_104
 	goto Route104_EventScript_1ECF38
 	end
@@ -1025,16 +1025,16 @@ Route104_Text_1ED662: @ 81ED662
 	.string "of the sea?$"
 
 Route104_Text_1ED6A2: @ 81ED6A2
-	.string "If you're going to throw a POKé BALL,\n"
-	.string "weaken the wild POKéMON first.\p"
+	.string "If you're going to throw a {P} BALL,\n"
+	.string "weaken the wild {P}MON first.\p"
 	.string "It will be easier to catch if it's been\n"
 	.string "poisoned, burned, or lulled to sleep.$"
 
 Route104_Text_1ED735: @ 81ED735
 	.string "You're a thief if you try to steal\n"
-	.string "someone else's POKéMON.\p"
-	.string "You should throw POKé BALLS only at\n"
-	.string "wild POKéMON.$"
+	.string "someone else's {P}MON.\p"
+	.string "You should throw {P} BALLS only at\n"
+	.string "wild {P}MON.$"
 
 Route104_Text_1ED7A2: @ 81ED7A2
 	.string "Oh, no, I'm not a TRAINER.\p"
@@ -1047,7 +1047,7 @@ Route104_Text_1ED838: @ 81ED838
 	.string "I like filling my mouth with seeds,\n"
 	.string "then spitting them out fast!\p"
 	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
+	.string "Use it on a {P}MON, and it will learn\n"
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_1ED8E7: @ 81ED8E7
@@ -1089,72 +1089,50 @@ Route104_Text_1EDAEF: @ 81EDAEF
 	.string "TRAINER TIPS\p"
 	.string "In the HOENN region there are pairs\n"
 	.string "of TRAINERS who challenge others\l"
-	.string "for 2-on-2 POKéMON battles called\l"
+	.string "for 2-on-2 {P}MON battles called\l"
 	.string "DOUBLE BATTLES.\p"
 	.string "In a DOUBLE BATTLE, the TRAINER must\n"
-	.string "send out two POKéMON, the one at the\l"
+	.string "send out two {P}MON, the one at the\l"
 	.string "left of the list and the top one.\l"
-	.string "Watch how POKéMON are lined up.$"
+	.string "Watch how {P}MON are lined up.$"
 
 Route104_Text_1EDBFF: @ 81EDBFF
-	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "DEVON upgraded your POKéNAV with\n"
+	.string "{RIVAL}: Oh, hi, {PLAYER}!\p"
+	.string "DEVON upgraded your {P}NAV with\n"
 	.string "the MATCH CALL system, huh?\p"
 	.string "We should register each other so we\n"
 	.string "can get in contact anytime.$"
 
 Route104_Text_1EDC8F: @ 81EDC8F
-	.string "{PLAYER} registered MAY\n"
-	.string "in the POKéNAV.$"
+	.string "{PLAYER} registered {RIVAL}\n"
+	.string "in the {P}NAV.$"
 
 Route104_Text_1EDCB1: @ 81EDCB1
-	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
-	.string "how's your POKéDEX coming along?$"
+	.string "{RIVAL}: Oh, by the way, {PLAYER},\n"
+	.string "how's your {P}DEX coming along?$"
 
 Route104_Text_1EDCED: @ 81EDCED
 	.string "Mine's looking pretty decent.\n"
 	.string "So…\l"
 	.string "How about a little battle?$"
 
-Route104_Text_1EDD2A: @ 81EDD2A
-	.string "MAY: Oh, what's the matter?\p"
-	.string "Haven't you caught or raised your\n"
-	.string "POKéMON very much?\p"
-	.string "That's not very good for a TRAINER!$"
-
-Route104_Text_1EDD9F: @ 81EDD9F
-	.string "MAY: So, what do you think?\n"
-	.string "How about a little battle here?$"
-
-Route104_Text_1EDDDB: @ 81EDDDB
-	.string "MAY: You just became a TRAINER,\n"
-	.string "{PLAYER}{KUN}. I'm not going to lose!$"
-
-Route104_Text_1EDE18: @ 81EDE18
-	.string "Yikes!\n"
-	.string "You're better than I expected!$"
-
 Route104_Text_1EDE3E: @ 81EDE3E
-	.string "MAY: I can tell you've gotten pretty\n"
-	.string "good with the way you handle POKéMON.\p"
+	.string "{RIVAL}: I can tell you've gotten pretty\n"
+	.string "good with the way you handle {P}MON.\p"
 	.string "But instead of only making them\n"
 	.string "battle, you should be like MR. BRINEY.\p"
 	.string "It's important to become friends with\n"
-	.string "POKéMON, too.$"
+	.string "{P}MON, too.$"
 
 Route104_Text_1EDF04: @ 81EDF04
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
+	.string "{RIVAL}: Oh, hey, {PLAYER}!\p"
 	.string "Cool, you had DEVON install the MATCH\n"
-	.string "CALL system on your POKéNAV!\p"
+	.string "CALL system on your {P}NAV!\p"
 	.string "Let's register each other in our\n"
-	.string "POKéNAVS so we can keep in touch.$"
-
-Route104_Text_1EDFA0: @ 81EDFA0
-	.string "{PLAYER} registered BRENDAN\n"
-	.string "in the POKéNAV.$"
+	.string "{P}NAVS so we can keep in touch.$"
 
 Route104_Text_1EDFC6: @ 81EDFC6
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
+	.string "{RIVAL}: {PLAYER}, how's your {P}DEX?\n"
 	.string "Have you filled in any pages yet?$"
 
 Route104_Text_1EE009: @ 81EE009
@@ -1162,26 +1140,10 @@ Route104_Text_1EE009: @ 81EE009
 	.string "Want to check out how good I am with\n"
 	.string "a battle?$"
 
-Route104_Text_1EE04D: @ 81EE04D
-	.string "BRENDAN: What's the matter? Don't have\n"
-	.string "any confidence in your POKéMON?$"
-
-Route104_Text_1EE094: @ 81EE094
-	.string "BRENDAN: What's up?\n"
-	.string "Want to have a battle with me?$"
-
-Route104_Text_1EE0C7: @ 81EE0C7
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
-
-Route104_Text_1EE107: @ 81EE107
-	.string "Hmm…\n"
-	.string "You're pretty good.$"
-
 Route104_Text_1EE120: @ 81EE120
-	.string "BRENDAN: You've gotten pretty decent\n"
-	.string "at handling POKéMON.\p"
+	.string "{RIVAL}: You've gotten pretty decent\n"
+	.string "at handling {P}MON.\p"
 	.string "But, you know, you shouldn't just be\n"
-	.string "making POKéMON battle.\p"
+	.string "making {P}MON battle.\p"
 	.string "Like MR. BRINEY, it's important to\n"
-	.string "become friends with your POKéMON.$"
+	.string "become friends with your {P}MON.$"

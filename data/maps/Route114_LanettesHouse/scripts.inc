@@ -49,7 +49,7 @@ Route114_LanettesHouse_EventScript_22B345:: @ 822B345
 	end
 
 Route114_LanettesHouse_Text_22B34E: @ 822B34E
-	.string "LANETTE: Oh! {PLAYER}{KUN}!\p"
+	.string "LANETTE: Oh! {PLAYER}!\p"
 	.string "I'm sorry everything is so cluttered…\n"
 	.string "When I get engrossed in research,\l"
 	.string "things end up this way…\p"
@@ -57,35 +57,35 @@ Route114_LanettesHouse_Text_22B34E: @ 822B34E
 	.string "this a secret in exchange for this.$"
 
 Route114_LanettesHouse_Text_22B407: @ 822B407
-	.string "May I offer advice about my POKéMON\n"
+	.string "May I offer advice about my {P}MON\n"
 	.string "Storage System?\p"
 	.string "You should organize your BOXES so you\n"
-	.string "can tell which POKéMON are in them.$"
+	.string "can tell which {P}MON are in them.$"
 
 Route114_LanettesHouse_Text_22B485: @ 822B485
 	.string "It's LANETTE's research notes.\n"
 	.string "There's information about BOXES.\p"
-	.string "Design BOXES to hold 30 POKéMON each.\p"
+	.string "Design BOXES to hold 30 {P}MON each.\p"
 	.string "Each TRAINER should be able to store\n"
-	.string "420 POKéMON on the PC system.\p"
+	.string "420 {P}MON on the PC system.\p"
 	.string "Keep reading?$"
 
 Route114_LanettesHouse_Text_22B53C: @ 822B53C
 	.string "A marking system should be added to\n"
-	.string "make POKéMON easier to organize.\p"
+	.string "make {P}MON easier to organize.\p"
 	.string "The name and wallpaper design of each\n"
 	.string "BOX will be made changeable to please\l"
-	.string "the stored POKéMON.\p"
+	.string "the stored {P}MON.\p"
 	.string "Keep reading?$"
 
 Route114_LanettesHouse_Text_22B5EF: @ 822B5EF
-	.string "When storing a POKéMON, it should be\n"
+	.string "When storing a {P}MON, it should be\n"
 	.string "sent to the BOX inspected last.\p"
 	.string "If that BOX is full, the received\n"
-	.string "POKéMON is stored in the next BOX.\p"
+	.string "{P}MON is stored in the next BOX.\p"
 	.string "In other words, when a BOX is examined,\n"
 	.string "it is automatically selected as the BOX\l"
-	.string "to which POKéMON are sent.$"
+	.string "to which {P}MON are sent.$"
 
 Route114_LanettesHouse_Text_22B6E4: @ 822B6E4
 	.string "{PLAYER} closed the notebook.$"

@@ -995,9 +995,6 @@ const u16 gTilesetAnims_BattleDomePals0_1[] = INCBIN_U16("graphics/battle_fronti
 const u16 gTilesetAnims_BattleDomePals0_2[] = INCBIN_U16("graphics/battle_frontier/dome_anim3.gbapal");
 const u16 gTilesetAnims_BattleDomePals0_3[] = INCBIN_U16("graphics/battle_frontier/dome_anim4.gbapal");
 
-// 8D856C0
-asm(".2byte 0x013F, 0x0119, 0x0113, 0x010E"); // unused?
-
 const u16 gUnknown_08D856C8[] = INCBIN_U16("graphics/battle_frontier/pyramid_light.gbapal"); // unfaded pal for the player light in battle pyramid
 
 const u32 gUnknown_08D857A8[] = INCBIN_U32("graphics/battle_frontier/battle_tilemap1.bin.lz");
@@ -1380,17 +1377,11 @@ const u8 gBerryBlenderMarubatsuTiles[] = INCBIN_U8("graphics/berry_blender/marub
 
 const u8 gBerryBlenderParticlesTiles[] = INCBIN_U8("graphics/berry_blender/particles.4bpp");
 
-asm(".space 0x120");
-
 const u8 gBerryBlenderCountdownNumbersTiles[] = INCBIN_U8("graphics/berry_blender/countdown_numbers.4bpp");
 
 const u8 gBerryBlenderStartTiles[] = INCBIN_U8("graphics/berry_blender/start.4bpp");
 
-asm(".space 0x200");
-
 const u8 gBerryBlenderArrowTiles[] = INCBIN_U8("graphics/berry_blender/arrow.4bpp");
-
-asm(".space 0x2C0");
 
 const u16 gEasyChatCursor_Pal[] = INCBIN_U16("graphics/easy_chat/cursor.gbapal");
 const u32 gEasyChatCursor_Gfx[] = INCBIN_U32("graphics/easy_chat/cursor.4bpp.lz");
@@ -1600,12 +1591,3 @@ const u16 gUnknown_08DE3374[] = INCBIN_U16("graphics/frontier_pass/tilemap2.bin"
 const u16 gUnknown_08DE3398[] = INCBIN_U16("graphics/berry_crusher/tiles.gbapal");
 const u32 gUnknown_08DE34B8[] = INCBIN_U32("graphics/berry_crusher/tiles.4bpp.lz");
 const u32 gUnknown_08DE3FD4[] = INCBIN_U32("graphics/berry_crusher/tiles.bin.lz");
-
-// random garbage at the end.
-asm(".space 0x54BAC \n\
-     .byte 0x0D, 0x00, 0x58, 0x02 \n\
-     .space 0x1145 \n\
-     .byte 0x02 \n\
-     .space 0x3242 \n\
-     .byte 0x40 \n\
-     .space 0x13");

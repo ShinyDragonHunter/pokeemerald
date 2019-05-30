@@ -513,7 +513,7 @@ BattleFrontier_BattlePalaceBattleRoom_Movement_24FEF2: @ 824FEF2
 BattleFrontier_BattlePalaceBattleRoom_Text_24FF00: @ 824FF00
 VerdanturfTown_BattleTentBattleRoom_Text_24FF00: @ 824FF00
 	.string "Excellent…\n"
-	.string "Let me restore your POKéMON.$"
+	.string "Let me restore your {P}MON.$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_24FF28: @ 824FF28
 VerdanturfTown_BattleTentBattleRoom_Text_24FF28: @ 824FF28
@@ -575,11 +575,11 @@ BattleFrontier_BattlePalaceBattleRoom_Text_25017C: @ 825017C
 
 BattleFrontier_BattlePalaceBattleRoom_Text_2501C1: @ 82501C1
 	.string "SPENSER: My physical being is with\n"
-	.string "POKéMON always!\p"
+	.string "{P}MON always!\p"
 	.string "My heart beats as one with\n"
 	.string "POKéMON always!\p"
 	.string "Young one of a TRAINER!\n"
-	.string "Do you believe in your POKéMON?\p"
+	.string "Do you believe in your {P}MON?\p"
 	.string "Can you believe them through\n"
 	.string "and through?\p"
 	.string "If your bonds of trust are frail,\n"
@@ -607,7 +607,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_2503DC: @ 82503DC
 	.string "the FRONTIER PASS!$"
 
 BattleFrontier_BattlePalaceBattleRoom_Text_250412: @ 8250412
-	.string "SPENSER: Your POKéMON's eyes are \n"
+	.string "SPENSER: Your {P}MON's eyes are \n"
 	.string "truly clear and unclouded.\p"
 	.string "I will eagerly await the next\n"
 	.string "opportunity to see you.$"
@@ -616,7 +616,7 @@ BattleFrontier_BattlePalaceBattleRoom_Text_250485: @ 8250485
 	.string "SPENSER: Gwahahah!\n"
 	.string "You've battled your way up again?\p"
 	.string "You must have developed a truly\n"
-	.string "formidable bond with your POKéMON.\p"
+	.string "formidable bond with your {P}MON.\p"
 	.string "So be it!\p"
 	.string "This time, I won't bluster or hold back.\n"
 	.string "This time, there's no fooling around.\p"

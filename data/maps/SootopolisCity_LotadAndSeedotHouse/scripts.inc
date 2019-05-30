@@ -114,7 +114,7 @@ SootopolisCity_LotadAndSeedotHouse_EventScript_22735B:: @ 822735B
 	end
 
 SootopolisCity_LotadAndSeedotHouse_Text_227369: @ 8227369
-	.string "Do you know the POKéMON SEEDOT?\n"
+	.string "Do you know the {P}MON SEEDOT?\n"
 	.string "It's hardly ever seen in SOOTOPOLIS.\p"
 	.string "Anyway, I love big SEEDOT.\n"
 	.string "The bigger the better.\p"
@@ -162,7 +162,7 @@ SootopolisCity_LotadAndSeedotHouse_Text_227617: @ 8227617
 	.string "always wanted!$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_227676: @ 8227676
-	.string "Do you know the POKéMON LOTAD?\n"
+	.string "Do you know the {P}MON LOTAD?\n"
 	.string "It's rarely seen in SOOTOPOLIS.\p"
 	.string "I love, I mean love, big LOTAD!\p"
 	.string "My big brother says that SEEDOT is\n"

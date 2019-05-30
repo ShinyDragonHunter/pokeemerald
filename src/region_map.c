@@ -1619,11 +1619,6 @@ u8 *sub_81245DC(u8 *dest, u16 mapSecId)
 
 u8 *sub_8124610(u8 *dest, u16 mapSecId)
 {
-    if (mapSecId == MAPSEC_AQUA_HIDEOUT_OLD)
-    {
-        return StringCopy(dest, gText_Hideout);
-    }
-    else
     {
         return sub_81245DC(dest, mapSecId);
     }

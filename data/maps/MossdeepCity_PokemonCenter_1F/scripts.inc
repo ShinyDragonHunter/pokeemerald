@@ -31,6 +31,6 @@ MossdeepCity_PokemonCenter_1F_Text_22226E: @ 822226E
 
 MossdeepCity_PokemonCenter_1F_Text_2222D9: @ 82222D9
 	.string "Depending on the special abilities of\n"
-	.string "POKéMON, some moves might change\l"
+	.string "{P}MON, some moves might change\l"
 	.string "or not work at all.$"
 

@@ -64,7 +64,7 @@ VictoryRoad_B2F_Text_236B14: @ 8236B14
 	.string "No signs of tiring at all!$"
 
 VictoryRoad_B2F_Text_236B2F: @ 8236B2F
-	.string "VICTORY ROAD and the POKéMON LEAGUE\n"
+	.string "VICTORY ROAD and the {P}MON LEAGUE\n"
 	.string "are long and grueling challenges.\l"
 	.string "Beware of fatigue!$"
 
@@ -91,7 +91,7 @@ VictoryRoad_B2F_Text_236CAB: @ 8236CAB
 
 VictoryRoad_B2F_Text_236CBA: @ 8236CBA
 	.string "I can't help getting all tense knowing\n"
-	.string "that I'm nearing the POKéMON LEAGUE.\p"
+	.string "that I'm nearing the {P}MON LEAGUE.\p"
 	.string "It's all I can do to feign calm.$"
 
 VictoryRoad_B2F_Text_236D27: @ 8236D27

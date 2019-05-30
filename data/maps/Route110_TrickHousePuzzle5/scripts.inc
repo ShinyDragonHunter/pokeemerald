@@ -980,17 +980,17 @@ Route110_TrickHousePuzzle5_Text_26D6CE: @ 826D6CE
 
 Route110_TrickHousePuzzle5_Text_26D757: @ 826D757
 	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON is not found\n"
+	.string "One of these {P}MON is not found\n"
 	.string "on ROUTE 110. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_26D7AA: @ 826D7AA
 	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON is not of the\n"
+	.string "One of these {P}MON is not of the\n"
 	.string "WATER type. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_26D7FC: @ 826D7FC
 	.string "MECHADOLL 1 QUIZ.\p"
-	.string "One of these POKéMON does not use\n"
+	.string "One of these {P}MON does not use\n"
 	.string "LEECH LIFE. Which one is it?$"
 
 Route110_TrickHousePuzzle5_Text_26D84D: @ 826D84D
@@ -1016,17 +1016,17 @@ Route110_TrickHousePuzzle5_Text_26D8EA: @ 826D8EA
 
 Route110_TrickHousePuzzle5_Text_26D940: @ 826D940
 	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON did WALLY\n"
+	.string "Which of these {P}MON did WALLY\n"
 	.string "borrow from your father?$"
 
 Route110_TrickHousePuzzle5_Text_26D98C: @ 826D98C
 	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON was chasing\n"
+	.string "Which of these {P}MON was chasing\n"
 	.string "PROF. BIRCH?$"
 
 Route110_TrickHousePuzzle5_Text_26D9CE: @ 826D9CE
 	.string "MECHADOLL 2 QUIZ.\p"
-	.string "Which of these POKéMON did TEAM AQUA\n"
+	.string "Which of these {P}MON did TEAM AQUA\n"
 	.string "use in PETALBURG FOREST?$"
 
 Route110_TrickHousePuzzle5_Text_26DA1E: @ 826DA1E
@@ -1077,8 +1077,8 @@ Route110_TrickHousePuzzle5_Text_26DC78: @ 826DC78
 
 Route110_TrickHousePuzzle5_Text_26DCCB: @ 826DCCB
 	.string "MECHADOLL 5 QUIZ.\p"
-	.string "In SLATEPORT's POKéMON FAN CLUB,\n"
-	.string "how many POKéMON were there?$"
+	.string "In SLATEPORT's {P}MON FAN CLUB,\n"
+	.string "how many {P}MON were there?$"
 
 Route110_TrickHousePuzzle5_Text_26DD1B: @ 826DD1B
 	.string "MECHADOLL 5 QUIZ.\p"

@@ -75,10 +75,10 @@ SlateportCity_House1_Text_209B8E: @ 8209B8E
 	.string "Hi, hi! I'm the NAME RATER!\n"
 	.string "I'm the fortune-teller of names!\p"
 	.string "I shall be pleased to rate your\n"
-	.string "POKéMON's nickname.$"
+	.string "{P}MON's nickname.$"
 
 SlateportCity_House1_Text_209BFF: @ 8209BFF
-	.string "Which POKéMON's nickname should\n"
+	.string "Which {P}MON's nickname should\n"
 	.string "I critique?$"
 
 SlateportCity_House1_Text_209C2B: @ 8209C2B
@@ -92,7 +92,7 @@ SlateportCity_House1_Text_209CA4: @ 8209CA4
 	.string "nickname be?$"
 
 SlateportCity_House1_Text_209CD4: @ 8209CD4
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this {P}MON\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It is a better name than before!\n"
 	.string "How fortunate for you!$"
@@ -102,7 +102,7 @@ SlateportCity_House1_Text_209D42: @ 8209D42
 	.string "Do come visit again.$"
 
 SlateportCity_House1_Text_209D5E: @ 8209D5E
-	.string "Done! From now on, this POKéMON\n"
+	.string "Done! From now on, this {P}MON\n"
 	.string "shall be known as {STR_VAR_1}!\p"
 	.string "It looks no different from before,\n"
 	.string "and yet, this is vastly superior!\p"

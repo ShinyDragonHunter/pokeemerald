@@ -113,14 +113,14 @@ RustboroCity_Gym_Text_21309D: @ 821309D
 	.string "I'm no TRAINER, not me, but I can\n"
 	.string "sure give you winning advice.\p"
 	.string "That's settled, then! We'll aim for the\n"
-	.string "POKéMON CHAMPIONSHIP together!\p"
+	.string "{P}MON CHAMPIONSHIP together!\p"
 	.string "It's your job as a TRAINER to collect\n"
 	.string "GYM BADGES, am I right?\p"
 	.string "But GYM LEADERS aren't pushovers!\p"
 	.string "And that's where I come in!\n"
 	.string "I'm here to provide expert advice!\p"
 	.string "ROXANNE, the GYM LEADER, is a user\n"
-	.string "of ROCK-type POKéMON.\p"
+	.string "of ROCK-type {P}MON.\p"
 	.string "The ROCK type is very durable, but\n"
 	.string "it can't stand WATER-type and\l"
 	.string "GRASS-type moves.\p"
@@ -166,7 +166,7 @@ RustboroCity_Gym_Text_2134E6: @ 82134E6
 RustboroCity_Gym_Text_213533: @ 8213533
 	.string "We might be in the middle of town,\n"
 	.string "but so what?\p"
-	.string "My ROCK POKéMON need room to\n"
+	.string "My ROCK {P}MON need room to\n"
 	.string "rampage!$"
 
 RustboroCity_Gym_Text_213589: @ 8213589
@@ -180,12 +180,12 @@ RustboroCity_Gym_Text_2135C0: @ 82135C0
 
 RustboroCity_Gym_Text_21362A: @ 821362A
 	.string "Hello, I am ROXANNE, the RUSTBORO\n"
-	.string "POKéMON GYM LEADER.\p"
+	.string "{P}MON GYM LEADER.\p"
 	.string "I became a GYM LEADER so that I might\n"
-	.string "apply what I learned at the POKéMON\l"
+	.string "apply what I learned at the {P}MON\l"
 	.string "TRAINER'S SCHOOL in battle.\p"
 	.string "Would you kindly demonstrate how you\n"
-	.string "battle, and with which POKéMON?$"
+	.string "battle, and with which {P}MON?$"
 
 RustboroCity_Gym_Text_21370B: @ 821370B
 	.string "So…\n"
@@ -193,10 +193,10 @@ RustboroCity_Gym_Text_21370B: @ 821370B
 	.string "It seems that I still have much more\n"
 	.string "to learn…\p"
 	.string "I understand.\p"
-	.string "The POKéMON LEAGUE's rules state\n"
+	.string "The {P}MON LEAGUE's rules state\n"
 	.string "that TRAINERS are to be given this\l"
 	.string "if they defeat a GYM LEADER.\p"
-	.string "Please accept the official POKéMON\n"
+	.string "Please accept the official {P}MON\n"
 	.string "LEAGUE STONE BADGE.$"
 
 RustboroCity_Gym_Text_2137EC: @ 82137EC
@@ -205,7 +205,7 @@ RustboroCity_Gym_Text_2137EC: @ 82137EC
 
 RustboroCity_Gym_Text_213816: @ 8213816
 	.string "The STONE BADGE heightens the ATTACK\n"
-	.string "power of your POKéMON.\p"
+	.string "power of your {P}MON.\p"
 	.string "It also enables them to use the HM move\n"
 	.string "CUT outside of battle.\p"
 	.string "Please take this with you, too.$"
@@ -216,7 +216,7 @@ RustboroCity_Gym_Text_2138B1: @ 82138B1
 	.string "It not only inflicts damage by dropping\n"
 	.string "rocks, it also lowers SPEED.\p"
 	.string "If you use a TM, it instantly teaches\n"
-	.string "the move to a POKéMON.\p"
+	.string "the move to a {P}MON.\p"
 	.string "Remember, a TM can be used only once,\n"
 	.string "so think before you use it.$"
 
@@ -227,10 +227,10 @@ RustboroCity_Gym_Text_2139A7: @ 82139A7
 	.string "learn many things.$"
 
 RustboroCity_Gym_Text_213A21: @ 8213A21
-	.string "RUSTBORO CITY POKéMON GYM$"
+	.string "RUSTBORO CITY {P}MON GYM$"
 
 RustboroCity_Gym_Text_213A3B: @ 8213A3B
-	.string "RUSTBORO CITY POKéMON GYM\p"
+	.string "RUSTBORO CITY {P}MON GYM\p"
 	.string "ROXANNE'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
@@ -254,7 +254,7 @@ RustboroCity_Gym_Text_213A76: @ 8213A76
 
 RustboroCity_Gym_Text_213C01: @ 8213C01
 	.string "Registered GYM LEADER ROXANNE\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 RustboroCity_Gym_Text_213C2F: @ 8213C2F
 	.string "ROXANNE: I'm so glad to see you again.\n"
@@ -270,7 +270,7 @@ RustboroCity_Gym_Text_213CF9: @ 8213CF9
 
 RustboroCity_Gym_Text_213D12: @ 8213D12
 	.string "ROXANNE: I still have much to learn\n"
-	.string "when it comes to battling POKéMON.\p"
+	.string "when it comes to battling {P}MON.\p"
 	.string "That awareness makes me love battling\n"
 	.string "all that much more!$"
 
@@ -282,6 +282,6 @@ RustboroCity_Gym_Text_213D93: @ 8213D93
 	.string "I would like to see how much better\n"
 	.string "we've become…\p"
 	.string "Oh, no…\n"
-	.string "You only have one POKéMON with you?\p"
+	.string "You only have one {P}MON with you?\p"
 	.string "Please return with at least one more\n"
-	.string "POKéMON.$"
+	.string "{P}MON.$"

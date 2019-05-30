@@ -269,9 +269,9 @@ MauvilleCity_Gym_Text_20E17F: @ 820E17F
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
 	.string "WATTSON, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type POKéMON.\p"
+	.string "GYM, uses ELECTRIC-type {P}MON.\p"
 	.string "If you challenge him with WATER-type\n"
-	.string "POKéMON, he'll zap them! Bzzt!\p"
+	.string "{P}MON, he'll zap them! Bzzt!\p"
 	.string "And, he's put in switch-controlled\n"
 	.string "doors all over his GYM! Eccentric!\p"
 	.string "Hey, go for it!$"
@@ -289,7 +289,7 @@ MauvilleCity_Gym_Text_20E2FC: @ 820E2FC
 	.string "over-driven electric, man!$"
 
 MauvilleCity_Gym_Text_20E336: @ 820E336
-	.string "POKéMON and rock, it's all about heart,\n"
+	.string "{P}MON and rock, it's all about heart,\n"
 	.string "whoa-yeah!$"
 
 MauvilleCity_Gym_Text_20E369: @ 820E369
@@ -317,7 +317,7 @@ MauvilleCity_Gym_Text_20E47E: @ 820E47E
 	.string "little traps with switches.$"
 
 MauvilleCity_Gym_Text_20E4BB: @ 820E4BB
-	.string "With my charm and my POKéMON's moves,\n"
+	.string "With my charm and my {P}MON's moves,\n"
 	.string "you'll be shocked!$"
 
 MauvilleCity_Gym_Text_20E4F4: @ 820E4F4
@@ -365,9 +365,9 @@ MauvilleCity_Gym_Text_20E77F: @ 820E77F
 	.string "from WATTSON.$"
 
 MauvilleCity_Gym_Text_20E7AA: @ 820E7AA
-	.string "With the DYNAMO BADGE, POKéMON can\n"
+	.string "With the DYNAMO BADGE, {P}MON can\n"
 	.string "use ROCK SMASH out of battle.\p"
-	.string "And, it will make your POKéMON a little\n"
+	.string "And, it will make your {P}MON a little\n"
 	.string "bit faster, too.\p"
 	.string "Hmm…\n"
 	.string "You should take this, too!$"
@@ -380,7 +380,7 @@ MauvilleCity_Gym_Text_20E844: @ 820E844
 
 MauvilleCity_Gym_Text_20E8B5: @ 820E8B5
 	.string "Registered GYM LEADER WATTSON\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 MauvilleCity_Gym_Text_20E8E3: @ 820E8E3
 	.string "I swell with optimism, seeing a promising\n"
@@ -391,17 +391,17 @@ MauvilleCity_Gym_Text_20E925: @ 820E925
 	.string "Go forth and endeavor, youngster!$"
 
 MauvilleCity_Gym_Text_20E952: @ 820E952
-	.string "MAUVILLE CITY POKéMON GYM$"
+	.string "MAUVILLE CITY {P}MON GYM$"
 
 MauvilleCity_Gym_Text_20E96C: @ 820E96C
-	.string "MAUVILLE CITY POKéMON GYM\p"
+	.string "MAUVILLE CITY {P}MON GYM\p"
 	.string "WATTSON'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
 
 MauvilleCity_Gym_Text_20E9A7: @ 820E9A7
 	.string "WATTSON: Ah-ha! Here at last!\n"
 	.string "I know what you want.\l"
-	.string "You want to battle my POKéMON!\p"
+	.string "You want to battle my {P}MON!\p"
 	.string "Wahahahaha!\p"
 	.string "I'll make sparks fly from you!\n"
 	.string "Don't say I didn't warn you!$"
@@ -421,10 +421,10 @@ MauvilleCity_Gym_Text_20EA5E: @ 820EA5E
 MauvilleCity_Gym_Text_20EAFD: @ 820EAFD
 	.string "WATTSON: Ah-ha! Here at last!\n"
 	.string "I know what you want.\l"
-	.string "You want to battle my POKéMON!\p"
+	.string "You want to battle my {P}MON!\p"
 	.string "Wahahahaha!\p"
 	.string "Oops! Wait!\n"
-	.string "You've only one POKéMON with you!\p"
+	.string "You've only one {P}MON with you!\p"
 	.string "Come see me with two or more\n"
-	.string "POKéMON, all right?$"
+	.string "{P}MON, all right?$"
 

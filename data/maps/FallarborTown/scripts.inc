@@ -76,7 +76,7 @@ FallarborTown_Text_1EB3CA: @ 81EB3CA
 	.string "the LEADER of LAVARIDGE GYM?\p"
 	.string "The girl's grandfather was famous.\n"
 	.string "He was one of the ELITE FOUR in the\l"
-	.string "POKéMON LEAGUE at one point.\p"
+	.string "{P}MON LEAGUE at one point.\p"
 	.string "It wouldn't surprise me to see FLANNERY\n"
 	.string "become a great TRAINER in her own\l"
 	.string "right.$"
@@ -91,5 +91,5 @@ FallarborTown_Text_1EB4FE: @ 81EB4FE
 
 FallarborTown_Text_1EB534: @ 81EB534
 	.string "MOVE TUTOR'S HOUSE\n"
-	.string "“New moves taught to POKéMON.”$"
+	.string "“New moves taught to {P}MON.”$"
 

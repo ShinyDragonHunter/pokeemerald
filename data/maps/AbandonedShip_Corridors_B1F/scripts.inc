@@ -56,7 +56,7 @@ AbandonedShip_Corridors_B1F_EventScript_237E13:: @ 8237E13
 
 AbandonedShip_Corridors_B1F_Text_237E2A: @ 8237E2A
 	.string "When we go out to sea, we SAILORS\n"
-	.string "always bring our POKéMON.\l"
+	.string "always bring our {P}MON.\l"
 	.string "How about a quick battle?$"
 
 AbandonedShip_Corridors_B1F_Text_237E80: @ 8237E80
@@ -65,7 +65,7 @@ AbandonedShip_Corridors_B1F_Text_237E80: @ 8237E80
 AbandonedShip_Corridors_B1F_Text_237E92: @ 8237E92
 	.string "The ship's bottom has sunk into the\n"
 	.string "depths.\p"
-	.string "If a POKéMON knew how to go underwater,\n"
+	.string "If a {P}MON knew how to go underwater,\n"
 	.string "we might make some progress…$"
 
 AbandonedShip_Corridors_B1F_Text_237F03: @ 8237F03

@@ -226,7 +226,7 @@ EverGrandeCity_ChampionsRoom_Movement_228C43: @ 8228C43
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_228C4C: @ 8228C4C
-	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
+	.string "WALLACE: Welcome, {PLAYER}.\p"
 	.string "That incident in SOOTOPOLIS CITY…\n"
 	.string "That was superb work, putting an end\l"
 	.string "to that crisis all by yourself.\p"
@@ -234,18 +234,18 @@ EverGrandeCity_ChampionsRoom_Text_228C4C: @ 8228C4C
 	.string "It wouldn't be fair to say that you\n"
 	.string "alone ended the crisis.\p"
 	.string "You overcame that difficult situation\n"
-	.string "by working as one with your POKéMON.\p"
-	.string "We TRAINERS raise POKéMON by giving\n"
+	.string "by working as one with your {P}MON.\p"
+	.string "We TRAINERS raise {P}MON by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
-	.string "things from POKéMON.\p"
+	.string "things from {P}MON.\p"
 	.string "And this is where your achievements\n"
 	.string "are put to the test against what\l"
 	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
-	.string "their POKéMON in HOENN?\p"
+	.string "their {P}MON in HOENN?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_228EAC: @ 8228EAC
@@ -253,44 +253,44 @@ EverGrandeCity_ChampionsRoom_Text_228EAC: @ 8228EAC
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
-	.string "Kudos to you, {PLAYER}{KUN}!\p"
-	.string "You are a truly noble POKéMON\n"
+	.string "Kudos to you, {PLAYER}!\p"
+	.string "You are a truly noble {P}MON\n"
 	.string "TRAINER!$"
 
 EverGrandeCity_ChampionsRoom_Text_228F66: @ 8228F66
-	.string "WALLACE: The POKéMON you sent into\n"
+	.string "WALLACE: The {P}MON you sent into\n"
 	.string "battle…\p"
 	.string "At times they danced like a spring\n"
 	.string "breeze, and at times they struck\l"
 	.string "like lightning.\p"
 	.string "It was with light, yet surefooted,\n"
-	.string "elegance that you led your POKéMON.\p"
+	.string "elegance that you led your {P}MON.\p"
 	.string "Even I felt bedazzled by your\n"
 	.string "masterful performance!\p"
 	.string "You now stand at the glorious peak\n"
-	.string "of the POKéMON LEAGUE.\p"
+	.string "of the {P}MON LEAGUE.\p"
 	.string "I now proclaim you to be the new\n"
 	.string "HOENN region…$"
 
 EverGrandeCity_ChampionsRoom_Text_2290CA: @ 82290CA
-	.string "MAY: {PLAYER}{KUN}!\p"
+	.string "{RIVAL}: {PLAYER}!\p"
 	.string "Here's some advice before you challenge\n"
 	.string "the CHAMPION…$"
 
 EverGrandeCity_ChampionsRoom_Text_22910B: @ 822910B
-	.string "MAY: Huh?\n"
+	.string "{RIVAL}: Huh?\n"
 	.string "What, what, what?\p"
-	.string "{PLAYER}{KUN}…\n"
+	.string "{PLAYER}…\n"
 	.string "Could it be that…\l"
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_229152: @ 8229152
-	.string "BRENDAN: {PLAYER}!\p"
+	.string "{RIVAL}: {PLAYER}!\p"
 	.string "How would you like some advice before\n"
 	.string "you challenge the CHAMPION?…$"
 
 EverGrandeCity_ChampionsRoom_Text_2291A2: @ 82291A2
-	.string "BRENDAN: {PLAYER}…\p"
+	.string "{RIVAL}: {PLAYER}…\p"
 	.string "Are you trying to tell me…\n"
 	.string "You've beaten the CHAMPION?$"
 
@@ -298,16 +298,16 @@ EverGrandeCity_ChampionsRoom_Text_2291E6: @ 82291E6
 	.string "PROF. BIRCH: See?\n"
 	.string "What did I tell you, {RIVAL}?\p"
 	.string "Didn't I tell you that you don't need\n"
-	.string "to worry about {PLAYER}{KUN}?\p"
+	.string "to worry about {PLAYER}?\p"
 	.string "… … … … … … … …\n"
-	.string "{PLAYER}{KUN}, you've finally done it.\p"
+	.string "{PLAYER}, you've finally done it.\p"
 	.string "When I heard that you defeated your\n"
 	.string "own father at the PETALBURG GYM,\l"
 	.string "I thought perhaps you had a chance…\p"
 	.string "But to think you've actually become\n"
 	.string "the CHAMPION!\p"
 	.string "Ah, yes!\p"
-	.string "What became of your POKéDEX?\n"
+	.string "What became of your {P}DEX?\n"
 	.string "Here, let me see.$"
 
 EverGrandeCity_ChampionsRoom_Text_22934D: @ 822934D
@@ -316,7 +316,7 @@ EverGrandeCity_ChampionsRoom_Text_22934D: @ 822934D
 	.string "Now, go proudly into the final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_229399: @ 8229399
-	.string "WALLACE: {PLAYER}{KUN}…\p"
+	.string "WALLACE: {PLAYER}…\p"
 	.string "No, let me rephrase that properly.\p"
 	.string "The new CHAMPION!\p"
 	.string "Come with me.$"
@@ -329,16 +329,16 @@ EverGrandeCity_ChampionsRoom_Text_2293EB: @ 82293EB
 	.string "PROF. BIRCH.$"
 
 EverGrandeCity_ChampionsRoom_Text_229479: @ 8229479
-	.string "MAY: Groan…\p"
+	.string "{RIVAL}: Groan…\p"
 	.string "… … … … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "I'm just joking! That's okay!\n"
 	.string "That's the rule!\p"
-	.string "{PLAYER}{KUN}!\n"
+	.string "{PLAYER}!\n"
 	.string "Honestly, congratulations!$"
 
 EverGrandeCity_ChampionsRoom_Text_2294F5: @ 82294F5
-	.string "BRENDAN: Whaaaat?! … … … … …\n"
+	.string "{RIVAL}: Whaaaat?! … … … … …\n"
 	.string "… … … … … … … …\p"
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"

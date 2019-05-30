@@ -13,7 +13,7 @@ Route104_Text_2A6D86: @ 82A6D86
 Route104_Text_2A6E32: @ 82A6E32
 	.string "The way you look, you must be a\n"
 	.string "TRAINER, no?\p"
-	.string "TRAINERS often make POKéMON hold\n"
+	.string "TRAINERS often make {P}MON hold\n"
 	.string "BERRIES.\p"
 	.string "It's up to you whether to grow BERRIES\n"
 	.string "or use them.$"
@@ -86,7 +86,7 @@ LilycoveCity_Text_2A72E3: @ 82A72E3
 LilycoveCity_Text_2A7321: @ 82A7321
 	.string "When it gets right down to it…\p"
 	.string "The way dignified simplicity suits me,\n"
-	.string "{POKEBLOCK}S perfectly suit POKéMON.$"
+	.string "{POKEBLOCK}S perfectly suit {P}MON.$"
 
 Route123_BerryMastersHouse_Text_2A7386: @ 82A7386
 	.string "You may call me the BERRY MASTER.\p"
@@ -140,14 +140,14 @@ Route104_PrettyPetalFlowerShop_Text_2A7686: @ 82A7686
 	.string "Spreading flowers all over the world!$"
 
 Route104_PrettyPetalFlowerShop_Text_2A76D9: @ 82A76D9
-	.string "{PLAYER}{KUN}, would you like to learn about\n"
+	.string "{PLAYER}, would you like to learn about\n"
 	.string "BERRIES?$"
 
 Route104_PrettyPetalFlowerShop_Text_2A7706: @ 82A7706
 	.string "Your name is?\p"
-	.string "{PLAYER}{KUN}.\n"
+	.string "{PLAYER}.\n"
 	.string "That's a nice name.\p"
-	.string "{PLAYER}{KUN}, would you like to learn about\n"
+	.string "{PLAYER}, would you like to learn about\n"
 	.string "BERRIES?$"
 
 Route104_PrettyPetalFlowerShop_Text_2A775B: @ 82A775B
@@ -161,7 +161,7 @@ Route104_PrettyPetalFlowerShop_Text_2A775B: @ 82A775B
 	.string "I want to see the whole wide world\n"
 	.string "filled with beautiful flowers.\l"
 	.string "That's my dream.\p"
-	.string "Please help me, {PLAYER}{KUN}. Plant BERRIES\n"
+	.string "Please help me, {PLAYER}. Plant BERRIES\n"
 	.string "and bring more flowers into the world.$"
 
 Route104_PrettyPetalFlowerShop_Text_2A78DF: @ 82A78DF
@@ -193,10 +193,10 @@ Route104_PrettyPetalFlowerShop_Text_2A7A98: @ 82A7A98
 
 Route104_PrettyPetalFlowerShop_Text_2A7AF3: @ 82A7AF3
 	.string "You can plant a BERRY and grow it big,\n"
-	.string "or you can make a POKéMON hold it.\p"
+	.string "or you can make a {P}MON hold it.\p"
 	.string "But now they have a machine that mixes\n"
 	.string "up different BERRIES and makes candies\l"
-	.string "for POKéMON.\p"
+	.string "for {P}MON.\p"
 	.string "I want some candy, too.$"
 
 SootopolisCity_Text_2A7BB0: @ 82A7BB0

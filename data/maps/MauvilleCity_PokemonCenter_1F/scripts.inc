@@ -48,7 +48,7 @@ MauvilleCity_PokemonCenter_1F_Text_210F06: @ 8210F06
 
 MauvilleCity_PokemonCenter_1F_Text_210F8A: @ 8210F8A
 	.string "A RECORD CORNER opened upstairs in\n"
-	.string "the POKéMON CENTER.\p"
+	.string "the {P}MON CENTER.\p"
 	.string "I don't know what it's about, but it\n"
 	.string "sounds fun. I'll go check it out!$"
 

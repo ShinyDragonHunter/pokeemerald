@@ -376,8 +376,8 @@ BattleFrontier_BattlePikeLobby_Text_25BE35: @ 825BE35
 BattleFrontier_BattlePikeLobby_Text_25BE8C: @ 825BE8C
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
-	.string "You must have three different POKéMON\n"
+	.string "{P}MON for the Battle Choice event.\p"
+	.string "You must have three different {P}MON\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -388,9 +388,9 @@ BattleFrontier_BattlePikeLobby_Text_25BE8C: @ 825BE8C
 BattleFrontier_BattlePikeLobby_Text_25BF9A: @ 825BF9A
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
+	.string "{P}MON for the Battle Choice event.\p"
 	.string "You must have three different\n"
-	.string "POKéMON to enter.\p"
+	.string "{P}MON to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
@@ -398,7 +398,7 @@ BattleFrontier_BattlePikeLobby_Text_25BF9A: @ 825BF9A
 	.string "you are ready…$"
 
 BattleFrontier_BattlePikeLobby_Text_25C094: @ 825C094
-	.string "Please choose the three POKéMON\n"
+	.string "Please choose the three {P}MON\n"
 	.string "you wish to enter in the challenge…$"
 
 BattleFrontier_BattlePikeLobby_Text_25C0D8: @ 825C0D8
@@ -463,7 +463,7 @@ BattleFrontier_BattlePikeLobby_Text_25C4A5: @ 825C4A5
 BattleFrontier_BattlePikeLobby_Text_25C4FD: @ 825C4FD
 	.string "Listen! Listen!\p"
 	.string "Don't you think that the special\n"
-	.string "abilities of POKéMON will be useful\l"
+	.string "abilities of {P}MON will be useful\l"
 	.string "here?$"
 
 BattleFrontier_BattlePikeLobby_Text_25C558: @ 825C558
@@ -480,17 +480,17 @@ BattleFrontier_BattlePikeLobby_Text_25C621: @ 825C621
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePikeLobby_Text_25C644: @ 825C644
-	.string "The BAG and POKéNAV may not be used\n"
+	.string "The BAG and {P}NAV may not be used\n"
 	.string "during a Battle Choice challenge.$"
 
 BattleFrontier_BattlePikeLobby_Text_25C68A: @ 825C68A
 	.string "During a Battle Choice challenge,\n"
-	.string "any BERRY or HERB held by POKéMON\l"
+	.string "any BERRY or HERB held by {P}MON\l"
 	.string "will be effective only once.$"
 
 BattleFrontier_BattlePikeLobby_Text_25C6EB: @ 825C6EB
 	.string "During a Battle Choice challenge,\n"
-	.string "the sequence of POKéMON cannot be\l"
+	.string "the sequence of {P}MON cannot be\l"
 	.string "changed.\p"
 	.string "The sequence must be set before\n"
 	.string "starting your challenge.$"

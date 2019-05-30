@@ -186,7 +186,7 @@ Route117_EventScript_1F3C65:: @ 81F3C65
 	end
 
 Route117_Text_1F3C7C: @ 81F3C7C
-	.string "I left my POKéMON at the DAY CARE.\p"
+	.string "I left my {P}MON at the DAY CARE.\p"
 	.string "When I got it back, it had a new move\n"
 	.string "that I didn't teach it.\l"
 	.string "I was really, really surprised.$"
@@ -208,6 +208,6 @@ Route117_Text_1F3D74: @ 81F3D74
 	.string "{RIGHT_ARROW} MAUVILLE CITY$"
 
 Route117_Text_1F3D8E: @ 81F3D8E
-	.string "POKéMON DAY CARE\n"
-	.string "“Let us raise your POKéMON.”$"
+	.string "{P}MON DAY CARE\n"
+	.string "“Let us raise your {P}MON.”$"
 

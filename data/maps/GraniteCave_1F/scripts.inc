@@ -31,9 +31,9 @@ GraniteCave_1F_Text_22DA94: @ 822DA94
 
 GraniteCave_1F_Text_22DBB7: @ 822DBB7
 	.string "Teach that hidden move FLASH to\n"
-	.string "a POKéMON and use it.\p"
+	.string "a {P}MON and use it.\p"
 	.string "It lights up even the inky darkness\n"
 	.string "of caves.\p"
 	.string "But, to use it, you need the GYM BADGE\n"
-	.string "from DEWFORD's POKéMON GYM.$"
+	.string "from DEWFORD's {P}MON GYM.$"
 

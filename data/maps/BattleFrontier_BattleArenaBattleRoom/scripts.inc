@@ -580,7 +580,7 @@ FallarborTown_BattleTentBattleRoom_Text_257CCE: @ 8257CCE
 
 BattleFrontier_BattleArenaBattleRoom_Text_257CE9: @ 8257CE9
 FallarborTown_BattleTentBattleRoom_Text_257CE9: @ 8257CE9
-	.string "Your POKéMON will be restored to\n"
+	.string "Your {P}MON will be restored to\n"
 	.string "full health.$"
 
 BattleFrontier_BattleArenaBattleRoom_Text_257D17: @ 8257D17

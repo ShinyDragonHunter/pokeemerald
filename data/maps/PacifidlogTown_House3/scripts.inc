@@ -85,8 +85,8 @@ PacifidlogTown_House3_Text_203E7F: @ 8203E7F
 	.string "that another TRAINER caught…$"
 
 PacifidlogTown_House3_Text_203EF1: @ 8203EF1
-	.string "Is that a POKéDEX?\p"
+	.string "Is that a {P}DEX?\p"
 	.string "Did you get to meet a lot of different\n"
-	.string "POKéMON?\p"
+	.string "{P}MON?\p"
 	.string "I wish I was like you.$"
 

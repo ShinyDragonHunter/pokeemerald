@@ -130,10 +130,10 @@ EverGrandeCity_PokemonLeague_1F_Text_2296E8: @ 82296E8
 
 EverGrandeCity_PokemonLeague_1F_Text_229787: @ 8229787
 	.string "You haven't obtained all the BADGES.\p"
-	.string "If you're bound for the POKéMON\n"
+	.string "If you're bound for the {P}MON\n"
 	.string "LEAGUE, you must return with them.$"
 
 EverGrandeCity_PokemonLeague_1F_Text_2297EF: @ 82297EF
 	.string "TRAINER! Believe in yourself and your\n"
-	.string "POKéMON, and go forth!$"
+	.string "{P}MON, and go forth!$"
 

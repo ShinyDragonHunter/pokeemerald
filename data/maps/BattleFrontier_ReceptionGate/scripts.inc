@@ -298,7 +298,7 @@ BattleFrontier_ReceptionGate_Text_266580: @ 8266580
 	.string "Please step this way!$"
 
 BattleFrontier_ReceptionGate_Text_2665B2: @ 82665B2
-	.string "The front lines of POKéMON battling!\n"
+	.string "The front lines of {P}MON battling!\n"
 	.string "Welcome to the BATTLE FRONTIER!$"
 
 BattleFrontier_ReceptionGate_Text_2665F7: @ 82665F7
@@ -321,7 +321,7 @@ BattleFrontier_ReceptionGate_Text_2666C6: @ 82666C6
 	.string "FRONTIER has to offer!$"
 
 BattleFrontier_ReceptionGate_Text_266703: @ 8266703
-	.string "???: Well, if it isn't {PLAYER}{KUN}!\n"
+	.string "???: Well, if it isn't {PLAYER}!\n"
 	.string "You came out here!$"
 
 BattleFrontier_ReceptionGate_Text_266733: @ 8266733
@@ -385,7 +385,7 @@ BattleFrontier_ReceptionGate_Text_266B5D: @ 8266B5D
 
 BattleFrontier_ReceptionGate_Text_266C24: @ 8266C24
 	.string "The BATTLE PIKE is the building shaped\n"
-	.string "like a POKéMON at the center-left of\l"
+	.string "like a {P}MON at the center-left of\l"
 	.string "the BATTLE FRONTIER.\p"
 	.string "An event called the Battle Choice\n"
 	.string "is conducted there.$"
@@ -426,11 +426,11 @@ BattleFrontier_ReceptionGate_Text_266F04: @ 8266F04
 	.string "two courses--Level 50 and Open Level.$"
 
 BattleFrontier_ReceptionGate_Text_266F69: @ 8266F69
-	.string "The Level 50 course is open to POKéMON\n"
+	.string "The Level 50 course is open to {P}MON\n"
 	.string "up to and including Level 50.\p"
 	.string "Please keep in mind, however, that\n"
 	.string "no TRAINER you face will have any\l"
-	.string "POKéMON below Level 50.\p"
+	.string "{P}MON below Level 50.\p"
 	.string "This course is the entry level for\n"
 	.string "battles at the BATTLE FRONTIER.\p"
 	.string "To begin, we hope you will challenge\n"
@@ -438,30 +438,30 @@ BattleFrontier_ReceptionGate_Text_266F69: @ 8266F69
 
 BattleFrontier_ReceptionGate_Text_267080: @ 8267080
 	.string "The Open Level course places no limit\n"
-	.string "on the levels of POKéMON entering\l"
+	.string "on the levels of {P}MON entering\l"
 	.string "challenges.\p"
 	.string "The levels of your opponents will\n"
 	.string "be adjusted to match the levels of\l"
-	.string "your POKéMON.\p"
+	.string "your {P}MON.\p"
 	.string "However, no TRAINER you face will\n"
-	.string "have any POKéMON below Level 60.$"
+	.string "have any {P}MON below Level 60.$"
 
 BattleFrontier_ReceptionGate_Text_26716A: @ 826716A
-	.string "Virtually any kind of POKéMON may take\n"
+	.string "Virtually any kind of {P}MON may take\n"
 	.string "on the challenges at all facilities.\p"
-	.string "EGGS and certain kinds of POKéMON,\n"
+	.string "EGGS and certain kinds of {P}MON,\n"
 	.string "however, are not permitted.\p"
-	.string "The numbers of POKéMON required for\n"
+	.string "The numbers of {P}MON required for\n"
 	.string "challenges will depend on the facility.\p"
 	.string "At all facilities, however, two or more\n"
-	.string "of the same kind of POKéMON are not\l"
+	.string "of the same kind of {P}MON are not\l"
 	.string "permitted.$"
 
 BattleFrontier_ReceptionGate_Text_267298: @ 8267298
 	.string "When entering a challenge at a BATTLE\n"
-	.string "FRONTIER facility, POKéMON may not\l"
+	.string "FRONTIER facility, {P}MON may not\l"
 	.string "be holding the same kind of item.\p"
-	.string "Please make sure that all POKéMON\n"
+	.string "Please make sure that all {P}MON\n"
 	.string "entering a challenge are holding\l"
 	.string "different items.$"
 

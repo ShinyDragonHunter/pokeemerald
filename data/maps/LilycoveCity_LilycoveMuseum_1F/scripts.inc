@@ -167,7 +167,7 @@ LilycoveCity_LilycoveMuseum_1F_Text_218E4B: @ 8218E4B
 	.string "Welcome to LILYCOVE MUSEUM.\p"
 	.string "Please take the time to enjoy our\n"
 	.string "collection of fantastic artwork\l"
-	.string "featuring POKéMON.$"
+	.string "featuring {P}MON.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_218EBC: @ 8218EBC
 	.string "I'm the CURATOR of this MUSEUM of\n"
@@ -183,7 +183,7 @@ LilycoveCity_LilycoveMuseum_1F_Text_218F5C: @ 8218F5C
 
 LilycoveCity_LilycoveMuseum_1F_Text_218F98: @ 8218F98
 	.string "Oh? I do believe that you seem to\n"
-	.string "be a POKéMON TRAINER.\p"
+	.string "be a {P}MON TRAINER.\p"
 	.string "Have you an interest in paintings,\n"
 	.string "too?$"
 
@@ -207,16 +207,16 @@ LilycoveCity_LilycoveMuseum_1F_Text_2190BF: @ 82190BF
 
 LilycoveCity_LilycoveMuseum_1F_Text_2190F9: @ 82190F9
 	.string "It's a painting of a beautiful, smiling\n"
-	.string "woman with a POKéMON on her lap.$"
+	.string "woman with a {P}MON on her lap.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_219142: @ 8219142
-	.string "It's a painting of a legendary POKéMON\n"
+	.string "It's a painting of a legendary {P}MON\n"
 	.string "from long ago.\p"
 	.string "The artist painted this from\n"
 	.string "imagination.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_2191A2: @ 82191A2
-	.string "It's a painting of GRASS POKéMON\n"
+	.string "It's a painting of GRASS {P}MON\n"
 	.string "swaying in a breeze.\p"
 	.string "They appear to be enjoying the wind's\n"
 	.string "gentle caress.$"
@@ -228,17 +228,17 @@ LilycoveCity_LilycoveMuseum_1F_Text_21920D: @ 821920D
 
 LilycoveCity_LilycoveMuseum_1F_Text_219260: @ 8219260
 	.string "It's a replica of a famous sculpture.\p"
-	.string "It depicts an ancient BIRD POKéMON.$"
+	.string "It depicts an ancient BIRD {P}MON.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_2192AA: @ 82192AA
-	.string "It's a big POKé BALL carved from\n"
+	.string "It's a big {P} BALL carved from\n"
 	.string "a black stone.\p"
 	.string "It was apparently used in festivals\n"
 	.string "in the olden days.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_219311: @ 8219311
 	.string "It's a huge stone tablet inscribed\n"
-	.string "with POKéMON and dense text in the\l"
+	.string "with {P}MON and dense text in the\l"
 	.string "small characters of an ancient,\l"
 	.string "unreadable language.$"
 
@@ -247,7 +247,7 @@ LilycoveCity_LilycoveMuseum_1F_Text_21938C: @ 821938C
 	.string "What works of great magnificence…$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_2193B4: @ 82193B4
-	.string "Battling with POKéMON is fun,\n"
+	.string "Battling with {P}MON is fun,\n"
 	.string "I'll grant you that.\p"
 	.string "But one mustn't forget our love for\n"
 	.string "the fine arts.$"
@@ -264,7 +264,7 @@ LilycoveCity_LilycoveMuseum_1F_Text_2194BA: @ 82194BA
 	.string "She's like Mommy!$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_2194E1: @ 82194E1
-	.string "This POKéMON is adorable!\n"
+	.string "This {P}MON is adorable!\n"
 	.string "Just like our little boy!$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_219515: @ 8219515

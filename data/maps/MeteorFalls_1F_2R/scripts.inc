@@ -75,12 +75,12 @@ MeteorFalls_1F_2R_Text_22C678: @ 822C678
 
 MeteorFalls_1F_2R_Text_22C6A3: @ 822C6A3
 	.string "The road ahead remains long and harsh.\p"
-	.string "When will my POKéMON and I become\n"
+	.string "When will my {P}MON and I become\n"
 	.string "the best?$"
 
 MeteorFalls_1F_2R_Text_22C6F6: @ 822C6F6
 	.string "I want to know more about your power.\n"
-	.string "Let me register you in my POKéNAV.$"
+	.string "Let me register you in my {P}NAV.$"
 
 MeteorFalls_1F_2R_Text_22C73F: @ 822C73F
 	.string "Since we met, we have trained hard\n"
@@ -94,12 +94,12 @@ MeteorFalls_1F_2R_Text_22C7AD: @ 822C7AD
 
 MeteorFalls_1F_2R_Text_22C7D8: @ 822C7D8
 	.string "You've obviously kept up your\n"
-	.string "POKéMON training.\p"
+	.string "{P}MON training.\p"
 	.string "So long as you remain strong, I, too,\n"
 	.string "can become stronger!$"
 
 MeteorFalls_1F_2R_Text_22C843: @ 822C843
-	.string "JOHN: We've always battled POKéMON\n"
+	.string "JOHN: We've always battled {P}MON\n"
 	.string "together as a twosome.\l"
 	.string "We've confidence in ourselves.$"
 
@@ -116,7 +116,7 @@ MeteorFalls_1F_2R_Text_22C8C1: @ 822C8C1
 MeteorFalls_1F_2R_Text_22C92B: @ 822C92B
 	.string "JOHN: Well, well, what a young TRAINER!\p"
 	.string "Will you battle with us? If so, you'll\n"
-	.string "have to return with more POKéMON.$"
+	.string "have to return with more {P}MON.$"
 
 MeteorFalls_1F_2R_Text_22C99C: @ 822C99C
 	.string "JOHN: Young TRAINER, if the chance\n"
@@ -135,16 +135,16 @@ MeteorFalls_1F_2R_Text_22CA44: @ 822CA44
 MeteorFalls_1F_2R_Text_22CA70: @ 822CA70
 	.string "JAY: Fifty years of marriage…\p"
 	.string "If we ever argued, we always settled\n"
-	.string "it with a POKéMON battle…$"
+	.string "it with a {P}MON battle…$"
 
 MeteorFalls_1F_2R_Text_22CACD: @ 822CACD
 	.string "JAY: Well, well, aren't you a young\n"
 	.string "TRAINER?\p"
 	.string "If you'd care to battle with us, you'll\n"
-	.string "have to come back with more POKéMON.$"
+	.string "have to come back with more {P}MON.$"
 
 MeteorFalls_1F_2R_Text_22CB47: @ 822CB47
-	.string "JOHN: We've always battled POKéMON\n"
+	.string "JOHN: We've always battled {P}MON\n"
 	.string "together as a twosome.\l"
 	.string "We've confidence in ourselves.$"
 
@@ -160,7 +160,7 @@ MeteorFalls_1F_2R_Text_22CBC5: @ 822CBC5
 MeteorFalls_1F_2R_Text_22CC27: @ 822CC27
 	.string "JOHN: Well, well, what a young TRAINER!\p"
 	.string "Will you battle with us? If so, you'll\n"
-	.string "have to return with more POKéMON.$"
+	.string "have to return with more {P}MON.$"
 
 MeteorFalls_1F_2R_Text_22CC98: @ 822CC98
 	.string "JAY: We've been married for\n"
@@ -182,5 +182,5 @@ MeteorFalls_1F_2R_Text_22CDAB: @ 822CDAB
 	.string "JAY: Well, well, aren't you a young\n"
 	.string "TRAINER?\p"
 	.string "If you'd care to battle with us, you'll\n"
-	.string "have to come back with more POKéMON.$"
+	.string "have to come back with more {P}MON.$"
 

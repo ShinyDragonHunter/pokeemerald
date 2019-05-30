@@ -90,7 +90,8 @@ void CopyMonCategoryText(int dexNum, u8 *dest)
 {
     u8 *str = StringCopy(dest, gPokedexEntries[dexNum].categoryName);
     *str = CHAR_SPACE;
-    StringCopy(str + 1, gText_Pokemon);
+    StringExpandPlaceholders(gStringVar4, gText_Pokemon);
+    StringCopy(str + 1, gStringVar4);
 }
 
 u8 *sub_81DB494(u8 *str, int fontId, const u8 *str2, int totalStringWidth)

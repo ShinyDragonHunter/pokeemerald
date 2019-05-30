@@ -38,5 +38,5 @@ MossdeepCity_House1_Text_222068: @ 8222068
 
 MossdeepCity_House1_Text_222099: @ 8222099
 	.string "My husband can tell what kind of\n"
-	.string "{POKEBLOCK}S a POKéMON likes at a glance.$"
+	.string "{POKEBLOCK}S a {P}MON likes at a glance.$"
 

@@ -127,7 +127,7 @@ VictoryRoad_1F_Text_235EE6: @ 8235EE6
 	.string "{PLAYER}, losing to you that time\n"
 	.string "made me stronger!\p"
 	.string "But I'm not going to lose anymore!\p"
-	.string "I'm going to win! For the POKéMON who\n"
+	.string "I'm going to win! For the {P}MON who\n"
 	.string "gave me courage and strength!\p"
 	.string "Okay… Here I come!$"
 
@@ -154,7 +154,7 @@ VictoryRoad_1F_Text_2360FE: @ 82360FE
 	.string "WALLY: I couldn't beat you this time,\n"
 	.string "too… But one of these days, {PLAYER},\l"
 	.string "I'm going to catch up to you…\p"
-	.string "And challenge the POKéMON LEAGUE!$"
+	.string "And challenge the {P}MON LEAGUE!$"
 
 VictoryRoad_1F_Text_236184: @ 8236184
 	.string "I've made it this far a couple times,\n"
@@ -203,7 +203,7 @@ VictoryRoad_1F_Text_2363C4: @ 82363C4
 VictoryRoad_1F_Text_2363D5: @ 82363D5
 	.string "Getting through here safely--that's\n"
 	.string "the final test for any TRAINER aiming\l"
-	.string "to become the POKéMON CHAMPION.\p"
+	.string "to become the {P}MON CHAMPION.\p"
 	.string "That's why it's called the VICTORY\n"
 	.string "ROAD.$"
 

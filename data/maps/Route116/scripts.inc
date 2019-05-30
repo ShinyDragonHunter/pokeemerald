@@ -386,14 +386,14 @@ Route116_Text_1F3166: @ 81F3166
 	.string "What's going on?\p"
 	.string "I was digging the tunnel without any\n"
 	.string "tools when some goon ordered me out!\p"
-	.string "That tunnel's filled with POKéMON\n"
+	.string "That tunnel's filled with {P}MON\n"
 	.string "that react badly to loud noises.\l"
 	.string "They could cause an uproar.\p"
 	.string "That's why we stopped using heavy\n"
 	.string "equipment for tunneling…\p"
 	.string "I'm worried that the goon will do\n"
 	.string "something stupid and startle the\l"
-	.string "POKéMON into an uproar.$"
+	.string "{P}MON into an uproar.$"
 
 Route116_Text_1F32C1: @ 81F32C1
 	.string "Nnn… Roar!\p"
@@ -415,13 +415,13 @@ Route116_Text_1F3317: @ 81F3317
 	.string "For you, the most wonderful TRAINER,\n"
 	.string "I bear good news!\p"
 	.string "Recently, our company developed\n"
-	.string "a new kind of POKé BALL.\p"
+	.string "a new kind of {P} BALL.\p"
 	.string "As a token of our appreciation, this\n"
 	.string "is our gift to our wonderful TRAINER!$"
 
 Route116_Text_1F3521: @ 81F3521
-	.string "Our new POKé BALL will be available\n"
-	.string "at the POKéMON MART in RUSTBORO.\p"
+	.string "Our new {P} BALL will be available\n"
+	.string "at the {P}MON MART in RUSTBORO.\p"
 	.string "Please do try it out!\n"
 	.string "Thank you and bye-bye!$"
 
@@ -432,7 +432,7 @@ Route116_Text_1F3593: @ 81F3593
 Route116_Text_1F35CE: @ 81F35CE
 	.string "As a token of our appreciation for\n"
 	.string "your delivering our package, I have\l"
-	.string "a gift of a new kind of POKé BALL\l"
+	.string "a gift of a new kind of {P} BALL\l"
 	.string "for our most wonderful TRAINER!$"
 
 Route116_Text_1F3657: @ 81F3657
@@ -475,10 +475,10 @@ Route116_Text_1F380F: @ 81F380F
 
 Route116_Text_1F3825: @ 81F3825
 	.string "TRAINER TIPS\p"
-	.string "If you want to stop a POKéMON from\n"
+	.string "If you want to stop a {P}MON from\n"
 	.string "evolving, press the B Button while it\l"
 	.string "is trying to evolve.\l"
-	.string "The startled POKéMON will stop.\p"
+	.string "The startled {P}MON will stop.\p"
 	.string "This is called an evolution cancel.$"
 
 Route116_Text_1F38D4: @ 81F38D4

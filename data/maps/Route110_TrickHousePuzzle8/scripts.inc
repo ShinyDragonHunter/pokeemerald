@@ -43,7 +43,7 @@ Route110_TrickHousePuzzle8_Text_26E8F6: @ 826E8F6
 	.string "That must mean you're tough, too…$"
 
 Route110_TrickHousePuzzle8_Text_26E918: @ 826E918
-	.string "You've beaten the POKéMON LEAGUE\n"
+	.string "You've beaten the {P}MON LEAGUE\n"
 	.string "CHAMPION? That's too much!$"
 
 Route110_TrickHousePuzzle8_Text_26E954: @ 826E954

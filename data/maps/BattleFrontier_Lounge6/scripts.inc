@@ -49,7 +49,7 @@ BattleFrontier_Lounge6_EventScript_265083:: @ 8265083
 	end
 
 BattleFrontier_Lounge6_Text_26508D: @ 826508D
-	.string "My POKéMON is a {STR_VAR_2}.\n"
+	.string "My {P}MON is a {STR_VAR_2}.\n"
 	.string "Do you know it?\l"
 	.string "It's quite cute and rather nice.\p"
 	.string "This little one, I could trade with\n"

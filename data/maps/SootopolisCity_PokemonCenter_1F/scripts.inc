@@ -63,10 +63,10 @@ SootopolisCity_PokemonCenter_1F_Text_22664B: @ 822664B
 SootopolisCity_PokemonCenter_1F_Text_2266B9: @ 82266B9
 	.string "Whenever, wherever, and whatever\n"
 	.string "happens, I will always be friends with\l"
-	.string "POKéMON.\p"
-	.string "Because it's fun to be with POKéMON!$"
+	.string "{P}MON.\p"
+	.string "Because it's fun to be with {P}MON!$"
 
 SootopolisCity_PokemonCenter_1F_Text_22672F: @ 822672F
-	.string "Aren't POKéMON our friends?\p"
+	.string "Aren't {P}MON our friends?\p"
 	.string "Why are they going wild this way?$"
 

@@ -1163,7 +1163,7 @@ BattleFrontier_BattleTowerLobby_Text_23F79D: @ 823F79D
 	.string "You're finally about to face the\n"
 	.string "50th TRAINER.\p"
 	.string "From here on, every time you beat seven\n"
-	.string "TRAINERS in a row, your POKéMON will\l"
+	.string "TRAINERS in a row, your {P}MON will\l"
 	.string "receive a commemorative RIBBON.\p"
 	.string "Good luck!$"
 
@@ -1174,7 +1174,7 @@ BattleFrontier_BattleTowerLobby_Text_23F844: @ 823F844
 
 BattleFrontier_BattleTowerLobby_Text_23F89F: @ 823F89F
 	.string "{PLAYER} put the RIBBONS on\n"
-	.string "the challenger POKéMON.$"
+	.string "the challenger {P}MON.$"
 
 BattleFrontier_BattleTowerLobby_Text_23F8CD: @ 823F8CD
 	.string "Excuse me, do you have a moment?\p"
@@ -1247,7 +1247,7 @@ BattleFrontier_BattleTowerLobby_Text_23FD3B: @ 823FD3B
 	.string "Which is your choice?$"
 
 BattleFrontier_BattleTowerLobby_Text_23FD9A: @ 823FD9A
-	.string "Please select the POKéMON you wish\n"
+	.string "Please select the {P}MON you wish\n"
 	.string "to enter.$"
 
 BattleFrontier_BattleTowerLobby_Text_23FDC7: @ 823FDC7
@@ -1264,8 +1264,8 @@ BattleFrontier_BattleTowerLobby_Text_23FE3C: @ 823FE3C
 
 BattleFrontier_BattleTowerLobby_Text_23FE7F: @ 823FE7F
 	.string "Excuse me!\p"
-	.string "You don't have {STR_VAR_2} eligible POKéMON.\p"
-	.string "You must have {STR_VAR_2} different POKéMON\n"
+	.string "You don't have {STR_VAR_2} eligible {P}MON.\p"
+	.string "You must have {STR_VAR_2} different {P}MON\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1274,8 +1274,8 @@ BattleFrontier_BattleTowerLobby_Text_23FE7F: @ 823FE7F
 
 BattleFrontier_BattleTowerLobby_Text_23FF5D: @ 823FF5D
 	.string "Excuse me!\p"
-	.string "You don't have {STR_VAR_2} eligible POKéMON.\p"
-	.string "You must have {STR_VAR_2} different POKéMON\n"
+	.string "You don't have {STR_VAR_2} eligible {P}MON.\p"
+	.string "You must have {STR_VAR_2} different {P}MON\n"
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1284,8 +1284,8 @@ BattleFrontier_BattleTowerLobby_Text_23FF5D: @ 823FF5D
 
 BattleFrontier_BattleTowerLobby_Text_240027: @ 8240027
 	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "You must have three different POKéMON\n"
+	.string "You don't have three eligible {P}MON.\p"
+	.string "You must have three different {P}MON\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1294,8 +1294,8 @@ BattleFrontier_BattleTowerLobby_Text_240027: @ 8240027
 
 BattleFrontier_BattleTowerLobby_Text_24010B: @ 824010B
 	.string "Excuse me!\p"
-	.string "You don't have three eligible POKéMON.\p"
-	.string "You must have three different POKéMON\n"
+	.string "You don't have three eligible {P}MON.\p"
+	.string "You must have three different {P}MON\n"
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1304,8 +1304,8 @@ BattleFrontier_BattleTowerLobby_Text_24010B: @ 824010B
 
 BattleFrontier_BattleTowerLobby_Text_2401DB: @ 82401DB
 	.string "Excuse me!\p"
-	.string "You don't have four eligible POKéMON.\p"
-	.string "You must have four different POKéMON\n"
+	.string "You don't have four eligible {P}MON.\p"
+	.string "You must have four different {P}MON\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1314,8 +1314,8 @@ BattleFrontier_BattleTowerLobby_Text_2401DB: @ 82401DB
 
 BattleFrontier_BattleTowerLobby_Text_2402BD: @ 82402BD
 	.string "Excuse me!\p"
-	.string "You don't have four eligible POKéMON.\p"
-	.string "You must have four different POKéMON\n"
+	.string "You don't have four eligible {P}MON.\p"
+	.string "You must have four different {P}MON\n"
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1324,8 +1324,8 @@ BattleFrontier_BattleTowerLobby_Text_2402BD: @ 82402BD
 
 BattleFrontier_BattleTowerLobby_Text_24038B: @ 824038B
 	.string "Excuse me!\p"
-	.string "You don't have two eligible POKéMON.\p"
-	.string "You must have two different POKéMON\n"
+	.string "You don't have two eligible {P}MON.\p"
+	.string "You must have two different {P}MON\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1334,8 +1334,8 @@ BattleFrontier_BattleTowerLobby_Text_24038B: @ 824038B
 
 BattleFrontier_BattleTowerLobby_Text_24046B: @ 824046B
 	.string "Excuse me!\p"
-	.string "You don't have two eligible POKéMON.\p"
-	.string "You must have two different POKéMON\n"
+	.string "You don't have two eligible {P}MON.\p"
+	.string "You must have two different {P}MON\n"
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -1356,7 +1356,7 @@ BattleFrontier_BattleTowerLobby_Text_2405B3: @ 82405B3
 BattleFrontier_BattleTowerLobby_Text_2405EC: @ 82405EC
 	.string "The BATTLE TOWER's SINGLE BATTLE\n"
 	.string "ROOMS are facilities for conducting\l"
-	.string "SINGLE BATTLES with three POKéMON.\p"
+	.string "SINGLE BATTLES with three {P}MON.\p"
 	.string "There are many SINGLE BATTLE ROOMS\n"
 	.string "in the BATTLE TOWER for team battles.\p"
 	.string "In each of the SINGLE BATTLE ROOMS,\n"
@@ -1369,7 +1369,7 @@ BattleFrontier_BattleTowerLobby_Text_2405EC: @ 82405EC
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattleTowerLobby_Text_2407A6: @ 82407A6
-	.string "Now please select the three POKéMON\n"
+	.string "Now please select the three {P}MON\n"
 	.string "that are to be entered.$"
 
 BattleFrontier_BattleTowerLobby_Text_2407E2: @ 82407E2
@@ -1386,7 +1386,7 @@ BattleFrontier_BattleTowerLobby_Text_24085E: @ 824085E
 BattleFrontier_BattleTowerLobby_Text_240897: @ 8240897
 	.string "The BATTLE TOWER's DOUBLE BATTLE\n"
 	.string "ROOMS are facilities for conducting\l"
-	.string "DOUBLE BATTLES with four POKéMON.\p"
+	.string "DOUBLE BATTLES with four {P}MON.\p"
 	.string "There are many DOUBLE BATTLE ROOMS\n"
 	.string "in the BATTLE TOWER for team battles.\p"
 	.string "In each of the DOUBLE BATTLE ROOMS,\n"
@@ -1399,7 +1399,7 @@ BattleFrontier_BattleTowerLobby_Text_240897: @ 8240897
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattleTowerLobby_Text_240A50: @ 8240A50
-	.string "Now please select the four POKéMON\n"
+	.string "Now please select the four {P}MON\n"
 	.string "that are to be entered.$"
 
 BattleFrontier_BattleTowerLobby_Text_240A8B: @ 8240A8B
@@ -1419,7 +1419,7 @@ BattleFrontier_BattleTowerLobby_Text_240B3E: @ 8240B3E
 	.string "MULTI BATTLES.\p"
 	.string "For MULTI BATTLES, you must partner\n"
 	.string "with a TRAINER in the TOWER and enter\l"
-	.string "with two POKéMON each.\p"
+	.string "with two {P}MON each.\p"
 	.string "Inside the TOWER is a room named\n"
 	.string "the BATTLE SALON where you may meet\l"
 	.string "other TRAINERS.\p"
@@ -1437,7 +1437,7 @@ BattleFrontier_BattleTowerLobby_Text_240B3E: @ 8240B3E
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattleTowerLobby_Text_240DDB: @ 8240DDB
-	.string "Now please select the two POKéMON\n"
+	.string "Now please select the two {P}MON\n"
 	.string "that are to be entered.$"
 
 BattleFrontier_BattleTowerLobby_Text_240E15: @ 8240E15
@@ -1459,7 +1459,7 @@ BattleFrontier_BattleTowerLobby_Text_240ED2: @ 8240ED2
 	.string "Wireless Adapters or a Game Boy\l"
 	.string "Advance Game Link cable.\p"
 	.string "You must partner with your friend and\n"
-	.string "enter two different kinds of POKéMON.\p"
+	.string "enter two different kinds of {P}MON.\p"
 	.string "There are many MULTI BATTLE ROOMS\n"
 	.string "in the BATTLE TOWER for team battles.\p"
 	.string "In a MULTI BATTLE ROOM, seven\n"
@@ -1473,13 +1473,13 @@ BattleFrontier_BattleTowerLobby_Text_240ED2: @ 8240ED2
 	.string "MULTI BATTLES in a row nonstop.$"
 
 BattleFrontier_BattleTowerLobby_Text_24115E: @ 824115E
-	.string "Now please select the two POKéMON\n"
+	.string "Now please select the two {P}MON\n"
 	.string "that are to be entered.$"
 
 BattleFrontier_BattleTowerLobby_Text_241198: @ 8241198
 	.string "You have chosen the same kind of\n"
-	.string "POKéMON as your friend.\p"
-	.string "Please choose two POKéMON different\n"
+	.string "{P}MON as your friend.\p"
+	.string "Please choose two {P}MON different\n"
 	.string "from your friend's, match the level\l"
 	.string "you wish to enter, and register again.$"
 
@@ -1489,11 +1489,11 @@ BattleFrontier_BattleTowerLobby_Text_241240: @ 8241240
 
 BattleFrontier_BattleTowerLobby_Text_241285: @ 8241285
 	.string "Your friend has also selected\n"
-	.string "the POKéMON {STR_VAR_1}.$"
+	.string "the {P}MON {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerLobby_Text_2412B3: @ 82412B3
 	.string "Your friend has also selected the\n"
-	.string "POKéMON {STR_VAR_1} and {STR_VAR_2}.$"
+	.string "{P}MON {STR_VAR_1} and {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerLobby_Text_2412E8: @ 82412E8
 	.string "Your friend has chosen a different\n"
@@ -1503,16 +1503,16 @@ BattleFrontier_BattleTowerLobby_Text_241319: @ 8241319
 	.string "Your friend has chosen a different\n"
 	.string "battle level.\p"
 	.string "Your friend has also selected\n"
-	.string "the POKéMON {STR_VAR_1}.$"
+	.string "the {P}MON {STR_VAR_1}.$"
 
 BattleFrontier_BattleTowerLobby_Text_241378: @ 8241378
 	.string "Your friend has chosen a different\n"
 	.string "battle level.\p"
 	.string "Your friend has also selected the\n"
-	.string "POKéMON {STR_VAR_1} and {STR_VAR_2}.$"
+	.string "{P}MON {STR_VAR_1} and {STR_VAR_2}.$"
 
 BattleFrontier_BattleTowerLobby_Text_2413DE: @ 82413DE
-	.string "Please choose two POKéMON different\n"
+	.string "Please choose two {P}MON different\n"
 	.string "from your friend's, match the level\l"
 	.string "you wish to enter, and register again.$"
 
@@ -1557,9 +1557,9 @@ BattleFrontier_BattleTowerLobby_Text_241586: @ 8241586
 BattleFrontier_BattleTowerLobby_Text_241693: @ 8241693
 	.string "Depending on the BATTLE ROOM you are\n"
 	.string "entering, you will be required to take\l"
-	.string "a certain number of POKéMON.\p"
+	.string "a certain number of {P}MON.\p"
 	.string "The SINGLE BATTLE mode requires\n"
-	.string "three POKéMON.\p"
+	.string "three {P}MON.\p"
 	.string "The DOUBLE BATTLE mode requires four,\n"
 	.string "and the MULTI modes both require two.$"
 
@@ -1569,7 +1569,7 @@ BattleFrontier_BattleTowerLobby_Text_241777: @ 8241777
 	.string "the MULTI BATTLE ROOM challenge.\p"
 	.string "Choose the best partner for you by\n"
 	.string "examining other TRAINERS'\l"
-	.string "POKéMON and their moves.\p"
+	.string "{P}MON and their moves.\p"
 	.string "You may choose a new tag partner\n"
 	.string "after winning seven straight matches.$"
 
@@ -1579,9 +1579,9 @@ BattleFrontier_BattleTowerLobby_Text_24187E: @ 824187E
 	.string "You and your friend must be linked with\n"
 	.string "Wireless Adapters or a GBA Game Link\l"
 	.string "cable.\p"
-	.string "You must choose two POKéMON at\n"
+	.string "You must choose two {P}MON at\n"
 	.string "the registration counter.\p"
-	.string "These POKéMON must be different\n"
+	.string "These {P}MON must be different\n"
 	.string "from those of your friend.\p"
 	.string "You may not interrupt this challenge\n"
 	.string "in the middle, unlike other modes.$"

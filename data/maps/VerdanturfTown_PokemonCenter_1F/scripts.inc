@@ -27,9 +27,9 @@ VerdanturfTown_PokemonCenter_1F_EventScript_202751:: @ 8202751
 VerdanturfTown_PokemonCenter_1F_Text_20275A: @ 820275A
 	.string "You can't consider yourself a real\n"
 	.string "TRAINER if you don't have faith\l"
-	.string "in your POKéMON.\p"
+	.string "in your {P}MON.\p"
 	.string "Only those people who can believe\n"
-	.string "in their battling POKéMON can win\l"
+	.string "in their battling {P}MON can win\l"
 	.string "through to the very end.$"
 
 VerdanturfTown_PokemonCenter_1F_Text_20280B: @ 820280B

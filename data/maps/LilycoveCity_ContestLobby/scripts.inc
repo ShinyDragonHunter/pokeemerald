@@ -1026,9 +1026,9 @@ LilycoveCity_ContestLobby_Text_21AD55: @ 821AD55
 
 LilycoveCity_ContestLobby_Text_21ADB9: @ 821ADB9
 	.string "Congratulations!\p"
-	.string "I did a painting of your POKéMON to\n"
+	.string "I did a painting of your {P}MON to\n"
 	.string "commemorate its victory…\p"
-	.string "Well, your POKéMON's appeals were\n"
+	.string "Well, your {P}MON's appeals were\n"
 	.string "so fantastic, it spurred me into\l"
 	.string "painting better than I usually do.\l"
 	.string "Look, see?$"
@@ -1054,7 +1054,7 @@ LilycoveCity_ContestLobby_Text_21AF63: @ 821AF63
 LilycoveCity_ContestLobby_Text_21B030: @ 821B030
 	.string "Oh, that's right!\p"
 	.string "As a memento of me painting your\n"
-	.string "POKéMON, please take this.$"
+	.string "{P}MON, please take this.$"
 
 LilycoveCity_ContestLobby_Text_21B07E: @ 821B07E
 	.string "{PLAYER} received a RIBBON.$"
@@ -1082,20 +1082,20 @@ LilycoveCity_ContestLobby_Text_21B1B1: @ 821B1B1
 	.string "Hoo, boy… Master Rank CONTESTS,\n"
 	.string "here I come.\p"
 	.string "The world will know that my dearest\n"
-	.string "POKéMON is the cutest being in all\l"
+	.string "{P}MON is the cutest being in all\l"
 	.string "existence. The time has come!\l"
 	.string "Uheheheh.$"
 
 LilycoveCity_ContestLobby_Text_21B24D: @ 821B24D
 	.string "You can see a whole variety of\n"
-	.string "POKéMON here.\p"
+	.string "{P}MON here.\p"
 	.string "That's why I make this place a regular\n"
 	.string "part of my daily stroll.$"
 
 LilycoveCity_ContestLobby_Text_21B2BA: @ 821B2BA
 	.string "Wow, coming out to a CONTEST is\n"
 	.string "a feast for these eyes!\p"
-	.string "Would you look at all the POKéMON\n"
+	.string "Would you look at all the {P}MON\n"
 	.string "that just scream to be painted?$"
 
 LilycoveCity_ContestLobby_Text_21B334: @ 821B334
@@ -1106,7 +1106,7 @@ LilycoveCity_ContestLobby_Text_21B334: @ 821B334
 
 LilycoveCity_ContestLobby_Text_21B392: @ 821B392
 	.string "Day in and day out, I lavished my care\n"
-	.string "on this POKéMON.\p"
+	.string "on this {P}MON.\p"
 	.string "Its condition is peaking.\n"
 	.string "Today, victory is mine!$"
 

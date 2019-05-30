@@ -32,7 +32,7 @@ MossdeepCity_GameCorner_1F_EventScript_224B5D:: @ 8224B5D
 
 MossdeepCity_GameCorner_1F_Text_224B66: @ 8224B66
 	.string "When I was young, I traveled the world\n"
-	.string "as a POKéMON TRAINER.\p"
+	.string "as a {P}MON TRAINER.\p"
 	.string "Now that I've become an old buzzard,\n"
 	.string "my only amusement is watching young\l"
 	.string "TRAINERS battle.$"

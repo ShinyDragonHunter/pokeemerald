@@ -67,7 +67,7 @@ PetalburgCity_WallysHouse_EventScript_2042D5:: @ 82042D5
 
 PetalburgCity_WallysHouse_Text_2042DF: @ 82042DF
 	.string "You're…\n"
-	.string "Ah, you must be {PLAYER}{KUN}, right?\p"
+	.string "Ah, you must be {PLAYER}, right?\p"
 	.string "Thank you for playing with WALLY a\n"
 	.string "little while ago.\p"
 	.string "He's been frail and sickly ever\n"
@@ -85,13 +85,13 @@ PetalburgCity_WallysHouse_Text_20444D: @ 820444D
 	.string "I wonder how our WALLY is doing?$"
 
 PetalburgCity_WallysHouse_Text_20446E: @ 820446E
-	.string "{PLAYER}{KUN}! Please excuse us for\n"
+	.string "{PLAYER}! Please excuse us for\n"
 	.string "dragging you here this way.\p"
 	.string "But our WALLY's become very healthy\n"
 	.string "since he went to VERDANTURF TOWN.\p"
 	.string "We owe it all to you!\p"
 	.string "When WALLY left town, you helped\n"
-	.string "him catch a POKéMON, right?\p"
+	.string "him catch a {P}MON, right?\p"
 	.string "I think that made WALLY really\n"
 	.string "happy.\p"
 	.string "Actually, not just WALLY.\n"
@@ -102,7 +102,7 @@ PetalburgCity_WallysHouse_Text_20446E: @ 820446E
 	.string "I'd really like you to have this.$"
 
 PetalburgCity_WallysHouse_Text_20461A: @ 820461A
-	.string "If your POKéMON can SURF, you'll be\n"
+	.string "If your {P}MON can SURF, you'll be\n"
 	.string "able to go to all sorts of places.$"
 
 PetalburgCity_WallysHouse_Text_204661: @ 8204661
@@ -112,14 +112,14 @@ PetalburgCity_WallysHouse_Text_204661: @ 8204661
 PetalburgCity_WallysHouse_Text_204698: @ 8204698
 	.string "Oh? You met WALLY in\n"
 	.string "EVER GRANDE CITY?\p"
-	.string "Oh, {PLAYER}{KUN}, don't be silly.\p"
+	.string "Oh, {PLAYER}, don't be silly.\p"
 	.string "He may have gotten healthy, but he\n"
 	.string "can't go somewhere far away like\l"
 	.string "that all by himself.$"
 
 PetalburgCity_WallysHouse_Text_204732: @ 8204732
 	.string "WALLY was really happy when he told\n"
-	.string "us that he caught a POKéMON.\p"
+	.string "us that he caught a {P}MON.\p"
 	.string "It's been ages since I've seen him\n"
 	.string "smile like that.$"
 

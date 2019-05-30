@@ -1,12 +1,4 @@
-﻿static const union AnimCmd sAnim_NONE_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_BULBASAUR_1[] =
+﻿static const union AnimCmd sAnim_BULBASAUR_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -290,25 +282,6 @@ static const union AnimCmd sAnim_PIKACHU_2[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_RAICHU_1[] =
-{
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_RAICHU_2[] =
-{
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd sAnim_SANDSHREW_1[] =
 {
     ANIMCMD_FRAME(0, 10),
@@ -468,25 +441,6 @@ static const union AnimCmd sAnim_JIGGLYPUFF_1[] =
 };
 
 static const union AnimCmd sAnim_JIGGLYPUFF_2[] =
-{
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_FRAME(0, 20),
-    ANIMCMD_FRAME(2, 20),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_WIGGLYTUFF_1[] =
-{
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_FRAME(1, 20),
-    ANIMCMD_FRAME(0, 15),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_WIGGLYTUFF_2[] =
 {
     ANIMCMD_FRAME(0, 20),
     ANIMCMD_FRAME(2, 20),
@@ -2359,14 +2313,6 @@ static const union AnimCmd sAnim_MISDREAVUS_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_UNOWN_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd sAnim_WOBBUFFET_1[] =
 {
     ANIMCMD_FRAME(0, 15),
@@ -2906,14 +2852,6 @@ static const union AnimCmd sAnim_CELEBI_1[] =
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
     ANIMCMD_FRAME(0, 30),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_OLD_UNOWN_B_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
 
@@ -4589,227 +4527,6 @@ static const union AnimCmd sAnim_EGG_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_UNOWN_B_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_C_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_D_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_E_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_F_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_G_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_H_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_I_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_J_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_K_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_L_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_M_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_N_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_O_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_P_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_Q_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_R_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_S_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_T_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_U_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_V_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_W_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_X_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_Y_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_Z_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_EMARK_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sAnim_UNOWN_QMARK_1[] =
-{
-    ANIMCMD_FRAME(0, 30),
-    ANIMCMD_FRAME(1, 30),
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd *const sAnims_NONE[] ={
-    sAnim_GeneralFrame0,
-    sAnim_NONE_1,
-};
-
 static const union AnimCmd *const sAnims_BULBASAUR[] ={
     sAnim_GeneralFrame0,
     sAnim_BULBASAUR_1,
@@ -4936,12 +4653,6 @@ static const union AnimCmd *const sAnims_PIKACHU[] ={
     sAnim_PIKACHU_2,
 };
 
-static const union AnimCmd *const sAnims_RAICHU[] ={
-    sAnim_GeneralFrame0,
-    sAnim_RAICHU_1,
-    sAnim_RAICHU_2,
-};
-
 static const union AnimCmd *const sAnims_SANDSHREW[] ={
     sAnim_GeneralFrame0,
     sAnim_SANDSHREW_1,
@@ -5010,12 +4721,6 @@ static const union AnimCmd *const sAnims_JIGGLYPUFF[] ={
     sAnim_GeneralFrame0,
     sAnim_JIGGLYPUFF_1,
     sAnim_JIGGLYPUFF_2,
-};
-
-static const union AnimCmd *const sAnims_WIGGLYTUFF[] ={
-    sAnim_GeneralFrame0,
-    sAnim_WIGGLYTUFF_1,
-    sAnim_WIGGLYTUFF_2,
 };
 
 static const union AnimCmd *const sAnims_ZUBAT[] ={
@@ -5839,7 +5544,7 @@ static const union AnimCmd *const sAnims_MISDREAVUS[] ={
 
 static const union AnimCmd *const sAnims_UNOWN[] ={
     sAnim_GeneralFrame0,
-    sAnim_UNOWN_1,
+    sAnim_BULBASAUR_1,
 };
 
 static const union AnimCmd *const sAnims_WOBBUFFET[] ={
@@ -6104,7 +5809,7 @@ static const union AnimCmd *const sAnims_CELEBI[] ={
 
 static const union AnimCmd *const sAnims_OLD_UNOWN_B[] ={
     sAnim_GeneralFrame0,
-    sAnim_OLD_UNOWN_B_1,
+    sAnim_BULBASAUR_1,
 };
 
 static const union AnimCmd *const sAnims_TREECKO[] ={
@@ -6810,148 +6515,13 @@ static const union AnimCmd *const sAnims_EGG[] ={
     sAnim_EGG_1,
 };
 
-static const union AnimCmd *const sAnims_UNOWN_B[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_B_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_C[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_C_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_D[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_D_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_E[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_E_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_F[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_F_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_G[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_G_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_H[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_H_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_I[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_I_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_J[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_J_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_K[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_K_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_L[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_L_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_M[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_M_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_N[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_N_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_O[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_O_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_P[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_P_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_Q[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_Q_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_R[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_R_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_S[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_S_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_T[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_T_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_U[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_U_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_V[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_V_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_W[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_W_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_X[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_X_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_Y[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_Y_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_Z[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_Z_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_EMARK[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_EMARK_1,
-};
-
-static const union AnimCmd *const sAnims_UNOWN_QMARK[] ={
-    sAnim_GeneralFrame0,
-    sAnim_UNOWN_QMARK_1,
-};
-
 #define ANIM_CMD(name)             [SPECIES_##name] = sAnims_##name
 #define ANIM_CMD_FULL(name, anims) [SPECIES_##name] = anims
 
 const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
 {
-    ANIM_CMD(NONE),
-    ANIM_CMD(BULBASAUR),
+    ANIM_CMD_FULL(NONE, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(BULBASAUR, sAnims_BULBASAUR),
     ANIM_CMD(IVYSAUR),
     ANIM_CMD(VENUSAUR),
     ANIM_CMD(CHARMANDER),
@@ -6975,8 +6545,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(FEAROW),
     ANIM_CMD(EKANS),
     ANIM_CMD(ARBOK),
-    ANIM_CMD(PIKACHU),
-    ANIM_CMD(RAICHU),
+    ANIM_CMD_FULL(PIKACHU, sAnims_PIKACHU),
+    ANIM_CMD_FULL(RAICHU, sAnims_PIKACHU),
     ANIM_CMD(SANDSHREW),
     ANIM_CMD(SANDSLASH),
     ANIM_CMD(NIDORAN_F),
@@ -6989,8 +6559,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(CLEFABLE),
     ANIM_CMD(VULPIX),
     ANIM_CMD(NINETALES),
-    ANIM_CMD(JIGGLYPUFF),
-    ANIM_CMD(WIGGLYTUFF),
+    ANIM_CMD_FULL(JIGGLYPUFF, sAnims_JIGGLYPUFF),
+    ANIM_CMD_FULL(WIGGLYTUFF, sAnims_JIGGLYPUFF),
     ANIM_CMD(ZUBAT),
     ANIM_CMD(GOLBAT),
     ANIM_CMD(ODDISH),
@@ -7151,7 +6721,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MURKROW),
     ANIM_CMD(SLOWKING),
     ANIM_CMD(MISDREAVUS),
-    ANIM_CMD(UNOWN),
+    ANIM_CMD_FULL(UNOWN, sAnims_BULBASAUR),
     ANIM_CMD(WOBBUFFET),
     ANIM_CMD(GIRAFARIG),
     ANIM_CMD(PINECO),
@@ -7203,30 +6773,30 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(HO_OH),
     ANIM_CMD(CELEBI),
     ANIM_CMD(OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_C, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_D, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_E, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_F, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_G, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_H, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_I, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_J, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_K, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_L, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_M, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_N, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_O, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_P, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_Q, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_R, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_S, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_T, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_U, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_V, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_W, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_X, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_Y, sAnims_OLD_UNOWN_B),
-    ANIM_CMD_FULL(OLD_UNOWN_Z, sAnims_OLD_UNOWN_B),
+    ANIM_CMD_FULL(OLD_UNOWN_C, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_D, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_E, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_F, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_G, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_H, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_I, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_J, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_K, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_L, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_M, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_N, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_O, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_P, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_Q, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_R, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_S, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_T, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_U, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_V, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_W, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_X, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_Y, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(OLD_UNOWN_Z, sAnims_BULBASAUR),
     ANIM_CMD(TREECKO),
     ANIM_CMD(GROVYLE),
     ANIM_CMD(SCEPTILE),
@@ -7363,31 +6933,31 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(DEOXYS),
     ANIM_CMD(CHIMECHO),
     ANIM_CMD(EGG),
-    ANIM_CMD(UNOWN_B),
-    ANIM_CMD(UNOWN_C),
-    ANIM_CMD(UNOWN_D),
-    ANIM_CMD(UNOWN_E),
-    ANIM_CMD(UNOWN_F),
-    ANIM_CMD(UNOWN_G),
-    ANIM_CMD(UNOWN_H),
-    ANIM_CMD(UNOWN_I),
-    ANIM_CMD(UNOWN_J),
-    ANIM_CMD(UNOWN_K),
-    ANIM_CMD(UNOWN_L),
-    ANIM_CMD(UNOWN_M),
-    ANIM_CMD(UNOWN_N),
-    ANIM_CMD(UNOWN_O),
-    ANIM_CMD(UNOWN_P),
-    ANIM_CMD(UNOWN_Q),
-    ANIM_CMD(UNOWN_R),
-    ANIM_CMD(UNOWN_S),
-    ANIM_CMD(UNOWN_T),
-    ANIM_CMD(UNOWN_U),
-    ANIM_CMD(UNOWN_V),
-    ANIM_CMD(UNOWN_W),
-    ANIM_CMD(UNOWN_X),
-    ANIM_CMD(UNOWN_Y),
-    ANIM_CMD(UNOWN_Z),
-    ANIM_CMD(UNOWN_EMARK),
-    ANIM_CMD(UNOWN_QMARK),
+    ANIM_CMD_FULL(UNOWN_B, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_C, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_D, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_E, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_F, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_G, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_H, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_I, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_J, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_K, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_L, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_M, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_N, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_O, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_P, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_Q, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_R, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_S, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_T, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_U, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_V, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_W, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_X, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_Y, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_Z, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_EMARK, sAnims_BULBASAUR),
+    ANIM_CMD_FULL(UNOWN_QMARK, sAnims_BULBASAUR),
 };

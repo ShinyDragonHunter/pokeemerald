@@ -77,7 +77,7 @@ SSTidalRooms_Text_23CB58: @ 823CB58
 
 SSTidalRooms_Text_23CB75: @ 823CB75
 	.string "I get so excited imagining what kinds\n"
-	.string "of POKéMON I'll get to see in the next\l"
+	.string "of {P}MON I'll get to see in the next\l"
 	.string "CONTEST. The anticipation of it thrills!$"
 
 SSTidalRooms_Text_23CBEB: @ 823CBEB
@@ -88,7 +88,7 @@ SSTidalRooms_Text_23CC04: @ 823CC04
 
 SSTidalRooms_Text_23CC26: @ 823CC26
 	.string "Friends need not be human.\n"
-	.string "For me, POKéMON are treasured friends!$"
+	.string "For me, {P}MON are treasured friends!$"
 
 SSTidalRooms_Text_23CC68: @ 823CC68
 	.string "Child…\n"
@@ -115,7 +115,7 @@ SSTidalRooms_Text_23CD5F: @ 823CD5F
 	.string "You must be an awesome TRAINER!$"
 
 SSTidalRooms_Text_23CDC6: @ 823CDC6
-	.string "JED: You only have one POKéMON?\n"
+	.string "JED: You only have one {P}MON?\n"
 	.string "Isn't that just too lonesome?$"
 
 SSTidalRooms_Text_23CE04: @ 823CE04
@@ -132,7 +132,7 @@ SSTidalRooms_Text_23CE59: @ 823CE59
 
 SSTidalRooms_Text_23CEB0: @ 823CEB0
 	.string "LEA: I wanted to battle…\n"
-	.string "But you don't even have two POKéMON…$"
+	.string "But you don't even have two {P}MON…$"
 
 SSTidalRooms_Text_23CEEE: @ 823CEEE
 	.string "Ah, you've come just in time.\p"
@@ -145,7 +145,7 @@ SSTidalRooms_Text_23CF36: @ 823CF36
 SSTidalRooms_Text_23CF45: @ 823CF45
 	.string "Perhaps I shall get Father to acquire\n"
 	.string "a yacht for me.\l"
-	.string "A yacht for me and POKéMON!$"
+	.string "A yacht for me and {P}MON!$"
 
 SSTidalRooms_Text_23CF97: @ 823CF97
 	.string "Oh, you're such an adorable TRAINER.\n"

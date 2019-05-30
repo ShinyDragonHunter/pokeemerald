@@ -215,14 +215,14 @@ Route119_WeatherInstitute_2F_EventScript_27018B:: @ 827018B
 
 Route119_WeatherInstitute_2F_Text_27019C: @ 827019C
 	.string "The INSTITUTE created a type of\n"
-	.string "POKéMON that has something to do with\l"
+	.string "{P}MON that has something to do with\l"
 	.string "the weather. We're here to take them!$"
 
 Route119_WeatherInstitute_2F_Text_270208: @ 8270208
 	.string "Our plan's being spoiled by a kid?$"
 
 Route119_WeatherInstitute_2F_Text_27022B: @ 827022B
-	.string "If the POKéMON they made here can\n"
+	.string "If the {P}MON they made here can\n"
 	.string "control the weather freely, then we of\l"
 	.string "TEAM AQUA definitely need it!$"
 
@@ -241,12 +241,12 @@ Route119_WeatherInstitute_2F_Text_2702DA: @ 82702DA
 
 Route119_WeatherInstitute_2F_Text_270335: @ 8270335
 	.string "Don't tell me you're looking for that\n"
-	.string "weather POKéMON, too?\p"
+	.string "weather {P}MON, too?\p"
 	.string "That's a no-no!\n"
 	.string "We were here to get it first!$"
 
 Route119_WeatherInstitute_2F_Text_27039F: @ 827039F
-	.string "Oh, will you look at my POKéMON?$"
+	.string "Oh, will you look at my {P}MON?$"
 
 Route119_WeatherInstitute_2F_Text_2703C0: @ 82703C0
 	.string "Humph, so what?\n"
@@ -291,17 +291,17 @@ Route119_WeatherInstitute_2F_Text_270650: @ 8270650
 	.string "Thanks!\n"
 	.string "Thanks to you, we're safe!\p"
 	.string "It might be an odd way of thanking you,\n"
-	.string "but take this POKéMON.$"
+	.string "but take this {P}MON.$"
 
 Route119_WeatherInstitute_2F_Text_2706B2: @ 82706B2
 	.string "Hm? You don't seem to have any room\n"
-	.string "for this POKéMON.$"
+	.string "for this {P}MON.$"
 
 Route119_WeatherInstitute_2F_Text_2706E8: @ 82706E8
 	.string "{PLAYER} received CASTFORM!$"
 
 Route119_WeatherInstitute_2F_Text_2706FE: @ 82706FE
-	.string "That POKéMON changes shape according\n"
+	.string "That {P}MON changes shape according\n"
 	.string "to the weather conditions.\p"
 	.string "There're plenty of them in the\n"
 	.string "INSTITUTE--go ahead and take it.$"

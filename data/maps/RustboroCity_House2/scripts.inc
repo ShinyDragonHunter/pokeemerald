@@ -16,6 +16,6 @@ RustboroCity_House2_Text_215EC6: @ 8215EC6
 
 RustboroCity_House2_Text_215F21: @ 8215F21
 	.string "ROXANNE, the GYM LEADER, really knows\n"
-	.string "a lot about POKéMON.\p"
+	.string "a lot about {P}MON.\p"
 	.string "She's really strong, too!$"
 

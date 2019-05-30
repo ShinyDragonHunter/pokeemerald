@@ -298,7 +298,7 @@ LittlerootTown_BrendansHouse_1F_Text_1F7A1C: @ 81F7A1C
 	.string "Isn't it nice in here, too?$"
 
 LittlerootTown_BrendansHouse_1F_Text_1F7A46: @ 81F7A46
-	.string "The mover's POKéMON do all the work\n"
+	.string "The mover's {P}MON do all the work\n"
 	.string "of moving us in and cleaning up after.\l"
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
@@ -365,7 +365,7 @@ LittlerootTown_BrendansHouse_1F_Text_1F7DBE: @ 81F7DBE
 	.string "Go for it, honey!$"
 
 LittlerootTown_BrendansHouse_1F_Text_1F7E0E: @ 81F7E0E
-	.string "MOM: What is that, honey? A POKéNAV?\n"
+	.string "MOM: What is that, honey? A {P}NAV?\n"
 	.string "Someone from DEVON gave it to you?\p"
 	.string "Well, honey, how about registering\n"
 	.string "your mom?\p"
@@ -373,7 +373,7 @@ LittlerootTown_BrendansHouse_1F_Text_1F7E0E: @ 81F7E0E
 
 LittlerootTown_BrendansHouse_1F_Text_1F7E89: @ 81F7E89
 	.string "Registered MOM\n"
-	.string "in the POKéNAV.$"
+	.string "in the {P}NAV.$"
 
 LittlerootTown_BrendansHouse_1F_Text_1F7EA8: @ 81F7EA8
 	.string "Fugiiiiih!$"
@@ -423,7 +423,7 @@ LittlerootTown_BrendansHouse_1F_Text_1F815B: @ 81F815B
 LittlerootTown_BrendansHouse_1F_Text_1F81B9: @ 81F81B9
 	.string "MOM: That DAD of yours…\p"
 	.string "He comes home for the first time in a\n"
-	.string "while, but all he talks about is POKéMON.\p"
+	.string "while, but all he talks about is {P}MON.\p"
 	.string "He should relax and stay a little longer.$"
 
 LittlerootTown_BrendansHouse_1F_Text_1F824B: @ 81F824B
@@ -434,8 +434,8 @@ LittlerootTown_BrendansHouse_1F_Text_1F826F: @ 81F826F
 	.string "news flash!\p"
 	.string "In various HOENN locales, there have\n"
 	.string "been reports of a BZZT…colored\l"
-	.string "POKéMON in flight.\p"
-	.string "The identity of this POKéMON is\n"
+	.string "{P}MON in flight.\p"
+	.string "The identity of this {P}MON is\n"
 	.string "currently unknown.\p"
 	.string "We now return you to the regular\n"
 	.string "movie program.$"
@@ -443,8 +443,8 @@ LittlerootTown_BrendansHouse_1F_Text_1F826F: @ 81F826F
 LittlerootTown_BrendansHouse_1F_Text_1F8351: @ 81F8351
 	.string "MOM: {PLAYER}, did you catch that?\p"
 	.string "What color did the announcer say\n"
-	.string "that POKéMON was?$"
+	.string "that {P}MON was?$"
 
 LittlerootTown_BrendansHouse_1F_Text_1F83A1: @ 81F83A1
 	.string "MOM: Well, isn't that something!\n"
-	.string "There are still unknown POKéMON.$"
+	.string "There are still unknown {P}MON.$"

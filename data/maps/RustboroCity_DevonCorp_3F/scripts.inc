@@ -220,11 +220,11 @@ RustboroCity_DevonCorp_3F_Text_21277C: @ 821277C
 	.string "That's why I want you to have this!$"
 
 RustboroCity_DevonCorp_3F_Text_212820: @ 8212820
-	.string "{PLAYER} received a POKéNAV.$"
+	.string "{PLAYER} received a {P}NAV.$"
 
 RustboroCity_DevonCorp_3F_Text_212837: @ 8212837
 	.string "MR. STONE: That device…\p"
-	.string "It's a POKéMON NAVIGATOR, or POKéNAV\n"
+	.string "It's a {P}MON NAVIGATOR, or {P}NAV\n"
 	.string "for short.\p"
 	.string "It's an indispensable tool for any\n"
 	.string "TRAINER on an adventure.\p"
@@ -238,7 +238,7 @@ RustboroCity_DevonCorp_3F_Text_212837: @ 8212837
 	.string "up before you go on your way.$"
 
 RustboroCity_DevonCorp_3F_Text_2129D2: @ 82129D2
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
+	.string "MR. STONE: Well, then, {PLAYER},\n"
 	.string "go with caution and care!$"
 
 RustboroCity_DevonCorp_3F_Text_212A09: @ 8212A09
@@ -251,13 +251,13 @@ RustboroCity_DevonCorp_3F_Text_212A29: @ 8212A29
 	.string "It should help you, a TRAINER.$"
 
 RustboroCity_DevonCorp_3F_Text_212A9E: @ 8212A9E
-	.string "MR. STONE: A POKéMON holding that\n"
+	.string "MR. STONE: A {P}MON holding that\n"
 	.string "EXP. SHARE will be given some of the\l"
 	.string "EXP Points from battle.\p"
 	.string "It will get EXP Points even if it didn't\n"
 	.string "actually battle.\p"
 	.string "I would say EXP. SHARE is quite useful\n"
-	.string "for raising weak POKéMON.$"
+	.string "for raising weak {P}MON.$"
 
 RustboroCity_DevonCorp_3F_Text_212B78: @ 8212B78
 	.string "MR. STONE: Since my youth, I've immersed\n"
@@ -265,7 +265,7 @@ RustboroCity_DevonCorp_3F_Text_212B78: @ 8212B78
 	.string "Consequently, I'm not familiar with\n"
 	.string "trends and that sort of thing.\p"
 	.string "But do young people all want to be\n"
-	.string "TRAINERS in the POKéMON LEAGUE?$"
+	.string "TRAINERS in the {P}MON LEAGUE?$"
 
 RustboroCity_DevonCorp_3F_Text_212C37: @ 8212C37
 	.string "This is the DEVON CORPORATION's\n"

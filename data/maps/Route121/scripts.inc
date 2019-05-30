@@ -178,7 +178,7 @@ Route121_Text_1F605A: @ 81F605A
 Route121_Text_1F607F: @ 81F607F
 	.string "Ahead looms MT. PYRE…\p"
 	.string "It is a natural monument to the spirits \n"
-	.string "of departed POKéMON…$"
+	.string "of departed {P}MON…$"
 
 Route121_Text_1F60D3: @ 81F60D3
 	.string "MT. PYRE PIER\p"
@@ -186,6 +186,6 @@ Route121_Text_1F60D3: @ 81F60D3
 	.string "The words are barely legible…$"
 
 Route121_Text_1F611E: @ 81F611E
-	.string "“Filled with rare POKéMON!”\n"
+	.string "“Filled with rare {P}MON!”\n"
 	.string "SAFARI ZONE$"
 

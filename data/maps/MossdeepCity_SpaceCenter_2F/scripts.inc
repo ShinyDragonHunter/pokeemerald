@@ -471,7 +471,7 @@ MossdeepCity_SpaceCenter_2F_Text_2246F0: @ 82246F0
 	.string "It will be savage!$"
 
 MossdeepCity_SpaceCenter_2F_Text_2247FF: @ 82247FF
-	.string "STEVEN: {PLAYER}{KUN}!\n"
+	.string "STEVEN: {PLAYER}!\n"
 	.string "You're going to help me?\p"
 	.string "Let's go into battle together!\n"
 	.string "Are you ready?$"
@@ -510,7 +510,7 @@ MossdeepCity_SpaceCenter_2F_Text_2249DC: @ 82249DC
 
 MossdeepCity_SpaceCenter_2F_Text_224A4A: @ 8224A4A
 	.string "STEVEN: Whew, that was too tense.\n"
-	.string "{PLAYER}{KUN}, thank you.\p"
+	.string "{PLAYER}, thank you.\p"
 	.string "I have something to give you as\n"
 	.string "thanks for your support.\p"
 	.string "Please come see me at home\n"

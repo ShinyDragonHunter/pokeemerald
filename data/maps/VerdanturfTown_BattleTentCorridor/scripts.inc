@@ -47,23 +47,23 @@ VerdanturfTown_BattleTentCorridor_Text_2020E7: @ 82020E7
 	.string "CONTEST, I don't think they judge you\l"
 	.string "only on cuteness in the first round.\p"
 	.string "You need to work out ways for raising\n"
-	.string "POKéMON better.$"
+	.string "{P}MON better.$"
 
 VerdanturfTown_BattleTentCorridor_Text_2021C4: @ 82021C4
-	.string "I raised my POKéMON to be cute.\p"
-	.string "I found out you can put POKéMON in\n"
+	.string "I raised my {P}MON to be cute.\p"
+	.string "I found out you can put {P}MON in\n"
 	.string "a CONTEST for cuteness!\p"
-	.string "I'm so glad I raised my POKéMON with\n"
+	.string "I'm so glad I raised my {P}MON with\n"
 	.string "loving care…$"
 
 VerdanturfTown_BattleTentCorridor_Text_202251: @ 8202251
-	.string "My POKéMON rules!\p"
+	.string "My {P}MON rules!\p"
 	.string "It's cool, tough yet beautiful, cute,\n"
 	.string "and smart. It's complete!\p"
 	.string "I may as well go for wins in every\n"
 	.string "single CONTEST.$"
 
 VerdanturfTown_BattleTentCorridor_Text_2022D6: @ 82022D6
-	.string "POKéMON CONTESTS\n"
+	.string "{P}MON CONTESTS\n"
 	.string "NORMAL RANK STAGE!$"
 

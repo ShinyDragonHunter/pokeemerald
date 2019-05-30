@@ -590,7 +590,7 @@ Route111_Text_1F1475: @ 81F1475
 	.string "Hello! I take it you're a traveler.\p"
 	.string "How's this? What do you say to taking\n"
 	.string "on our family of four in a series of\l"
-	.string "POKéMON battles?$"
+	.string "{P}MON battles?$"
 
 Route111_Text_1F14F5: @ 81F14F5
 	.string "Is that so?\n"
@@ -648,10 +648,10 @@ Route111_Text_1F1788: @ 81F1788
 	.string "visit with us awhile.$"
 
 Route111_Text_1F17BA: @ 81F17BA
-	.string "If you don't raise your POKéMON some\n"
+	.string "If you don't raise your {P}MON some\n"
 	.string "more, it could be tough to keep winning\l"
 	.string "up through the ranks.\p"
-	.string "I've heard the POKéMON LEAGUE's\n"
+	.string "I've heard the {P}MON LEAGUE's\n"
 	.string "ELITE FOUR are far stronger than\l"
 	.string "any GYM LEADER.$"
 
@@ -682,7 +682,7 @@ Route111_Text_1F194D: @ 81F194D
 
 Route111_Text_1F1987: @ 81F1987
 	.string "TRAINER TIPS\p"
-	.string "One of the indicators of a POKéMON's\n"
+	.string "One of the indicators of a {P}MON's\n"
 	.string "powerfulness is SP. ATK. It stands for\l"
 	.string "“SPECIAL ATTACK.”\p"
 	.string "Likewise, SP. DEF stands for “SPECIAL\n"

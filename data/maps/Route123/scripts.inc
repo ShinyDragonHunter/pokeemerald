@@ -176,19 +176,19 @@ Route123_EventScript_1F6407:: @ 81F6407
 	end
 
 Route123_Text_1F641E: @ 81F641E
-	.string "I love GRASS-type POKéMON!\p"
-	.string "Do you have any GRASS-type POKéMON?$"
+	.string "I love GRASS-type {P}MON!\p"
+	.string "Do you have any GRASS-type {P}MON?$"
 
 Route123_Text_1F645D: @ 81F645D
 	.string "Oh?\p"
-	.string "You like GRASS-type POKéMON, too,\n"
+	.string "You like GRASS-type {P}MON, too,\n"
 	.string "don't you?\p"
 	.string "I'm so happy, you can have this!\n"
 	.string "It's a token of our friendship.$"
 
 Route123_Text_1F64CF: @ 81F64CF
 	.string "I check trees with my GRASS-type\n"
-	.string "POKéMON. I'm like a tree doctor.$"
+	.string "{P}MON. I'm like a tree doctor.$"
 
 Route123_Text_1F6511: @ 81F6511
 	.string "{RIGHT_ARROW} ROUTE 123\n"

@@ -38,9 +38,9 @@ SeafloorCavern_Room3_Text_234A8A: @ 8234A8A
 
 SeafloorCavern_Room3_Text_234B3A: @ 8234B3A
 	.string "For our dream to become real, we need\n"
-	.string "the power of POKéMON.\p"
+	.string "the power of {P}MON.\p"
 	.string "But meddlers like you use the power of\n"
-	.string "POKéMON to mess with us even at\l"
+	.string "{P}MON to mess with us even at\l"
 	.string "a place like this!\p"
 	.string "Life just doesn't work the way we\n"
 	.string "need it to!$"

@@ -297,7 +297,7 @@ BattleFrontier_BattlePyramidTop_Text_255669: @ 8255669
 	.string "are the grandest of adventures?\p"
 	.string "Your own wits!\p"
 	.string "Your own strength!\p"
-	.string "Your own POKéMON!\p"
+	.string "Your own {P}MON!\p"
 	.string "And, above all, only your own courage\n"
 	.string "to lead you through unknown worlds…$"
 

@@ -148,7 +148,7 @@ SkyPillar_Outside_Text_239416: @ 8239416
 	.string "I'd left you behind!\p"
 	.string "I've opened the locked door of\n"
 	.string "the SKY PILLAR.\p"
-	.string "{PLAYER}{KUN}, let's be on our way!$"
+	.string "{PLAYER}, let's be on our way!$"
 
 SkyPillar_Outside_Text_2394BC: @ 82394BC
 	.string "WALLACE: It's an earthquake!\p"
@@ -163,7 +163,7 @@ SkyPillar_Outside_Text_23953A: @ 823953A
 	.string "WALLACE: This isn't good…\p"
 	.string "The weather distortion is spreading\n"
 	.string "even here…\p"
-	.string "{PLAYER}{KUN}.\p"
+	.string "{PLAYER}.\p"
 	.string "RAYQUAZA should be farther up\n"
 	.string "from here.\p"
 	.string "I'm worried about SOOTOPOLIS.\n"

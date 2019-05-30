@@ -333,7 +333,7 @@ SlateportCity_OceanicMuseum_2F_Text_20C059: @ 820C059
 	.string "You're not dressed for the part.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
-	.string "POKéMON, people… All life depends on\n"
+	.string "{P}MON, people… All life depends on\n"
 	.string "the sea.\p"
 	.string "So, TEAM AQUA is dedicated to\n"
 	.string "the expansion of the sea.\p"
@@ -350,7 +350,7 @@ SlateportCity_OceanicMuseum_2F_Text_20C059: @ 820C059
 
 SlateportCity_OceanicMuseum_2F_Text_20C2BE: @ 820C2BE
 	.string "CAPT. STERN: You're…\n"
-	.string "Ah, okay, you're {PLAYER}{KUN}…\p"
+	.string "Ah, okay, you're {PLAYER}…\p"
 	.string "Anyway, that was a tense situation!\n"
 	.string "Thank you for saving us!\p"
 	.string "Oh, yes, I almost forgot that you\n"

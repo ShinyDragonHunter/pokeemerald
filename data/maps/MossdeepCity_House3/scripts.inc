@@ -29,7 +29,7 @@ MossdeepCity_House3_Text_222616: @ 8222616
 	.string "Hey there, TRAINER!\n"
 	.string "A SUPER ROD really is super!\p"
 	.string "Say all you want, but this baby can\n"
-	.string "catch POKéMON off the seafloor!\p"
+	.string "catch {P}MON off the seafloor!\p"
 	.string "What do you think?\n"
 	.string "You want it, don't you?$"
 
@@ -46,6 +46,6 @@ MossdeepCity_House3_Text_222733: @ 8222733
 	.string "Don't you like to fish?$"
 
 MossdeepCity_House3_Text_222751: @ 8222751
-	.string "Go after the seafloor POKéMON with\n"
+	.string "Go after the seafloor {P}MON with\n"
 	.string "your SUPER ROD.$"
 

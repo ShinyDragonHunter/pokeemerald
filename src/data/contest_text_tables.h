@@ -50,20 +50,6 @@ extern const u8 gContestEffect2DhDescription[];
 extern const u8 gContestEffect2EhDescription[];
 extern const u8 gContestEffect2FhDescription[];
 
-extern const u8 gUnusedContestMoveName0[];
-extern const u8 gUnusedContestMoveName1[];
-extern const u8 gUnusedContestMoveName2[];
-extern const u8 gUnusedContestMoveName3[];
-extern const u8 gUnusedContestMoveName4[];
-extern const u8 gUnusedContestMoveName5[];
-extern const u8 gUnusedContestMoveName6[];
-extern const u8 gUnusedContestMoveName7[];
-extern const u8 gUnusedContestMoveName8[];
-extern const u8 gUnusedContestMoveName9[];
-extern const u8 gUnusedContestMoveName10[];
-extern const u8 gUnusedContestMoveName11[];
-extern const u8 gUnusedContestMoveName12[];
-
 extern const u8 gContestMoveTypeCoolText[];
 extern const u8 gContestMoveTypeBeautyText[];
 extern const u8 gContestMoveTypeCuteText[];
@@ -243,27 +229,6 @@ const u8 *const gContestEffectDescriptionPointers[] =
     gContestEffect2DhDescription,
     gContestEffect2EhDescription,
     gContestEffect2FhDescription
-};
-
-// Unreferenced array of pointers to move names.
-// All of the moves except Conversion are combo starters, so this may have
-// been an early list of combo starters.
-const u8 *const gUnknown_8587D10[] =
-{
-    gUnusedContestMoveName0,
-    gUnusedContestMoveName0,
-    gUnusedContestMoveName1,
-    gUnusedContestMoveName2,
-    gUnusedContestMoveName3,
-    gUnusedContestMoveName4,
-    gUnusedContestMoveName5,
-    gUnusedContestMoveName6,
-    gUnusedContestMoveName7,
-    gUnusedContestMoveName8,
-    gUnusedContestMoveName9,
-    gUnusedContestMoveName10,
-    gUnusedContestMoveName11,
-    gUnusedContestMoveName12
 };
 
 const u8 *const gContestMoveTypeTextPointers[] =
