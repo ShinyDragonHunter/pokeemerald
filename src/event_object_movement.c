@@ -395,6 +395,9 @@ const u8 gInitialMovementTypeFacingDirections[] = {
     [MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT] = DIR_EAST,
 };
 
+#define EVENT_OBJ_PAL_TAG_8  0x1100
+#define EVENT_OBJ_PAL_TAG_9  0x1101
+#define EVENT_OBJ_PAL_TAG_10 0x1102
 #define EVENT_OBJ_PAL_TAG_0  0x1103
 #define EVENT_OBJ_PAL_TAG_1  0x1104
 #define EVENT_OBJ_PAL_TAG_2  0x1105
@@ -403,33 +406,28 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define EVENT_OBJ_PAL_TAG_5  0x1108
 #define EVENT_OBJ_PAL_TAG_6  0x1109
 #define EVENT_OBJ_PAL_TAG_7  0x110A
-#define EVENT_OBJ_PAL_TAG_8  0x1100
-#define EVENT_OBJ_PAL_TAG_9  0x1101
-#define EVENT_OBJ_PAL_TAG_10 0x1102
-#define EVENT_OBJ_PAL_TAG_11 0x1115
-#define EVENT_OBJ_PAL_TAG_12 0x110B
-#define EVENT_OBJ_PAL_TAG_13 0x110C
-#define EVENT_OBJ_PAL_TAG_14 0x110D
-#define EVENT_OBJ_PAL_TAG_15 0x110E
-#define EVENT_OBJ_PAL_TAG_16 0x110F
-#define EVENT_OBJ_PAL_TAG_17 0x1110
-#define EVENT_OBJ_PAL_TAG_18 0x1111
-#define EVENT_OBJ_PAL_TAG_19 0x1112
-#define EVENT_OBJ_PAL_TAG_20 0x1113
-#define EVENT_OBJ_PAL_TAG_21 0x1114
-#define EVENT_OBJ_PAL_TAG_22 0x1116
-#define EVENT_OBJ_PAL_TAG_23 0x1117
-#define EVENT_OBJ_PAL_TAG_24 0x1118
-#define EVENT_OBJ_PAL_TAG_25 0x1119
-#define EVENT_OBJ_PAL_TAG_26 0x111B
-#define EVENT_OBJ_PAL_TAG_27 0x111C
-#define EVENT_OBJ_PAL_TAG_28 0x111D
-#define EVENT_OBJ_PAL_TAG_29 0x111E
-#define EVENT_OBJ_PAL_TAG_30 0x111F
-#define EVENT_OBJ_PAL_TAG_31 0x1120
-#define EVENT_OBJ_PAL_TAG_32 0x1121
-#define EVENT_OBJ_PAL_TAG_33 0x1122
-#define EVENT_OBJ_PAL_TAG_34 0x1123
+#define EVENT_OBJ_PAL_TAG_14 0x110B
+#define EVENT_OBJ_PAL_TAG_15 0x110C
+#define EVENT_OBJ_PAL_TAG_16 0x110D
+#define EVENT_OBJ_PAL_TAG_17 0x110E
+#define EVENT_OBJ_PAL_TAG_18 0x110F
+#define EVENT_OBJ_PAL_TAG_19 0x1110
+#define EVENT_OBJ_PAL_TAG_20 0x1111
+#define EVENT_OBJ_PAL_TAG_21 0x1112
+#define EVENT_OBJ_PAL_TAG_11 0x1113
+#define EVENT_OBJ_PAL_TAG_22 0x1114
+#define EVENT_OBJ_PAL_TAG_23 0x1115
+#define EVENT_OBJ_PAL_TAG_24 0x1116
+#define EVENT_OBJ_PAL_TAG_25 0x1117
+#define EVENT_OBJ_PAL_TAG_26 0x1119
+#define EVENT_OBJ_PAL_TAG_27 0x111A
+#define EVENT_OBJ_PAL_TAG_28 0x111B
+#define EVENT_OBJ_PAL_TAG_29 0x111C
+#define EVENT_OBJ_PAL_TAG_30 0x111D
+#define EVENT_OBJ_PAL_TAG_31 0x111E
+#define EVENT_OBJ_PAL_TAG_32 0x111F
+#define EVENT_OBJ_PAL_TAG_33 0x1120
+#define EVENT_OBJ_PAL_TAG_34 0x1121
 #define EVENT_OBJ_PAL_TAG_NONE 0x11FF
 
 #include "data/field_event_obj/event_object_graphics_info_pointers.h"
@@ -453,8 +451,6 @@ const struct SpritePalette sEventObjectSpritePalettes[] = {
     {gEventObjectPalette9,  EVENT_OBJ_PAL_TAG_9},
     {gEventObjectPalette10, EVENT_OBJ_PAL_TAG_10},
     {gEventObjectPalette11, EVENT_OBJ_PAL_TAG_11},
-    {gEventObjectPalette12, EVENT_OBJ_PAL_TAG_12},
-    {gEventObjectPalette13, EVENT_OBJ_PAL_TAG_13},
     {gEventObjectPalette14, EVENT_OBJ_PAL_TAG_14},
     {gEventObjectPalette15, EVENT_OBJ_PAL_TAG_15},
     {gEventObjectPalette16, EVENT_OBJ_PAL_TAG_16},
@@ -505,13 +501,6 @@ const struct PairedPalettes gPlayerReflectionPaletteSets[] = {
     {EVENT_OBJ_PAL_TAG_17, Unknown_0850BCF0},
     {EVENT_OBJ_PAL_TAG_11, gPlayerUnderwaterReflectionPaletteTags},
     {EVENT_OBJ_PAL_TAG_NONE, NULL},
-};
-
-const u16 gQuintyPlumpReflectionPaletteTags[] = {
-    EVENT_OBJ_PAL_TAG_13,
-    EVENT_OBJ_PAL_TAG_13,
-    EVENT_OBJ_PAL_TAG_13,
-    EVENT_OBJ_PAL_TAG_13,
 };
 
 const u16 gTruckReflectionPaletteTags[] = {
@@ -587,7 +576,6 @@ const u16 gRedLeafReflectionPaletteTags[] = {
 const struct PairedPalettes gSpecialObjectReflectionPaletteSets[] = {
     {EVENT_OBJ_PAL_TAG_8, gPlayerReflectionPaletteTags},
     {EVENT_OBJ_PAL_TAG_17, Unknown_0850BCF0},
-    {EVENT_OBJ_PAL_TAG_12, gQuintyPlumpReflectionPaletteTags},
     {EVENT_OBJ_PAL_TAG_14, gTruckReflectionPaletteTags},
     {EVENT_OBJ_PAL_TAG_15, gVigorothMoverReflectionPaletteTags},
     {EVENT_OBJ_PAL_TAG_19, gMovingBoxReflectionPaletteTags},

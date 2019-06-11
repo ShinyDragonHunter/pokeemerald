@@ -60,6 +60,7 @@ static void EncryptBoxMon(struct BoxPokemon *boxMon);
 static void DecryptBoxMon(struct BoxPokemon *boxMon);
 static void sub_806E6CC(u8 taskId);
 static bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
+extern const union AnimCmd *const gTrainerFrontAnims_TrainerSpriteNoAnim;
 
 // EWRAM vars
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
@@ -3448,7 +3449,7 @@ void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosit
             gMultiuseSpriteTemplate = gMonSpritesGfxPtr->templates[battlerPosition];
         else
             gMultiuseSpriteTemplate = gUnknown_08329D98[battlerPosition];
-        gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerSpriteId];
+        gMultiuseSpriteTemplate.anims = &gTrainerFrontAnims_TrainerSpriteNoAnim;
     }
 }
 
@@ -3460,7 +3461,7 @@ void SetMultiuseSpriteTemplateToTrainerFront(u16 arg0, u8 battlerPosition)
         gMultiuseSpriteTemplate = gUnknown_08329D98[battlerPosition];
 
     gMultiuseSpriteTemplate.paletteTag = arg0;
-    gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[arg0];
+    gMultiuseSpriteTemplate.anims = &gTrainerFrontAnims_TrainerSpriteNoAnim;
 }
 
 static void EncryptBoxMon(struct BoxPokemon *boxMon)

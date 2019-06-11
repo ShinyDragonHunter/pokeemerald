@@ -2,7 +2,6 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_BrendanNormal;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_BrendanMachBike;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_BrendanSurfing;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_BrendanFieldMove;
-const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_QuintyPlump;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_NinjaBoy;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Twin;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Boy1;
@@ -134,7 +133,6 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Tate;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Wallace;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Steven;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_Wally;
-const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_RubySapphireLittleBoy;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_BrendanFishing;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_MayFishing;
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_HotSpringsOldWoman;
@@ -251,7 +249,6 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_BrendanMachBike,
     &gEventObjectGraphicsInfo_BrendanSurfing,
     &gEventObjectGraphicsInfo_BrendanFieldMove,
-    &gEventObjectGraphicsInfo_QuintyPlump,
     &gEventObjectGraphicsInfo_NinjaBoy,
     &gEventObjectGraphicsInfo_Twin,
     &gEventObjectGraphicsInfo_Boy1,
@@ -383,7 +380,6 @@ const struct EventObjectGraphicsInfo *const gEventObjectGraphicsInfoPointers[] =
     &gEventObjectGraphicsInfo_Wallace,
     &gEventObjectGraphicsInfo_Steven,
     &gEventObjectGraphicsInfo_Wally,
-    &gEventObjectGraphicsInfo_RubySapphireLittleBoy,
     &gEventObjectGraphicsInfo_BrendanFishing,
     &gEventObjectGraphicsInfo_MayFishing,
     &gEventObjectGraphicsInfo_HotSpringsOldWoman,
