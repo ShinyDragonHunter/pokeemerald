@@ -712,12 +712,6 @@ const struct SpriteFrameImage gEventObjectPicTable_Nurse[] = {
     overworld_frame(gEventObjectPic_Nurse, 2, 4, 0),
     overworld_frame(gEventObjectPic_Nurse, 2, 4, 1),
     overworld_frame(gEventObjectPic_Nurse, 2, 4, 2),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 0),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 0),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 1),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 1),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 2),
-    overworld_frame(gEventObjectPic_Nurse, 2, 4, 2),
     overworld_frame(gEventObjectPic_Nurse, 2, 4, 3),
 };
 

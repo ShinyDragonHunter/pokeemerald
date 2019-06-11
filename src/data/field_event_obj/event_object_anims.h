@@ -419,7 +419,7 @@ const union AnimCmd gEventObjectImageAnim_BerryTreeStage4[] =
 const union AnimCmd gEventObjectImageAnim_NurseBow[] =
 {
     ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(2, 32),
+    ANIMCMD_FRAME(3, 32),
     ANIMCMD_FRAME(0, 8),
     ANIMCMD_END,
 };
