@@ -40,7 +40,7 @@ SkyPillar_Top_MapScript2_239713: @ 8239713
 	.2byte 0
 
 SkyPillar_Top_EventScript_23971D:: @ 823971D
-	turnobject 1, 1
+	turnobject 1, DIR_SOUTH
 	end
 
 SkyPillar_Top_EventScript_239722:: @ 8239722
@@ -71,7 +71,7 @@ SkyPillar_Top_EventScript_239768:: @ 8239768
 	end
 
 SkyPillar_Top_EventScript_239771:: @ 8239771
-	setvar VAR_0x8004, 406
+	setvar VAR_0x8004, SPECIES_RAYQUAZA
 	goto SkyPillar_Top_EventScript_239785
 	end
 
@@ -130,7 +130,7 @@ SkyPillar_Top_EventScript_23979A:: @ 823979A
 	applymovement EVENT_OBJ_ID_CAMERA, SkyPillar_Top_Movement_23985C
 	waitmovement 0
 	special RemoveCameraObject
-	setvar VAR_RAYQUAZA_STATE, 5
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 5
 	setvar VAR_SKY_PILLAR_STATE, 1
 	setvar VAR_SKY_PILLAR_RAQUAZA_CRY_DONE, 1
 	releaseall

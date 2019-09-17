@@ -73,7 +73,7 @@ static void CreateRandomEggShardSprite(void);
 static void CreateEggShardSprite(u8 x, u8 y, s16 data1, s16 data2, s16 data3, u8 spriteAnimIndex);
 
 // IWRAM bss
-static IWRAM_DATA struct EggHatchData *sEggHatchData;
+static struct EggHatchData *sEggHatchData;
 
 // rom data
 static const u16 sEggPalette[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
@@ -298,13 +298,13 @@ static void CreatedHatchedMon(struct Pokemon *egg, struct Pokemon *temp)
     u16 species;
     u32 personality, pokerus;
     u8 i, friendship, language, gameMet, markings, obedience;
-    u16 moves[4];
+    u16 moves[MAX_MON_MOVES];
     u32 ivs[NUM_STATS];
 
 
     species = GetMonData(egg, MON_DATA_SPECIES);
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
     {
         moves[i] = GetMonData(egg, MON_DATA_MOVE1 + i);
     }
@@ -322,9 +322,9 @@ static void CreatedHatchedMon(struct Pokemon *egg, struct Pokemon *temp)
     pokerus = GetMonData(egg, MON_DATA_POKERUS);
     obedience = GetMonData(egg, MON_DATA_OBEDIENCE);
 
-    CreateMon(temp, species, EGG_HATCH_LEVEL, 32, TRUE, personality, 0, 0);
+    CreateMon(temp, species, EGG_HATCH_LEVEL, 32, TRUE, personality, OT_ID_PLAYER_ID, 0);
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < MAX_MON_MOVES; i++)
     {
         SetMonData(temp, MON_DATA_MOVE1 + i,  &moves[i]);
     }

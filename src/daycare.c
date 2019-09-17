@@ -34,10 +34,10 @@ static void DaycarePrintMonInfo(u8 windowId, s32 daycareSlotId, u8 y);
 
 // RAM buffers used to assist with BuildEggMoveset()
 EWRAM_DATA static u16 sHatchedEggLevelUpMoves[EGG_LVL_UP_MOVES_ARRAY_COUNT] = {0};
-EWRAM_DATA static u16 sHatchedEggFatherMoves[4] = {0};
-EWRAM_DATA static u16 sHatchedEggFinalMoves[4] = {0};
+EWRAM_DATA static u16 sHatchedEggFatherMoves[MAX_MON_MOVES] = {0};
+EWRAM_DATA static u16 sHatchedEggFinalMoves[MAX_MON_MOVES] = {0};
 EWRAM_DATA static u16 sHatchedEggEggMoves[EGG_MOVES_ARRAY_COUNT] = {0};
-EWRAM_DATA static u16 sHatchedEggMotherMoves[4] = {0};
+EWRAM_DATA static u16 sHatchedEggMotherMoves[MAX_MON_MOVES] = {0};
 
 #include "data/pokemon/egg_moves.h"
 
@@ -835,7 +835,7 @@ void CreateEgg(struct Pokemon *mon, u16 species, bool8 setHotSpringsLocation)
     u8 metLocation;
     u8 isEgg;
 
-    CreateMon(mon, species, EGG_HATCH_LEVEL, 0x20, FALSE, 0, FALSE, 0);
+    CreateMon(mon, species, EGG_HATCH_LEVEL, 0x20, FALSE, 0, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;
     language = LANGUAGE_JAPANESE;
@@ -862,7 +862,7 @@ static void SetInitialEggData(struct Pokemon *mon, u16 species, struct DayCare *
     u8 language;
 
     personality = daycare->offspringPersonality;
-    CreateMon(mon, species, EGG_HATCH_LEVEL, 0x20, TRUE, personality, FALSE, 0);
+    CreateMon(mon, species, EGG_HATCH_LEVEL, 0x20, TRUE, personality, OT_ID_PLAYER_ID, 0);
     metLevel = 0;
     ball = ITEM_POKE_BALL;
     language = LANGUAGE_JAPANESE;

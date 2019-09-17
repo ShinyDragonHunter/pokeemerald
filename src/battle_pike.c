@@ -49,15 +49,15 @@ struct PikeWildMon
 {
     u16 species;
     u8 levelDelta;
-    u16 moves[4];
+    u16 moves[MAX_MON_MOVES];
 };
 
 // IWRAM bss
-static IWRAM_DATA u8 sRoomType;
-static IWRAM_DATA u8 sStatusMon;
-static IWRAM_DATA bool8 sUnknown_0300128E;
-static IWRAM_DATA u32 sStatusFlags;
-static IWRAM_DATA u8 sNpcId;
+static u8 sRoomType;
+static u8 sStatusMon;
+static bool8 sUnknown_0300128E;
+static u32 sStatusFlags;
+static u8 sNpcId;
 
 // This file's functions.
 static void SetRoomType(void);

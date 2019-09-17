@@ -258,7 +258,7 @@ EWRAM_DATA static struct Struct203CF10 *sUnknown_0203CF10 = NULL;
 EWRAM_DATA static struct BgRegOffsets *sBgShakeOffsets = NULL;
 EWRAM_DATA struct MirageTowerPulseBlend *sMirageTowerPulseBlend = NULL;
 
-IWRAM_DATA static u16 gUnknown_030012A8[8];
+static u16 gUnknown_030012A8[8];
 
 bool8 IsMirageTowerVisible(void)
 {
@@ -318,7 +318,7 @@ void SetMirageTowerVisibility(void)
     u16 rand;
     bool8 visible;
 
-    if (VarGet(VAR_ROUTE_111_STATE))
+    if (VarGet(VAR_MIRAGE_TOWER_STATE))
     {
         FlagClear(FLAG_MIRAGE_TOWER_VISIBLE);
         return;

@@ -17,7 +17,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_1F777A:: @ 81F777A
 
 LittlerootTown_BrendansHouse_1F_EventScript_1F778D:: @ 81F778D
 	checkplayergender
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, MALE
 	goto_if_eq LittlerootTown_BrendansHouse_1F_EventScript_1F779A
 	return
 
@@ -174,7 +174,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_1F78E2:: @ 81F78E2
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	delay 30
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setvar VAR_0x4050, 1
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall

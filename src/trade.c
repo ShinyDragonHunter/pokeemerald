@@ -158,6 +158,9 @@ static EWRAM_DATA struct {
     /*0xFE*/ u8 unk_FE;
 } *gUnknown_020322A0 = {NULL};
 
+#if !defined(NONMATCHING) && MODERN
+#define static
+#endif
 static bool32 sub_8077260(void);
 static void sub_80773D0(void);
 static void sub_807811C(void);
@@ -1548,7 +1551,7 @@ static void sub_80773D0(void)
 
         for (i = 0; i < PARTY_SIZE; i++)
         {
-            CreateMon(&gEnemyParty[i], SPECIES_NONE, 0, 0x20, FALSE, 0, 0, 0);
+            CreateMon(&gEnemyParty[i], SPECIES_NONE, 0, 0x20, FALSE, 0, OT_ID_PLAYER_ID, 0);
         }
 
         sub_807A19C(0);
@@ -2779,7 +2782,7 @@ static void sub_8079398(void)
     }
 }
 
-static void DisplayMessageAndContinueTask(void)
+static void Wait2SecondsAndCreateYesNoMenu(void)
 {
     gUnknown_0203229C->unk_A8++;
 
@@ -2918,7 +2921,7 @@ static void sub_80795AC(void)
             sub_80781C8();
             break;
         case 14:
-            DisplayMessageAndContinueTask();
+            Wait2SecondsAndCreateYesNoMenu();
             break;
         case 15:
             sub_8079034();
@@ -3029,7 +3032,7 @@ static u8 sub_8079A3C(u8 *str, u8 whichParty, u8 monIdx)
 
 static void sub_8079AA4(u8 *a0, u8 a1, u8 a2)
 {
-    u16 arr[4];
+    u16 moves[MAX_MON_MOVES];
     u16 i;
 
     if (!gUnknown_0203229C->unk_51[a1][a2])
@@ -3038,11 +3041,11 @@ static void sub_8079AA4(u8 *a0, u8 a1, u8 a2)
         {
             if (!a1)
             {
-                arr[i] = GetMonData(&gPlayerParty[a2], i + MON_DATA_MOVE1, NULL);
+                moves[i] = GetMonData(&gPlayerParty[a2], i + MON_DATA_MOVE1, NULL);
             }
             else
             {
-                arr[i] = GetMonData(&gEnemyParty[a2], i + MON_DATA_MOVE1, NULL);
+                moves[i] = GetMonData(&gEnemyParty[a2], i + MON_DATA_MOVE1, NULL);
             }
         }
 
@@ -3050,9 +3053,9 @@ static void sub_8079AA4(u8 *a0, u8 a1, u8 a2)
 
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            if (arr[i] != MOVE_NONE)
+            if (moves[i] != MOVE_NONE)
             {
-                StringAppend(a0, gMoveNames[arr[i]]);
+                StringAppend(a0, gMoveNames[moves[i]]);
             }
 
             StringAppend(a0, gText_NewLine3);
@@ -5829,7 +5832,7 @@ static void _CreateInGameTradePokemon(u8 whichPlayerMon, u8 whichInGameTrade)
     u8 isMail;
     struct Pokemon *pokemon = &gEnemyParty[0];
 
-    CreateMon(pokemon, inGameTrade->species, level, 32, TRUE, inGameTrade->personality, TRUE, inGameTrade->otId);
+    CreateMon(pokemon, inGameTrade->species, level, 32, TRUE, inGameTrade->personality, OT_ID_PRESET, inGameTrade->otId);
 
     SetMonData(pokemon, MON_DATA_HP_IV, &inGameTrade->ivs[0]);
     SetMonData(pokemon, MON_DATA_ATK_IV, &inGameTrade->ivs[1]);

@@ -43,7 +43,7 @@ BattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E14: @ 8243E14
 	.2byte 0
 
 BattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E1E:: @ 8243E1E
-	turnobject EVENT_OBJ_ID_PLAYER, 2
+	turnobject EVENT_OBJ_ID_PLAYER, DIR_NORTH
 	end
 
 BattleFrontier_BattleTowerMultiBattleRoom_MapScript2_243E23: @ 8243E23
@@ -63,7 +63,7 @@ BattleFrontier_BattleTowerMultiBattleRoom_EventScript_243E41:: @ 8243E41
 	waitmovement 0
 	applymovement 1, BattleFrontier_BattleTowerMultiBattleRoom_Movement_243E77
 	waitmovement 0
-	moveobjectoffscreen 1
+	copyobjectxytoperm 1
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceUp
 	waitmovement 0
 	msgbox BattleFrontier_BattleTowerMultiBattleRoom_Text_244056, MSGBOX_DEFAULT

@@ -4,16 +4,16 @@ PetalburgCity_WallysHouse_MapScripts:: @ 8204229
 	.byte 0
 
 PetalburgCity_WallysHouse_MapScript2_204234: @ 8204234
-	map_script_2 VAR_PETALBURG_STATE, 4, PetalburgCity_WallysHouse_EventScript_20423E
+	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_WallysHouse_EventScript_20423E
 	.2byte 0
 
 PetalburgCity_WallysHouse_EventScript_20423E:: @ 820423E
-	turnobject EVENT_OBJ_ID_PLAYER, 4
-	turnobject 1, 3
+	turnobject EVENT_OBJ_ID_PLAYER, DIR_EAST
+	turnobject 1, DIR_WEST
 	end
 
 PetalburgCity_WallysHouse_MapScript2_204247: @ 8204247
-	map_script_2 VAR_PETALBURG_STATE, 4, PetalburgCity_WallysHouse_EventScript_204251
+	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_WallysHouse_EventScript_204251
 	.2byte 0
 
 PetalburgCity_WallysHouse_EventScript_204251:: @ 8204251
@@ -22,7 +22,7 @@ PetalburgCity_WallysHouse_EventScript_204251:: @ 8204251
 	giveitem_std ITEM_HM03
 	setflag FLAG_RECEIVED_HM03
 	msgbox PetalburgCity_WallysHouse_Text_20461A, MSGBOX_DEFAULT
-	setvar VAR_PETALBURG_STATE, 5
+	setvar VAR_PETALBURG_CITY_STATE, 5
 	releaseall
 	end
 

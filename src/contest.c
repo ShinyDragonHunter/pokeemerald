@@ -269,8 +269,6 @@ extern const u8 gText_Contest_Fear[];
 extern const u8 gText_BDot[];
 extern const u8 gText_CDot[];
 extern const u8 *const gUnknown_08587E10[];
-extern const struct SpriteTemplate gSpriteTemplate_8587AD0;
-extern const struct SpriteTemplate gSpriteTemplate_8587B18[];
 extern void (*const gContestEffectFuncs[])(void);
 
 static const u8 gUnknown_08587A6C[] =
@@ -1219,10 +1217,10 @@ static bool8 SetupContestGraphics(u8 *stateVar)
         CreateApplauseMeterSprite();
         sub_80DC5E8();
         sub_80DC7EC();
-        gBattlerPositions[0] = 0;
-        gBattlerPositions[1] = 1;
-        gBattlerPositions[2] = 3;
-        gBattlerPositions[3] = 2;
+        gBattlerPositions[0] = B_POSITION_PLAYER_LEFT;
+        gBattlerPositions[1] = B_POSITION_OPPONENT_LEFT;
+        gBattlerPositions[2] = B_POSITION_OPPONENT_RIGHT;
+        gBattlerPositions[3] = B_POSITION_PLAYER_RIGHT;
         gBattleTypeFlags = 0;
         gBattlerAttacker = 2;
         gBattlerTarget = 3;
@@ -1268,7 +1266,7 @@ static void sub_80D8108(u8 taskId)
         gTasks[taskId].data[0]++;
         break;
     case 1:
-        (s16)gBattle_BG1_Y += 7;
+        *(s16*)&gBattle_BG1_Y += 7;
         if ((s16)gBattle_BG1_Y <= 160)
             break;
         gTasks[taskId].data[0]++;
@@ -2975,7 +2973,7 @@ static u8 sub_80DB174(u16 species, u32 otId, u32 personality, u32 index)
     else
         HandleLoadSpecialPokePic_DontHandleDeoxys(gMonBackPicTable + species, gMonSpritesGfxPtr->sprites[0], species, personality);
 
-    LoadCompressedPalette(GetFrontSpritePalFromSpeciesAndPersonality(species, otId, personality), 0x120, 0x20);
+    LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality), 0x120, 0x20);
     SetMultiuseSpriteTemplateToPokemon(species, 0);
 
     spriteId = CreateSprite(&gMultiuseSpriteTemplate, 0x70, GetBattlerSpriteFinal_Y(2, species, FALSE), 30);

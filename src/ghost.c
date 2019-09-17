@@ -1039,7 +1039,7 @@ static void sub_81129F0(struct Sprite *sprite)
     {
         xDelta = 24;
         xDelta2 = -2;
-        sprite->oam.matrixNum = 8;
+        sprite->oam.matrixNum = ST_OAM_HFLIP;
     }
     else
     {
@@ -1148,7 +1148,8 @@ static void sub_8112B78(struct Sprite *sprite)
 
         if (++coeffB > 16)
             coeffB = 16;
-        if (--(s16)coeffA < 0)
+        --coeffA;
+        if ((s16)coeffA < 0)
             coeffA = 0;
 
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(coeffA, coeffB));

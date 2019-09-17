@@ -37,6 +37,7 @@
 #include "contest.h"
 #include "item_menu.h"
 #include "pokemon_storage_system.h"
+#include "pokemon_jump.h"
 #include "decoration_inventory.h"
 #include "secret_base.h"
 #include "player_pc.h"
@@ -44,8 +45,6 @@
 #include "berry_powder.h"
 #include "mevent.h"
 #include "union_room_chat.h"
-
-extern void ResetPokeJumpResults(void);
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -82,7 +81,7 @@ u32 GetTrainerId(u8 *trainerId)
 void CopyTrainerId(u8 *dst, u8 *src)
 {
     s32 i;
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < TRAINER_ID_LENGTH; i++)
         dst[i] = src[i];
 }
 
@@ -199,7 +198,7 @@ void NewGameInitData(void)
     ScriptContext2_RunNewScript(EventScript_ResetAllMapFlags);
     ResetMiniGamesResults();
     copy_strings_to_sav1();
-    SetLilycoveLady();
+    InitLilycoveLady();
     ResetAllApprenticeData();
     ClearRankingHallRecords();
     InitMatchCallCounters();

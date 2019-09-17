@@ -81,7 +81,7 @@ void TaskCloseBagMenu_2(u8);
 u8 AddItemMessageWindow(u8);
 void bag_menu_RemoveBagItem_message_window(u8);
 void set_callback3_to_bag(u8);
-void sub_81ABC54(u8, s16);
+void PrintItemDepositAmount(u8, s16);
 u8 BagMenu_AddWindow(u8);
 u8 GetSwitchBagPocketDirection(void);
 void SwitchBagPocket(u8, s16, u16);
@@ -118,16 +118,16 @@ void sub_81AD9C0(u8);
 void sub_81ADB14(u8);
 void sub_81ADA7C(u8);
 void sub_81ADC0C(u8);
-void bag_menu_leave_maybe_3(void);
-void bag_menu_leave_maybe_2(void);
 void bag_menu_leave_maybe(void);
+void CB2_FavorLadyExitBagMenu(void);
+void CB2_QuizLadyExitBagMenu(void);
 void sub_81ABA6C(void);
 static void SetPocketListPositions(void);
 void sub_81ABAE0(void);
 u8 sub_81AB1F0(u8);
 void sub_81AC23C(u8);
 void BagMenu_MoveCursorCallback(s32 a, bool8 b, struct ListMenu*);
-void PrintItemQuantityPlusGFX(u8 rboxId, int item_index_in_pocket, u8 a);
+void PrintItemQuantityPlusGFX(u8 rboxId, s32 item_index_in_pocket, u8 a);
 void ItemMenu_UseOutOfBattle(u8 taskId);
 void ItemMenu_Toss(u8 taskId);
 void ItemMenu_Register(u8 taskId);
@@ -493,20 +493,20 @@ void sub_81AAC14(void)
 
 void sub_81AAC28(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_6, POCKETS_COUNT, bag_menu_leave_maybe_3);
+    GoToBagMenu(RETURN_LOCATION_FIELD_6, POCKETS_COUNT, bag_menu_leave_maybe);
     gSpecialVar_0x8005 = 0;
     gSpecialVar_Result = 0;
 }
 
-void sub_81AAC50(void)
+void FavorLadyOpenBagMenu(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_4, POCKETS_COUNT, bag_menu_leave_maybe_2);
+    GoToBagMenu(RETURN_LOCATION_FIELD_4, POCKETS_COUNT, CB2_FavorLadyExitBagMenu);
     gSpecialVar_Result = 0;
 }
 
-void sub_81AAC70(void)
+void QuizLadyOpenBagMenu(void)
 {
-    GoToBagMenu(RETURN_LOCATION_FIELD_5, POCKETS_COUNT, bag_menu_leave_maybe);
+    GoToBagMenu(RETURN_LOCATION_FIELD_5, POCKETS_COUNT, CB2_QuizLadyExitBagMenu);
     gSpecialVar_Result = 0;
 }
 
@@ -830,7 +830,7 @@ void BagMenu_MoveCursorCallback(s32 a, bool8 b, struct ListMenu *unused)
     }
 }
 
-void PrintItemQuantityPlusGFX(u8 rboxId, int item_index_in_pocket, u8 a)
+void PrintItemQuantityPlusGFX(u8 rboxId, s32 item_index_in_pocket, u8 a)
 {
     u16 itemId;
     u16 itemQuantity;
@@ -1050,10 +1050,10 @@ void BagMenu_InitListsMenu(u8 taskId)
 
 void sub_81ABC3C(u8 a)
 {
-    sub_81ABC54(BagMenu_AddWindow(a), 1);
+    PrintItemDepositAmount(BagMenu_AddWindow(a), 1);
 }
 
-void sub_81ABC54(u8 a, s16 b)
+void PrintItemDepositAmount(u8 a, s16 b)
 {
     u8 r3 = (gBagPositionStruct.pocket == BERRIES_POCKET) ? 3 : 2;
     ConvertIntToDecimalStringN(gStringVar1, b, 2, r3);
@@ -1704,7 +1704,7 @@ void Task_ChooseHowManyToToss(u8 taskId)
 
     if (AdjustQuantityAccordingToDPadInput(&data[8], data[2]) == TRUE)
     {
-        sub_81ABC54(gBagMenu->unk817, data[8]);
+        PrintItemDepositAmount(gBagMenu->unk817, data[8]);
     }
     else if (gMain.newKeys & A_BUTTON)
     {
@@ -2056,7 +2056,7 @@ void sub_81ADA7C(u8 taskId)
 
     if (AdjustQuantityAccordingToDPadInput(&data[8], data[2]) == TRUE)
     {
-        sub_81ABC54(gBagMenu->unk817, data[8]);
+        PrintItemDepositAmount(gBagMenu->unk817, data[8]);
     }
     else if (gMain.newKeys & A_BUTTON)
     {
@@ -2202,7 +2202,7 @@ void unknown_ItemMenu_Show(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void bag_menu_leave_maybe_3(void)
+void bag_menu_leave_maybe(void)
 {
     gFieldCallback = Apprentice_EnableBothScriptContexts;
     SetMainCallback2(CB2_ReturnToField);
@@ -2216,9 +2216,9 @@ void unknown_ItemMenu_Give2(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void bag_menu_leave_maybe_2(void)
+void CB2_FavorLadyExitBagMenu(void)
 {
-    gFieldCallback = sub_818DEF4;
+    gFieldCallback = FieldCallback_FavorLadyEnableScriptContexts;
     SetMainCallback2(CB2_ReturnToField);
 }
 
@@ -2229,9 +2229,9 @@ void unknown_ItemMenu_Confirm2(u8 taskId)
     unknown_ItemMenu_Confirm(taskId);
 }
 
-void bag_menu_leave_maybe(void)
+void CB2_QuizLadyExitBagMenu(void)
 {
-    gFieldCallback = sub_818E564;
+    gFieldCallback = FieldCallback_QuizLadyEnableScriptContexts;
     SetMainCallback2(CB2_ReturnToField);
 }
 

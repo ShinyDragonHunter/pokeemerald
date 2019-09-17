@@ -1320,7 +1320,7 @@ void CB2_Pokedex(void)
         default:
             SetVBlankCallback(NULL);
             sub_80C09B0(0);
-            DmaFillLarge16(3, 0, (u8 *)VRAM, VRAM_SIZE, 0x1000)
+            DmaFillLarge16(3, 0, (u8 *)VRAM, VRAM_SIZE, 0x1000);
             DmaClear32(3, OAM, OAM_SIZE);
             DmaClear16(3, PLTT, PLTT_SIZE);
             gMain.state = 1;
@@ -3856,7 +3856,7 @@ void blockset_load_palette_to_gpu(u8 taskId)
         otId = ((u16)gTasks[taskId].data[13] << 16) | (u16)gTasks[taskId].data[12];
         personality = ((u16)gTasks[taskId].data[15] << 16) | (u16)gTasks[taskId].data[14];
         paletteNum = gSprites[gTasks[taskId].data[3]].oam.paletteNum;
-        lzPaletteData = GetFrontSpritePalFromSpeciesAndPersonality(species, otId, personality);
+        lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality);
         LoadCompressedPalette(lzPaletteData, 0x100 | paletteNum * 16, 32);
         DestroyTask(taskId);
     }
@@ -4250,12 +4250,12 @@ u16 GetPokedexHeightWeight(u16 dexNum, u8 data)
 {
     switch (data)
     {
-        case 0:  // height
-            return gPokedexEntries[dexNum].height;
-        case 1:  // weight
-            return gPokedexEntries[dexNum].weight;
-        default:
-            return 1;
+    case 0:  // height
+        return gPokedexEntries[dexNum].height;
+    case 1:  // weight
+        return gPokedexEntries[dexNum].weight;
+    default:
+        return 1;
     }
 }
 
@@ -4361,23 +4361,23 @@ u16 GetHoennPokedexCount(u8 caseID)
     return count;
 }
 
-u16 sub_80C089C(u8 caseID)
+u16 GetKantoPokedexCount(u8 caseID)
 {
     u16 count = 0;
     u16 i;
 
-    for (i = 0; i < 151; i++)
+    for (i = 0; i < KANTO_DEX_COUNT; i++)
     {
         switch (caseID)
         {
-            case FLAG_GET_SEEN:
-                if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
-                    count++;
-                break;
-            case FLAG_GET_CAUGHT:
-                if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-                    count++;
-                break;
+        case FLAG_GET_SEEN:
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+                count++;
+            break;
+        case FLAG_GET_CAUGHT:
+            if (GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
+                count++;
+            break;
         }
     }
     return count;
@@ -4387,7 +4387,7 @@ bool16 HasAllHoennMons(void)
 {
     u16 i;
 
-    for (i = 0; i < 200; i++)
+    for (i = 0; i < HOENN_DEX_COUNT - 2; i++)
     {
         if (!GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_CAUGHT))
             return FALSE;
@@ -4395,11 +4395,11 @@ bool16 HasAllHoennMons(void)
     return TRUE;
 }
 
-bool8 sub_80C0918(void)
+bool8 HasAllKantoMons(void)
 {
     u16 i;
 
-    for (i = 0; i < 150; i++)
+    for (i = 0; i < KANTO_DEX_COUNT - 1; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
             return FALSE;
@@ -4407,26 +4407,26 @@ bool8 sub_80C0918(void)
     return TRUE;
 }
 
-u16 sub_80C0944(void)
+bool16 HasAllMons(void)
 {
     u16 i;
 
-    for (i = 0; i < 150; i++)
+    for (i = 0; i < NATIONAL_DEX_MEWTWO; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return 0;
+            return FALSE;
     }
-    for (i = 151; i < 248; i++)
+    for (i = NATIONAL_DEX_MEW; i < NATIONAL_DEX_TYRANITAR; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return 0;
+            return FALSE;
     }
-    for (i = 251; i < 384; i++)
+    for (i = NATIONAL_DEX_CELEBI; i < NATIONAL_DEX_RAYQUAZA; i++)
     {
         if (!GetSetPokedexFlag(i + 1, FLAG_GET_CAUGHT))
-            return 0;
+            return FALSE;
     }
-    return 1;
+    return TRUE;
 }
 
 void sub_80C09B0(u16 a)

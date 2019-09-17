@@ -19,7 +19,7 @@ RustboroCity_DevonCorp_3F_MapScript2_212455: @ 8212455
 	.2byte 0
 
 RustboroCity_DevonCorp_3F_EventScript_21245F:: @ 821245F
-	turnobject EVENT_OBJ_ID_PLAYER, 4
+	turnobject EVENT_OBJ_ID_PLAYER, DIR_EAST
 	end
 
 RustboroCity_DevonCorp_3F_MapScript2_212464: @ 8212464
@@ -68,7 +68,7 @@ RustboroCity_DevonCorp_3F_EventScript_21246E:: @ 821246E
 	setvar VAR_BRINEY_LOCATION, 1
 	clearflag FLAG_HIDE_RUSBORO_CITY_RIVAL
 	setvar VAR_DEVON_CORP_3F_STATE, 1
-	setvar VAR_RUSTBORO_STATE, 6
+	setvar VAR_RUSTBORO_CITY_STATE, 6
 	releaseall
 	end
 

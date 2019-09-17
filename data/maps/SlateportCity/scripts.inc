@@ -6,7 +6,7 @@ SlateportCity_MapScripts:: @ 81DCC61
 SlateportCity_OnTransition: @ 81DCC6C
 	setvar VAR_SLATEPORT_MUSEUM_1F_STATE, 0
 	call SlateportCity_EventScript_1DCC8D
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCC99
 	compare VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCCE7
@@ -170,7 +170,7 @@ SlateportCity_EventScript_1DCE38:: @ 81DCE38
 SlateportCity_EventScript_1DCE42:: @ 81DCE42
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCE59
 	msgbox SlateportCity_Text_1DD81A, MSGBOX_DEFAULT
 	release
@@ -184,7 +184,7 @@ SlateportCity_EventScript_1DCE59:: @ 81DCE59
 SlateportCity_EventScript_1DCE63:: @ 81DCE63
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCE7A
 	msgbox SlateportCity_Text_1DD8A6, MSGBOX_DEFAULT
 	release
@@ -198,7 +198,7 @@ SlateportCity_EventScript_1DCE7A:: @ 81DCE7A
 SlateportCity_EventScript_1DCE84:: @ 81DCE84
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCEA4
 	goto_if_set FLAG_RECEIVED_SECRET_POWER, SlateportCity_EventScript_1DCEAE
 	msgbox SlateportCity_Text_1DD93D, MSGBOX_DEFAULT
@@ -218,7 +218,7 @@ SlateportCity_EventScript_1DCEAE:: @ 81DCEAE
 SlateportCity_EventScript_1DCEB8:: @ 81DCEB8
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCECF
 	msgbox SlateportCity_Text_1DDA34, MSGBOX_DEFAULT
 	release
@@ -230,7 +230,7 @@ SlateportCity_EventScript_1DCECF:: @ 81DCECF
 	end
 
 SlateportCity_EventScript_1DCED9:: @ 81DCED9
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	goto_if_eq SlateportCity_EventScript_1DCEED
 	msgbox SlateportCity_Text_1DDA9A, MSGBOX_NPC
 	end
@@ -242,7 +242,7 @@ SlateportCity_EventScript_1DCEED:: @ 81DCEED
 SlateportCity_EventScript_1DCEF6:: @ 81DCEF6
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCF0D
 	msgbox SlateportCity_Text_1DDB21, MSGBOX_DEFAULT
 	release
@@ -323,7 +323,7 @@ SlateportCity_EventScript_1DCFB2:: @ 81DCFB2
 SlateportCity_EventScript_1DCFBB:: @ 81DCFBB
 	lock
 	faceplayer
-	compare VAR_SLATEPORT_STATE, 1
+	compare VAR_SLATEPORT_CITY_STATE, 1
 	call_if_eq SlateportCity_EventScript_1DCFD2
 	msgbox SlateportCity_Text_1DE10E, MSGBOX_DEFAULT
 	release
@@ -609,7 +609,7 @@ SlateportCity_EventScript_1DD1F8:: @ 81DD1F8
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_ARCHIE
-	setvar VAR_SLATEPORT_STATE, 2
+	setvar VAR_SLATEPORT_CITY_STATE, 2
 	warp MAP_SLATEPORT_CITY_HARBOR, 255, 11, 14
 	waitstate
 	releaseall
@@ -769,77 +769,77 @@ SlateportCity_EventScript_1DD3CA:: @ 81DD3CA
 
 SlateportCity_EventScript_1DD46E:: @ 81DD46E
 	bufferitemname 0, ITEM_ENERGY_POWDER
-	setvar VAR_0x8008, 30
+	setvar VAR_0x8008, ITEM_ENERGY_POWDER
 	setvar VAR_0x8009, 50
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD482:: @ 81DD482
 	bufferitemname 0, ITEM_ENERGY_ROOT
-	setvar VAR_0x8008, 31
+	setvar VAR_0x8008, ITEM_ENERGY_ROOT
 	setvar VAR_0x8009, 80
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD496:: @ 81DD496
 	bufferitemname 0, ITEM_HEAL_POWDER
-	setvar VAR_0x8008, 32
+	setvar VAR_0x8008, ITEM_HEAL_POWDER
 	setvar VAR_0x8009, 50
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD4AA:: @ 81DD4AA
 	bufferitemname 0, ITEM_REVIVAL_HERB
-	setvar VAR_0x8008, 33
+	setvar VAR_0x8008, ITEM_REVIVAL_HERB
 	setvar VAR_0x8009, 300
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD4BE:: @ 81DD4BE
 	bufferitemname 0, ITEM_PROTEIN
-	setvar VAR_0x8008, 64
+	setvar VAR_0x8008, ITEM_PROTEIN
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD4D2:: @ 81DD4D2
 	bufferitemname 0, ITEM_IRON
-	setvar VAR_0x8008, 65
+	setvar VAR_0x8008, ITEM_IRON
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD4E6:: @ 81DD4E6
 	bufferitemname 0, ITEM_CARBOS
-	setvar VAR_0x8008, 66
+	setvar VAR_0x8008, ITEM_CARBOS
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD4FA:: @ 81DD4FA
 	bufferitemname 0, ITEM_CALCIUM
-	setvar VAR_0x8008, 67
+	setvar VAR_0x8008, ITEM_CALCIUM
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD50E:: @ 81DD50E
 	bufferitemname 0, ITEM_ZINC
-	setvar VAR_0x8008, 70
+	setvar VAR_0x8008, ITEM_ZINC
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD522:: @ 81DD522
 	bufferitemname 0, ITEM_HP_UP
-	setvar VAR_0x8008, 63
+	setvar VAR_0x8008, ITEM_HP_UP
 	setvar VAR_0x8009, 1000
 	goto SlateportCity_EventScript_1DD557
 	end
 
 SlateportCity_EventScript_1DD536:: @ 81DD536
 	bufferitemname 0, ITEM_PP_UP
-	setvar VAR_0x8008, 69
+	setvar VAR_0x8008, ITEM_PP_UP
 	setvar VAR_0x8009, 3000
 	goto SlateportCity_EventScript_1DD557
 	end

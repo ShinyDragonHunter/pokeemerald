@@ -4,7 +4,7 @@ MossdeepCity_SpaceCenter_2F_MapScripts:: @ 8223D58
 	.byte 0
 
 MossdeepCity_SpaceCenter_2F_OnTransition: @ 8223D63
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	call_if_eq MossdeepCity_SpaceCenter_2F_EventScript_223D7A
 	compare VAR_MOSSDEEP_SPACE_CENTER_STATE_2, 2
 	call_if_eq MossdeepCity_SpaceCenter_2F_EventScript_223D9F
@@ -70,9 +70,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_223E09:: @ 8223E09
 	applymovement 7, MossdeepCity_SpaceCenter_2F_Movement_223E89
 	waitmovement 0
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE_2, 2
-	moveobjectoffscreen 5
-	moveobjectoffscreen 7
-	moveobjectoffscreen 6
+	copyobjectxytoperm 5
+	copyobjectxytoperm 7
+	copyobjectxytoperm 6
 	releaseall
 	end
 
@@ -98,9 +98,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_223E8D:: @ 8223E8D
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_223EB4
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_eq MossdeepCity_SpaceCenter_2F_EventScript_223EBE
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_lt MossdeepCity_SpaceCenter_2F_EventScript_223EB4
 	goto MossdeepCity_SpaceCenter_2F_EventScript_223EBE
 	end
@@ -119,9 +119,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_223EC8:: @ 8223EC8
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_223EEF
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_eq MossdeepCity_SpaceCenter_2F_EventScript_223EF9
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_lt MossdeepCity_SpaceCenter_2F_EventScript_223EEF
 	goto MossdeepCity_SpaceCenter_2F_EventScript_223EF9
 	end
@@ -140,9 +140,9 @@ MossdeepCity_SpaceCenter_2F_EventScript_223F03:: @ 8223F03
 	lock
 	faceplayer
 	goto_if_set FLAG_SYS_GAME_CLEAR, MossdeepCity_SpaceCenter_2F_EventScript_223F2A
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_eq MossdeepCity_SpaceCenter_2F_EventScript_223F34
-	compare VAR_MOSSDEEP_STATE, 2
+	compare VAR_MOSSDEEP_CITY_STATE, 2
 	goto_if_lt MossdeepCity_SpaceCenter_2F_EventScript_223F2A
 	goto MossdeepCity_SpaceCenter_2F_EventScript_223F34
 	end
@@ -287,7 +287,7 @@ MossdeepCity_SpaceCenter_2F_EventScript_224071:: @ 8224071
 	delay 20
 	msgbox MossdeepCity_SpaceCenter_2F_Text_2249DC, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_MOSSDEEP_STATE, 3
+	setvar VAR_MOSSDEEP_CITY_STATE, 3
 	fadedefaultbgm
 	fadescreen 1
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE_2, 3
@@ -300,11 +300,11 @@ MossdeepCity_SpaceCenter_2F_EventScript_224071:: @ 8224071
 	removeobject 8
 	removeobject 9
 	setobjectxy 3, 5, 6
-	turnobject 3, 1
+	turnobject 3, DIR_SOUTH
 	setobjectxy 2, 11, 8
-	turnobject 2, 2
+	turnobject 2, DIR_NORTH
 	setobjectxy 1, 6, 2
-	turnobject 1, 2
+	turnobject 1, DIR_NORTH
 	call MossdeepCity_SpaceCenter_2F_EventScript_224131
 	fadescreen 0
 	msgbox MossdeepCity_SpaceCenter_2F_Text_224A4A, MSGBOX_DEFAULT
@@ -331,11 +331,11 @@ MossdeepCity_SpaceCenter_2F_EventScript_224131:: @ 8224131
 	return
 
 MossdeepCity_SpaceCenter_2F_EventScript_22414D:: @ 822414D
-	turnobject 4, 2
+	turnobject 4, DIR_NORTH
 	return
 
 MossdeepCity_SpaceCenter_2F_EventScript_224152:: @ 8224152
-	turnobject 4, 4
+	turnobject 4, DIR_EAST
 	return
 
 MossdeepCity_SpaceCenter_2F_EventScript_224157:: @ 8224157

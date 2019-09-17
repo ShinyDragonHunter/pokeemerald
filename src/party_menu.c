@@ -1596,8 +1596,8 @@ static void InitPartyMenu(u8 a, u8 b, u8 c, u8 d, u8 messageId, TaskFunc task, M
         gUnknown_0203CEC4->task = task;
         gUnknown_0203CEC4->exitCallback = NULL;
         gUnknown_0203CEC4->unk8_1 = 0;
-        gUnknown_0203CEC4->unk8_2 = 0xFF;
-        gUnknown_0203CEC4->unk9_0 = 0xFF;
+        gUnknown_0203CEC4->unk8_2 = 0x7F;
+        gUnknown_0203CEC4->unk9_0 = 0x7F;
 
         if (a == 4)
             gUnknown_0203CEC4->unk8_0 = TRUE;
@@ -1820,7 +1820,7 @@ static bool8 AllocPartyMenuBg(void)
 
 static bool8 AllocPartyMiscGfx(void)
 {
-    int sizeout;
+    u32 sizeout;
 
     switch (gUnknown_0203CEC4->data[0])
     {
@@ -3650,7 +3650,7 @@ static u8 sub_81B31B0(u8 a)
 
     for (i = 0; i < gUnknown_0203CEC4->listSize; i++)
     {
-        u8 unk = (gUnknown_0203CEC4->actions[i] > 18) ? 4 : 3;
+        u8 unk = (gUnknown_0203CEC4->actions[i] >= MENU_FIELD_MOVES) ? 4 : 3;
         AddTextPrinterParameterized4(gUnknown_0203CEC4->windowId[0], 1, cursorDimension, (i * 16) + 1, fontAttribute, 0, sFontColorTable[unk], 0, sCursorOptions[gUnknown_0203CEC4->actions[i]].text);
     }
 

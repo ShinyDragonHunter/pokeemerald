@@ -56,9 +56,9 @@ struct {
     u16 move;
 } sTV_SecretBaseVisitMonsTemp[10];
 
-IWRAM_DATA u8 sTVShowMixingNumPlayers;
-IWRAM_DATA u8 sTVShowNewsMixingNumPlayers;
-IWRAM_DATA s8 sTVShowMixingCurSlot;
+static u8 sTVShowMixingNumPlayers;
+static u8 sTVShowNewsMixingNumPlayers;
+static s8 sTVShowMixingCurSlot;
 
 EWRAM_DATA u16 sPokemonAnglerSpecies = 0;
 EWRAM_DATA u16 sPokemonAnglerAttemptCounters = 0;
@@ -69,10 +69,9 @@ EWRAM_DATA ALIGNED(4) u8 sTVShowState = 0;
 EWRAM_DATA u8 sTVSecretBaseSecretsRandomValues[3] = {};
 
 // Static ROM declarations
-
-extern const u8 *const sTVBravoTrainerTextGroup[];
-extern const u8 *const sTVBravoTrainerBattleTowerTextGroup[];
-
+#if !defined(NONMATCHING) && MODERN
+#define static
+#endif
 void ClearPokemonNews(void);
 u8 GetTVChannelByShowType(u8 kind);
 u8 FindFirstActiveTVShowThatIsNotAMassOutbreak(void);
@@ -183,7 +182,7 @@ static void DoTVShowPokemonContestLiveUpdates2(void);
 
 static const struct {
     u16 species;
-    u16 moves[4];
+    u16 moves[MAX_MON_MOVES];
     u8 level;
     u8 location;
 } sPokeOutbreakSpeciesList[] = {
@@ -1658,12 +1657,12 @@ void PutLilycoveContestLadyShowOnTheAir(void)
     if (gSpecialVar_Result != TRUE)
     {
         show = &gSaveBlock1Ptr->tvShows[sCurTVShowSlot];
-        sub_818E848(&show->contestLiveUpdates2.language);
+        BufferContestLadyLanguage(&show->contestLiveUpdates2.language);
         show->contestLiveUpdates2.pokemonNameLanguage = LANGUAGE_ENGLISH;
         show->contestLiveUpdates2.kind = TVSHOW_CONTEST_LIVE_UPDATES_2;
         show->contestLiveUpdates2.active = TRUE;
-        sub_818E81C(show->contestLiveUpdates2.playerName);
-        sub_818E7E0(&show->contestLiveUpdates2.contestCategory, show->contestLiveUpdates2.nickname);
+        BufferContestLadyPlayerName(show->contestLiveUpdates2.playerName);
+        BufferContestLadyMonName(&show->contestLiveUpdates2.contestCategory, show->contestLiveUpdates2.nickname);
         show->contestLiveUpdates2.pokeblockState = sub_818E880();
         tv_store_id_2x(show);
     }
@@ -2330,7 +2329,7 @@ void sub_80EE35C(u16 foeSpecies, u16 species, u8 moveIdx, const u16 *movePtr, u1
         show->battleSeminar.foeSpecies = foeSpecies;
         show->battleSeminar.species = species;
         show->battleSeminar.move = movePtr[moveIdx];
-        for (i = 0, j = 0; i < 4; i ++)
+        for (i = 0, j = 0; i < MAX_MON_MOVES; i ++)
         {
             if (i != moveIdx && movePtr[i])
             {
@@ -5601,7 +5600,7 @@ static void DoTVShowPokemonContestLiveUpdates(void)
     switch (state)
     {
         case  0:
-            sub_818E868(gStringVar1, show->contestLiveUpdates.category);
+            BufferContestName(gStringVar1, show->contestLiveUpdates.category);
             StringCopy(gStringVar2, gSpeciesNames[show->contestLiveUpdates.species]);
             TVShowConvertInternationalString(gStringVar3, show->contestLiveUpdates.playerName, show->contestLiveUpdates.language);
             if (show->contestLiveUpdates.round1Rank == show->contestLiveUpdates.round2Rank)
@@ -7721,7 +7720,7 @@ static void DoTVShowPokemonContestLiveUpdates2(void)
     switch (state)
     {
         case 0:
-            sub_818E868(gStringVar1, show->contestLiveUpdates2.contestCategory);
+            BufferContestName(gStringVar1, show->contestLiveUpdates2.contestCategory);
             if (show->contestLiveUpdates2.pokeblockState == 1)
             {
                 sTVShowState = 1;
