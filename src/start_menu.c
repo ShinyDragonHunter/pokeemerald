@@ -1229,7 +1229,7 @@ static void sub_80A0550(u8 taskId)
             FillWindowPixelBuffer(0, PIXEL_FILL(1));
             AddTextPrinterParameterized2(0,
                                         1,
-                                        gText_SavingDontTurnOffPower,
+                                        gText_SavingDontTurnOff,
                                         255,
                                         NULL,
                                         2,
@@ -1265,7 +1265,7 @@ static void sub_80A0550(u8 taskId)
         case 2:
             if (CheckSaveFile())
             {
-                ClearContinueGameWarpStatus2();
+                ClearContinueGameWarpStatus();
                 *step = 3;
                 gSoftResetDisabled = 0;
             }

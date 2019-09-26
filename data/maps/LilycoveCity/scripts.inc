@@ -698,6 +698,19 @@ LilycoveCity_Text_1E4571: @ 81E4571
 	.string "“{PLAYER}'s {P}MON Collection\n"
 	.string "on exhibit!”$"
 
+    .if UK
+LilycoveCity_Text_1E45A7: @ 81E45A7
+	.string "LILYCOVE CITY HARBOUR\p"
+	.string "“The ferry S.S. TIDAL is under\n"
+	.string "construction in SLATEPORT CITY.\p"
+	.string "“Service is scheduled to begin\n"
+	.string "shortly.”$"
+
+LilycoveCity_Text_1E4624: @ 81E4624
+	.string "LILYCOVE CITY HARBOUR\p"
+	.string "“Enjoy a delightful cruise on\n"
+	.string "the ferry S.S. TIDAL.”$"
+    .else
 LilycoveCity_Text_1E45A7: @ 81E45A7
 	.string "LILYCOVE CITY HARBOR\p"
 	.string "“The ferry S.S. TIDAL is under\n"
@@ -709,18 +722,28 @@ LilycoveCity_Text_1E4624: @ 81E4624
 	.string "LILYCOVE CITY HARBOR\p"
 	.string "“Enjoy a delightful cruise on\n"
 	.string "the ferry S.S. TIDAL.”$"
+	.endif
 
 LilycoveCity_Text_1E466E: @ 81E466E
 	.string "{P}MON TRAINER FAN CLUB\p"
 	.string "The names of TRAINERS are scribbled\n"
 	.string "all over the sign…$"
 
+    .if UK
+LilycoveCity_Text_1E46BE: @ 81E46BE
+	.string "LILYCOVE SHOPPING CENTRE\p"
+	.string "“Overflowing with great merchandise\n"
+	.string "and excitement!\p"
+	.string "“A great place to find that something\n"
+	.string "you need!”$"
+    .else
 LilycoveCity_Text_1E46BE: @ 81E46BE
 	.string "LILYCOVE DEPARTMENT STORE\p"
 	.string "“Overflowing with great merchandise\n"
 	.string "and excitement!\p"
 	.string "“A great place to find that something\n"
 	.string "you need!”$"
+	.endif
 
 LilycoveCity_Text_1E473D: @ 81E473D
 	.string "MOVE DELETER'S HOUSE\p"

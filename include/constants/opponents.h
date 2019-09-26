@@ -852,11 +852,7 @@
 #define TRAINER_MARIELA         848
 #define TRAINER_ALVARO          849
 #define TRAINER_EVERETT         850
-#define TRAINER_RED             851
-#define TRAINER_LEAF            852
-#define TRAINER_BRENDAN_16      853
-#define TRAINER_MAY_16          854
 
-#define TRAINERS_COUNT          855
+#define TRAINERS_COUNT          851
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

@@ -938,12 +938,6 @@ const struct UnkStruct_0858AB24 gUnknown_0858AB24[] = {
 
 const struct BerryTree gBlankBerryTree = {};
 
-// unused
-void ClearEnigmaBerries(void)
-{
-    CpuFill16(0, &gSaveBlock1Ptr->enigmaBerry, sizeof(gSaveBlock1Ptr->enigmaBerry));
-}
-
 void SetEnigmaBerry(u8 *src)
 {
     u32 i;

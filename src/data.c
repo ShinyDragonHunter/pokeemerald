@@ -290,7 +290,7 @@ const union AnimCmd *const gUnknown_082FF70C[] =
 #define TRAINER_BACK_PAL(trainerPic, pal) [TRAINER_BACK_PIC_##trainerPic] = {pal, TRAINER_BACK_PIC_##trainerPic}
 
 #include "data/pokemon_graphics/front_pic_coordinates.h"
-#include "data/pokemon_graphics/still_front_pic_table.h"
+#include "data/pokemon_graphics/front_pic_table.h"
 #include "data/pokemon_graphics/back_pic_coordinates.h"
 
 #include "data/pokemon_graphics/back_pic_table.h"
@@ -304,7 +304,6 @@ const union AnimCmd *const gUnknown_082FF70C[] =
 
 #include "data/pokemon_graphics/enemy_mon_elevation.h"
 #include "data/pokemon_graphics/front_pic_anims.h"
-#include "data/pokemon_graphics/front_pic_table.h"
 
 #include "data/trainer_parties.h"
 #include "data/text/trainer_class_names.h"

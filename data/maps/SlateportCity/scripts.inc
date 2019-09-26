@@ -1209,10 +1209,17 @@ SlateportCity_Text_1DE7F7: @ 81DE7F7
 	.string "a megaphone…\p"
 	.string "Where did it come from?$"
 
+    .if UK
+SlateportCity_Text_1DE860: @ 81DE860
+	.string "It's from the HARBOUR!\p"
+	.string "The submarine!\n"
+	.string "They're trying to take it!$"
+    .else
 SlateportCity_Text_1DE860: @ 81DE860
 	.string "It's from the HARBOR!\p"
 	.string "The submarine!\n"
 	.string "They're trying to take it!$"
+    .endif
 
 SlateportCity_Text_1DE8A0: @ 81DE8A0
 	.string "{PLAYER}!\n"
@@ -1233,11 +1240,19 @@ SlateportCity_Text_1DE940: @ 81DE940
 	.string "completion for serving the ports of\l"
 	.string "SLATEPORT and LILYCOVE.”$"
 
+    .if UK
+SlateportCity_Text_1DE9AA: @ 81DE9AA
+	.string "STERN'S SHIPYARD\p"
+	.string "“Boarding of the SLATEPORT-LILYCOVE\n"
+	.string "ferry S.S. TIDAL is handled at the\l"
+	.string "HARBOUR.”$"
+	.else
 SlateportCity_Text_1DE9AA: @ 81DE9AA
 	.string "STERN'S SHIPYARD\p"
 	.string "“Boarding of the SLATEPORT-LILYCOVE\n"
 	.string "ferry S.S. TIDAL is handled at the\l"
 	.string "HARBOR.”$"
+	.endif
 
 SlateportCity_Text_1DEA0B: @ 81DEA0B
 	.string "{P}MON FAN CLUB\n"
@@ -1257,6 +1272,19 @@ SlateportCity_Text_1DEAAF: @ 81DEAAF
 	.string "SLATEPORT MARKET\n"
 	.string "“Unique items found nowhere else!”$"
 
+    .if UK
+SlateportCity_Text_1DEAE3: @ 81DEAE3
+	.string "SLATEPORT HARBOUR\p"
+	.string "“The ferry S.S. TIDAL is under\n"
+	.string "construction in the SHIPYARD.\p"
+	.string "“Service is scheduled to begin\n"
+	.string "shortly.”$"
+
+SlateportCity_Text_1DEB5A: @ 81DEB5A
+	.string "SLATEPORT HARBOUR\p"
+	.string "“Enjoy a delightful cruise on\n"
+	.string "the ferry S.S. TIDAL.”$"
+    .else
 SlateportCity_Text_1DEAE3: @ 81DEAE3
 	.string "SLATEPORT HARBOR\p"
 	.string "“The ferry S.S. TIDAL is under\n"
@@ -1268,6 +1296,7 @@ SlateportCity_Text_1DEB5A: @ 81DEB5A
 	.string "SLATEPORT HARBOR\p"
 	.string "“Enjoy a delightful cruise on\n"
 	.string "the ferry S.S. TIDAL.”$"
+	.endif
 
 SlateportCity_Text_1DEBA0: @ 81DEBA0
 	.string "NAME RATER'S HOUSE\n"
@@ -1288,6 +1317,18 @@ SlateportCity_Text_1DEBCE: @ 81DEBCE
 	.string "I've got something good for someone\n"
 	.string "like you.$"
 
+    .if UK
+SlateportCity_Text_1DED27: @ 81DED27
+	.string "I recently had machines installed at\n"
+	.string "{P}MON CENTRES for crushing BERRIES.\p"
+	.string "The BERRY CRUSH machines are at\n"
+	.string "the DIRECT CORNER upstairs.\p"
+	.string "Did you know?\p"
+	.string "Could you make BERRY POWDER for\n"
+	.string "me using those machines?\p"
+	.string "I can make you all sorts of medicine\n"
+	.string "if you bring me lots of BERRY POWDER.$"
+	.else
 SlateportCity_Text_1DED27: @ 81DED27
 	.string "I recently had machines installed at\n"
 	.string "{P}MON CENTERS for crushing BERRIES.\p"
@@ -1298,6 +1339,7 @@ SlateportCity_Text_1DED27: @ 81DED27
 	.string "me using those machines?\p"
 	.string "I can make you all sorts of medicine\n"
 	.string "if you bring me lots of BERRY POWDER.$"
+	.endif
 
 SlateportCity_Text_1DEE40: @ 81DEE40
 	.string "Have you brought me some\n"

@@ -966,7 +966,7 @@ static void Task_DoRecordMixing(u8 taskId)
     case 3:
         if (CheckSaveFile())
         {
-            ClearContinueGameWarpStatus2();
+            ClearContinueGameWarpStatus();
             task->data[0] = 4;
             task->data[1] = 0;
         }

@@ -179,7 +179,7 @@ extern const u8 gText_Norman_Pokenav_2B5ACF[];
 extern const u8 gText_Norman_Pokenav_2B5B5E[];
 
 extern const u8 gNormanMatchCallDesc[];
-extern const u8 gNormanMatchCallName[];
+extern const u8 gText_Dad[];
 
 extern const u8 gProfBirchMatchCallDesc[];
 extern const u8 gProfBirchMatchCallName[];
@@ -189,7 +189,7 @@ extern const u8 gText_Mom_Pokenav_2B2310[];
 extern const u8 gText_Mom_Pokenav_2B23F3[];
 
 extern const u8 gMomMatchCallDesc[];
-extern const u8 gMomMatchCallName[];
+extern const u8 gText_Mom[];
 
 extern const u8 gText_Steven_Pokenav_2B5B95[];
 extern const u8 gText_Steven_Pokenav_2B5C53[];
@@ -355,7 +355,7 @@ static const struct MatchCallStruct5 sNormanMatchCallHeader =
     .flag = FLAG_ENABLE_NORMAN_MATCH_CALL,
     .rematchTableIdx = REMATCH_NORMAN,
     .desc = gNormanMatchCallDesc,
-    .name = gNormanMatchCallName,
+    .name = gText_Dad,
     .textData = sNormanTextScripts
 };
 
@@ -381,7 +381,7 @@ static const struct MatchCallStruct0 sMomMatchCallHeader =
     .mapSec = MAPSEC_LITTLEROOT_TOWN,
     .flag = FLAG_ENABLE_MOM_MATCH_CALL,
     .desc = gMomMatchCallDesc,
-    .name = gMomMatchCallName,
+    .name = gText_Mom,
     .textData = sMomTextScripts
 };
 

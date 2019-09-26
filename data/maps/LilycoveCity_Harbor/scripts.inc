@@ -34,8 +34,8 @@ LilycoveCity_Harbor_EventScript_21E00F:: @ 821E00F
 LilycoveCity_Harbor_EventScript_21E080:: @ 821E080
 	compare VAR_TEMP_A, 0
 	goto_if_eq LilycoveCity_Harbor_EventScript_21E557
-	msgbox LilycoveCity_Harbor_Text_21E758, MSGBOX_DEFAULT
-	message LilycoveCity_Harbor_Text_21E7ED
+	msgbox SlateportCity_Harbor_Text_20CE87, MSGBOX_DEFAULT
+	message SlateportCity_Harbor_Text_20CF1C
 	waitmessage
 	goto LilycoveCity_Harbor_EventScript_21E09F
 	end
@@ -96,7 +96,7 @@ LilycoveCity_Harbor_EventScript_21E149:: @ 821E149
 	end
 
 LilycoveCity_Harbor_EventScript_21E171:: @ 821E171
-	msgbox LilycoveCity_Harbor_Text_21E880, MSGBOX_YESNO
+	msgbox SlateportCity_Harbor_Text_20CFAE, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq LilycoveCity_Harbor_EventScript_21E5C0
 	call LilycoveCity_Harbor_EventScript_21E5CC
@@ -337,7 +337,7 @@ LilycoveCity_Harbor_EventScript_21E4B6:: @ 821E4B6
 	waitmovement 0
 	showobjectat 1, MAP_LILYCOVE_CITY_HARBOR
 	delay 30
-	msgbox LilycoveCity_Harbor_Text_21E842, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_20CF71, MSGBOX_DEFAULT
 	release
 	end
 
@@ -369,19 +369,19 @@ LilycoveCity_Harbor_EventScript_21E514:: @ 821E514
 	return
 
 LilycoveCity_Harbor_EventScript_21E54D:: @ 821E54D
-	msgbox LilycoveCity_Harbor_Text_21E6F1, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_20CE20, MSGBOX_DEFAULT
 	release
 	end
 
 LilycoveCity_Harbor_EventScript_21E557:: @ 821E557
-	msgbox LilycoveCity_Harbor_Text_21E758, MSGBOX_DEFAULT
-	message LilycoveCity_Harbor_Text_21E7ED
+	msgbox SlateportCity_Harbor_Text_20CE87, MSGBOX_DEFAULT
+	message SlateportCity_Harbor_Text_20CF1C
 	waitmessage
 	goto LilycoveCity_Harbor_EventScript_21E09F
 	end
 
 LilycoveCity_Harbor_EventScript_21E56B:: @ 821E56B
-	msgbox LilycoveCity_Harbor_Text_21E792, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_20CEC1, MSGBOX_DEFAULT
 	release
 	end
 
@@ -397,7 +397,7 @@ LilycoveCity_Harbor_EventScript_21E575:: @ 821E575
 	end
 
 LilycoveCity_Harbor_EventScript_21E59D:: @ 821E59D
-	msgbox LilycoveCity_Harbor_Text_21E880, MSGBOX_YESNO
+	msgbox SlateportCity_Harbor_Text_20CFAE, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq LilycoveCity_Harbor_EventScript_21E5C0
 	call LilycoveCity_Harbor_EventScript_21E5CC
@@ -407,13 +407,13 @@ LilycoveCity_Harbor_EventScript_21E59D:: @ 821E59D
 	end
 
 LilycoveCity_Harbor_EventScript_21E5C0:: @ 821E5C0
-	message LilycoveCity_Harbor_Text_21E8CC
+	message SlateportCity_Harbor_Text_20CFFA
 	waitmessage
 	goto LilycoveCity_Harbor_EventScript_21E09F
 	end
 
 LilycoveCity_Harbor_EventScript_21E5CC:: @ 821E5CC
-	msgbox LilycoveCity_Harbor_Text_21E89D, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_20CFCB, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceUp
 	waitmovement 0
@@ -440,7 +440,7 @@ LilycoveCity_Harbor_EventScript_21E61B:: @ 821E61B
 	return
 
 LilycoveCity_Harbor_EventScript_21E626:: @ 821E626
-	msgbox LilycoveCity_Harbor_Text_21E842, MSGBOX_DEFAULT
+	msgbox SlateportCity_Harbor_Text_20CF71, MSGBOX_DEFAULT
 	release
 	end
 
@@ -567,43 +567,8 @@ LilycoveCity_Harbor_Movement_21E6EA: @ 821E6EA
 	set_invisible
 	step_end
 
-LilycoveCity_Harbor_Text_21E6F1: @ 821E6F1
-	.string "I beg your pardon?\n"
-	.string "You're looking for a ship?\p"
-	.string "I'm sorry, the ferry service isn't\n"
-	.string "available at present…$"
-
-LilycoveCity_Harbor_Text_21E758: @ 821E758
-	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
-
-
-LilycoveCity_Harbor_Text_21E792: @ 821E792
-	.string "{PLAYER} doesn't have the TICKET…\p"
-	.string "I'm terribly sorry.\p"
-	.string "You must have a TICKET to board\n"
-	.string "the ferry.$"
-
-LilycoveCity_Harbor_Text_21E7ED: @ 821E7ED
-	.string "{PLAYER} flashed the TICKET.\p"
-	.string "Perfect! That's all you need!\p"
-	.string "And where would you like to go?$"
-
-LilycoveCity_Harbor_Text_21E842: @ 821E842
-	.string "Please sail with us another time!$"
-
 LilycoveCity_Harbor_Text_21E864: @ 821E864
 	.string "SLATEPORT CITY it is, then!$"
-
-LilycoveCity_Harbor_Text_21E880: @ 821E880
-	.string "BATTLE FRONTIER it is, then!$"
-
-LilycoveCity_Harbor_Text_21E89D: @ 821E89D
-	.string "Please board the ferry and wait for\n"
-	.string "departure.$"
-
-LilycoveCity_Harbor_Text_21E8CC: @ 821E8CC
-	.string "Then, where would you like to go?$"
 
 LilycoveCity_Harbor_Text_21E8EE: @ 821E8EE
 	.string "Until they finish making the ferry,\n"

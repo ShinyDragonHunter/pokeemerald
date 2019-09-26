@@ -24,7 +24,6 @@ static void GetBattleFactoryData(void);
 static void SetBattleFactoryData(void);
 static void sub_81A613C(void);
 static void nullsub_75(void);
-static void nullsub_123(void);
 static void SelectInitialRentalMons(void);
 static void SwapRentalMons(void);
 static void SetPerformedRentalSwap(void);
@@ -117,7 +116,7 @@ static void (* const sBattleFactoryFunctions[])(void) =
     SetBattleFactoryData,
     sub_81A613C,
     nullsub_75,
-    nullsub_123,
+    nullsub_75,
     SelectInitialRentalMons,
     SwapRentalMons,
     SetPerformedRentalSwap,
@@ -261,11 +260,6 @@ static void sub_81A613C(void)
 }
 
 static void nullsub_75(void)
-{
-
-}
-
-static void nullsub_123(void)
 {
 
 }

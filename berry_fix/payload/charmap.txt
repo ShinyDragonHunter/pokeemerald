@@ -61,6 +61,10 @@ UP_ARROW    = 79
 DOWN_ARROW  = 7A
 LEFT_ARROW  = 7B
 RIGHT_ARROW = 7C
+SUPER_E     = 84
+'<'         = 85
+'>'         = 86
+SUPER_RE    = A0
 '0'         = A1
 '1'         = A2
 '2'         = A3
@@ -80,7 +84,7 @@ RIGHT_ARROW = 7C
 '“'         = B1
 '”'         = B2
 '‘'         = B3
-'’'         = B4
+'\''         = B4
 '♂'         = B5
 '♀'         = B6
 '¥'         = B7
@@ -329,17 +333,8 @@ PLAYER         = FD 01
 STR_VAR_1      = FD 02
 STR_VAR_2      = FD 03
 STR_VAR_3      = FD 04
-KUN            = FD 05
+P              = FD 05
 RIVAL          = FD 06
-@ version-dependent strings (originally made for Ruby/Sapphire differences)
-@ Emerald uses the Sapphire strings (except for VERSION).
-VERSION        = FD 07 @ "EMERALD"
-AQUA           = FD 08
-MAGMA          = FD 09
-ARCHIE         = FD 0A
-MAXIE          = FD 0B
-KYOGRE         = FD 0C
-GROUDON        = FD 0D
 
 @ battle string placeholders
 
@@ -424,7 +419,7 @@ PLAY_SE = FC 10
 CLEAR = FC 11
 SKIP = FC 12
 CLEAR_TO = FC 13
-UNKNOWN_14 = FC 14
+MIN_LETTER_SPACING = FC 14
 JPN = FC 15
 ENG = FC 16
 PAUSE_MUSIC = FC 17
@@ -986,7 +981,16 @@ PH_NURSE_SOLO = 61 02
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01
+L_BUTTON = F8 02
+R_BUTTON = F8 03
+START_BUTTON = F8 04
+SELECT_BUTTON = F8 05
+DPAD_UP = F8 06
+DPAD_DOWN = F8 07
+DPAD_LEFT = F8 08
+DPAD_RIGHT = F8 09
 DPAD_UPDOWN = F8 0A
+DPAD_LEFTRIGHT = F8 0B
 DPAD_NONE = F8 0C
 
 UP_ARROW_2 = F9 00

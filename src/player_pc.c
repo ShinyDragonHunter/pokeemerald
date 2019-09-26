@@ -178,7 +178,7 @@ const struct MenuAction gMailboxMailOptions[] =
     { gText_Read, Mailbox_DoMailRead },
     { gText_MoveToBag, Mailbox_MoveToBag },
     { gText_Give2, Mailbox_Give },
-    { gText_Cancel2, Mailbox_Cancel }
+    { gText_Cancel, Mailbox_Cancel }
 };
 
 static const struct WindowTemplate gUnknown_085DFF24[3] =
@@ -921,7 +921,7 @@ void ItemStorage_RefreshListMenu(void)
         gUnknown_0203BCC4->unk0[i].name = &(gUnknown_0203BCC4->unk198[i][0]);
         gUnknown_0203BCC4->unk0[i].id = i;
     }
-    StringCopy(&(gUnknown_0203BCC4->unk198[i][0]) ,gText_Cancel2);
+    StringCopy(&(gUnknown_0203BCC4->unk198[i][0]) ,gText_Cancel);
     gUnknown_0203BCC4->unk0[i].name = &(gUnknown_0203BCC4->unk198[i][0]);
     gUnknown_0203BCC4->unk0[i].id = -2;
     gMultiuseListMenuTemplate = gUnknown_085DFF44;

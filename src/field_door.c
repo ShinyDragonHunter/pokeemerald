@@ -18,17 +18,12 @@ const u8 DoorAnimTiles_04[][0x100] =
     INCBIN_U8("graphics/door_anims/04/2.4bpp"),
 };
 
-// TODO: Make these blank palette includes?
-asm(".space 32");
-
 const u8 DoorAnimTiles_05[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/05/0.4bpp"),
     INCBIN_U8("graphics/door_anims/05/1.4bpp"),
     INCBIN_U8("graphics/door_anims/05/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_08[][0x100] =
 {
@@ -37,16 +32,12 @@ const u8 DoorAnimTiles_08[][0x100] =
     INCBIN_U8("graphics/door_anims/08/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_15[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/15/0.4bpp"),
     INCBIN_U8("graphics/door_anims/15/1.4bpp"),
     INCBIN_U8("graphics/door_anims/15/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_16[][0x100] =
 {
@@ -55,16 +46,12 @@ const u8 DoorAnimTiles_16[][0x100] =
     INCBIN_U8("graphics/door_anims/16/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_00[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/00/0.4bpp"),
     INCBIN_U8("graphics/door_anims/00/1.4bpp"),
     INCBIN_U8("graphics/door_anims/00/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_01[][0x100] =
 {
@@ -94,16 +81,12 @@ const u8 DoorAnimTiles_06[][0x100] =
     INCBIN_U8("graphics/door_anims/06/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_07[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/07/0.4bpp"),
     INCBIN_U8("graphics/door_anims/07/1.4bpp"),
     INCBIN_U8("graphics/door_anims/07/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_09[][0x100] =
 {
@@ -112,34 +95,12 @@ const u8 DoorAnimTiles_09[][0x100] =
     INCBIN_U8("graphics/door_anims/09/2.4bpp"),
 };
 
-asm(".space 0x5900");
-
-const u8 DoorAnimTiles_UnusedTops[][0x40] =
-{
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/0_top.4bpp"),
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/1_top.4bpp"),
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/2_top.4bpp"),
-};
-
-asm(".space 0x140");
-
-const u8 DoorAnimTiles_UnusedBottoms[][0x40] =
-{
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/0_bottom.4bpp"),
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/1_bottom.4bpp"),
-    INCBIN_U8("graphics/door_anims/unused_848EDEC/2_bottom.4bpp"),
-};
-
-asm(".space 32");
-
 const u8 DoorAnimTiles_10[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/10/0.4bpp"),
     INCBIN_U8("graphics/door_anims/10/1.4bpp"),
     INCBIN_U8("graphics/door_anims/10/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_11[][0x100] =
 {
@@ -148,16 +109,12 @@ const u8 DoorAnimTiles_11[][0x100] =
     INCBIN_U8("graphics/door_anims/11/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_12[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/12/0.4bpp"),
     INCBIN_U8("graphics/door_anims/12/1.4bpp"),
     INCBIN_U8("graphics/door_anims/12/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_13[][0x100] =
 {
@@ -166,16 +123,12 @@ const u8 DoorAnimTiles_13[][0x100] =
     INCBIN_U8("graphics/door_anims/13/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_14[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/14/0.4bpp"),
     INCBIN_U8("graphics/door_anims/14/1.4bpp"),
     INCBIN_U8("graphics/door_anims/14/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_17[][0x100] =
 {
@@ -184,16 +137,12 @@ const u8 DoorAnimTiles_17[][0x100] =
     INCBIN_U8("graphics/door_anims/17/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_18[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/18/0.4bpp"),
     INCBIN_U8("graphics/door_anims/18/1.4bpp"),
     INCBIN_U8("graphics/door_anims/18/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_19[][0x100] =
 {
@@ -202,16 +151,12 @@ const u8 DoorAnimTiles_19[][0x100] =
     INCBIN_U8("graphics/door_anims/19/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_20[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/20/0.4bpp"),
     INCBIN_U8("graphics/door_anims/20/1.4bpp"),
     INCBIN_U8("graphics/door_anims/20/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_21[][0x100] =
 {
@@ -220,16 +165,12 @@ const u8 DoorAnimTiles_21[][0x100] =
     INCBIN_U8("graphics/door_anims/21/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_22[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/22/0.4bpp"),
     INCBIN_U8("graphics/door_anims/22/1.4bpp"),
     INCBIN_U8("graphics/door_anims/22/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_23[][0x100] =
 {
@@ -238,16 +179,12 @@ const u8 DoorAnimTiles_23[][0x100] =
     INCBIN_U8("graphics/door_anims/23/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_24[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/24/0.4bpp"),
     INCBIN_U8("graphics/door_anims/24/1.4bpp"),
     INCBIN_U8("graphics/door_anims/24/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_25[][0x100] =
 {
@@ -256,16 +193,12 @@ const u8 DoorAnimTiles_25[][0x100] =
     INCBIN_U8("graphics/door_anims/25/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_26[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/26/0.4bpp"),
     INCBIN_U8("graphics/door_anims/26/1.4bpp"),
     INCBIN_U8("graphics/door_anims/26/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_27[][0x100] =
 {
@@ -274,16 +207,12 @@ const u8 DoorAnimTiles_27[][0x100] =
     INCBIN_U8("graphics/door_anims/27/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_28[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/28/0.4bpp"),
     INCBIN_U8("graphics/door_anims/28/1.4bpp"),
     INCBIN_U8("graphics/door_anims/28/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_29[][0x100] =
 {
@@ -292,16 +221,12 @@ const u8 DoorAnimTiles_29[][0x100] =
     INCBIN_U8("graphics/door_anims/29/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_30[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/30/0.4bpp"),
     INCBIN_U8("graphics/door_anims/30/1.4bpp"),
     INCBIN_U8("graphics/door_anims/30/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_31[][0x100] =
 {
@@ -310,16 +235,12 @@ const u8 DoorAnimTiles_31[][0x100] =
     INCBIN_U8("graphics/door_anims/31/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_32[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/32/0.4bpp"),
     INCBIN_U8("graphics/door_anims/32/1.4bpp"),
     INCBIN_U8("graphics/door_anims/32/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_33[][0x100] =
 {
@@ -328,16 +249,12 @@ const u8 DoorAnimTiles_33[][0x100] =
     INCBIN_U8("graphics/door_anims/33/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_34[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/34/0.4bpp"),
     INCBIN_U8("graphics/door_anims/34/1.4bpp"),
     INCBIN_U8("graphics/door_anims/34/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_35[][0x100] =
 {
@@ -346,16 +263,12 @@ const u8 DoorAnimTiles_35[][0x100] =
     INCBIN_U8("graphics/door_anims/35/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_36[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/36/0.4bpp"),
     INCBIN_U8("graphics/door_anims/36/1.4bpp"),
     INCBIN_U8("graphics/door_anims/36/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_37[][0x100] =
 {
@@ -364,16 +277,12 @@ const u8 DoorAnimTiles_37[][0x100] =
     INCBIN_U8("graphics/door_anims/37/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_38[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/38/0.4bpp"),
     INCBIN_U8("graphics/door_anims/38/1.4bpp"),
     INCBIN_U8("graphics/door_anims/38/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_39[][0x100] =
 {
@@ -382,16 +291,12 @@ const u8 DoorAnimTiles_39[][0x100] =
     INCBIN_U8("graphics/door_anims/39/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_40[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/40/0.4bpp"),
     INCBIN_U8("graphics/door_anims/40/1.4bpp"),
     INCBIN_U8("graphics/door_anims/40/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_41[][0x100] =
 {
@@ -408,16 +313,12 @@ const u8 DoorAnimTiles_42[][0x100] =
     INCBIN_U8("graphics/door_anims/42/3.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_43[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/43/0.4bpp"),
     INCBIN_U8("graphics/door_anims/43/1.4bpp"),
     INCBIN_U8("graphics/door_anims/43/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_44[][0x100] =
 {
@@ -429,16 +330,12 @@ const u8 DoorAnimTiles_44[][0x100] =
     INCBIN_U8("graphics/door_anims/44/2_right.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_45[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/45/0.4bpp"),
     INCBIN_U8("graphics/door_anims/45/1.4bpp"),
     INCBIN_U8("graphics/door_anims/45/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_46[][0x100] =
 {
@@ -447,16 +344,12 @@ const u8 DoorAnimTiles_46[][0x100] =
     INCBIN_U8("graphics/door_anims/46/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_47[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/47/0.4bpp"),
     INCBIN_U8("graphics/door_anims/47/1.4bpp"),
     INCBIN_U8("graphics/door_anims/47/2.4bpp"),
 };
-
-asm(".space 32");
 
 const u8 DoorAnimTiles_48[][0x100] =
 {
@@ -466,8 +359,6 @@ const u8 DoorAnimTiles_48[][0x100] =
     INCBIN_U8("graphics/door_anims/48/3.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_49[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/49/0.4bpp"),
@@ -475,16 +366,12 @@ const u8 DoorAnimTiles_49[][0x100] =
     INCBIN_U8("graphics/door_anims/49/2.4bpp"),
 };
 
-asm(".space 32");
-
 const u8 DoorAnimTiles_50[][0x100] =
 {
     INCBIN_U8("graphics/door_anims/50/0.4bpp"),
     INCBIN_U8("graphics/door_anims/50/1.4bpp"),
     INCBIN_U8("graphics/door_anims/50/2.4bpp"),
 };
-
-asm(".space 32");
 
 static const struct DoorAnimFrame gDoorOpenAnimFrames[] =
 {

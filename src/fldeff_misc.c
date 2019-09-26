@@ -109,16 +109,6 @@ static const union AnimCmd gSpriteAnim_858E4E0[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd gSpriteAnim_858E4F8[] =
-{
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(1, 8),
-    ANIMCMD_FRAME(2, 8),
-    ANIMCMD_FRAME(3, 8),
-    ANIMCMD_FRAME(4, 8),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd gSpriteAnim_858E510[] =
 {
     ANIMCMD_FRAME(4, 8),
@@ -149,16 +139,6 @@ static const union AnimCmd gSpriteAnim_858E540[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd gSpriteAnim_858E558[] =
-{
-    ANIMCMD_FRAME(0, 8),
-    ANIMCMD_FRAME(1, 8),
-    ANIMCMD_FRAME(2, 8),
-    ANIMCMD_FRAME(3, 8),
-    ANIMCMD_FRAME(4, 8),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd *const gSpriteAnimTable_858E570[] =
 {
     gSpriteAnim_858E4E0,
@@ -166,7 +146,7 @@ static const union AnimCmd *const gSpriteAnimTable_858E570[] =
 
 static const union AnimCmd *const gSpriteAnimTable_858E574[] =
 {
-    gSpriteAnim_858E4F8,
+    gSpriteAnim_858E4E0,
     gSpriteAnim_858E510,
     gSpriteAnim_858E528,
     gSpriteAnim_858E540,
@@ -174,7 +154,7 @@ static const union AnimCmd *const gSpriteAnimTable_858E574[] =
 
 static const union AnimCmd *const gSpriteAnimTable_858E584[] =
 {
-    gSpriteAnim_858E558,
+    gSpriteAnim_858E4E0,
 };
 
 static const struct SpriteFrameImage gUnknown_858E588[] =

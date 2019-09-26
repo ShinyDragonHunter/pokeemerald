@@ -36,7 +36,7 @@ const struct MenuAction MultichoiceList_003[] =
     {gUnknown_085EAD72, NULL},
     {gUnknown_085EAD84, NULL},
     {gUnknown_085EAD96, NULL},
-    {gText_Cancel2, NULL},
+    {gText_Cancel, NULL},
 };
 
 const struct MenuAction MultichoiceList_004[] =
@@ -69,7 +69,7 @@ const struct MenuAction MultichoiceList_007[] =
     {gMenuText_Register, NULL},
     {gUnknown_085EAE12, NULL},
     {gUnknown_085EAE1B, NULL},
-    {gText_Cancel2, NULL},
+    {gText_Cancel, NULL},
 };
 
 const struct MenuAction MultichoiceList_012[] =
@@ -272,7 +272,7 @@ const struct MenuAction MultichoiceList_047[] =
     {gUnknown_085EAF93, NULL},
     {gUnknown_085EAF9F, NULL},
     {gUnknown_085EAFAB, NULL},
-    {gText_Cancel2, NULL},
+    {gText_Cancel, NULL},
 };
 
 const struct MenuAction MultichoiceList_048[] =
@@ -557,7 +557,7 @@ const struct MenuAction MultichoiceList_084[] =
     {gText_LinkContest, NULL},
     {gText_AboutE_Mode, NULL},
     {gText_AboutG_Mode, NULL},
-    {gText_Cancel2, NULL},
+    {gText_Cancel, NULL},
 };
 
 const struct MenuAction MultichoiceList_085[] =

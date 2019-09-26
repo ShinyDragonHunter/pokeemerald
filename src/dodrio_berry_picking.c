@@ -377,25 +377,6 @@ static const u8 gUnknown_082F467F[5][5] =
     {1, 3, 5, 6, 9},
 };
 
-// Duplicate and unused gfx. Feel free to remove.
-static const u32 sDuplicateGfx[] = INCBIN_U32("graphics/link_games/dodrioberry_bg1.gbapal",
-                                     "graphics/link_games/dodrioberry_bg2.gbapal",
-                                     "graphics/link_games/dodrioberry_pkmn.gbapal",
-                                     "graphics/link_games/dodrioberry_shiny.gbapal",
-                                     "graphics/link_games/dodrioberry_status.gbapal",
-                                     "graphics/link_games/dodrioberry_berrysprites.gbapal",
-                                     "graphics/link_games/dodrioberry_berrysprites.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_platform.gbapal",
-                                     "graphics/link_games/dodrioberry_bg1.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_bg2.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_status.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_platform.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_pkmn.4bpp.lz",
-                                     "graphics/link_games/dodrioberry_bg1.bin.lz",
-                                     "graphics/link_games/dodrioberry_bg2right.bin.lz",
-                                     "graphics/link_games/dodrioberry_bg2left.bin.lz");
-
-
 static const u8 gUnknown_082F7A88[][3] =
 {
     {40, 24, 13},
@@ -4890,7 +4871,7 @@ static void sub_802A380(void)
     {
     case 0:
         DrawDialogueFrame(0, FALSE);
-        AddTextPrinterParameterized2(0, 1, gText_SavingDontTurnOffPower, 0, NULL, 2, 1, 3);
+        AddTextPrinterParameterized2(0, 1, gText_SavingDontTurnOff, 0, NULL, 2, 1, 3);
         gUnknown_02022CF8->state++;
         break;
     case 1:

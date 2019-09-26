@@ -86,7 +86,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     gText_Sound,
     gText_ButtonMode,
     gText_Frame,
-    gText_OptionMenuCancel,
+    gText_Cancel,
 };
 
 static const struct WindowTemplate sOptionMenuWinTemplates[] =

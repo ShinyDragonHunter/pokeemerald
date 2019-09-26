@@ -6251,7 +6251,7 @@ u16 GetBattleBGM(void)
             return MUS_BATTLE32;
         case TRAINER_CLASS_CHAMPION:
             return MUS_BATTLE33;
-        case TRAINER_CLASS_PKMN_TRAINER_3:
+        case TRAINER_CLASS_PKMN_TRAINER:
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_BATTLE35;
             if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))

@@ -201,7 +201,7 @@ const u8 *const gUnknown_086227E8[] =
 {
     gUnknown_085EC017,
     gUnknown_085EC01C,
-    gUnknown_085EC022
+    gText_Cancel
 };
 
 const u8 gUnknown_086227F4[] = _("·{PAUSE 0x04}·{PAUSE 0x04}·{PAUSE 0x04}·{PAUSE 0x04}·\p");

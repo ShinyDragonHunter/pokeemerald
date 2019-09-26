@@ -28,10 +28,17 @@ const u8 gGiftRibbonDescriptionPart1_RedTower[] = _("RED TOWER Clear");
 const u8 gGiftRibbonDescriptionPart1_BlackironTower[] = _("BLACKIRON TOWER Clear");
 const u8 gGiftRibbonDescriptionPart1_FinalTower[] = _("FINAL TOWER Clear");
 const u8 gGiftRibbonDescriptionPart1_LegendMaking[] = _("Legend-making");
+#if UK
+const u8 gGiftRibbonDescriptionPart1_PokemonCenterTokyo[] = _("POKéMON CENTRE TOKYO");
+const u8 gGiftRibbonDescriptionPart1_PokemonCenterOsaka[] = _("POKéMON CENTRE OSAKA");
+const u8 gGiftRibbonDescriptionPart1_PokemonCenterNagoya[] = _("POKéMON CENTRE NAGOYA");
+const u8 gGiftRibbonDescriptionPart1_PokemonCenterNY[] = _("POKéMON CENTRE NY");
+#else
 const u8 gGiftRibbonDescriptionPart1_PokemonCenterTokyo[] = _("POKéMON CENTER TOKYO");
 const u8 gGiftRibbonDescriptionPart1_PokemonCenterOsaka[] = _("POKéMON CENTER OSAKA");
 const u8 gGiftRibbonDescriptionPart1_PokemonCenterNagoya[] = _("POKéMON CENTER NAGOYA");
 const u8 gGiftRibbonDescriptionPart1_PokemonCenterNY[] = _("POKéMON CENTER NY");
+#endif
 const u8 gGiftRibbonDescriptionPart1_SummerHolidays[] = _("Summer Holidays RIBBON");
 const u8 gGiftRibbonDescriptionPart2_EmptyString[] = _("");
 const u8 gGiftRibbonDescriptionPart1_WinterHolidays[] = _("Winter Holidays RIBBON");

@@ -4110,7 +4110,7 @@ static void sub_807ACFC(u8 whichParty, u8 a1)
             personality = GetMonData(mon, MON_DATA_PERSONALITY);
 
             if (whichParty == 0)
-                HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[1], species, personality);
+                HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[1], species, personality);
             else
                 HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites[whichParty * 2 + 1], species, personality);
 
@@ -5052,7 +5052,7 @@ static bool8 sub_807BBEC(void)
         case 65:
             if (gSprites[gUnknown_020322A0->unk_D3].callback == SpriteCallbackDummy)
             {
-                HandleLoadSpecialPokePic_2(&gMonFrontPicTable[gUnknown_020322A0->tradeSpecies[1]], gMonSpritesGfxPtr->sprites[3], gUnknown_020322A0->tradeSpecies[1], gUnknown_020322A0->unk_68[1]);
+                HandleLoadSpecialPokePic(&gMonFrontPicTable[gUnknown_020322A0->tradeSpecies[1]], gMonSpritesGfxPtr->sprites[3], gUnknown_020322A0->tradeSpecies[1], gUnknown_020322A0->unk_68[1]);
                 gUnknown_020322A0->state++;
             }
             break;
@@ -5567,7 +5567,7 @@ static bool8 sub_807CFC8(void)
         case 65:
             if (gSprites[gUnknown_020322A0->unk_D3].callback == SpriteCallbackDummy)
             {
-                HandleLoadSpecialPokePic_2(&gMonFrontPicTable[gUnknown_020322A0->tradeSpecies[1]], gMonSpritesGfxPtr->sprites[3], gUnknown_020322A0->tradeSpecies[1], gUnknown_020322A0->unk_68[1]);
+                HandleLoadSpecialPokePic(&gMonFrontPicTable[gUnknown_020322A0->tradeSpecies[1]], gMonSpritesGfxPtr->sprites[3], gUnknown_020322A0->tradeSpecies[1], gUnknown_020322A0->unk_68[1]);
                 gUnknown_020322A0->state++;
             }
             break;
@@ -5981,7 +5981,7 @@ static void sub_807EB50(void)
             break;
         case 2:
             gMain.state = 50;
-            StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOffPower);
+            StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOff);
             sub_807F1A8(0, gStringVar4, 0);
             break;
         case 50:
@@ -6005,7 +6005,7 @@ static void sub_807EB50(void)
         case 52:
             if (sub_81533AC())
             {
-                ClearContinueGameWarpStatus2();
+                ClearContinueGameWarpStatus();
                 gMain.state = 4;
             }
             else
@@ -6294,7 +6294,7 @@ static void sub_807F464(void)
             if (_IsLinkTaskFinished())
             {
                 gMain.state = 3;
-                StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOffPower);
+                StringExpandPlaceholders(gStringVar4, gText_SavingDontTurnOff);
                 sub_807F1A8(0, gStringVar4, 0);
                 IncrementGameStat(GAME_STAT_POKEMON_TRADES);
                 sub_8153380();

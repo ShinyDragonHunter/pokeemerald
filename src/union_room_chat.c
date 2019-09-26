@@ -1220,7 +1220,7 @@ static void sub_801E978(void)
         if (!sub_801F644(0))
         {
             PlaySE(SE_SAVE);
-            ClearContinueGameWarpStatus2();
+            ClearContinueGameWarpStatus();
             gUnknown_02022C84->unk6 = 10;
         }
         break;

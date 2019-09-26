@@ -274,12 +274,6 @@ static const struct ScanlineEffectParams sIntroScanlineParams16Bit =
     (void *)REG_ADDR_BG3HOFS, SCANLINE_EFFECT_DMACNT_16BIT, 1
 };
 
-// unused
-static const struct ScanlineEffectParams sIntroScanlineParams32Bit =
-{
-    (void *)REG_ADDR_BG3HOFS, SCANLINE_EFFECT_DMACNT_32BIT, 1
-};
-
 const struct SpriteTemplate gUnknown_0831AC88 =
 {
     .tileTag = 0,
@@ -322,12 +316,6 @@ const struct OamData gOamData_831ACB0 =
     .paletteNum = 2,
     .affineParam = 0,
 };
-
-// Unknown and unused data. Feel free to remove.
-static const u16 gUnknown_0831ACB8[] = {0, 5, 0xfffe, 0};
-static const u16 *const gUnknown_0831ACC0 = gUnknown_0831ACB8;
-static const u16 gUnknown_0831ACC4[] = {0xfff0, 0, 0x0400, 0, 0, 0, 0x3c00, 0, 0x7ffe, 1, 0, 0};
-static const u16 *const gUnknown_0831ACDC = gUnknown_0831ACC4;
 
 static const s8 gUnknown_0831ACE0[] ={-32, -16, -16, -32, -32, 0, 0, 0};
 
@@ -522,7 +510,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_TWINS, 3},
     {TRAINER_CLASS_SAILOR, 8},
     {TRAINER_CLASS_COLLECTOR, 15},
-    {TRAINER_CLASS_PKMN_TRAINER_3, 15},
+    {TRAINER_CLASS_PKMN_TRAINER, 15},
     {TRAINER_CLASS_PKMN_BREEDER, 10},
     {TRAINER_CLASS_PKMN_RANGER, 12},
     {TRAINER_CLASS_TEAM_MAGMA, 5},
@@ -571,23 +559,15 @@ static void (* const sEndTurnFuncsTable[])(void) =
     [B_OUTCOME_MON_TELEPORTED] = HandleEndTurn_FinishBattle,
 };
 
-const u8 gStatusConditionString_PoisonJpn[8] = _("どく$$$$$");
-const u8 gStatusConditionString_SleepJpn[8] = _("ねむり$$$$");
-const u8 gStatusConditionString_ParalysisJpn[8] = _("まひ$$$$$");
-const u8 gStatusConditionString_BurnJpn[8] = _("やけど$$$$");
-const u8 gStatusConditionString_IceJpn[8] = _("こおり$$$$");
-const u8 gStatusConditionString_ConfusionJpn[8] = _("こんらん$$$");
-const u8 gStatusConditionString_LoveJpn[8] = _("メロメロ$$$");
-
 const u8 * const gStatusConditionStringsTable[7][2] =
 {
-    {gStatusConditionString_PoisonJpn, gText_Poison},
-    {gStatusConditionString_SleepJpn, gText_Sleep},
-    {gStatusConditionString_ParalysisJpn, gText_Paralysis},
-    {gStatusConditionString_BurnJpn, gText_Burn},
-    {gStatusConditionString_IceJpn, gText_Ice},
-    {gStatusConditionString_ConfusionJpn, gText_Confusion},
-    {gStatusConditionString_LoveJpn, gText_Love}
+    {gText_Poison},
+    {gText_Sleep},
+    {gText_Paralysis},
+    {gText_Burn},
+    {gText_Ice},
+    {gText_Confusion},
+    {gText_Love}
 };
 
 static const u8 sPkblToEscapeFactor[][3] = {{0, 0, 0}, {3, 5, 0}, {2, 3, 0}, {1, 2, 0}, {1, 1, 0}};
@@ -2056,12 +2036,6 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     return gTrainers[trainerNum].partySize;
 }
 
-void sub_8038A04(void) // unused
-{
-    if (REG_VCOUNT < 0xA0 && REG_VCOUNT >= 0x6F)
-        SetGpuReg(REG_OFFSET_BG0CNT, 0x9800);
-}
-
 void VBlankCB_Battle(void)
 {
     // Change gRngSeed every vblank unless the battle could be recorded.
@@ -2699,13 +2673,6 @@ static void SpriteCb_WildMonAnimate(struct Sprite *sprite)
 void SpriteCallbackDummy_2(struct Sprite *sprite)
 {
 
-}
-
-static void sub_80398BC(struct Sprite *sprite) // unused?
-{
-    sprite->data[3] = 6;
-    sprite->data[4] = 1;
-    sprite->callback = sub_80398D0;
 }
 
 static void sub_80398D0(struct Sprite *sprite)
@@ -3752,12 +3719,6 @@ static void BattleIntroRecordMonsToDex(void)
     }
 }
 
-void sub_803B3AC(void) // unused
-{
-    if (gBattleControllerExecFlags == 0)
-        gBattleMainFunc = BattleIntroPrintPlayerSendsOut;
-}
-
 static void BattleIntroPrintPlayerSendsOut(void)
 {
     if (gBattleControllerExecFlags == 0)
@@ -3853,27 +3814,6 @@ static void BattleIntroPlayer1SendsOutMonAnimation(void)
     gBattleStruct->overworldWeatherDone = FALSE;
 
     gBattleMainFunc = TryDoEventsBeforeFirstTurn;
-}
-
-void sub_803B598(void) // unused
-{
-    if (gBattleControllerExecFlags == 0)
-    {
-        for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
-        {
-            if (GetBattlerSide(gActiveBattler) == B_SIDE_PLAYER)
-            {
-                BtlController_EmitSwitchInAnim(0, gBattlerPartyIndexes[gActiveBattler], FALSE);
-                MarkBattlerForControllerExec(gActiveBattler);
-            }
-        }
-
-        gBattleStruct->switchInAbilitiesCounter = 0;
-        gBattleStruct->switchInItemsCounter = 0;
-        gBattleStruct->overworldWeatherDone = FALSE;
-
-        gBattleMainFunc = TryDoEventsBeforeFirstTurn;
-    }
 }
 
 static void TryDoEventsBeforeFirstTurn(void)

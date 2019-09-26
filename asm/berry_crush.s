@@ -4886,7 +4886,7 @@ _080241A6:
 	movs r0, 0
 	movs r1, 0
 	bl DrawDialogueFrame
-	ldr r2, =gText_SavingDontTurnOffPower
+	ldr r2, =gText_SavingDontTurnOff
 	movs r0, 0
 	str r0, [sp]
 	movs r0, 0x2

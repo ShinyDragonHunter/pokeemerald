@@ -279,7 +279,7 @@ u8 sub_81D1DC0(struct PlayerPCItemPageStruct *page)
         sUnknown_0203CF4C[i].id = i;
     }
 
-    sUnknown_0203CF4C[i].name = gText_Cancel2;
+    sUnknown_0203CF4C[i].name = gText_Cancel;
     sUnknown_0203CF4C[i].id = LIST_CANCEL;
 
     gMultiuseListMenuTemplate.items = sUnknown_0203CF4C;
@@ -1271,23 +1271,6 @@ static const union AnimCmd *const sSpriteAnimTable_8625AF8[] =
     sSpriteAnim_8625AD8 + 2,
 };
 
-// unused
-static const union AnimCmd *const sSpriteAnimTable_8625B00[] =
-{
-    sSpriteAnim_8625AD8 + 4,
-    sSpriteAnim_8625AD8 + 6,
-};
-
-// unused
-static const union AnimCmd *const sSpriteAnimTable_8625B08[] =
-{
-    sSpriteAnim_8625AD8 + 8,
-    sSpriteAnim_8625AD8 + 10,
-};
-
-// unused
-static const union AnimCmd *const *const sUnknown_08625B10 = sSpriteAnimTable_8625B08;
-
 const struct SpriteTemplate gUnknown_08625B14 =
 {
     .tileTag = 104,
@@ -1479,11 +1462,11 @@ static void sub_81D35E8(struct Sprite *sprite)
 static const u8 *const sLvlUpStatStrings[] =
 {
     gUnknown_085EEA46,
-    gUnknown_085EEA4E,
+    gText_Attack3,
     gUnknown_085EEA55,
-    gUnknown_085EEA63,
-    gUnknown_085EEA6B,
-    gUnknown_085EEA5D
+    gText_SpAtk3,
+    gText_SpDef3,
+    gText_Speed2
 };
 
 void DrawLevelUpWindowPg1(u16 windowId, u16 *statsBefore, u16 *statsAfter, u8 bgClr, u8 fgClr, u8 shadowClr)

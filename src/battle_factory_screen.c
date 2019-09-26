@@ -1035,7 +1035,7 @@ extern const u8 gText_Swap[];
 extern const u8 gText_Summary2[];
 extern const u8 gText_PkmnForSwap[];
 extern const u8 gText_SamePkmnInPartyAlready[];
-extern const u8 gText_Cancel3[];
+extern const u8 gText_Cancel[];
 
 // code
 static void sub_819A44C(struct Sprite *sprite)
@@ -3644,7 +3644,7 @@ static void Swap_PrintActionStrings(void)
     case TRUE:
         Swap_PrintActionString(gText_PkmnForSwap, 0, 5);
     case FALSE:
-        Swap_PrintActionString(gText_Cancel3, 24, 5);
+        Swap_PrintActionString(gText_Cancel, 24, 5);
         break;
     }
     CopyWindowToVram(5, 3);
@@ -3658,7 +3658,7 @@ static void Swap_PrintActionStrings2(void)
     case TRUE:
         Swap_PrintActionString(gText_PkmnForSwap, 8, 3);
     case FALSE:
-        Swap_PrintActionString(gText_Cancel3, 32, 3);
+        Swap_PrintActionString(gText_Cancel, 32, 3);
         break;
     }
     CopyWindowToVram(3, 3);
@@ -3673,7 +3673,7 @@ static void Swap_PrintOneActionString(u8 which)
             Swap_PrintActionString(gText_PkmnForSwap, 8, 3);
         break;
     case 1:
-        Swap_PrintActionString(gText_Cancel3, 32, 3);
+        Swap_PrintActionString(gText_Cancel, 32, 3);
         break;
     }
     CopyWindowToVram(3, 3);

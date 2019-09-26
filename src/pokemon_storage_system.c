@@ -8664,7 +8664,7 @@ static void InitMenu(void)
 
 static const u8 *const gUnknown_0857BA80[] =
 {
-    gPCText_Cancel,
+    gText_Cancel,
     gPCText_Store,
     gPCText_Withdraw,
     gPCText_Move,

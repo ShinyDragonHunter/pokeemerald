@@ -176,7 +176,6 @@ const u32 gWirelessLinkDisplayGfx[] = INCBIN_U32("graphics/interface/wireless_li
 const u32 gWirelessLinkDisplayTilemap[] = INCBIN_U32("graphics/interface/wireless_link_display.bin.lz");
 const u16 gLinkTestDigitsPal[] = INCBIN_U16("graphics/interface/link_test_digits.gbapal");
 const u16 gLinkTestDigitsGfx[] = INCBIN_U16("graphics/interface/link_test_digits.4bpp");
-const u8 unkstring_82ed160[] = _("{HIGHLIGHT TRANSPARENT}{COLOR WHITE}");
 const u16 g2BlankTilesGfx[] = INCBIN_U16("graphics/interface/blank_1x2.4bpp");
 const struct BlockRequest gUnknown_082ED1A8[] = {
     {gBlockSendBuffer, 200},

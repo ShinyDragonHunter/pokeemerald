@@ -75,7 +75,6 @@ static void SetUpDataStruct(void);
 static void FreeDataStruct(void);
 static void nullsub_2(void);
 static void SetTimerValue(u32 *dst, u32 val);
-static u32 GetTimerValue(u32 *src);
 static void sub_81D642C(struct Pokemon *mon, u8 level);
 static u16 sub_81D6640(void);
 
@@ -125,7 +124,7 @@ struct
     {TRAINER_CLASS_PKMN_BREEDER, TRAINER_ENCOUNTER_MUSIC_FEMALE},
     {TRAINER_CLASS_COLLECTOR, TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS},
     {TRAINER_CLASS_PKMN_RANGER, TRAINER_ENCOUNTER_MUSIC_COOL},
-    {TRAINER_CLASS_PKMN_TRAINER_3, TRAINER_ENCOUNTER_MUSIC_MALE},
+    {TRAINER_CLASS_PKMN_TRAINER, TRAINER_ENCOUNTER_MUSIC_MALE},
     {TRAINER_CLASS_YOUNG_COUPLE, TRAINER_ENCOUNTER_MUSIC_GIRL},
     {TRAINER_CLASS_PSYCHIC, TRAINER_ENCOUNTER_MUSIC_INTENSE},
     {TRAINER_CLASS_SR_AND_JR, TRAINER_ENCOUNTER_MUSIC_TWINS},
@@ -208,15 +207,6 @@ static const struct TrHillTag *const sDataPerTag[] =
     &sDataTagVariety,
     &sDataTagUnique,
     &sDataTagExpert,
-};
-
-// Unused.
-static const u8 *const sFloorStrings[] =
-{
-    gText_TrainerHill1F,
-    gText_TrainerHill2F,
-    gText_TrainerHill3F,
-    gText_TrainerHill4F,
 };
 
 static void (* const sHillFunctions[])(void) =
@@ -441,12 +431,6 @@ static void sub_81D59D0(void)
     {
         gSpecialVar_Result = 2;
     }
-    else if (GetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime) > gSaveBlock1Ptr->trainerHill.timer)
-    {
-        SetTimerValue(&gSaveBlock1Ptr->trainerHill.bestTime, gSaveBlock1Ptr->trainerHill.timer);
-        gSaveBlock1Ptr->trainerHillTimes[gSaveBlock1Ptr->trainerHill.tag] = gSaveBlock1Ptr->trainerHill.bestTime;
-        gSpecialVar_Result = 0;
-    }
     else
     {
         gSpecialVar_Result = 1;
@@ -478,12 +462,6 @@ static void TrainerHillGetChallengeStatus(void)
         // The player lost their last match.
         gSaveBlock1Ptr->trainerHill.hasLost = 0;
         gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_LOST;
-    }
-    else if (gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge)
-    {
-        // Unreachable code. Something relating to eCards?
-        gSaveBlock1Ptr->trainerHill.maybeECardScanDuringChallenge = 0;
-        gSpecialVar_Result = TRAINER_HILL_PLAYER_STATUS_ECARD_SCANNED;
     }
     else
     {
@@ -579,9 +557,6 @@ void PrintOnTrainerHillRecordsWindow(void)
     {
         AddTextPrinterParameterized3(0, 1, 0, y, sRecordWinColors, TEXT_SPEED_FF, sTagMatchStrings[i]);
         y += 15;
-        total = GetTimerValue(&gSaveBlock1Ptr->trainerHillTimes[i]);
-        minutes = total / (60 * 60);
-        total %= (60 * 60);
         ConvertIntToDecimalStringN(gStringVar1, minutes, STR_CONV_MODE_RIGHT_ALIGN, 2);
         secondsWhole = total / 60;
         total %= 60;
@@ -597,13 +572,6 @@ void PrintOnTrainerHillRecordsWindow(void)
     PutWindowTilemap(0);
     CopyWindowToVram(0, 3);
     FreeDataStruct();
-}
-
-// Leftover from Fire Red / Leaf Green as in these games,
-// the timer had to be xored by the encryption key in Sav2.
-static u32 GetTimerValue(u32 *src)
-{
-    return *src;
 }
 
 static void SetTimerValue(u32 *dst, u32 val)
@@ -919,14 +887,6 @@ void FillHillTrainersParties(void)
     ZeroEnemyPartyMons();
     sub_81D62CC(gTrainerBattleOpponent_A, 0);
     sub_81D62CC(gTrainerBattleOpponent_B, 3);
-}
-
-// This function is unused, but my best guess is
-// it was supposed to return AI scripts for trainer
-// hill trainers.
-u32 sub_81D63C4(void)
-{
-    return 7;
 }
 
 u8 GetTrainerEncounterMusicIdInTrainerHill(u16 trainerId)

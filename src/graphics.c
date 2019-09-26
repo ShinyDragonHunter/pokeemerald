@@ -4,14 +4,10 @@ const u32 gBattleTextboxTiles[] = INCBIN_U32("graphics/battle_interface/textbox.
 const u32 gBattleTextboxPalette[] = INCBIN_U32("graphics/battle_interface/textbox.gbapal.lz");
 const u32 gBattleTextboxTilemap[] = INCBIN_U32("graphics/battle_interface/textbox_map.bin.lz");
 
-const u32 gMonStillFrontPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/circled_question_mark/front.4bpp.lz");
+const u32 gMonFrontPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/circled_question_mark/front.4bpp.lz");
 const u32 gMonBackPic_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/circled_question_mark/back.4bpp.lz");
 const u32 gMonPalette_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/circled_question_mark/normal.gbapal.lz");
 const u32 gMonShinyPalette_CircledQuestionMark[] = INCBIN_U32("graphics/pokemon/circled_question_mark/shiny.gbapal.lz");
-
-const u32 gUnusedGfx_OldCharmap[] = INCBIN_U32("graphics/unused/old_charmap.4bpp.lz"); // japanese table and bunch of stuff
-const u32 gUnusedTimemap_OldCharmap[] = INCBIN_U32("graphics/unused/old_charmap.bin.lz");
-const u32 gUnusedPal_OldCharmap[] = INCBIN_U32("graphics/unused/old_charmap.gbapal.lz");
 
 const u32 gSmokescreenImpactTiles[] = INCBIN_U32("graphics/battle_anims/sprites/smokescreen_impact.4bpp.lz");
 const u32 gSmokescreenImpactPalette[] = INCBIN_U32("graphics/battle_anims/sprites/smokescreen_impact.gbapal.lz");
@@ -334,20 +330,7 @@ const u32 gBattleAnimSpritePal_WaterColumn[] = INCBIN_U32("graphics/battle_anims
 const u32 gBattleAnimSpriteGfx_MudUnk[] = INCBIN_U32("graphics/battle_anims/sprites/mud_unk.4bpp.lz");
 const u32 gBattleAnimSpritePal_MudUnk[] = INCBIN_U32("graphics/battle_anims/sprites/mud_unk.gbapal.lz");
 
-const u32 gUnusedTilemap_BlueFrame[] = INCBIN_U32("graphics/unused/blue_frame.bin.lz"); // P1, P2, P3 and P4 tilemaps?
-const u32 gUnusedTilemap_RedYellowGreenFrame[] = INCBIN_U32("graphics/unused/redyellowgreen_frame.bin.lz");
-const u32 gUnusedGfx_ColorFrames[] = INCBIN_U32("graphics/unused/color_frames.4bpp.lz");
-const u32 gUnusedPal_ColorFrames[] = INCBIN_U32("graphics/unused/color_frames.gbapal.lz");
-
 const u32 gBattleAnimSpriteGfx_RainDrops[] = INCBIN_U32("graphics/battle_anims/sprites/rain_drops.4bpp.lz");
-
-const u32 gUnusedGfx8bpp_WaterSplash [] = INCBIN_U32("graphics/unused/water_splash.8bpp.lz");
-const u32 gUnusedTilemap_WaterSplash[] = INCBIN_U32("graphics/unused/water_splash.bin.lz");
-const u32 gUnusedPalette_WaterSplash[] = INCBIN_U32("graphics/unused/water_splash.gbapal.lz");
-
-const u32 gUnusedGfx_BasicFrame[] = INCBIN_U32("graphics/unused/basic_frame.4bpp.lz");
-const u32 gUnusedPal_BasicFrame[] = INCBIN_U32("graphics/unused/basic_frame.gbapal.lz");
-const u32 gUnusedTilemap_BasicFrame[] = INCBIN_U32("graphics/unused/basic_frame.bin.lz");
 
 // Battle Interface
 
@@ -439,13 +422,9 @@ const u32 gBattleAnimSpriteGfx_BlueFlames2[] = INCBIN_U32("graphics/battle_anims
 
 // Contest
 
-const u32 gUnusedGfx_OldContest[] = INCBIN_U32("graphics/unused/old_contest.4bpp.lz");
-const u32 gUnusedPal_OldContest[] = INCBIN_U32("graphics/unused/old_contest.gbapal.lz");
-const u32 gUnusedTilemap_OldContest[] = INCBIN_U32("graphics/unused/old_contest.bin.lz");
 
 const u32 gUnknownTilemap_C15BC0[] = INCBIN_U32("graphics/unknown/unknown_C15BC0.bin.lz");
 
-const u32 gUnusedGfx_OldContest2[] = INCBIN_U32("graphics/unused/old_contest_2.4bpp.lz");
 const u32 gOldContestPalette[] = INCBIN_U32("graphics/unused/old_contest_2.gbapal.lz");
 const u32 gOldContestGfx[] = INCBIN_U32("graphics/unused/old_contest_2.bin.lz");
 
@@ -503,9 +482,6 @@ const u32 gBattleAnimSpriteGfx_IceCrystals[] = INCBIN_U32("graphics/battle_anims
 const u32 gBattleAnimSpritePal_IceCrystals[] = INCBIN_U32("graphics/battle_anims/sprites/ice_crystals.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_IceSpikes[] = INCBIN_U32("graphics/battle_anims/sprites/ice_spikes.4bpp.lz");
-
-const u32 gUnusedGfx_OldBeatUp[] = INCBIN_U32("graphics/unused/old_beatup.4bpp.lz");
-const u32 gUnusedPal_OldBeatUp[] = INCBIN_U32("graphics/unused/old_beatup.gbapal.lz");
 
 const u32 gBattleAnimSpriteGfx_Orbs[] = INCBIN_U32("graphics/battle_anims/sprites/orbs.4bpp.lz");
 const u32 gBattleAnimSpritePal_Orbs[] = INCBIN_U32("graphics/battle_anims/sprites/orbs.gbapal.lz");
@@ -1494,16 +1470,17 @@ const u16 gTilesetPalettes_General[][16] =
     INCBIN_U16("data/tilesets/primary/general/palettes/15.gbapal"),
 };
 
+#if UK
+const u32 gTilesetTiles_General[] = INCBIN_U32("data/tilesets/primary/general/tiles_uk.4bpp.lz");
+#else
 const u32 gTilesetTiles_General[] = INCBIN_U32("data/tilesets/primary/general/tiles.4bpp.lz");
+#endif
 
 // trade/egg hatch
 
 const u16 gTradeGba_Pal[] = INCBIN_U16("graphics/link/gba.gbapal");
 const u16 gTradeGba2_Pal[] = INCBIN_U16("graphics/link/gba_pal2.gbapal");
 const u8 gTradeGba_Gfx[] = INCBIN_U8("graphics/link/gba.4bpp");
-
-// 8DD8760
-asm(".space 0x20"); //blank palette??
 
 #include "data/graphics/berry_fix.h"
 
@@ -1579,7 +1556,7 @@ const u32 gUnknown_08DE0644[] = INCBIN_U32("graphics/title_screen/title_screen2.
 
 // more trainer card stuff
 
-const u16 gUnknown_08DE07C8[][16] = INCBIN_U16("graphics/frontier_pass/tiles.gbapal");// size in LoadPalette calls is reported as 0xD0 << 1, which is 0x1A0, but palette is only 0x100 bytes long so it loads garbage as well
+const u16 gUnknown_08DE07C8[] = INCBIN_U16("graphics/frontier_pass/tiles.gbapal");// size in LoadPalette calls is reported as 0xD0 << 1, which is 0x1A0, but palette is only 0x100 bytes long so it loads garbage as well
 const u32 gUnknown_08DE08C8[] = INCBIN_U32("graphics/frontier_pass/tiles.4bpp.lz");
 const u32 gUnknown_08DE2084[] = INCBIN_U32("graphics/frontier_pass/tiles2.8bpp.lz");
 const u32 gUnknown_08DE3060[] = INCBIN_U32("graphics/frontier_pass/tiles.bin.lz");

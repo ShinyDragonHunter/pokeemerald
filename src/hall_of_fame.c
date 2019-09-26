@@ -489,7 +489,7 @@ static void Task_Hof_InitTeamSaveData(u8 taskId)
     *lastSavedTeam = *sHofMonPtr;
 
     DrawDialogueFrame(0, 0);
-    AddTextPrinterParameterized2(0, 1, gText_SavingDontTurnOffPower, 0, NULL, 2, 1, 3);
+    AddTextPrinterParameterized2(0, 1, gText_SavingDontTurnOff, 0, NULL, 2, 1, 3);
     CopyWindowToVram(0, 3);
     gTasks[taskId].func = Task_Hof_TrySaveData;
 }

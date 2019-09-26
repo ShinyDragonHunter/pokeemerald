@@ -133,7 +133,6 @@ static void sub_8086988(bool32 arg0);
 static void sub_8086A80(void);
 static void sub_8086A68(void);
 static void sub_8086860(void);
-static void SetCameraToTrackGuestPlayer_2(void);
 static void CreateLinkPlayerSprites(void);
 static void ClearAllPlayerKeys(void);
 static void ResetAllTradingStates(void);
@@ -2007,7 +2006,7 @@ static bool32 map_loading_iteration_2_link(u8 *state)
     case 2:
         CreateLinkPlayerSprites();
         sub_8086A68();
-        SetCameraToTrackGuestPlayer_2();
+        SetCameraToTrackGuestPlayer();
         (*state)++;
         break;
     case 3:
@@ -2195,12 +2194,6 @@ static void sub_8086A80(void)
 }
 
 static void SetCameraToTrackGuestPlayer(void)
-{
-    InitCameraUpdateCallback(GetSpriteForLinkedPlayer(gLocalLinkPlayerId));
-}
-
-// Duplicate function.
-static void SetCameraToTrackGuestPlayer_2(void)
 {
     InitCameraUpdateCallback(GetSpriteForLinkedPlayer(gLocalLinkPlayerId));
 }

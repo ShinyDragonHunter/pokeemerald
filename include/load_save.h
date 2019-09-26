@@ -19,7 +19,6 @@ u32 UseContinueGameWarp(void);
 void ClearContinueGameWarpStatus(void);
 void SetContinueGameWarpStatus(void);
 void SetContinueGameWarpStatusToDynamicWarp(void);
-void ClearContinueGameWarpStatus2(void);
 void SavePlayerParty(void);
 void LoadPlayerParty(void);
 void SaveEventObjects(void);

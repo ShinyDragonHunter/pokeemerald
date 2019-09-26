@@ -364,7 +364,7 @@ static void sub_80F5CE4(u8 taskId)
             VarSet(VAR_LINK_CONTEST_ROOM_STATE, 0);
             SetContinueGameWarpStatusToDynamicWarp();
             TrySavingData(SAVE_LINK);
-            ClearContinueGameWarpStatus2();
+            ClearContinueGameWarpStatus();
             VarSet(VAR_LINK_CONTEST_ROOM_STATE, var);
             gTasks[taskId].data[0]++;
             break;
@@ -644,7 +644,7 @@ static void sub_80F6404(u8 taskId)
         otId = gContestMons[i].otId;
         if (i == gContestPlayerMonIndex)
         {
-            HandleLoadSpecialPokePic_2(
+            HandleLoadSpecialPokePic(
                 &gMonFrontPicTable[species],
                 gMonSpritesGfxPtr->sprites[1],
                 species,

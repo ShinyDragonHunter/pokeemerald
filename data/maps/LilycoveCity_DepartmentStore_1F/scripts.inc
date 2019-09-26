@@ -144,6 +144,19 @@ LilycoveCity_DepartmentStore_1F_EventScript_21F85D:: @ 821F85D
 	msgbox LilycoveCity_DepartmentStore_1F_Text_21F98A, MSGBOX_SIGN
 	end
 
+    .if UK
+LilycoveCity_DepartmentStore_1F_Text_21F866: @ 821F866
+	.string "Welcome to LILYCOVE SHOPPING CENTRE.$"
+
+LilycoveCity_DepartmentStore_1F_Text_21F88C: @ 821F88C
+	.string "Whenever I come to the SHOPPING\n"
+	.string "CENTRE, I always end up buying all\l"
+	.string "sorts of things because it's so fun.$"
+
+LilycoveCity_DepartmentStore_1F_Text_21F8F5: @ 821F8F5
+	.string "Today, my mum is going to buy me some\n"
+	.string "nice furniture.$"
+    .else
 LilycoveCity_DepartmentStore_1F_Text_21F866: @ 821F866
 	.string "Welcome to LILYCOVE DEPARTMENT STORE.$"
 
@@ -155,6 +168,7 @@ LilycoveCity_DepartmentStore_1F_Text_21F88C: @ 821F88C
 LilycoveCity_DepartmentStore_1F_Text_21F8F5: @ 821F8F5
 	.string "Today, my mom is going to buy me some\n"
 	.string "nice furniture.$"
+    .endif
 
 LilycoveCity_DepartmentStore_1F_Text_21F92B: @ 821F92B
 	.string "I'm buying something for my AZUMARILL\n"

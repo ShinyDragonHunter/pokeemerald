@@ -3,9 +3,6 @@ PokemonCenter_2F_OnTransition: @ 8276ACF
 	end
 
 OldaleTown_PokemonCenter_2F_EventScript_OnTransitionCheckMysteryGift:: @ 8276AD5
-	specialvar VAR_RESULT, sub_813B514
-	compare VAR_RESULT, 1
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276AFB
 	specialvar VAR_RESULT, ValidateReceivedWonderCard
 	compare VAR_RESULT, 0
 	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276AFF
@@ -37,13 +34,6 @@ RustboroCity_PokemonCenter_2F_EventScript_276B03:: @ 8276B03
 SlateportCity_PokemonCenter_2F_EventScript_276B03:: @ 8276B03
 SootopolisCity_PokemonCenter_2F_EventScript_276B03:: @ 8276B03
 VerdanturfTown_PokemonCenter_2F_EventScript_276B03:: @ 8276B03
-	specialvar VAR_RESULT, sub_813B514
-	compare VAR_RESULT, 1
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276B23
-	goto OldaleTown_PokemonCenter_2F_EventScript_276B19
-	end
-
-OldaleTown_PokemonCenter_2F_EventScript_276B19:: @ 8276B19
 	gotoram
 
 OldaleTown_PokemonCenter_2F_EventScript_276B1A:: @ 8276B1A
@@ -53,8 +43,8 @@ OldaleTown_PokemonCenter_2F_EventScript_276B1A:: @ 8276B1A
 OldaleTown_PokemonCenter_2F_EventScript_276B23:: @ 8276B23
 	checkitem ITEM_EON_TICKET, 1
 	compare VAR_RESULT, 1
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276B19
-	goto_if_set FLAG_SYS_HAS_EON_TICKET, OldaleTown_PokemonCenter_2F_EventScript_276B19
+	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276B03
+	goto_if_set FLAG_SYS_HAS_EON_TICKET, OldaleTown_PokemonCenter_2F_EventScript_276B03
 	msgbox gUnknown_08273594, MSGBOX_DEFAULT
 	giveitem_std ITEM_EON_TICKET
 	setflag FLAG_SYS_HAS_EON_TICKET
@@ -129,13 +119,13 @@ VerdanturfTown_PokemonCenter_2F_MapScript1_276BBE: @ 8276BBE
 	compare VAR_CABLE_CLUB_STATE, 5
 	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C17
 	compare VAR_CABLE_CLUB_STATE, 3
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C1D
+	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C17
 	compare VAR_CABLE_CLUB_STATE, 4
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C23
+	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C17
 	compare VAR_CABLE_CLUB_STATE, 6
 	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C29
 	compare VAR_CABLE_CLUB_STATE, 7
-	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C2F
+	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C17
 	compare VAR_CABLE_CLUB_STATE, 8
 	goto_if_eq OldaleTown_PokemonCenter_2F_EventScript_276C35
 	end
@@ -144,20 +134,8 @@ OldaleTown_PokemonCenter_2F_EventScript_276C17:: @ 8276C17
 	call OldaleTown_PokemonCenter_2F_EventScript_277BE4
 	end
 
-OldaleTown_PokemonCenter_2F_EventScript_276C1D:: @ 8276C1D
-	call OldaleTown_PokemonCenter_2F_EventScript_277BE4
-	end
-
-OldaleTown_PokemonCenter_2F_EventScript_276C23:: @ 8276C23
-	call OldaleTown_PokemonCenter_2F_EventScript_277BE4
-	end
-
 OldaleTown_PokemonCenter_2F_EventScript_276C29:: @ 8276C29
 	call OldaleTown_PokemonCenter_2F_EventScript_277BBE
-	end
-
-OldaleTown_PokemonCenter_2F_EventScript_276C2F:: @ 8276C2F
-	call OldaleTown_PokemonCenter_2F_EventScript_277BE4
 	end
 
 OldaleTown_PokemonCenter_2F_EventScript_276C35:: @ 8276C35

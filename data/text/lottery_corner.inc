@@ -1,3 +1,14 @@
+    .if UK
+LilycoveCity_DepartmentStore_1F_Text_2A6390: @ 82A6390
+	.string "This is the {P}MON LOTTERY CORNER.\p"
+	.string "All shoppers at our SHOPPING CENTRE\n"
+	.string "get to draw a {P}MON LOTO TICKET.\p"
+	.string "If the LOTO TICKET's number matches\n"
+	.string "the ID number of any of your {P}MON,\l"
+	.string "you will receive a fabulous gift.\p"
+	.string "Would you like to draw a {P}MON\n"
+	.string "LOTO TICKET?$"
+	.else
 LilycoveCity_DepartmentStore_1F_Text_2A6390: @ 82A6390
 	.string "This is the {P}MON LOTTERY CORNER.\p"
 	.string "All shoppers at our DEPARTMENT STORE\n"
@@ -7,6 +18,7 @@ LilycoveCity_DepartmentStore_1F_Text_2A6390: @ 82A6390
 	.string "you will receive a fabulous gift.\p"
 	.string "Would you like to draw a {P}MON\n"
 	.string "LOTO TICKET?$"
+	.endif
 
 LilycoveCity_DepartmentStore_1F_Text_2A6496: @ 82A6496
 	.string "Please come back tomorrow.$"

@@ -495,7 +495,7 @@ static void BuyMenuBuildListMenuTemplate(void)
     for (i = 0; i < gMartInfo.itemCount; i++)
         BuyMenuSetListEntry(&gUnknown_02039F74[i], gMartInfo.itemList[i], gUnknown_02039F78[i]);
 
-    StringCopy(gUnknown_02039F78[i], gText_Cancel2);
+    StringCopy(gUnknown_02039F78[i], gText_Cancel);
     gUnknown_02039F74[i].name = gUnknown_02039F78[i];
     gUnknown_02039F74[i].id = -2;
 

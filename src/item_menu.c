@@ -209,7 +209,7 @@ const struct MenuAction sItemMenuActions[] = {
     {gMenuText_Toss, ItemMenu_Toss},
     {gMenuText_Register, ItemMenu_Register},
     {gMenuText_Give, ItemMenu_Give},
-    {gText_Cancel2, ItemMenu_Cancel},
+    {gText_Cancel, ItemMenu_Cancel},
     {gMenuText_Use, ItemMenu_UseInBattle},
     {gMenuText_Check, ItemMenu_UseOutOfBattle},
     {gMenuText_Walk, ItemMenu_UseOutOfBattle},

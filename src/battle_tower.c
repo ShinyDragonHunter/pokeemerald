@@ -1372,33 +1372,6 @@ u16 sub_8162548(u8 challengeNum, u8 battleNum)
     return trainerId;
 }
 
-static void sub_81625B4(u8 challengeNum, u8 battleNum, u16 *trainerIdPtr, u8 *arg3) // Unused
-{
-    u16 trainerId, count;
-
-    if (challengeNum <= 7)
-    {
-        if (battleNum == 6)
-        {
-            count = (gUnknown_085DFA1A[challengeNum][1] - gUnknown_085DFA1A[challengeNum][0]) + 1;
-            trainerId = gUnknown_085DFA1A[challengeNum][0];
-        }
-        else
-        {
-            count = (gUnknown_085DF9FA[challengeNum][1] - gUnknown_085DF9FA[challengeNum][0]) + 1;
-            trainerId = gUnknown_085DF9FA[challengeNum][0];
-        }
-    }
-    else
-    {
-        count = (gUnknown_085DF9FA[7][1] - gUnknown_085DF9FA[7][0]) + 1;
-        trainerId = gUnknown_085DF9FA[7][0];
-    }
-
-    *trainerIdPtr = trainerId;
-    *arg3 = count;
-}
-
 void SetBattleFacilityTrainerGfxId(u16 trainerId, u8 tempVarId)
 {
     u32 i;
@@ -1986,39 +1959,6 @@ static void FillTrainerParty(u16 trainerId, u8 firstMonId, u8 monCount)
         // The pokemon was successfully added to the trainer's party, so it's safe to move on to
         // the next party slot.
         i++;
-    }
-}
-
-// Probably an early draft before the 'CreateApprenticeMon' was written.
-static void Unused_CreateApprenticeMons(u16 trainerId, u8 firstMonId)
-{
-    s32 i, j;
-    u8 friendship = 0xFF;
-    u8 level = 0;
-    u8 fixedIV = 0;
-    struct Apprentice *apprentice = &gSaveBlock2Ptr->apprentices[0];
-
-    if (apprentice->field_1 < 5)
-        fixedIV = 6;
-    else
-        fixedIV = 9;
-
-    if (gSaveBlock2Ptr->frontier.lvlMode != FRONTIER_LVL_50)
-        level = 100;
-    else
-        level = 50;
-
-    for (i = 0; i != 3; i++)
-    {
-        CreateMonWithEVSpread(&gEnemyParty[firstMonId + i], apprentice->party[i].species, level, fixedIV, 8);
-        friendship = 0xFF;
-        for (j = 0; j < MAX_MON_MOVES; j++)
-        {
-            if (apprentice->party[i].moves[j] == MOVE_FRUSTRATION)
-                friendship = 0;
-        }
-        SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_FRIENDSHIP, &friendship);
-        SetMonData(&gEnemyParty[firstMonId + i], MON_DATA_HELD_ITEM, &apprentice->party[i].item);
     }
 }
 
@@ -3033,44 +2973,6 @@ static void AwardBattleTowerRibbons(void)
     }
 }
 
-// This is a leftover debugging function that is used to populate the E-Reader
-// trainer with the player's current data.
-static void FillEReaderTrainerWithPlayerData(void)
-{
-    struct BattleTowerEReaderTrainer *ereaderTrainer = &gSaveBlock2Ptr->frontier.ereaderTrainer;
-    s32 i, j;
-
-    if (gSaveBlock2Ptr->playerGender != MALE)
-    {
-        ereaderTrainer->facilityClass = gTowerFemaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
-                                                        + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerFemaleFacilityClasses)];
-    }
-    else
-    {
-        ereaderTrainer->facilityClass = gTowerMaleFacilityClasses[(gSaveBlock2Ptr->playerTrainerId[0] + gSaveBlock2Ptr->playerTrainerId[1]
-                                                        + gSaveBlock2Ptr->playerTrainerId[2] + gSaveBlock2Ptr->playerTrainerId[3]) % ARRAY_COUNT(gTowerMaleFacilityClasses)];
-    }
-
-    CopyTrainerId(ereaderTrainer->trainerId, gSaveBlock2Ptr->playerTrainerId);
-    StringCopy7(ereaderTrainer->name, gSaveBlock2Ptr->playerName);
-
-    ereaderTrainer->winStreak = 1;
-
-    j = 7;
-    for (i = 0; i < 6; i++)
-    {
-        ereaderTrainer->greeting[i] = gSaveBlock1Ptr->easyChatBattleStart[i];
-        ereaderTrainer->farewellPlayerLost[i] = j;
-        ereaderTrainer->farewellPlayerWon[i] = j + 6;
-        j++;
-    }
-
-    for (i = 0; i < 3; i++)
-        sub_80686FC(&gPlayerParty[i], &ereaderTrainer->party[i]);
-
-    SetEReaderTrainerChecksum(ereaderTrainer);
-}
-
 u8 GetEreaderTrainerFrontSpriteId(void)
 {
     return gFacilityClassToPicIndex[gSaveBlock2Ptr->frontier.ereaderTrainer.facilityClass];
@@ -3694,33 +3596,6 @@ u8 FacilityClassToGraphicsId(u8 facilityClass)
     else
     {
         return EVENT_OBJ_GFX_BOY_1;
-    }
-}
-
-bool32 ValidateBattleTowerRecord(u8 recordId) // unused
-{
-    s32 i;
-    u32 *record = (u32*)(&gSaveBlock2Ptr->frontier.towerRecords[recordId]);
-    u32 checksum = 0;
-    u32 hasData = 0;
-    for (i = 0; i < (sizeof(struct EmeraldBattleTowerRecord) - 4) / 4; i++) // - 4, because of the last fjeld bejng the checksum jtself.
-    {
-        checksum += record[i];
-        hasData |= record[i];
-    }
-
-    if (checksum == 0 && hasData == 0)
-    {
-        return FALSE;
-    }
-    else if (gSaveBlock2Ptr->frontier.towerRecords[recordId].checksum != checksum)
-    {
-        ClearBattleTowerRecord(&gSaveBlock2Ptr->frontier.towerRecords[recordId]);
-        return FALSE;
-    }
-    else
-    {
-        return TRUE;
     }
 }
 

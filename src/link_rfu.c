@@ -290,26 +290,6 @@ const u16 gUnknown_082ED6E0[] = {
     0x0002, 0x7f7d, 0x0000, 0xFFFF
 };
 
-const char sUnref_082ED6E8[][15] = {
-    "RFU WAIT",
-    "RFU BOOT",
-    "RFU ERROR",
-    "RFU RESET",
-    "RFU CONFIG",
-    "RFU START",
-    "RFU SC POLL",
-    "RFU SP POLL",
-    "RFU START",
-    "RFU SEND ERR",
-    "RFU CP POLL"
-};
-const char sUnref_082ED6E9[][16] = {
-    "              ",
-    "RECOVER START ",
-    "DISSCONECT    ",
-    "RECOVER SUUSES",
-    "RECOVER FAILED"
-};
 const TaskFunc gUnknown_082ED7E0[] = {
     sub_801084C,
     sub_8010AAC,

@@ -2559,7 +2559,7 @@ gUnknown_08272A3F:: @ 8272A3F
 	.string "Please come again!$"
 
 gUnknown_08272A52:: @ 8272A52
-	.string "{PLAYER}{KUN}, welcome!\pWhat can I do for you?$"
+	.string "{PLAYER}, welcome!\pWhat can I do for you?$"
 
 gUnknown_08272A78:: @ 8272A78
 	.string "Obtained the {STR_VAR_2}!$"
@@ -3545,9 +3545,15 @@ gContestPaintingCool2::
 	.string "Hey, there!\n"
 	.string "The good-looking {P}MON {STR_VAR_1}$"
 
+#if UK
+gContestPaintingCool3::
+	.string "The marvellous, wonderful, and\n"
+	.string "very great {STR_VAR_1}$"
+#else
 gContestPaintingCool3::
 	.string "The marvelous, wonderful, and\n"
 	.string "very great {STR_VAR_1}$"
+#endif
 
 gContestPaintingBeauty1::
 	.string "This century's last Venus--\n"
@@ -3557,9 +3563,15 @@ gContestPaintingBeauty2::
 	.string "{STR_VAR_1}'s dazzling,\n"
 	.string "glittering smile$"
 
+#if UK
+gContestPaintingBeauty3::
+	.string "{P}MON CENTRE's super idol--\n"
+	.string "the incomparable {STR_VAR_1}$"
+#else
 gContestPaintingBeauty3::
 	.string "{P}MON CENTER's super idol--\n"
 	.string "the incomparable {STR_VAR_1}$"
+#endif
 
 gContestPaintingCute1::
 	.string "The lovely and sweet {STR_VAR_1}$"

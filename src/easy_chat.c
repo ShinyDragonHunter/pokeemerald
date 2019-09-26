@@ -968,18 +968,13 @@ static const struct OamData gUnknown_08597E10 = {
     .affineParam = 0,
 };
 
-static const union AnimCmd sUnknown_08597E18[] = {
-    ANIMCMD_FRAME(0, 0),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd sUnknown_08597E20[] = {
     ANIMCMD_FRAME(4, 0),
     ANIMCMD_END,
 };
 
 static const union AnimCmd *const sUnknown_08597E28[] = {
-    sUnknown_08597E18,
+    sUnknown_08597D38,
     sUnknown_08597E20,
 };
 
@@ -1010,9 +1005,9 @@ static const u8 sFooterOptionXOffsets[][4] = {
 };
 
 static const u8 *const sFooterTextOptions[][4] = {
-    {gText_DelAll, gText_Cancel5, gText_Ok2, NULL},
-    {gText_DelAll, gText_Cancel5, gText_Ok2, gText_Quiz},
-    {gText_DelAll, gText_Cancel5, gText_Ok2, gText_Answer},
+    {gText_DelAll, gText_Cancel, gText_Ok2, NULL},
+    {gText_DelAll, gText_Cancel, gText_Ok2, gText_Quiz},
+    {gText_DelAll, gText_Cancel, gText_Ok2, gText_Answer},
 };
 
 #include "data/easy_chat/easy_chat_groups.h"

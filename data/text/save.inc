@@ -26,7 +26,3 @@ gText_SaveError:: @ 82C892A
 	.string "Save error.\p"
 	.string "Please exchange the\n"
 	.string "backup memory.$"
-
-gText_SavingDontTurnOffPower:: @ 82C8959
-	.string "SAVING…\n"
-	.string "DON'T TURN OFF THE POWER.$"

@@ -1085,14 +1085,14 @@ struct
 {
     [MENU_SUMMARY] = {gText_Summary5, CursorCb_Summary},
     [MENU_SWITCH] = {gText_Switch2, CursorCb_Switch},
-    [MENU_CANCEL1] = {gText_Cancel2, CursorCb_Cancel1},
+    [MENU_CANCEL1] = {gText_Cancel, CursorCb_Cancel1},
     [MENU_ITEM] = {gText_Item, CursorCb_Item},
     [MENU_GIVE] = {gMenuText_Give, CursorCb_Give},
     [MENU_TAKE_ITEM] = {gText_Take, CursorCb_TakeItem},
     [MENU_MAIL] = {gText_Mail, CursorCb_Mail},
     [MENU_TAKE_MAIL] = {gText_Take2, CursorCb_TakeMail},
     [MENU_READ] = {gText_Read2, CursorCb_Read},
-    [MENU_CANCEL2] = {gText_Cancel2, CursorCb_Cancel2},
+    [MENU_CANCEL2] = {gText_Cancel, CursorCb_Cancel2},
     [MENU_SHIFT] = {gText_Shift, CursorCb_SendMon},
     [MENU_SEND_OUT] = {gText_SendOut, CursorCb_SendMon},
     [MENU_ENTER] = {gText_Enter, CursorCb_Enter},
@@ -1502,17 +1502,6 @@ static const struct SpriteTemplate sSpriteTemplate_StatusIcons =
 };
 
 static const u8 gUnknown_08616020[] = {0x00, 0x01, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00};
-
-// Unused table of pointers to strings of statistics.
-static const u8 *const gUnknown_08616028[] =
-{
-    gText_HP4,
-    gText_Attack3,
-    gText_Defense3,
-    gText_SpAtk4,
-    gText_SpDef4,
-    gText_Speed2
-};
 
 static const u16 gTMHMMoves[] =
 {
@@ -3192,8 +3181,8 @@ static void sub_81B2428(bool8 a)
         }
         else
         {
-            mainOffset = GetStringCenterAlignXOffset(0, gText_Cancel2, 48);
-            AddTextPrinterParameterized3(windowId, 0, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel2);
+            mainOffset = GetStringCenterAlignXOffset(0, gText_Cancel, 48);
+            AddTextPrinterParameterized3(windowId, 0, mainOffset + offset, 1, sFontColorTable[0], -1, gText_Cancel);
         }
         PutWindowTilemap(windowId);
         CopyWindowToVram(windowId, 2);
@@ -5369,7 +5358,7 @@ static void GetMedicineItemEffectMessage(u16 item)
         StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
         break;
     case ITEM_EFFECT_DEF_EV:
-        StringCopy(gStringVar2, gText_Defense3);
+        StringCopy(gStringVar2, gUnknown_085EEA55);
         StringExpandPlaceholders(gStringVar4, gText_PkmnBaseVar2StatIncreased);
         break;
     case ITEM_EFFECT_SPEED_EV:
@@ -5578,7 +5567,7 @@ static void ItemEffectToStatString(u8 effectType, u8 *dest)
         StringCopy(dest, gText_Attack3);
         break;
     case ITEM_EFFECT_DEF_EV:
-        StringCopy(dest, gText_Defense3);
+        StringCopy(dest, gUnknown_085EEA55);
         break;
     case ITEM_EFFECT_SPEED_EV:
         StringCopy(dest, gText_Speed2);

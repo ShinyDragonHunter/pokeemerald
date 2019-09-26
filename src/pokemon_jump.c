@@ -2589,7 +2589,7 @@ static void sub_802C9D4(struct PokemonJump2 *arg0, struct PokemonJump1_MonInfo *
     if (buffer && unusedBuffer)
     {
         HandleLoadSpecialPokePic(
-            &gMonStillFrontPicTable[jumpMon->species],
+            &gMonFrontPicTable[jumpMon->species],
             buffer,
             jumpMon->species,
             jumpMon->personality);
@@ -3177,7 +3177,7 @@ static void sub_802D4F4(void)
     {
     case 0:
         gUnknown_02022D00->unk12 = sub_802DA9C(2, 7, 26, 4);
-        AddTextPrinterParameterized(gUnknown_02022D00->unk12, 1, gText_SavingDontTurnOffPower, 0, 1, TEXT_SPEED_FF, NULL);
+        AddTextPrinterParameterized(gUnknown_02022D00->unk12, 1, gText_SavingDontTurnOff, 0, 1, TEXT_SPEED_FF, NULL);
         CopyWindowToVram(gUnknown_02022D00->unk12, 2);
         gUnknown_02022D00->unk4++;
         break;

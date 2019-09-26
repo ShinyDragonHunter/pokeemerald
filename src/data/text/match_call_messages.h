@@ -193,7 +193,11 @@ const u8 gMatchCallFlavorText_Triathlete_Maria_Pokemon[] = _("I use a speedy POK
 const u8 gMatchCallFlavorText_Triathlete_Maria_Intro1[] = _("A marathon is a challenge");
 const u8 gMatchCallFlavorText_Triathlete_Maria_Intro2[] = _("against your own self.");
 
+#if UK
+const u8 gMatchCallFlavorText_Triathlete_Abigail_Strategy[] = _("Defence is crucial.");
+#else
 const u8 gMatchCallFlavorText_Triathlete_Abigail_Strategy[] = _("Defense is crucial.");
+#endif
 const u8 gMatchCallFlavorText_Triathlete_Abigail_Pokemon[] = _("My POKéMON is solid.");
 const u8 gMatchCallFlavorText_Triathlete_Abigail_Intro1[] = _("I started this for dieting,");
 const u8 gMatchCallFlavorText_Triathlete_Abigail_Intro2[] = _("but I got right into it.");

@@ -273,14 +273,6 @@ static const u8 gUnknown_0849750C[2][5][2] =
     }
 };
 
-static bool8 (*const sArrowWarpMetatileBehaviorChecks2[])(u8) =  //Duplicate of sArrowWarpMetatileBehaviorChecks
-{
-    MetatileBehavior_IsSouthArrowWarp,
-    MetatileBehavior_IsNorthArrowWarp,
-    MetatileBehavior_IsWestArrowWarp,
-    MetatileBehavior_IsEastArrowWarp,
-};
-
 static bool8 (*const gUnknown_08497530[])(struct Task *, struct EventObject *, struct EventObject *) =
 {
     sub_808C3A4,
@@ -1246,24 +1238,6 @@ u8 GetPlayerAvatarGraphicsIdByStateId(u8 state)
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
 }
 
-u8 unref_GetRivalAvatarGenderByGraphicsId(u8 gfxId)
-{
-    switch (gfxId)
-    {
-    case EVENT_OBJ_GFX_RIVAL_MAY_NORMAL:
-    case EVENT_OBJ_GFX_RIVAL_MAY_MACH_BIKE:
-    case EVENT_OBJ_GFX_RIVAL_MAY_ACRO_BIKE:
-    case EVENT_OBJ_GFX_RIVAL_MAY_SURFING:
-    case EVENT_OBJ_GFX_RIVAL_MAY_FIELD_MOVE:
-    case EVENT_OBJ_GFX_MAY_UNDERWATER:
-    case EVENT_OBJ_GFX_MAY_FISHING:
-    case EVENT_OBJ_GFX_MAY_WATERING:
-        return FEMALE;
-    default:
-        return MALE;
-    }
-}
-
 u8 GetPlayerAvatarGenderByGraphicsId(u8 gfxId)
 {
     switch (gfxId)
@@ -1438,7 +1412,7 @@ static void sub_808C280(struct EventObject *eventObject)
 
     for (x = 0, direction = DIR_SOUTH; x < 4; x++, direction++)
     {
-        if (sArrowWarpMetatileBehaviorChecks2[x](metatileBehavior) && direction == eventObject->movementDirection)
+        if (sArrowWarpMetatileBehaviorChecks[x](metatileBehavior) && direction == eventObject->movementDirection)
         {
             x = eventObject->currentCoords.x;
             y = eventObject->currentCoords.y;

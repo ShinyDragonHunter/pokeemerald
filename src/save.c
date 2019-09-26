@@ -943,7 +943,7 @@ void sub_8153688(u8 taskId)
         break;
     case 7:
         if (taskData[2] == 0)
-            ClearContinueGameWarpStatus2();
+            ClearContinueGameWarpStatus();
         sub_800ADF8();
         taskData[0] = 8;
         break;

@@ -156,11 +156,6 @@ void SetContinueGameWarpStatusToDynamicWarp(void)
     gSaveBlock2Ptr->specialSaveWarpFlags |= CONTINUE_GAME_WARP;
 }
 
-void ClearContinueGameWarpStatus2(void)
-{
-    gSaveBlock2Ptr->specialSaveWarpFlags &= ~CONTINUE_GAME_WARP;
-}
-
 void SavePlayerParty(void)
 {
     int i;

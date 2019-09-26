@@ -770,7 +770,7 @@ void CB2_ViewWallClock(void)
 
     WallClockInit();
 
-    AddTextPrinterParameterized(1, 1, gText_Cancel4, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(1, 1, gText_Cancel, 0, 1, 0, NULL);
     PutWindowTilemap(1);
     schedule_bg_copy_tilemap_to_vram(2);
 }

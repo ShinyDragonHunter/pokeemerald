@@ -73,7 +73,6 @@ void SetHillTrainerFlag(void);
 const u8 *GetTrainerHillTrainerScript(void);
 void FillHillTrainerParty(void);
 void FillHillTrainersParties(void);
-u32 sub_81D63C4(void);
 u8 GetTrainerEncounterMusicIdInTrainerHill(u16 trainerId);
 u8 sub_81D6490(void);
 void sub_81D64C0(void);

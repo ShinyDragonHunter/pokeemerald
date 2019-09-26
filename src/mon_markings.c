@@ -131,12 +131,6 @@ static const union AnimCmd *const gUnknown_0859EEDC[] =
     gUnknown_0859EED4,
 };
 
-static const union AnimCmd gUnknown_0859EF04[] =
-{
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
-};
-
 static const union AnimCmd gUnknown_0859EF0C[] =
 {
     ANIMCMD_FRAME(64, 5),
@@ -145,7 +139,7 @@ static const union AnimCmd gUnknown_0859EF0C[] =
 
 static const union AnimCmd *const gUnknown_0859EF14[] =
 {
-    gUnknown_0859EF04,
+    gUnknown_0859EE8C,
     gUnknown_0859EF0C,
 };
 
@@ -164,24 +158,6 @@ static const struct OamData gUnknown_0859EF1C =
     .priority = 0,
     .paletteNum = 0,
     .affineParam = 0,
-};
-
-static const union AnimCmd gUnknown_0859EF24[] =
-{
-    ANIMCMD_FRAME(0, 5),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd gUnknown_0859EF2C[] =
-{
-    ANIMCMD_FRAME(4, 5),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd gUnknown_0859EF34[] =
-{
-    ANIMCMD_FRAME(8, 5),
-    ANIMCMD_END,
 };
 
 static const union AnimCmd gUnknown_0859EF3C[] =
@@ -264,9 +240,9 @@ static const union AnimCmd gUnknown_0859EF9C[] =
 
 static const union AnimCmd *const gUnknown_0859EFA4[] =
 {
-    gUnknown_0859EF24,
-    gUnknown_0859EF2C,
-    gUnknown_0859EF34,
+    gUnknown_0859EE8C,
+    gUnknown_0859EEAC,
+    gUnknown_0859EECC,
     gUnknown_0859EF3C,
     gUnknown_0859EF44,
     gUnknown_0859EF4C,

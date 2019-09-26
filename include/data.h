@@ -92,7 +92,7 @@ extern const union AffineAnimCmd *const gUnknown_082FF6C0[];
 
 extern const union AnimCmd *const gUnknown_082FF70C[];
 extern const struct MonCoords gMonFrontPicCoords[];
-extern const struct CompressedSpriteSheet gMonStillFrontPicTable[];
+extern const struct CompressedSpriteSheet gMonFrontPicTable[];
 extern const struct MonCoords gMonBackPicCoords[];
 extern const struct CompressedSpriteSheet gMonBackPicTable[];
 extern const struct CompressedSpritePalette gMonPaletteTable[];
@@ -103,13 +103,11 @@ extern const struct CompressedSpriteSheet gTrainerFrontPicTable[];
 extern const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[];
 extern const union AnimCmd *const *const gTrainerBackAnimsPtrTable[];
 extern const struct MonCoords gTrainerBackPicCoords[];
-extern const struct CompressedSpriteSheet gTrainerBackPicTable[]; // functionally unused
 extern const struct CompressedSpritePalette gTrainerBackPicPaletteTable[];
 
 extern const u8 gEnemyMonElevation[NUM_SPECIES];
 
 extern const union AnimCmd *const *const gMonFrontAnimsPtrTable[];
-extern const struct CompressedSpriteSheet gMonFrontPicTable[];
 
 extern const struct Trainer gTrainers[];
 extern const u8 gTrainerClassNames[][13];

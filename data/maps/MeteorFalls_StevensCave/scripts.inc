@@ -26,6 +26,20 @@ MeteorFalls_StevensCave_EventScript_23B1CD:: @ 823B1CD
 	release
 	end
 
+    .if UK
+MeteorFalls_StevensCave_Text_23B1E1: @ 823B1E1
+	.string "STEVEN: Oh, wow, {PLAYER}.\n"
+	.string "I'm amazed you knew where to find me.\p"
+	.string "Do you, uh…maybe think of me as\n"
+	.string "just a rock maniac?\p"
+	.string "No, that can't be right.\p"
+	.string "We battled alongside each other at\n"
+	.string "the MOSSDEEP SPACE CENTRE.\p"
+	.string "You should have a very good idea\n"
+	.string "about how good I am.\p"
+	.string "Okay, {PLAYER}, if you're going to mount\n"
+	.string "a serious challenge, expect the worst!$"
+    .else
 MeteorFalls_StevensCave_Text_23B1E1: @ 823B1E1
 	.string "STEVEN: Oh, wow, {PLAYER}.\n"
 	.string "I'm amazed you knew where to find me.\p"
@@ -38,6 +52,7 @@ MeteorFalls_StevensCave_Text_23B1E1: @ 823B1E1
 	.string "about how good I am.\p"
 	.string "Okay, {PLAYER}, if you're going to mount\n"
 	.string "a serious challenge, expect the worst!$"
+	.endif
 
 MeteorFalls_StevensCave_Text_23B32D: @ 823B32D
 	.string "You…\n"

@@ -2795,12 +2795,12 @@ static void PrintPageNamesAndStatsPageToWindows(void)
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE, gText_BattleMoves, 2, 1, 0, 1);
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
-    stringXPos = GetStringRightAlignXOffset(1, gText_Cancel2, 62);
+    stringXPos = GetStringRightAlignXOffset(1, gText_Cancel, 62);
     iconXPos = stringXPos - 16;
     if (iconXPos < 0)
         iconXPos = 0;
     PrintAOrBButtonIcon(PSS_LABEL_WINDOW_PROMPT_CANCEL, FALSE, iconXPos);
-    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel2, stringXPos, 1, 0, 0);
+    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_PROMPT_CANCEL, gText_Cancel, stringXPos, 1, 0, 0);
 
     stringXPos = GetStringRightAlignXOffset(1, gText_Info, 0x3E);
     iconXPos = stringXPos - 16;
@@ -2818,16 +2818,16 @@ static void PrintPageNamesAndStatsPageToWindows(void)
 
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_RENTAL, gText_RentalPkmn, 0, 1, 0, 1);
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_TYPE, gText_TypeSlash, 0, 1, 0, 0);
-    statsXPos = 6 + GetStringCenterAlignXOffset(1, gText_HP4, 42);
-    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_HP4, statsXPos, 1, 0, 1);
+    statsXPos = 6 + GetStringCenterAlignXOffset(1, gText_HP3, 42);
+    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_HP3, statsXPos, 1, 0, 1);
     statsXPos = 6 + GetStringCenterAlignXOffset(1, gText_Attack3, 42);
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_Attack3, statsXPos, 17, 0, 1);
-    statsXPos = 6 + GetStringCenterAlignXOffset(1, gText_Defense3, 42);
-    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gText_Defense3, statsXPos, 33, 0, 1);
-    statsXPos = 2 + GetStringCenterAlignXOffset(1, gText_SpAtk4, 36);
-    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpAtk4, statsXPos, 1, 0, 1);
-    statsXPos = 2 + GetStringCenterAlignXOffset(1, gText_SpDef4, 36);
-    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpDef4, statsXPos, 17, 0, 1);
+    statsXPos = 6 + GetStringCenterAlignXOffset(1, gUnknown_085EEA55, 42);
+    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT, gUnknown_085EEA55, statsXPos, 33, 0, 1);
+    statsXPos = 2 + GetStringCenterAlignXOffset(1, gText_SpAtk3, 36);
+    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpAtk3, statsXPos, 1, 0, 1);
+    statsXPos = 2 + GetStringCenterAlignXOffset(1, gText_SpDef3, 36);
+    SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_SpDef3, statsXPos, 17, 0, 1);
     statsXPos = 2 + GetStringCenterAlignXOffset(1, gText_Speed2, 36);
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT, gText_Speed2, statsXPos, 33, 0, 1);
     SummaryScreen_PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP, gText_ExpPoints, 6, 1, 0, 1);
@@ -3876,7 +3876,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
                 }
                 else
                 {
-                    HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
+                    HandleLoadSpecialPokePic(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
                 }
             }
             else
@@ -3885,7 +3885,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
                 {
                     if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->unk40EF == TRUE)
                     {
-                        HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
+                        HandleLoadSpecialPokePic(&gMonFrontPicTable[summary->species2], gMonSpritesGfxPtr->sprites[1], summary->species2, summary->pid);
                     }
                     else
                     {
@@ -3896,7 +3896,7 @@ static u8 CreatePokemonSprite(struct Pokemon *mon, s16 *a1)
                 {
                     if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == PSS_MODE_BOX || sMonSummaryScreen->unk40EF == TRUE)
                     {
-                        HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2], sub_806F4F8(0, 1), summary->species2, summary->pid);
+                        HandleLoadSpecialPokePic(&gMonFrontPicTable[summary->species2], sub_806F4F8(0, 1), summary->species2, summary->pid);
                     }
                     else
                     {

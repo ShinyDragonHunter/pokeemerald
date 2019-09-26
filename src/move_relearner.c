@@ -197,40 +197,6 @@ static const struct OamData sHeartSpriteOamData =
     .affineParam = 0,
 };
 
-static const struct OamData sUnusedOam1 =
-{
-    .y = 0,
-    .affineMode = 0,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = 0,
-    .bpp = ST_OAM_4BPP,
-    .shape = ST_OAM_V_RECTANGLE,
-    .x = 0,
-    .matrixNum = 0,
-    .size = 0,
-    .tileNum = 0,
-    .priority = 0,
-    .paletteNum = 0,
-    .affineParam = 0,
-};
-
-static const struct OamData sUnusedOam2 =
-{
-    .y = 0,
-    .affineMode = 0,
-    .objMode = ST_OAM_OBJ_NORMAL,
-    .mosaic = 0,
-    .bpp = ST_OAM_4BPP,
-    .shape = ST_OAM_H_RECTANGLE,
-    .x = 0,
-    .matrixNum = 0,
-    .size = 0,
-    .tileNum = 0,
-    .priority = 0,
-    .paletteNum = 0,
-    .affineParam = 0,
-};
-
 static const struct SpriteSheet sMoveRelearnerSpriteSheet =
 {
     .data = sMoveRelearnerSpriteSheetData,

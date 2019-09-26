@@ -467,6 +467,15 @@ PetalburgWoods_Text_22EC10: @ 822EC10
 	.string "out. It will earn EXP Points without\l"
 	.string "being exposed to any harm.$"
 
+	.if UK
+PetalburgWoods_Text_22ED07: @ 822ED07
+	.string "TRAINER TIPS\p"
+	.string "In addition to Hit Points (HP), {P}MON\n"
+	.string "have Power Points (PP) that are used to\l"
+	.string "make moves during battle.\p"
+	.string "If a {P}MON runs out of PP, it must be\n"
+	.string "taken to a {P}MON CENTRE.$"
+	.else
 PetalburgWoods_Text_22ED07: @ 822ED07
 	.string "TRAINER TIPS\p"
 	.string "In addition to Hit Points (HP), {P}MON\n"
@@ -474,4 +483,5 @@ PetalburgWoods_Text_22ED07: @ 822ED07
 	.string "make moves during battle.\p"
 	.string "If a {P}MON runs out of PP, it must be\n"
 	.string "taken to a {P}MON CENTER.$"
+	.endif
 

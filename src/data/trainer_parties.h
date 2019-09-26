@@ -12403,34 +12403,3 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Everett[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Red[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_CHARMANDER,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Leaf[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_BULBASAUR,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Brendan16[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_GROUDON,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_May16[] = {
-    {
-    .iv = 0,
-    .lvl = 5,
-    .species = SPECIES_KYOGRE,
-    }
-};

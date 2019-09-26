@@ -91,6 +91,16 @@ GraniteCave_StevensRoom_Text_22DD5A: @ 822DD5A
 	.string "Oh?\n"
 	.string "A LETTER for me?$"
 
+    .if UK
+GraniteCave_StevensRoom_Text_22DDBD: @ 822DDBD
+	.string "STEVEN: Okay, thank you.\p"
+	.string "You went through all this trouble to\n"
+	.string "deliver that. I need to thank you.\p"
+	.string "Let me see…\n"
+	.string "I'll give you this TM.\p"
+	.string "It contains my favourite move,\n"
+	.string "STEEL WING.$"
+	.else
 GraniteCave_StevensRoom_Text_22DDBD: @ 822DDBD
 	.string "STEVEN: Okay, thank you.\p"
 	.string "You went through all this trouble to\n"
@@ -99,6 +109,7 @@ GraniteCave_StevensRoom_Text_22DDBD: @ 822DDBD
 	.string "I'll give you this TM.\p"
 	.string "It contains my favorite move,\n"
 	.string "STEEL WING.$"
+	.endif
 
 GraniteCave_StevensRoom_Text_22DE6B: @ 822DE6B
 	.string "STEVEN: Your {P}MON appear quite\n"

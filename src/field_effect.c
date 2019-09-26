@@ -243,7 +243,6 @@ extern const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[];
 
 // .rodata
 const u32 gNewGameBirchPic[] = INCBIN_U32("graphics/birch_speech/birch.4bpp");
-const u32 gUnusedBirchBeauty[] = INCBIN_U32("graphics/unused/intro_birch_beauty.4bpp");
 const u16 gNewGameBirchPalette[16] = INCBIN_U16("graphics/birch_speech/birch.gbapal");
 const u32 gSpriteImage_855A970[] = INCBIN_U32("graphics/misc/pokeball_glow.4bpp");
 const u16 gFieldEffectObjectPalette4[16] = INCBIN_U16("graphics/event_objects/palettes/field_effect_object_palette_04.gbapal");
