@@ -52,8 +52,8 @@ Route113_GlassWorkshop_EventScript_26ED9D:: @ 826ED9D
 
 Route113_GlassWorkshop_EventScript_26EDA7:: @ 826EDA7
 	setvar VAR_0x8009, 0
-	setvar VAR_0x8004, 1
-	special sub_813A128
+	setvar VAR_0x8004, SCROLL_MULTI_GLASS_WORKSHOP_VENDOR
+	special ShowScrollableMultichoice
 	waitstate
 	switch VAR_RESULT
 	case 0, Route113_GlassWorkshop_EventScript_26EE1E
@@ -64,7 +64,7 @@ Route113_GlassWorkshop_EventScript_26EDA7:: @ 826EDA7
 	case 5, Route113_GlassWorkshop_EventScript_26EF4A
 	case 6, Route113_GlassWorkshop_EventScript_26EF8B
 	case 7, Route113_GlassWorkshop_EventScript_26EFCC
-	case 127, Route113_GlassWorkshop_EventScript_26EFCC
+	case MULTI_B_PRESSED, Route113_GlassWorkshop_EventScript_26EFCC
 	end
 
 Route113_GlassWorkshop_EventScript_26EE1E:: @ 826EE1E
