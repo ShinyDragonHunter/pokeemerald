@@ -39,7 +39,7 @@
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_KYOGRE"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 2,
@@ -49,17 +49,12 @@
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_KYOGRE"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_KYOGRE"
-              },
-              {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 3,
@@ -69,7 +64,12 @@
               {
                 "min_level": 3,
                 "max_level": 3,
-                "species": "SPECIES_KYOGRE"
+                "species": "SPECIES_POOCHYENA"
+              },
+              {
+                "min_level": 3,
+                "max_level": 3,
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 3,
