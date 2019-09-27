@@ -721,16 +721,6 @@
             "width": 8
         },
         {
-            "blockdata_filepath": "data/layouts/Unknown_08428450/map.bin",
-            "border_filepath": "data/layouts/Unknown_08428450/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_08428450",
-            "name": "Unknown_08428450_Layout",
-            "primary_tileset": "gTileset_Building",
-            "secondary_tileset": "gTileset_Contest",
-            "width": 1
-        },
-        {
             "blockdata_filepath": "data/layouts/VerdanturfTown_WandasHouse/map.bin",
             "border_filepath": "data/layouts/VerdanturfTown_WandasHouse/border.bin",
             "height": 8,
@@ -799,26 +789,6 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Facility",
             "width": 17
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_084294C4/map.bin",
-            "border_filepath": "data/layouts/Unknown_084294C4/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_084294C4",
-            "name": "Unknown_084294C4_Layout",
-            "primary_tileset": "gTileset_Building",
-            "secondary_tileset": "gTileset_Contest",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_084294E8/map.bin",
-            "border_filepath": "data/layouts/Unknown_084294E8/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_084294E8",
-            "name": "Unknown_084294E8_Layout",
-            "primary_tileset": "gTileset_Building",
-            "secondary_tileset": "gTileset_Contest",
-            "width": 1
         },
         {
             "blockdata_filepath": "data/layouts/SlateportCity_PokemonFanClub/map.bin",
@@ -1641,146 +1611,6 @@
             "width": 46
         },
         {
-            "blockdata_filepath": "data/layouts/Unknown_0843E6C0/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E6C0/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E6C0",
-            "name": "Unknown_0843E6C0_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E6E4/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E6E4/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E6E4",
-            "name": "Unknown_0843E6E4_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E708/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E708/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E708",
-            "name": "Unknown_0843E708_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E72C/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E72C/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E72C",
-            "name": "Unknown_0843E72C_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E750/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E750/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E750",
-            "name": "Unknown_0843E750_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E774/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E774/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E774",
-            "name": "Unknown_0843E774_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E798/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E798/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E798",
-            "name": "Unknown_0843E798_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E7BC/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E7BC/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E7BC",
-            "name": "Unknown_0843E7BC_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E7E0/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E7E0/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E7E0",
-            "name": "Unknown_0843E7E0_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E804/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E804/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E804",
-            "name": "Unknown_0843E804_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E828/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E828/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E828",
-            "name": "Unknown_0843E828_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E84C/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E84C/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E84C",
-            "name": "Unknown_0843E84C_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E870/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E870/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E870",
-            "name": "Unknown_0843E870_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_0843E894/map.bin",
-            "border_filepath": "data/layouts/Unknown_0843E894/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_0843E894",
-            "name": "Unknown_0843E894_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "gTileset_Cave",
-            "width": 1
-        },
-        {
             "blockdata_filepath": "data/layouts/NewMauville_Entrance/map.bin",
             "border_filepath": "data/layouts/NewMauville_Entrance/border.bin",
             "height": 9,
@@ -2299,16 +2129,6 @@
             "primary_tileset": "gTileset_General",
             "secondary_tileset": "gTileset_Lilycove",
             "width": 40
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_08447028/map.bin",
-            "border_filepath": "data/layouts/Unknown_08447028/border.bin",
-            "height": 26,
-            "id": "LAYOUT_UNKNOWN_08447028",
-            "name": "Unknown_08447028_Layout",
-            "primary_tileset": "gTileset_General",
-            "secondary_tileset": "0",
-            "width": 58
         },
         {
             "blockdata_filepath": "data/layouts/Route109_SeashoreHouse/map.bin",
@@ -3419,16 +3239,6 @@
             "primary_tileset": "gTileset_Building",
             "secondary_tileset": "gTileset_BattlePike",
             "width": 9
-        },
-        {
-            "blockdata_filepath": "data/layouts/Unknown_084693AC/map.bin",
-            "border_filepath": "data/layouts/Unknown_084693AC/border.bin",
-            "height": 1,
-            "id": "LAYOUT_UNKNOWN_084693AC",
-            "name": "Unknown_084693AC_Layout",
-            "primary_tileset": "gTileset_Building",
-            "secondary_tileset": "gTileset_BattlePike",
-            "width": 1
         },
         {
             "blockdata_filepath": "data/layouts/BattleFrontier_BattlePyramidLobby/map.bin",
