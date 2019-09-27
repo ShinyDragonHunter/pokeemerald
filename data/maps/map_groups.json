@@ -463,10 +463,10 @@
         "NavelRock_Bottom",
         "TrainerHill_Elevator"
     ],
-    "gMapGroup28": [
+    "gMapGroup27": [
         "Route109_SeashoreHouse"
     ],
-    "gMapGroup29": [
+    "gMapGroup28": [
         "Route110_TrickHouseEntrance",
         "Route110_TrickHouseEnd",
         "Route110_TrickHouseCorridor",
@@ -489,18 +489,18 @@
         "DewfordTown_Hall",
         "DewfordTown_House2"
     ],
-    "gMapGroup30": [
+    "gMapGroup29": [
         "Route113_GlassWorkshop"
     ],
-    "gMapGroup31": [
+    "gMapGroup30": [
         "Route123_BerryMastersHouse"
     ],
-    "gMapGroup32": [
+    "gMapGroup31": [
         "Route119_WeatherInstitute_1F",
         "Route119_WeatherInstitute_2F",
         "Route119_House"
     ],
-    "gMapGroup33": [
+    "gMapGroup32": [
         "Route124_DivingTreasureHuntersHouse"
     ],
     "gMapGroup4": [
@@ -595,12 +595,12 @@
         "gMapGroup24",
         "gMapGroup25",
         "gMapGroup26",
+        "gMapGroup27",
         "gMapGroup28",
         "gMapGroup29",
         "gMapGroup30",
         "gMapGroup31",
-        "gMapGroup32",
-        "gMapGroup33"
+        "gMapGroup32"
     ],
     "layouts_table_label": "gMapLayouts"
 }
