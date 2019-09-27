@@ -80,7 +80,7 @@ gPokeNewsTextGameCorner_Ending:: @ 0828D768
 	.string "The location is MAUVILLE CITY.\p"
 	.string "That's the news on {P}MON NEWS.$"
 
-#if uk
+	.if UK
 gPokeNewsTextLilycove_Upcoming:: @ 0828D875
 	.string "Greetings!\n"
 	.string "It's time for {P}MON NEWS.\p"
@@ -104,20 +104,7 @@ gPokeNewsTextLilycove_Ongoing:: @ 0828D994
 	.string "You may be in for fateful encounters\n"
 	.string "with them all!\p"
 	.string "That's the news on {P}MON NEWS.$"
-
-gPokeNewsTextLilycove_Ending:: @ 0828DAC0
-	.string "Greetings!\n"
-	.string "It's time for {P}MON NEWS.\p"
-	.string "This is the news you've all been\n"
-	.string "waiting for!\p"
-	.string "LILYCOVE SHOPPING CENTRE's clear-out\n"
-	.string "sale has finally arrived!\p"
-	.string "All the thingamajigs and doodads that\n"
-	.string "you've always dreamt about…\p"
-	.string "You may be in for fateful encounters\n"
-	.string "with them all!\p"
-	.string "That's the news on {P}MON NEWS.$"
-#else
+	.else
 gPokeNewsTextLilycove_Upcoming:: @ 0828D875
 	.string "Greetings!\n"
 	.string "It's time for {P}MON NEWS.\p"
@@ -141,20 +128,7 @@ gPokeNewsTextLilycove_Ongoing:: @ 0828D994
 	.string "You may be in for fateful encounters\n"
 	.string "with them all!\p"
 	.string "That's the news on {P}MON NEWS.$"
-
-gPokeNewsTextLilycove_Ending:: @ 0828DAC0
-	.string "Greetings!\n"
-	.string "It's time for {P}MON NEWS.\p"
-	.string "This is the news you've all been\n"
-	.string "waiting for!\p"
-	.string "LILYCOVE DEPARTMENT STORE's clear-out\n"
-	.string "sale has finally arrived!\p"
-	.string "All the thingamajigs and doodads that\n"
-	.string "you've always dreamt about…\p"
-	.string "You may be in for fateful encounters\n"
-	.string "with them all!\p"
-	.string "That's the news on {P}MON NEWS.$"
-#endif
+	.endif
 
 gPokeNewsTextBlendMaster_Upcoming:: @ 0828DBEC
 	.string "Greetings!\n"

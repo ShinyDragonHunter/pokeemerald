@@ -185,7 +185,6 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
 static u16 GetCenterScreenMetatileBehavior(void);
 
 // IWRAM bss vars
-static void *sUnusedOverworldCallback;
 static u8 sPlayerTradingStates[4];
 // This callback is called with a player's key code. It then returns an
 // adjusted key code, effectively intercepting the input before anything
@@ -225,18 +224,6 @@ static const struct WarpData sDummyWarpData =
     .warpId = -1,
     .x = -1,
     .y = -1,
-};
-
-static const u8 sUnusedData[] =
-{
-    0xB0, 0x04, 0x00, 0x00,
-    0x10, 0x0E, 0x00, 0x00,
-    0xB0, 0x04, 0x00, 0x00,
-    0x60, 0x09, 0x00, 0x00,
-    0x32, 0x00, 0x00, 0x00,
-    0x50, 0x00, 0x00, 0x00,
-    0xD4, 0xFF, 0xFF, 0xFF,
-    0x2C, 0x00, 0x00, 0x00,
 };
 
 const struct UCoords32 gDirectionToVectors[] =
@@ -1497,12 +1484,6 @@ void CB2_Overworld(void)
 void SetMainCallback1(MainCallback cb)
 {
     gMain.callback1 = cb;
-}
-
-// This function is never called.
-void SetUnusedCallback(void *func)
-{
-    sUnusedOverworldCallback = func;
 }
 
 static bool8 map_post_load_hook_exec(void)

@@ -121,10 +121,6 @@ static bool32 SetDamagedSectorBits(u8 op, u8 bit)
     case DISABLE:
         gDamagedSaveSectors &= ~(1 << bit);
         break;
-    case CHECK: // unused
-        if (gDamagedSaveSectors & (1 << bit))
-            retVal = TRUE;
-        break;
     }
 
     return retVal;
@@ -666,9 +662,6 @@ u8 HandleSavingData(u8 saveType)
     UpdateSaveAddresses();
     switch (saveType)
     {
-    case SAVE_HALL_OF_FAME_ERASE_BEFORE: // deletes HOF before overwriting HOF completely. unused
-        for (i = SECTOR_ID_HOF_1; i < SECTORS_COUNT; i++)
-            EraseFlashSector(i);
     case SAVE_HALL_OF_FAME: // hall of fame.
         if (GetGameStat(GAME_STAT_ENTERED_HOF) < 999)
             IncrementGameStat(GAME_STAT_ENTERED_HOF);

@@ -41,9 +41,6 @@ static const u32 gUnknown_0862AF30[] = INCBIN_U32("graphics/battle_transitions/f
 static const u32 gUnknown_0862B0DC[] = INCBIN_U32("graphics/battle_transitions/frontier_transition_circles.4bpp.lz");
 static const u16 gUnknown_0862B53C[] = INCBIN_U16("graphics/battle_transitions/frontier_transition.gbapal");
 
-// Unused Empty data.
-static const u8 sFiller[0x1C0] = {0};
-
 static const struct OamData sOamData_862B71C =
 {
     .y = 0,

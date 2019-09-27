@@ -265,7 +265,7 @@ static const u8 *const sPokeNewsTextGroup_Ending[] = {
     NULL,
     gPokeNewsTextSlateport_Ending,
     gPokeNewsTextGameCorner_Ending,
-    gPokeNewsTextLilycove_Ending,
+    gPokeNewsTextLilycove_Ongoing,
     gPokeNewsTextBlendMaster_Ending
 };
 

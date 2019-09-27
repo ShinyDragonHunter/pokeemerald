@@ -812,15 +812,6 @@ static void ListMenuCallSelectionChangedCallback(struct ListMenu *list, u8 onIni
         list->template.moveCursorFunc(list->template.items[list->scrollOffset + list->selectedRow].id, onInit, list);
 }
 
-// unused
-void ListMenuOverrideSetColors(u8 cursorPal, u8 fillValue, u8 cursorShadowPal)
-{
-    gListMenuOverride.cursorPal = cursorPal;
-    gListMenuOverride.fillValue = fillValue;
-    gListMenuOverride.cursorShadowPal = cursorShadowPal;
-    gListMenuOverride.enabled = TRUE;
-}
-
 void ListMenuDefaultCursorMoveFunc(s32 itemIndex, bool8 onInit, struct ListMenu *list)
 {
     if (!onInit)

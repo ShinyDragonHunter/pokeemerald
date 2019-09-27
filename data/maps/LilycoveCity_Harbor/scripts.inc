@@ -31,18 +31,9 @@ LilycoveCity_Harbor_EventScript_FerryAttendant:: @ 821E00F
 	goto LilycoveCity_Harbor_EventScript_NoFirstTimeEventTickets
 	end
 
-@ First goto_if_eq is unnecessary; identical scripts
 LilycoveCity_Harbor_EventScript_NoFirstTimeEventTickets:: @ 821E080
-	compare VAR_TEMP_A, 0
-<<<<<<< HEAD
-	goto_if_eq LilycoveCity_Harbor_EventScript_21E557
 	msgbox SlateportCity_Harbor_Text_20CE87, MSGBOX_DEFAULT
 	message SlateportCity_Harbor_Text_20CF1C
-=======
-	goto_if_eq LilycoveCity_Harbor_EventScript_NoEventTickets
-	msgbox LilycoveCity_Harbor_Text_MayISeeYourTicket, MSGBOX_DEFAULT
-	message LilycoveCity_Harbor_Text_FlashTicketWhereTo
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
 	waitmessage
 	goto LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect
 	end
@@ -102,13 +93,8 @@ LilycoveCity_Harbor_EventScript_GoToSlateport:: @ 821E149
 	release
 	end
 
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E171:: @ 821E171
-	msgbox SlateportCity_Harbor_Text_20CFAE, MSGBOX_YESNO
-=======
 LilycoveCity_Harbor_EventScript_GoToBattleFrontier:: @ 821E171
-	msgbox LilycoveCity_Harbor_Text_BattleFrontierItIs, MSGBOX_YESNO
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
+	msgbox SlateportCity_Harbor_Text_20CFAE, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind
 	call LilycoveCity_Harbor_EventScript_BoardFerry
@@ -349,11 +335,7 @@ LilycoveCity_Harbor_EventScript_ExitFirstTimeTicketSailSelect:: @ 821E4B6
 	waitmovement 0
 	showobjectat 1, MAP_LILYCOVE_CITY_HARBOR
 	delay 30
-<<<<<<< HEAD
 	msgbox SlateportCity_Harbor_Text_20CF71, MSGBOX_DEFAULT
-=======
-	msgbox LilycoveCity_Harbor_Text_SailAnotherTime, MSGBOX_DEFAULT
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
 	release
 	end
 
@@ -384,86 +366,19 @@ LilycoveCity_Harbor_EventScript_BoardFerryWithSailor:: @ 821E514
 	call Common_EventScript_FerryDepart
 	return
 
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E54D:: @ 821E54D
+LilycoveCity_Harbor_EventScript_FerryUnavailable:: @ 821E54D
 	msgbox SlateportCity_Harbor_Text_20CE20, MSGBOX_DEFAULT
 	release
 	end
 
-LilycoveCity_Harbor_EventScript_21E557:: @ 821E557
-	msgbox SlateportCity_Harbor_Text_20CE87, MSGBOX_DEFAULT
-	message SlateportCity_Harbor_Text_20CF1C
-=======
-LilycoveCity_Harbor_EventScript_FerryUnavailable:: @ 821E54D
-	msgbox LilycoveCity_Harbor_Text_FerryUnavailable, MSGBOX_DEFAULT
-	release
-	end
-
-LilycoveCity_Harbor_EventScript_NoEventTickets:: @ 821E557
-	msgbox LilycoveCity_Harbor_Text_MayISeeYourTicket, MSGBOX_DEFAULT
-	message LilycoveCity_Harbor_Text_FlashTicketWhereTo
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
-	waitmessage
-	goto LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect
-	end
-
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E56B:: @ 821E56B
-	msgbox SlateportCity_Harbor_Text_20CEC1, MSGBOX_DEFAULT
-=======
-@ Unused
-LilycoveCity_Harbor_EventScript_NoTicket:: @ 821E56B
-	msgbox LilycoveCity_Harbor_Text_NoTicket, MSGBOX_DEFAULT
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
-	release
-	end
-
-@ Unused
-LilycoveCity_Harbor_EventScript_GoToSlateportUnused:: @ 821E575
-	msgbox LilycoveCity_Harbor_Text_SlateportItIs, MSGBOX_YESNO
-	compare VAR_RESULT, 0
-	goto_if_eq LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind
-	setvar VAR_PORTHOLE_STATE, 5
-	call LilycoveCity_Harbor_EventScript_BoardFerry
-	warp MAP_SS_TIDAL_CORRIDOR, 255, 1, 10
-	waitstate
-	release
-	end
-
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E59D:: @ 821E59D
-	msgbox SlateportCity_Harbor_Text_20CFAE, MSGBOX_YESNO
-=======
-@ Unused
-LilycoveCity_Harbor_EventScript_GoToBattleFrontierUnused:: @ 821E59D
-	msgbox LilycoveCity_Harbor_Text_BattleFrontierItIs, MSGBOX_YESNO
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
-	compare VAR_RESULT, 0
-	goto_if_eq LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind
-	call LilycoveCity_Harbor_EventScript_BoardFerry
-	warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 255, 19, 67
-	waitstate
-	release
-	end
-
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E5C0:: @ 821E5C0
-	message SlateportCity_Harbor_Text_20CFFA
-=======
 LilycoveCity_Harbor_EventScript_FerryDestinationChangeMind:: @ 821E5C0
-	message LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
+	message SlateportCity_Harbor_Text_20CFFA
 	waitmessage
 	goto LilycoveCity_Harbor_EventScript_FerryRegularLocationSelect
 	end
 
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E5CC:: @ 821E5CC
-	msgbox SlateportCity_Harbor_Text_20CFCB, MSGBOX_DEFAULT
-=======
 LilycoveCity_Harbor_EventScript_BoardFerry:: @ 821E5CC
-	msgbox LilycoveCity_Harbor_Text_PleaseBoard, MSGBOX_DEFAULT
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
+	msgbox SlateportCity_Harbor_Text_20CFCB, MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceUp
 	waitmovement 0
@@ -489,13 +404,8 @@ LilycoveCity_Harbor_EventScript_PlayerBoardFerryNorth:: @ 821E61B
 	waitmovement 0
 	return
 
-<<<<<<< HEAD
-LilycoveCity_Harbor_EventScript_21E626:: @ 821E626
-	msgbox SlateportCity_Harbor_Text_20CF71, MSGBOX_DEFAULT
-=======
 LilycoveCity_Harbor_EventScript_ExitSailSelect:: @ 821E626
-	msgbox LilycoveCity_Harbor_Text_SailAnotherTime, MSGBOX_DEFAULT
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
+	msgbox SlateportCity_Harbor_Text_20CF71, MSGBOX_DEFAULT
 	release
 	end
 
@@ -505,11 +415,6 @@ LilycoveCity_Harbor_Movement_PlayerBoardFerryEast: @ 821E630
 	step_end
 
 LilycoveCity_Harbor_Movement_PlayerBoardFerryNorth: @ 821E633
-	walk_up
-	step_end
-
-@ Unused
-LilycoveCity_Harbor_Movement_21E635: @ 821E635
 	walk_up
 	step_end
 
@@ -623,51 +528,10 @@ LilycoveCity_Harbor_Movement_SailorBoardWithBrineyEast: @ 821E6EA
 	set_invisible
 	step_end
 
-<<<<<<< HEAD
-LilycoveCity_Harbor_Text_21E864: @ 821E864
-	.string "SLATEPORT CITY it is, then!$"
-
-LilycoveCity_Harbor_Text_21E8EE: @ 821E8EE
-=======
-LilycoveCity_Harbor_Text_FerryUnavailable: @ 821E6F1
-	.string "I beg your pardon?\n"
-	.string "You're looking for a ship?\p"
-	.string "I'm sorry, the ferry service isn't\n"
-	.string "available at present…$"
-
-LilycoveCity_Harbor_Text_MayISeeYourTicket: @ 821E758
-	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your TICKET?$"
-
-LilycoveCity_Harbor_Text_NoTicket: @ 821E792
-	.string "{PLAYER} doesn't have the TICKET…\p"
-	.string "I'm terribly sorry.\p"
-	.string "You must have a TICKET to board\n"
-	.string "the ferry.$"
-
-LilycoveCity_Harbor_Text_FlashTicketWhereTo: @ 821E7ED
-	.string "{PLAYER} flashed the TICKET.\p"
-	.string "Perfect! That's all you need!\p"
-	.string "And where would you like to go?$"
-
-LilycoveCity_Harbor_Text_SailAnotherTime: @ 821E842
-	.string "Please sail with us another time!$"
-
 LilycoveCity_Harbor_Text_SlateportItIs: @ 821E864
 	.string "SLATEPORT CITY it is, then!$"
 
-LilycoveCity_Harbor_Text_BattleFrontierItIs: @ 821E880
-	.string "BATTLE FRONTIER it is, then!$"
-
-LilycoveCity_Harbor_Text_PleaseBoard: @ 821E89D
-	.string "Please board the ferry and wait for\n"
-	.string "departure.$"
-
-LilycoveCity_Harbor_Text_WhereWouldYouLikeToGo: @ 821E8CC
-	.string "Then, where would you like to go?$"
-
 LilycoveCity_Harbor_Text_SailorFerryUnavailable: @ 821E8EE
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
 	.string "Until they finish making the ferry,\n"
 	.string "we sailors have nothing to do…\p"
 	.string "I wish they'd get a move on, the folks\n"

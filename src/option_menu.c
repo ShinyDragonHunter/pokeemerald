@@ -87,23 +87,13 @@ static const u8 sEqualSignGfx[] = INCBIN_U8("graphics/misc/option_menu_equals_si
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
-<<<<<<< HEAD
-    gText_TextSpeed,
-    gText_BattleScene,
-    gText_BattleStyle,
-    gText_Sound,
-    gText_ButtonMode,
-    gText_Frame,
-    gText_Cancel,
-=======
     [MENUITEM_TEXTSPEED]   = gText_TextSpeed,
     [MENUITEM_BATTLESCENE] = gText_BattleScene,
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
-    [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
+    [MENUITEM_CANCEL]      = gText_Cancel,
 };
 
 static const struct WindowTemplate sOptionMenuWinTemplates[] =

@@ -18,7 +18,7 @@ static const struct MenuAction MultichoiceList_ContestInfo[] =
     {gText_WhatsAContest},
     {gText_TypesOfContests},
     {gText_Ranks},
-    {gText_Cancel2},
+    {gText_Cancel},
 };
 
 static const struct MenuAction MultichoiceList_ContestType[] =
@@ -51,7 +51,7 @@ static const struct MenuAction MultichoiceList_RegisterMenu[] =
     {gMenuText_Register},
     {gText_Registry},
     {gText_Information},
-    {gText_Cancel2},
+    {gText_Cancel},
 };
 
 static const struct MenuAction MultichoiceList_Bike[] =
@@ -254,7 +254,7 @@ static const struct MenuAction MultichoiceList_UnusedAshVendor[] =
     {gText_BlackFlute2},
     {gText_GlassChair},
     {gText_GlassDesk},
-    {gText_Cancel2},
+    {gText_Cancel},
 };
 
 static const struct MenuAction MultichoiceList_GameCornerDolls[] =
@@ -539,7 +539,7 @@ static const struct MenuAction MultichoiceList_LinkContestInfo[] =
     {gText_LinkContest},
     {gText_AboutE_Mode},
     {gText_AboutG_Mode},
-    {gText_Cancel2},
+    {gText_Cancel},
 };
 
 static const struct MenuAction MultichoiceList_LinkContestMode[] =
@@ -566,35 +566,6 @@ static const struct MenuAction MultichoiceList_FrontierGamblerBet[] =
     {gText_5BP},
     {gText_10BP},
     {gText_15BP},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_UnusedSSTidal1[] =
-{
-    {gText_SouthernIsland},
-    {gText_BirthIsland},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_UnusedSSTidal2[] =
-{
-    {gText_SouthernIsland},
-    {gText_FarawayIsland},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_UnusedSSTidal3[] =
-{
-    {gText_BirthIsland},
-    {gText_FarawayIsland},
-    {gText_Exit},
-};
-
-static const struct MenuAction MultichoiceList_UnusedSSTidal4[] =
-{
-    {gText_SouthernIsland},
-    {gText_BirthIsland},
-    {gText_FarawayIsland},
     {gText_Exit},
 };
 
@@ -873,10 +844,6 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FORCED_START_MENU]          = MULTICHOICE(MultichoiceList_ForcedStartMenu),
     [MULTI_FRONTIER_GAMBLER_BET]       = MULTICHOICE(MultichoiceList_FrontierGamblerBet),
     [MULTI_TENT]                       = MULTICHOICE(MultichoiceList_Tent),
-    [MULTI_UNUSED_SSTIDAL_1]           = MULTICHOICE(MultichoiceList_UnusedSSTidal1),
-    [MULTI_UNUSED_SSTIDAL_2]           = MULTICHOICE(MultichoiceList_UnusedSSTidal2),
-    [MULTI_UNUSED_SSTIDAL_3]           = MULTICHOICE(MultichoiceList_UnusedSSTidal3),
-    [MULTI_UNUSED_SSTIDAL_4]           = MULTICHOICE(MultichoiceList_UnusedSSTidal4),
     [MULTI_FOSSIL]                     = MULTICHOICE(MultichoiceList_Fossil),
     [MULTI_YESNO]                      = MULTICHOICE(MultichoiceList_YesNo),
     [MULTI_FRONTIER_RULES]             = MULTICHOICE(MultichoiceList_FrontierRules),

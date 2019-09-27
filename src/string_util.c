@@ -457,30 +457,13 @@ const u8 *GetExpandedPlaceholder(u32 id)
 
     static const ExpandPlaceholderFunc funcs[] =
     {
-<<<<<<< HEAD
-        ExpandPlaceholder_UnknownStringVar,
-        ExpandPlaceholder_PlayerName,
-        ExpandPlaceholder_StringVar1,
-        ExpandPlaceholder_StringVar2,
-        ExpandPlaceholder_StringVar3,
-        ExpandPlaceholder_Poke,
-        ExpandPlaceholder_RivalName,
-=======
         [PLACEHOLDER_ID_UNKNOWN]      = ExpandPlaceholder_UnknownStringVar,
         [PLACEHOLDER_ID_PLAYER]       = ExpandPlaceholder_PlayerName,
         [PLACEHOLDER_ID_STRING_VAR_1] = ExpandPlaceholder_StringVar1,
         [PLACEHOLDER_ID_STRING_VAR_2] = ExpandPlaceholder_StringVar2,
         [PLACEHOLDER_ID_STRING_VAR_3] = ExpandPlaceholder_StringVar3,
-        [PLACEHOLDER_ID_KUN]          = ExpandPlaceholder_KunChan,
+        [PLACEHOLDER_ID_POKE]         = ExpandPlaceholder_Poke,
         [PLACEHOLDER_ID_RIVAL]        = ExpandPlaceholder_RivalName,
-        [PLACEHOLDER_ID_VERSION]      = ExpandPlaceholder_Version,
-        [PLACEHOLDER_ID_AQUA]         = ExpandPlaceholder_Aqua,
-        [PLACEHOLDER_ID_MAGMA]        = ExpandPlaceholder_Magma,
-        [PLACEHOLDER_ID_ARCHIE]       = ExpandPlaceholder_Archie,
-        [PLACEHOLDER_ID_MAXIE]        = ExpandPlaceholder_Maxie,
-        [PLACEHOLDER_ID_KYOGRE]       = ExpandPlaceholder_Kyogre,
-        [PLACEHOLDER_ID_GROUDON]      = ExpandPlaceholder_Groudon,
->>>>>>> 208e1c968959c781562f0b94c03368385ce7012c
     };
 
     if (id >= ARRAY_COUNT(funcs))

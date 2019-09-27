@@ -832,7 +832,6 @@ static const u8 gTradeCableEndTiles[] = INCBIN_U8("graphics/trade/cable_end.4bpp
 static const u8 gTradeGBAScreenTiles[] = INCBIN_U8("graphics/trade/gba_screen.4bpp");
 const u16 gUnknown_08331F60[] = INCBIN_U16("graphics/trade/shadow_map.bin");
 static const u8 gUnknown_08332F60[] = INCBIN_U8("graphics/trade/gba_affine.8bpp");
-static const u8 sFiller_08335760[64] = {};
 static const u8 gUnknown_083357A0[] = INCBIN_U8("graphics/trade/gba_affine_map_cable.bin");
 static const u8 gUnknown_083358A0[] = INCBIN_U8("graphics/trade/gba_affine_map_wireless.bin");
 static const u16 gUnknown_083359A0[] = INCBIN_U16("graphics/trade/gba_map_wireless.bin");
