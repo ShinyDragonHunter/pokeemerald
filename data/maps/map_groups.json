@@ -27,7 +27,6 @@
     "gMapGroup24",
     "gMapGroup25",
     "gMapGroup26",
-    "gMapGroup27",
     "gMapGroup28",
     "gMapGroup29",
     "gMapGroup30",
@@ -230,7 +229,6 @@
     "LilycoveCity_ContestHall",
     "LilycoveCity_PokemonCenter_1F",
     "LilycoveCity_PokemonCenter_2F",
-    "LilycoveCity_UnusedMart",
     "LilycoveCity_PokemonTrainerFanClub",
     "LilycoveCity_Harbor",
     "LilycoveCity_MoveDeletersHouse",
@@ -361,9 +359,6 @@
     "SeafloorCavern_Room9",
     "CaveOfOrigin_Entrance",
     "CaveOfOrigin_1F",
-    "CaveOfOrigin_UnusedRubySapphireMap1",
-    "CaveOfOrigin_UnusedRubySapphireMap2",
-    "CaveOfOrigin_UnusedRubySapphireMap3",
     "CaveOfOrigin_B1F",
     "VictoryRoad_1F",
     "VictoryRoad_B1F",
@@ -396,9 +391,6 @@
     "SealedChamber_OuterRoom",
     "SealedChamber_InnerRoom",
     "ScorchedSlab",
-    "AquaHideout_UnusedRubyMap1",
-    "AquaHideout_UnusedRubyMap2",
-    "AquaHideout_UnusedRubyMap3",
     "SkyPillar_Entrance",
     "SkyPillar_Outside",
     "SkyPillar_1F",
@@ -584,10 +576,6 @@
     "NavelRock_Down11",
     "NavelRock_Bottom",
     "TrainerHill_Elevator"
-  ],
-  "gMapGroup27": [
-    "Route104_Prototype",
-    "Route104_PrototypePrettyPetalFlowerShop"
   ],
   "gMapGroup28": [
     "Route109_SeashoreHouse"

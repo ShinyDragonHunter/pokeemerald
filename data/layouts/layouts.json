@@ -1582,36 +1582,6 @@
       "blockdata_filepath": "data/layouts/CaveOfOrigin_1F/map.bin"
     },
     {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP1",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap1_Layout",
-      "width": 23,
-      "height": 23,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap1/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap1/map.bin"
-    },
-    {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP2",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap2_Layout",
-      "width": 21,
-      "height": 21,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap2/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap2/map.bin"
-    },
-    {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3",
-      "name": "CaveOfOrigin_UnusedRubySapphireMap3_Layout",
-      "width": 19,
-      "height": 21,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap3/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_UnusedRubySapphireMap3/map.bin"
-    },
-    {
       "id": "LAYOUT_CAVE_OF_ORIGIN_B1F",
       "name": "CaveOfOrigin_B1F_Layout",
       "width": 19,
@@ -2862,16 +2832,6 @@
       "blockdata_filepath": "data/layouts/VictoryRoad_B2F/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE104_PROTOTYPE",
-      "name": "Route104_Prototype_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Route104_Prototype/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin"
-    },
-    {
       "id": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
       "name": "GraniteCave_StevensRoom_Layout",
       "width": 15,
@@ -3112,16 +3072,6 @@
       "blockdata_filepath": "data/layouts/ScorchedSlab/map.bin"
     },
     {
-      "id": "LAYOUT_CAVE_OF_ORIGIN_UNUSED_B4F_LAVA",
-      "name": "CaveOfOrigin_Unused_B4F_Lava_Layout",
-      "width": 19,
-      "height": 19,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/CaveOfOrigin_Unused_B4F_Lava/border.bin",
-      "blockdata_filepath": "data/layouts/CaveOfOrigin_Unused_B4F_Lava/map.bin"
-    },
-    {
       "id": "LAYOUT_RUSTBORO_CITY_FLAT1_1F",
       "name": "RustboroCity_Flat1_1F_Layout",
       "width": 14,
@@ -3150,36 +3100,6 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_Hall4/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_Hall4/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP1",
-      "name": "AquaHideout_UnusedRubyMap1_Layout",
-      "width": 28,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP2",
-      "name": "AquaHideout_UnusedRubyMap2_Layout",
-      "width": 62,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/map.bin"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP3",
-      "name": "AquaHideout_UnusedRubyMap3_Layout",
-      "width": 34,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE131_SKY_PILLAR",
