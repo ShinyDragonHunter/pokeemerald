@@ -489,7 +489,7 @@ SlateportCity_Harbor_Text_20D42B: @ 820D42B
 	.string "You're not responsible for this.\p"
 	.string "Trying to catch a submarine…\n"
 	.string "It's impossible for most people.\p"
-	.string "You would need a POKéMON that knows\n"
+	.string "You would need a {P}MON that knows\n"
 	.string "how to DIVE…\p"
 	.string "Perhaps if you went out to\n"
 	.string "MOSSDEEP CITY…\p"
@@ -499,7 +499,7 @@ SlateportCity_Harbor_Text_20D42B: @ 820D42B
 SlateportCity_Harbor_Text_20D58A: @ 820D58A
 	.string "CAPT. STERN: Trying to catch a\n"
 	.string "submarine… It's impossible.\p"
-	.string "You would need a POKéMON that knows\n"
+	.string "You would need a {P}MON that knows\n"
 	.string "how to DIVE…\p"
 	.string "Perhaps if you went out to\n"
 	.string "MOSSDEEP CITY…\p"
