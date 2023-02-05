@@ -251,7 +251,7 @@ C_channel_init_comp_reverse:
 	subs r2, r1
 	movs r0, r2
 C_channel_init_check_loop:
-	movs r5, #0                          @ initial envelope = #0
+	movs r5, #0                         @ initial envelope = #0
 	str r5, [r4, #o_SoundChannel_fw]
 C_channel_init_check_loop_no_fine_pos:
 	str r0, [r4, #o_SoundChannel_currentPointer]
@@ -666,8 +666,8 @@ C_data_load_uncomp_for:
 	 * The code below inits the DMA to read word aligned
 	 * samples from ROM to stack
 	 */
-    mov R9, #REG_DMA3_SRC & 0xFF000000
-    add R9, #REG_DMA3_SRC & 0x000000FF
+    mov r9, #REG_DMA3_SRC & 0xFF000000
+    add r9, #REG_DMA3_SRC & 0x000000FF
 	mov r0, r0, lsr#2
 	sub sp, sp, r0, lsl#2
 	orr lr, r0, #0x84000000              @ DMA enable, 32-bit transfer type
