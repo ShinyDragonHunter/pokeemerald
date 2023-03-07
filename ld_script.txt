@@ -1248,10 +1248,12 @@ SECTIONS {
         sound/songs/gbs/gbs_c_comm_center.o(.rodata);
         sound/songs/gbs/gbs_gsc_pewter.o(.rodata);
         sound/songs/gbs/gbs_c_vs_legend_beast.o(.rodata);
+        sound/songs/gbs/gbs_route101.o(.rodata);
         sound/songs/gbs/gbs_obtain_badge.o(.rodata);
         sound/songs/gbs/gbs_obtain_item.o(.rodata);
         sound/songs/gbs/gbs_obtain_tmhm.o(.rodata);
         sound/songs/gbs/gbs_oceanic_museum.o(.rodata);
+        sound/songs/gbs/gbs_abandoned_ship.o(.rodata);
         sound/songs/gbs/gbs_rg_poke_mansion.o(.rodata);
         sound/songs/gbs/gbs_rg_vs_trainer.o(.rodata);
         sound/songs/gbs/gbs_rg_sevii_route.o(.rodata);
