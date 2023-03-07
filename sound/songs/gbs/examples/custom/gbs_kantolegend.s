@@ -866,7 +866,7 @@ gbs_KantoLegend_Ch3:
 	sound_call gbs_KantoLegend_Ch3_P1
 @ Pat 2 Row 0
 @ Pat 3 Row 0
-gbs_KantoLegend_Ch3.L:
+gbs_KantoLegend_Ch3_L:
 	volume_envelope 1, 4
 	sound_call gbs_KantoLegend_Ch3_P1
 @ Pat 4 Row 0

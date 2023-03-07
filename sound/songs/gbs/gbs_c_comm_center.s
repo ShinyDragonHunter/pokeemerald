@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_mobilecenter
+	.global gbs_c_comm_center
 	.align 1
 
-gbs_mobilecenter_Ch1:
+gbs_c_comm_center_Ch1:
 	gbs_switch 0
 	tempo 160
 	volume 7, 7
@@ -20,7 +20,7 @@ gbs_mobilecenter_Ch1:
 	note G_, 2
 	note A_, 2
 	note B_, 4
-gbs_mobilecenter_Ch1.mainloop:
+gbs_c_comm_center_Ch1.mainloop:
 	octave 3
 	note E_, 2
 	note C_, 2
@@ -155,9 +155,9 @@ gbs_mobilecenter_Ch1.mainloop:
 	note D_, 2
 	note E_, 2
 	note F_, 2
-	sound_loop 0, gbs_mobilecenter_Ch1.mainloop
+	sound_loop 0, gbs_c_comm_center_Ch1.mainloop
 
-gbs_mobilecenter_Ch2:
+gbs_c_comm_center_Ch2:
 	gbs_switch 1
 	note_type 12, 12, 2
 	duty_cycle 3
@@ -166,7 +166,7 @@ gbs_mobilecenter_Ch2:
 	note G_, 2
 	note A_, 2
 	note B_, 2
-gbs_mobilecenter_Ch2.mainloop:
+gbs_c_comm_center_Ch2.mainloop:
 	octave 2
 	note C_, 2
 	note E_, 2
@@ -324,9 +324,9 @@ gbs_mobilecenter_Ch2.mainloop:
 	note F_, 2
 	note E_, 2
 	note D_, 2
-	sound_loop 0, gbs_mobilecenter_Ch2.mainloop
+	sound_loop 0, gbs_c_comm_center_Ch2.mainloop
 
-gbs_mobilecenter_Ch3:
+gbs_c_comm_center_Ch3:
 	gbs_switch 2
 	note_type 12, 2, 4
 	vibrato 16, 3, 4
@@ -339,7 +339,7 @@ gbs_mobilecenter_Ch3:
 	note C_, 2
 	note D_, 4
 	note_type 12, 2, 5
-gbs_mobilecenter_Ch3.mainloop:
+gbs_c_comm_center_Ch3.mainloop:
 	note C_, 2
 	octave 4
 	note G_, 2
@@ -451,9 +451,9 @@ gbs_mobilecenter_Ch3.mainloop:
 	note D_, 2
 	note C_, 8
 	vibrato 16, 3, 4
-	sound_loop 0, gbs_mobilecenter_Ch3.mainloop
+	sound_loop 0, gbs_c_comm_center_Ch3.mainloop
 
-gbs_mobilecenter_Ch4:
+gbs_c_comm_center_Ch4:
 	gbs_switch 3
 	toggle_noise 3
 	stereo_panning FALSE, TRUE
@@ -464,8 +464,8 @@ gbs_mobilecenter_Ch4:
 	drum_note 2, 1
 	drum_note 2, 1
 	drum_note 2, 1
-gbs_mobilecenter_Ch4.mainloop:
-gbs_mobilecenter_Ch4.loop1:
+gbs_c_comm_center_Ch4.mainloop:
+gbs_c_comm_center_Ch4.loop1:
 	drum_note 10, 2
 	drum_note 2, 2
 	drum_note 2, 2
@@ -474,7 +474,7 @@ gbs_mobilecenter_Ch4.loop1:
 	drum_note 2, 2
 	drum_note 3, 2
 	drum_note 2, 2
-	sound_loop 3, gbs_mobilecenter_Ch4.loop1
+	sound_loop 3, gbs_c_comm_center_Ch4.loop1
 	drum_note 10, 2
 	drum_note 2, 2
 	drum_note 2, 2
@@ -485,10 +485,10 @@ gbs_mobilecenter_Ch4.loop1:
 	drum_note 2, 1
 	drum_note 2, 1
 	drum_note 2, 1
-	sound_loop 0, gbs_mobilecenter_Ch4.mainloop
+	sound_loop 0, gbs_c_comm_center_Ch4.mainloop
 
 	.align 4
-gbs_mobilecenter:
+gbs_c_comm_center:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -496,7 +496,7 @@ gbs_mobilecenter:
 
 	.int voicegroup000
 
-	.int gbs_mobilecenter_Ch1
-	.int gbs_mobilecenter_Ch2
-	.int gbs_mobilecenter_Ch3
-	.int gbs_mobilecenter_Ch4
+	.int gbs_c_comm_center_Ch1
+	.int gbs_c_comm_center_Ch2
+	.int gbs_c_comm_center_Ch3
+	.int gbs_c_comm_center_Ch4

@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_item
+	.global gbs_obtain_item
 	.align 1
 
-gbs_item_Ch5:
+gbs_obtain_item_Ch5:
 	gbs_switch 4
 	toggle_sfx
 	tempo 108
@@ -23,7 +23,7 @@ gbs_item_Ch5:
 	note F_, 12
 	sound_ret
 
-gbs_item_Ch6:
+gbs_obtain_item_Ch6:
 	gbs_switch 5
 	toggle_sfx
 	vibrato 8, 2, 7
@@ -40,7 +40,7 @@ gbs_item_Ch6:
 	note A_, 12
 	sound_ret
 
-gbs_item_Ch7:
+gbs_obtain_item_Ch7:
 	gbs_switch 6
 	toggle_sfx
 	note_type 8, 2, 5
@@ -65,7 +65,7 @@ gbs_item_Ch7:
 	rest 2
 	sound_ret
 
-gbs_item_Ch8:
+gbs_obtain_item_Ch8:
 	gbs_switch 7
 	toggle_sfx
 	sfx_toggle_noise 4
@@ -75,7 +75,7 @@ gbs_item_Ch8:
 	sound_ret
 
 	.align 4
-gbs_item:
+gbs_obtain_item:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -83,7 +83,7 @@ gbs_item:
 
 	.int voicegroup000
 
-	.int gbs_item_Ch5
-	.int gbs_item_Ch6
-	.int gbs_item_Ch7
-	.int gbs_item_Ch8
+	.int gbs_obtain_item_Ch5
+	.int gbs_obtain_item_Ch6
+	.int gbs_obtain_item_Ch7
+	.int gbs_obtain_item_Ch8

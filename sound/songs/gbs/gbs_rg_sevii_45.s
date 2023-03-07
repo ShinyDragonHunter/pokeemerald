@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_azaleatown
+	.global gbs_rg_sevii_45
 	.align 1
 
-gbs_azaleatown_Ch1:
+gbs_rg_sevii_45_Ch1:
 	gbs_switch 0
 	tempo 160
 	volume 7, 7
@@ -12,7 +12,7 @@ gbs_azaleatown_Ch1:
 	stereo_panning FALSE, TRUE
 	note_type 12, 10, 1
 	rest 2
-gbs_azaleatown_Ch1.introloop:
+gbs_rg_sevii_45_Ch1.introloop:
 	volume_envelope 10, 1
 	octave 3
 	note F_, 2
@@ -26,9 +26,9 @@ gbs_azaleatown_Ch1.introloop:
 	note F_, 2
 	note F_, 2
 	note F_, 2
-	sound_loop 2, gbs_azaleatown_Ch1.introloop
-gbs_azaleatown_Ch1.mainloop:
-	sound_call gbs_azaleatown_Ch1.sub1
+	sound_loop 2, gbs_rg_sevii_45_Ch1.introloop
+gbs_rg_sevii_45_Ch1.mainloop:
+	sound_call gbs_rg_sevii_45_Ch1.sub1
 	stereo_panning TRUE, FALSE
 	volume_envelope 10, 4
 	note Gs, 2
@@ -43,7 +43,7 @@ gbs_azaleatown_Ch1.mainloop:
 	note Ds, 2
 	rest 2
 	stereo_panning FALSE, TRUE
-	sound_call gbs_azaleatown_Ch1.sub1
+	sound_call gbs_rg_sevii_45_Ch1.sub1
 	stereo_panning TRUE, FALSE
 	note_type 6, 10, 4
 	note Ds, 4
@@ -56,7 +56,7 @@ gbs_azaleatown_Ch1.mainloop:
 	note As, 4
 	note Fs, 4
 	stereo_panning FALSE, TRUE
-	sound_call gbs_azaleatown_Ch1.sub2
+	sound_call gbs_rg_sevii_45_Ch1.sub2
 	volume_envelope 10, 3
 	note As, 4
 	octave 4
@@ -69,7 +69,7 @@ gbs_azaleatown_Ch1.mainloop:
 	note Cs, 4
 	note A_, 2
 	rest 14
-	sound_call gbs_azaleatown_Ch1.sub2
+	sound_call gbs_rg_sevii_45_Ch1.sub2
 	volume_envelope 10, 3
 	octave 4
 	note C_, 1
@@ -118,9 +118,9 @@ gbs_azaleatown_Ch1.mainloop:
 	octave 3
 	note Gs, 14
 	rest 2
-	sound_loop 0, gbs_azaleatown_Ch1.mainloop
+	sound_loop 0, gbs_rg_sevii_45_Ch1.mainloop
 
-gbs_azaleatown_Ch1.sub1:
+gbs_rg_sevii_45_Ch1.sub1:
 	note_type 12, 10, 1
 	octave 4
 	note F_, 2
@@ -219,7 +219,7 @@ gbs_azaleatown_Ch1.sub1:
 	note Cs, 2
 	sound_ret
 
-gbs_azaleatown_Ch1.sub2:
+gbs_rg_sevii_45_Ch1.sub2:
 	volume_envelope 6, 1
 	note Gs, 8
 	note Gs, 8
@@ -229,7 +229,7 @@ gbs_azaleatown_Ch1.sub2:
 	note A_, 8
 	sound_ret
 
-gbs_azaleatown_Ch2:
+gbs_rg_sevii_45_Ch2:
 	gbs_switch 1
 	vibrato 18, 2, 3
 	duty_cycle 2
@@ -266,8 +266,8 @@ gbs_azaleatown_Ch2:
 	duty_cycle 1
 	octave 5
 	note C_, 1
-gbs_azaleatown_Ch2.mainloop:
-	sound_call gbs_azaleatown_Ch2.sub1
+gbs_rg_sevii_45_Ch2.mainloop:
+	sound_call gbs_rg_sevii_45_Ch2.sub1
 	note Cs, 4
 	note C_, 2
 	note Cs, 1
@@ -278,7 +278,7 @@ gbs_azaleatown_Ch2.mainloop:
 	duty_cycle 1
 	octave 5
 	note C_, 1
-	sound_call gbs_azaleatown_Ch2.sub1
+	sound_call gbs_rg_sevii_45_Ch2.sub1
 	rest 2
 	note Cs, 2
 	note C_, 2
@@ -363,9 +363,9 @@ gbs_azaleatown_Ch2.mainloop:
 	note Gs, 2
 	octave 5
 	note C_, 2
-	sound_loop 0, gbs_azaleatown_Ch2.mainloop
+	sound_loop 0, gbs_rg_sevii_45_Ch2.mainloop
 
-gbs_azaleatown_Ch2.sub1:
+gbs_rg_sevii_45_Ch2.sub1:
 	note Cs, 4
 	octave 4
 	note Gs, 2
@@ -418,7 +418,7 @@ gbs_azaleatown_Ch2.sub1:
 	volume_envelope 11, 4
 	sound_ret
 
-gbs_azaleatown_Ch3:
+gbs_rg_sevii_45_Ch3:
 	gbs_switch 2
 	stereo_panning TRUE, TRUE
 	vibrato 6, 2, 6
@@ -443,15 +443,15 @@ gbs_azaleatown_Ch3:
 	note Cs, 1
 	rest 1
 	note Gs, 4
-gbs_azaleatown_Ch3.mainloop:
-	sound_call gbs_azaleatown_Ch3.sub1
+gbs_rg_sevii_45_Ch3.mainloop:
+	sound_call gbs_rg_sevii_45_Ch3.sub1
 	note Gs, 4
 	note Ds, 2
-	sound_call gbs_azaleatown_Ch3.sub1
+	sound_call gbs_rg_sevii_45_Ch3.sub1
 	note Gs, 2
 	rest 2
 	note Fs, 2
-	sound_call gbs_azaleatown_Ch3.sub2
+	sound_call gbs_rg_sevii_45_Ch3.sub2
 	note As, 1
 	rest 1
 	octave 4
@@ -465,7 +465,7 @@ gbs_azaleatown_Ch3.mainloop:
 	rest 3
 	note F_, 1
 	rest 1
-	sound_call gbs_azaleatown_Ch3.sub2
+	sound_call gbs_rg_sevii_45_Ch3.sub2
 	octave 2
 	note As, 2
 	octave 3
@@ -530,9 +530,9 @@ gbs_azaleatown_Ch3.mainloop:
 	note B_, 1
 	octave 3
 	note C_, 1
-	sound_loop 0, gbs_azaleatown_Ch3.mainloop
+	sound_loop 0, gbs_rg_sevii_45_Ch3.mainloop
 
-gbs_azaleatown_Ch3.sub1:
+gbs_rg_sevii_45_Ch3.sub1:
 	note Cs, 1
 	rest 5
 	note Cs, 1
@@ -605,7 +605,7 @@ gbs_azaleatown_Ch3.sub1:
 	rest 1
 	sound_ret
 
-gbs_azaleatown_Ch3.sub2:
+gbs_rg_sevii_45_Ch3.sub2:
 	volume_envelope 3, 5
 	octave 3
 	note F_, 1
@@ -627,12 +627,12 @@ gbs_azaleatown_Ch3.sub2:
 	rest 1
 	sound_ret
 
-gbs_azaleatown_Ch4:
+gbs_rg_sevii_45_Ch4:
 	gbs_switch 3
 	toggle_noise 3
 	drum_speed 12
 	drum_note 6, 2
-gbs_azaleatown_Ch4.mainloop:
+gbs_rg_sevii_45_Ch4.mainloop:
 	drum_note 4, 2
 	drum_note 7, 2
 	drum_note 3, 2
@@ -654,10 +654,10 @@ gbs_azaleatown_Ch4.mainloop:
 	drum_note 4, 2
 	drum_note 3, 2
 	drum_note 7, 2
-	sound_loop 0, gbs_azaleatown_Ch4.mainloop
+	sound_loop 0, gbs_rg_sevii_45_Ch4.mainloop
 
 	.align 4
-gbs_azaleatown:
+gbs_rg_sevii_45:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -665,7 +665,7 @@ gbs_azaleatown:
 
 	.int voicegroup000
 
-	.int gbs_azaleatown_Ch1
-	.int gbs_azaleatown_Ch2
-	.int gbs_azaleatown_Ch3
-	.int gbs_azaleatown_Ch4
+	.int gbs_rg_sevii_45_Ch1
+	.int gbs_rg_sevii_45_Ch2
+	.int gbs_rg_sevii_45_Ch3
+	.int gbs_rg_sevii_45_Ch4

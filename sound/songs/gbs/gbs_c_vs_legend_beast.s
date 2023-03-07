@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_suicunebattle
+	.global gbs_c_vs_legend_beast
 	.align 1
 
-gbs_suicunebattle_Ch1:
+gbs_c_vs_legend_beast_Ch1:
 	gbs_switch 0
 	tempo 101
 	volume 7, 7
@@ -96,7 +96,7 @@ gbs_suicunebattle_Ch1:
 	octave 3
 	note E_, 1
 	note Gs, 1
-gbs_suicunebattle_Ch1.mainloop:
+gbs_c_vs_legend_beast_Ch1.mainloop:
 	note_type 12, 11, 4
 	octave 2
 	note A_, 2
@@ -511,9 +511,9 @@ gbs_suicunebattle_Ch1.mainloop:
 	note A_, 16
 	vibrato 18, 1, 5
 	duty_cycle 3
-	sound_loop 0, gbs_suicunebattle_Ch1.mainloop
+	sound_loop 0, gbs_c_vs_legend_beast_Ch1.mainloop
 
-gbs_suicunebattle_Ch2:
+gbs_c_vs_legend_beast_Ch2:
 	gbs_switch 1
 	duty_cycle 3
 	vibrato 20, 3, 4
@@ -592,7 +592,7 @@ gbs_suicunebattle_Ch2:
 	note E_, 8
 	note E_, 8
 	note E_, 4
-gbs_suicunebattle_Ch2.mainloop:
+gbs_c_vs_legend_beast_Ch2.mainloop:
 	note_type 12, 12, 7
 	octave 3
 	note A_, 8
@@ -1187,9 +1187,9 @@ gbs_suicunebattle_Ch2.mainloop:
 	note E_, 2
 	note A_, 2
 	note B_, 2
-	sound_loop 0, gbs_suicunebattle_Ch2.mainloop
+	sound_loop 0, gbs_c_vs_legend_beast_Ch2.mainloop
 
-gbs_suicunebattle_Ch3:
+gbs_c_vs_legend_beast_Ch3:
 	gbs_switch 2
 	note_type 12, 1, 8
 	rest 16
@@ -1283,7 +1283,7 @@ gbs_suicunebattle_Ch3:
 	note D_, 2
 	note E_, 2
 	note_type 12, 1, 6
-gbs_suicunebattle_Ch3.mainloop:
+gbs_c_vs_legend_beast_Ch3.mainloop:
 	octave 1
 	note A_, 2
 	octave 2
@@ -2057,10 +2057,10 @@ gbs_suicunebattle_Ch3.mainloop:
 	note E_, 2
 	note D_, 2
 	note E_, 2
-	sound_loop 0, gbs_suicunebattle_Ch3.mainloop
+	sound_loop 0, gbs_c_vs_legend_beast_Ch3.mainloop
 
 	.align 4
-gbs_suicunebattle:
+gbs_c_vs_legend_beast:
 	.byte 3	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -2068,6 +2068,6 @@ gbs_suicunebattle:
 
 	.int voicegroup000
 
-	.int gbs_suicunebattle_Ch1
-	.int gbs_suicunebattle_Ch2
-	.int gbs_suicunebattle_Ch3
+	.int gbs_c_vs_legend_beast_Ch1
+	.int gbs_c_vs_legend_beast_Ch2
+	.int gbs_c_vs_legend_beast_Ch3

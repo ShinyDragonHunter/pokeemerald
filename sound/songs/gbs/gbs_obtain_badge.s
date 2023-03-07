@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_getbadge
+	.global gbs_obtain_badge
 	.align 1
 
-gbs_getbadge_Ch5:
+gbs_obtain_badge_Ch5:
 	gbs_switch 4
 	toggle_sfx
 	tempo 120
@@ -14,17 +14,17 @@ gbs_getbadge_Ch5:
 	note_type 6, 9, 2
 	octave 4
 	note F_, 3
-	sound_call gbs_getbadge_Ch5.sub1
+	sound_call gbs_obtain_badge_Ch5.sub1
 	note As, 3
 	transpose 0, 2
-	sound_call gbs_getbadge_Ch5.sub1
+	sound_call gbs_obtain_badge_Ch5.sub1
 	transpose 0, 0
 	volume_envelope 10, 7
 	note A_, 16
 	rest 6
 	sound_ret
 
-gbs_getbadge_Ch5.sub1:
+gbs_obtain_badge_Ch5.sub1:
 	rest 5
 	octave 3
 	note F_, 2
@@ -46,7 +46,7 @@ gbs_getbadge_Ch5.sub1:
 	note F_, 2
 	sound_ret
 
-gbs_getbadge_Ch6:
+gbs_obtain_badge_Ch6:
 	gbs_switch 5
 	toggle_sfx
 	duty_cycle 3
@@ -94,7 +94,7 @@ gbs_getbadge_Ch6:
 	rest 6
 	sound_ret
 
-gbs_getbadge_Ch7:
+gbs_obtain_badge_Ch7:
 	gbs_switch 6
 	toggle_sfx
 	note_type 6, 2, 5
@@ -132,12 +132,12 @@ gbs_getbadge_Ch7:
 	rest 6
 	sound_ret
 
-gbs_getbadge_Ch8:
+gbs_obtain_badge_Ch8:
 	gbs_switch 7
 	toggle_sfx
 	sfx_toggle_noise 4
 	drum_speed 6
-gbs_getbadge_Ch8.loop1:
+gbs_obtain_badge_Ch8.loop1:
 	note B_, 12
 	note D_, 1
 	note D_, 1
@@ -152,13 +152,13 @@ gbs_getbadge_Ch8.loop1:
 	note Cs, 1
 	note Cs, 1
 	note Cs, 1
-	sound_loop 2, gbs_getbadge_Ch8.loop1
+	sound_loop 2, gbs_obtain_badge_Ch8.loop1
 	note B_, 16
 	rest 6
 	sound_ret
 
 	.align 4
-gbs_getbadge:
+gbs_obtain_badge:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -166,7 +166,7 @@ gbs_getbadge:
 
 	.int voicegroup000
 
-	.int gbs_getbadge_Ch5
-	.int gbs_getbadge_Ch6
-	.int gbs_getbadge_Ch7
-	.int gbs_getbadge_Ch8
+	.int gbs_obtain_badge_Ch5
+	.int gbs_obtain_badge_Ch6
+	.int gbs_obtain_badge_Ch7
+	.int gbs_obtain_badge_Ch8

@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_lakeofrage
+	.global gbs_rg_sevii_route
 	.align 1
 
-gbs_lakeofrage_Ch1:
+gbs_rg_sevii_route_Ch1:
 	gbs_switch 0
 	tempo 144
 	volume 7, 7
@@ -19,7 +19,7 @@ gbs_lakeofrage_Ch1:
 	note D_, 6
 	note D_, 6
 	note E_, 4
-gbs_lakeofrage_Ch1.mainloop:
+gbs_rg_sevii_route_Ch1.mainloop:
 	volume_envelope 11, 5
 	note Fs, 6
 	note E_, 6
@@ -92,9 +92,9 @@ gbs_lakeofrage_Ch1.mainloop:
 	note D_, 6
 	volume_envelope 10, 7
 	note D_, 6
-	sound_loop 0, gbs_lakeofrage_Ch1.mainloop
+	sound_loop 0, gbs_rg_sevii_route_Ch1.mainloop
 
-gbs_lakeofrage_Ch2:
+gbs_rg_sevii_route_Ch2:
 	gbs_switch 1
 	duty_cycle 3
 	vibrato 32, 4, 4
@@ -108,7 +108,7 @@ gbs_lakeofrage_Ch2:
 	note A_, 8
 	volume_envelope 10, 7
 	note A_, 8
-gbs_lakeofrage_Ch2.mainloop:
+gbs_rg_sevii_route_Ch2.mainloop:
 	note_type 8, 12, 7
 	octave 4
 	note D_, 16
@@ -182,9 +182,9 @@ gbs_lakeofrage_Ch2.mainloop:
 	note Fs, 4
 	note_type 12, 12, 7
 	note A_, 16
-	sound_loop 0, gbs_lakeofrage_Ch2.mainloop
+	sound_loop 0, gbs_rg_sevii_route_Ch2.mainloop
 
-gbs_lakeofrage_Ch3:
+gbs_rg_sevii_route_Ch3:
 	gbs_switch 2
 	stereo_panning FALSE, TRUE
 	note_type 12, 1, 6
@@ -198,7 +198,7 @@ gbs_lakeofrage_Ch3:
 	note Fs, 4
 	rest 2
 	note E_, 4
-gbs_lakeofrage_Ch3.mainloop:
+gbs_rg_sevii_route_Ch3.mainloop:
 	octave 3
 	note D_, 4
 	octave 2
@@ -296,14 +296,14 @@ gbs_lakeofrage_Ch3.mainloop:
 	note D_, 2
 	octave 2
 	note A_, 2
-	sound_loop 0, gbs_lakeofrage_Ch3.mainloop
+	sound_loop 0, gbs_rg_sevii_route_Ch3.mainloop
 
-gbs_lakeofrage_Ch4:
+gbs_rg_sevii_route_Ch4:
 	gbs_switch 3
 	stereo_panning TRUE, FALSE
 	toggle_noise 3
 	drum_speed 12
-gbs_lakeofrage_Ch4.mainloop:
+gbs_rg_sevii_route_Ch4.mainloop:
 	drum_note 3, 2
 	drum_note 3, 1
 	drum_note 3, 1
@@ -323,10 +323,10 @@ gbs_lakeofrage_Ch4.mainloop:
 	drum_note 3, 1
 	drum_note 3, 1
 	drum_note 3, 1
-	sound_loop 0, gbs_lakeofrage_Ch4.mainloop
+	sound_loop 0, gbs_rg_sevii_route_Ch4.mainloop
 
 	.align 4
-gbs_lakeofrage:
+gbs_rg_sevii_route:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -334,7 +334,7 @@ gbs_lakeofrage:
 
 	.int voicegroup000
 
-	.int gbs_lakeofrage_Ch1
-	.int gbs_lakeofrage_Ch2
-	.int gbs_lakeofrage_Ch3
-	.int gbs_lakeofrage_Ch4
+	.int gbs_rg_sevii_route_Ch1
+	.int gbs_rg_sevii_route_Ch2
+	.int gbs_rg_sevii_route_Ch3
+	.int gbs_rg_sevii_route_Ch4

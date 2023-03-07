@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_TrainerBattle
+	.global gbs_rg_vs_trainer
 	.align 1
 
-gbs_TrainerBattle_Ch1:
+gbs_rg_vs_trainer_Ch1:
 	gbs_switch 0
 	tempo 112
 	volume 7, 7
@@ -73,7 +73,7 @@ gbs_TrainerBattle_Ch1:
 	note C_, 2
 	note Cs, 2
 
-gbs_TrainerBattle_branch_22962:
+gbs_rg_vs_trainer_branch_22962:
 	note_type 12, 11, 5
 	note D_, 2
 	note E_, 4
@@ -653,10 +653,10 @@ gbs_TrainerBattle_branch_22962:
 	note Gs, 1
 	note A_, 1
 	note As, 1
-	sound_loop 0, gbs_TrainerBattle_branch_22962
+	sound_loop 0, gbs_rg_vs_trainer_branch_22962
 
 
-gbs_TrainerBattle_Ch2:
+gbs_rg_vs_trainer_Ch2:
 	gbs_switch 1
 	duty_cycle 3
 	vibrato 10, 2, 5
@@ -730,7 +730,7 @@ gbs_TrainerBattle_Ch2:
 	octave 4
 	note A_, 4
 
-gbs_TrainerBattle_branch_22bfc:
+gbs_rg_vs_trainer_branch_22bfc:
 	note_type 12, 12, 7
 	octave 3
 	note B_, 6
@@ -958,10 +958,10 @@ gbs_TrainerBattle_branch_22bfc:
 	note C_, 16
 	note E_, 8
 	note G_, 8
-	sound_loop 0, gbs_TrainerBattle_branch_22bfc
+	sound_loop 0, gbs_rg_vs_trainer_branch_22bfc
 
 
-gbs_TrainerBattle_Ch3:
+gbs_rg_vs_trainer_Ch3:
 	gbs_switch 2
 	vibrato 0, 2, 0
 	note_type 12, 1, 4
@@ -1101,7 +1101,7 @@ gbs_TrainerBattle_Ch3:
 	octave 3
 	note C_, 2
 
-gbs_TrainerBattle_branch_22d9c:
+gbs_rg_vs_trainer_branch_22d9c:
 	octave 2
 	note As, 1
 	note B_, 1
@@ -1863,10 +1863,10 @@ gbs_TrainerBattle_branch_22d9c:
 	note E_, 2
 	note D_, 2
 	note C_, 2
-	sound_loop 0, gbs_TrainerBattle_branch_22d9c
+	sound_loop 0, gbs_rg_vs_trainer_branch_22d9c
 
 	.align 4
-gbs_TrainerBattle:
+gbs_rg_vs_trainer:
 	.byte 3	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -1874,6 +1874,6 @@ gbs_TrainerBattle:
 
 	.int voicegroup000
 
-	.int gbs_TrainerBattle_Ch1
-	.int gbs_TrainerBattle_Ch2
-	.int gbs_TrainerBattle_Ch3
+	.int gbs_rg_vs_trainer_Ch1
+	.int gbs_rg_vs_trainer_Ch2
+	.int gbs_rg_vs_trainer_Ch3

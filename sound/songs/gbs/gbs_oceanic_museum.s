@@ -1,7 +1,7 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_OceanicMuseum
+	.global gbs_oceanic_museum
 	.align 1
 
 @ Pokémon R/S/E - Oceanic Museum (G/S/C version)
@@ -9,7 +9,7 @@
 @ https://github.com/TwitchPlaysPokemon/tppcrystal251pub/blob/public/audio/music/custom/ssanne.asm
 @ https://pigu-a.bandcamp.com/album/pok-mon-anniversary-crystal-pigus-arranges
 
-gbs_OceanicMuseum_Ch1:
+gbs_oceanic_museum_Ch1:
 	gbs_switch 0
 @ Pat 0 Row 0
 	tempo 213
@@ -106,7 +106,7 @@ gbs_OceanicMuseum_Ch1:
 @ Pat 2 Row 0
 	note_type 8, 8, 3
 	note D_, 6
-gbs_OceanicMuseum_Ch1_L:
+gbs_oceanic_museum_Ch1_L:
 	duty_cycle 3
 	volume_envelope 13, 6
 	octave 3
@@ -302,10 +302,10 @@ gbs_OceanicMuseum_Ch1_L:
 	note Fs, 2
 	note E_, 12
 	rest 6
-	sound_loop 0, gbs_OceanicMuseum_Ch1_L
+	sound_loop 0, gbs_oceanic_museum_Ch1_L
 
 
-gbs_OceanicMuseum_Ch2:
+gbs_oceanic_museum_Ch2:
 	gbs_switch 1
 @ Pat 0 Row 0
 	duty_cycle 1
@@ -349,7 +349,7 @@ gbs_OceanicMuseum_Ch2:
 	note Cs, 8
 @ Pat 2 Row 0
 	note_type 8, 13, 6
-gbs_OceanicMuseum_Ch2_L:
+gbs_oceanic_museum_Ch2_L:
 	note D_, 3
 	octave 3
 	note A_, 3
@@ -570,13 +570,14 @@ gbs_OceanicMuseum_Ch2_L:
 	duty_cycle 1
 	volume_envelope 13, 6
 	vibrato 0, 0, 0
-	sound_loop 0, gbs_OceanicMuseum_Ch2_L
+	sound_loop 0, gbs_oceanic_museum_Ch2_L
 
 
-gbs_OceanicMuseum_Ch3:
+gbs_oceanic_museum_Ch3:
 	gbs_switch 2
 @ Pat 0 Row 0
 	note_type 12, 1, 3
+	stereo_panning TRUE, TRUE
 	octave 3
 	note D_, 6
 	rest 4
@@ -611,7 +612,7 @@ gbs_OceanicMuseum_Ch3:
 	note A_, 16
 	note_type 12, 1, 3
 	rest 16
-gbs_OceanicMuseum_Ch3_L:
+gbs_oceanic_museum_Ch3_L:
 @ Pat 2 Row 0
 	note_type 8, 1, 3
 	note D_, 12
@@ -836,31 +837,33 @@ gbs_OceanicMuseum_Ch3_L:
 	rest 2
 	octave 2
 	note Cs, 2
-	sound_loop 0, gbs_OceanicMuseum_Ch3_L
+	sound_loop 0, gbs_oceanic_museum_Ch3_L
 
-gbs_OceanicMuseum_Ch4:
+
+gbs_oceanic_museum_Ch4:
 	gbs_switch 3
 	drum_speed 12
 	toggle_noise 3
-gbs_OceanicMuseum_Ch4_L1:
+	stereo_panning TRUE, TRUE
+gbs_oceanic_museum_Ch4_L1:
 	rest 9
-	sound_loop 6, gbs_OceanicMuseum_Ch4_L1 @ 54 rows
+	sound_loop 6, gbs_oceanic_museum_Ch4_L1 @ 54 rows
 	drum_speed 8
 	rest 16
 	drum_speed 12
 	rest 16
-gbs_OceanicMuseum_Ch4_L:
+gbs_oceanic_museum_Ch4_L:
 	rest 16
-	sound_loop 12, gbs_OceanicMuseum_Ch4_L @ 6 pats
+	sound_loop 12, gbs_oceanic_museum_Ch4_L @ 6 pats
 @ Pat 14 Row 0
 	drum_speed 6
-gbs_OceanicMuseum_Ch4_L2:
+gbs_oceanic_museum_Ch4_L2:
 	rest 8
 	drum_note 9, 2
 	drum_note 9, 2
 	drum_note 8, 2
 	drum_note 8, 2
-	sound_loop 4, gbs_OceanicMuseum_Ch4_L2
+	sound_loop 4, gbs_oceanic_museum_Ch4_L2
 @ Pat 15 Row 0
 	drum_note 9, 2
 	drum_note 9, 2
@@ -976,10 +979,10 @@ gbs_OceanicMuseum_Ch4_L2:
 	drum_note 4, 2
 	drum_note 1, 8
 	drum_speed 12
-	sound_loop 0, gbs_OceanicMuseum_Ch4_L
+	sound_loop 0, gbs_oceanic_museum_Ch4_L
 
 	.align 4
-gbs_OceanicMuseum:
+gbs_oceanic_museum:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -987,7 +990,7 @@ gbs_OceanicMuseum:
 
 	.int voicegroup000
 
-	.int gbs_OceanicMuseum_Ch1
-	.int gbs_OceanicMuseum_Ch2
-	.int gbs_OceanicMuseum_Ch3
-	.int gbs_OceanicMuseum_Ch4
+	.int gbs_oceanic_museum_Ch1
+	.int gbs_oceanic_museum_Ch2
+	.int gbs_oceanic_museum_Ch3
+	.int gbs_oceanic_museum_Ch4

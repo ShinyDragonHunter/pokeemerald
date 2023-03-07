@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_violetcity
+	.global gbs_rg_sevii_67
 	.align 1
 
-gbs_violetcity_Ch1:
+gbs_rg_sevii_67_Ch1:
 	gbs_switch 0
 	tempo 164
 	volume 7, 7
@@ -65,7 +65,7 @@ gbs_violetcity_Ch1:
 	octave 3
 	note Cs, 12
 	rest 8
-gbs_violetcity_Ch1.mainloop:
+gbs_rg_sevii_67_Ch1.mainloop:
 	note_type 6, 9, 5
 	rest 4
 	octave 2
@@ -295,9 +295,9 @@ gbs_violetcity_Ch1.mainloop:
 	octave 4
 	note Cs, 4
 	rest 4
-	sound_loop 0, gbs_violetcity_Ch1.mainloop
+	sound_loop 0, gbs_rg_sevii_67_Ch1.mainloop
 
-gbs_violetcity_Ch2:
+gbs_rg_sevii_67_Ch2:
 	gbs_switch 1
 	vibrato 18, 2, 4
 	duty_cycle 2
@@ -349,7 +349,7 @@ gbs_violetcity_Ch2:
 	rest 2
 	note Ds, 1
 	note E_, 1
-gbs_violetcity_Ch2.mainloop:
+gbs_rg_sevii_67_Ch2.mainloop:
 	volume_envelope 11, 7
 	note Fs, 4
 	rest 2
@@ -502,9 +502,9 @@ gbs_violetcity_Ch2.mainloop:
 	rest 2
 	note Ds, 1
 	note E_, 1
-	sound_loop 0, gbs_violetcity_Ch2.mainloop
+	sound_loop 0, gbs_rg_sevii_67_Ch2.mainloop
 
-gbs_violetcity_Ch3:
+gbs_rg_sevii_67_Ch3:
 	gbs_switch 2
 	note_type 12, 2, 5
 	rest 16
@@ -530,7 +530,7 @@ gbs_violetcity_Ch3:
 	note Fs, 2
 	octave 2
 	note As, 2
-gbs_violetcity_Ch3.mainloop:
+gbs_rg_sevii_67_Ch3.mainloop:
 	note_type 12, 2, 5
 	note B_, 1
 	rest 5
@@ -626,7 +626,7 @@ gbs_violetcity_Ch3.mainloop:
 	note B_, 2
 	rest 2
 	note A_, 8
-	sound_call gbs_violetcity_Ch3.sub1
+	sound_call gbs_rg_sevii_67_Ch3.sub1
 	note Fs, 2
 	rest 10
 	note B_, 2
@@ -636,7 +636,7 @@ gbs_violetcity_Ch3.mainloop:
 	note As, 8
 	note A_, 2
 	rest 2
-	sound_call gbs_violetcity_Ch3.sub1
+	sound_call gbs_rg_sevii_67_Ch3.sub1
 	note Fs, 2
 	rest 10
 	note B_, 2
@@ -691,9 +691,9 @@ gbs_violetcity_Ch3.mainloop:
 	rest 4
 	octave 2
 	note As, 4
-	sound_loop 0, gbs_violetcity_Ch3.mainloop
+	sound_loop 0, gbs_rg_sevii_67_Ch3.mainloop
 
-gbs_violetcity_Ch3.sub1:
+gbs_rg_sevii_67_Ch3.sub1:
 	note G_, 2
 	rest 10
 	note G_, 2
@@ -708,7 +708,7 @@ gbs_violetcity_Ch3.sub1:
 	note A_, 4
 	sound_ret
 
-gbs_violetcity_Ch4:
+gbs_rg_sevii_67_Ch4:
 	gbs_switch 3
 	toggle_noise 3
 	drum_speed 12
@@ -719,35 +719,35 @@ gbs_violetcity_Ch4:
 	drum_note 3, 2
 	drum_note 3, 4
 	drum_note 7, 4
-	sound_call gbs_violetcity_Ch4.sub1
-	sound_call gbs_violetcity_Ch4.sub1
-	sound_call gbs_violetcity_Ch4.sub1
+	sound_call gbs_rg_sevii_67_Ch4.sub1
+	sound_call gbs_rg_sevii_67_Ch4.sub1
+	sound_call gbs_rg_sevii_67_Ch4.sub1
 	drum_note 3, 2
 	drum_note 4, 1
 	drum_note 4, 1
 	drum_note 3, 2
 	drum_note 1, 8
 	drum_note 4, 2
-gbs_violetcity_Ch4.mainloop:
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_call gbs_violetcity_Ch4.sub2
-	sound_loop 0, gbs_violetcity_Ch4.mainloop
+gbs_rg_sevii_67_Ch4.mainloop:
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_call gbs_rg_sevii_67_Ch4.sub2
+	sound_loop 0, gbs_rg_sevii_67_Ch4.mainloop
 
-gbs_violetcity_Ch4.sub1:
+gbs_rg_sevii_67_Ch4.sub1:
 	drum_note 3, 1
 	drum_note 3, 1
 	drum_note 4, 1
@@ -763,7 +763,7 @@ gbs_violetcity_Ch4.sub1:
 	drum_note 8, 1
 	sound_ret
 
-gbs_violetcity_Ch4.sub2:
+gbs_rg_sevii_67_Ch4.sub2:
 	drum_note 4, 2
 	drum_note 8, 1
 	drum_note 8, 1
@@ -778,7 +778,7 @@ gbs_violetcity_Ch4.sub2:
 	sound_ret
 
 	.align 4
-gbs_violetcity:
+gbs_rg_sevii_67:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -786,7 +786,7 @@ gbs_violetcity:
 
 	.int voicegroup000
 
-	.int gbs_violetcity_Ch1
-	.int gbs_violetcity_Ch2
-	.int gbs_violetcity_Ch3
-	.int gbs_violetcity_Ch4
+	.int gbs_rg_sevii_67_Ch1
+	.int gbs_rg_sevii_67_Ch2
+	.int gbs_rg_sevii_67_Ch3
+	.int gbs_rg_sevii_67_Ch4

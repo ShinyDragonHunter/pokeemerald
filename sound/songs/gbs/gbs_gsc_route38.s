@@ -1,10 +1,10 @@
 	.include "asm/macros.inc"
 
 	.section .rodata
-	.global gbs_route37
+	.global gbs_gsc_route38
 	.align 1
 
-gbs_route37_Ch1:
+gbs_gsc_route38_Ch1:
 	gbs_switch 0
 	tempo 144
 	volume 7, 7
@@ -14,7 +14,7 @@ gbs_route37_Ch1:
 	note_type 12, 11, 3
 	rest 16
 	rest 16
-gbs_route37_Ch1.mainloop:
+gbs_gsc_route38_Ch1.mainloop:
 	volume_envelope 11, 3
 	rest 2
 	octave 2
@@ -68,37 +68,37 @@ gbs_route37_Ch1.mainloop:
 	note E_, 2
 	note Ds, 4
 	stereo_panning FALSE, TRUE
-gbs_route37_Ch1.loop1:
-	sound_call gbs_route37_Ch1.sub1
+gbs_gsc_route38_Ch1.loop1:
+	sound_call gbs_gsc_route38_Ch1.sub1
 	octave 3
 	note Cs, 4
-	sound_loop 2, gbs_route37_Ch1.loop1
-	sound_call gbs_route37_Ch1.sub2
+	sound_loop 2, gbs_gsc_route38_Ch1.loop1
+	sound_call gbs_gsc_route38_Ch1.sub2
 	octave 3
 	note Fs, 4
-	sound_call gbs_route37_Ch1.sub2
+	sound_call gbs_gsc_route38_Ch1.sub2
 	octave 3
 	note Fs, 4
-	sound_call gbs_route37_Ch1.sub1
+	sound_call gbs_gsc_route38_Ch1.sub1
 	octave 3
 	note E_, 4
-	sound_call gbs_route37_Ch1.sub1
+	sound_call gbs_gsc_route38_Ch1.sub1
 	octave 3
 	note Gs, 4
-	sound_call gbs_route37_Ch1.sub2
+	sound_call gbs_gsc_route38_Ch1.sub2
 	octave 4
 	note Ds, 4
-	sound_call gbs_route37_Ch1.sub2
+	sound_call gbs_gsc_route38_Ch1.sub2
 	octave 3
 	note F_, 4
 	stereo_panning TRUE, TRUE
-	sound_call gbs_route37_Ch1.sub2
+	sound_call gbs_gsc_route38_Ch1.sub2
 	rest 4
-	sound_call gbs_route37_Ch1.sub2
+	sound_call gbs_gsc_route38_Ch1.sub2
 	rest 4
-	sound_loop 0, gbs_route37_Ch1.mainloop
+	sound_loop 0, gbs_gsc_route38_Ch1.mainloop
 
-gbs_route37_Ch1.sub1:
+gbs_gsc_route38_Ch1.sub1:
 	volume_envelope 12, 2
 	octave 2
 	note A_, 2
@@ -113,7 +113,7 @@ gbs_route37_Ch1.sub1:
 	volume_envelope 11, 7
 	sound_ret
 
-gbs_route37_Ch1.sub2:
+gbs_gsc_route38_Ch1.sub2:
 	volume_envelope 12, 2
 	octave 2
 	note B_, 2
@@ -128,7 +128,7 @@ gbs_route37_Ch1.sub2:
 	volume_envelope 11, 7
 	sound_ret
 
-gbs_route37_Ch2:
+gbs_gsc_route38_Ch2:
 	gbs_switch 1
 	duty_cycle 3
 	vibrato 28, 1, 2
@@ -160,8 +160,8 @@ gbs_route37_Ch2:
 	note B_, 1
 	volume_envelope 12, 2
 	note B_, 2
-gbs_route37_Ch2.mainloop:
-	sound_call gbs_route37_Ch2.sub1
+gbs_gsc_route38_Ch2.mainloop:
+	sound_call gbs_gsc_route38_Ch2.sub1
 	volume_envelope 12, 6
 	octave 4
 	note Cs, 4
@@ -175,7 +175,7 @@ gbs_route37_Ch2.mainloop:
 	note Fs, 8
 	volume_envelope 12, 7
 	note Ds, 12
-	sound_call gbs_route37_Ch2.sub1
+	sound_call gbs_gsc_route38_Ch2.sub1
 	volume_envelope 12, 7
 	octave 4
 	note Cs, 4
@@ -271,9 +271,9 @@ gbs_route37_Ch2.mainloop:
 	note Fs, 1
 	volume_envelope 12, 2
 	note Fs, 2
-	sound_loop 0, gbs_route37_Ch2.mainloop
+	sound_loop 0, gbs_gsc_route38_Ch2.mainloop
 
-gbs_route37_Ch2.sub1:
+gbs_gsc_route38_Ch2.sub1:
 	volume_envelope 12, 7
 	octave 3
 	note Fs, 4
@@ -287,17 +287,17 @@ gbs_route37_Ch2.sub1:
 	note B_, 2
 	sound_ret
 
-gbs_route37_Ch3:
+gbs_gsc_route38_Ch3:
 	gbs_switch 2
 	stereo_panning TRUE, FALSE
 	note_type 12, 1, 4
-gbs_route37_Ch3.loop1:
+gbs_gsc_route38_Ch3.loop1:
 	octave 2
 	note Fs, 2
 	rest 6
-	sound_loop 4, gbs_route37_Ch3.loop1
-gbs_route37_Ch3.mainloop:
-	sound_call gbs_route37_Ch3.sub1
+	sound_loop 4, gbs_gsc_route38_Ch3.loop1
+gbs_gsc_route38_Ch3.mainloop:
+	sound_call gbs_gsc_route38_Ch3.sub1
 	note A_, 2
 	octave 3
 	note Cs, 2
@@ -308,12 +308,12 @@ gbs_route37_Ch3.mainloop:
 	note A_, 2
 	note Fs, 2
 	note E_, 2
-gbs_route37_Ch3.loop2:
+gbs_gsc_route38_Ch3.loop2:
 	note Ds, 2
 	note Fs, 2
-	sound_loop 4, gbs_route37_Ch3.loop2
-	sound_call gbs_route37_Ch3.sub1
-	sound_call gbs_route37_Ch3.sub1
+	sound_loop 4, gbs_gsc_route38_Ch3.loop2
+	sound_call gbs_gsc_route38_Ch3.sub1
+	sound_call gbs_gsc_route38_Ch3.sub1
 	note A_, 2
 	octave 3
 	note Cs, 2
@@ -326,45 +326,45 @@ gbs_route37_Ch3.loop2:
 	note Cs, 2
 	octave 2
 	note A_, 2
-	sound_call gbs_route37_Ch3.sub1
-gbs_route37_Ch3.loop3:
+	sound_call gbs_gsc_route38_Ch3.sub1
+gbs_gsc_route38_Ch3.loop3:
 	octave 2
 	note B_, 2
 	octave 3
 	note Ds, 2
-	sound_loop 4, gbs_route37_Ch3.loop3
-gbs_route37_Ch3.loop4:
+	sound_loop 4, gbs_gsc_route38_Ch3.loop3
+gbs_gsc_route38_Ch3.loop4:
 	octave 2
 	note A_, 2
 	octave 3
 	note Cs, 2
-	sound_loop 7, gbs_route37_Ch3.loop4
+	sound_loop 7, gbs_gsc_route38_Ch3.loop4
 	note E_, 2
 	note Cs, 2
-	sound_call gbs_route37_Ch3.sub2
-gbs_route37_Ch3.loop5:
+	sound_call gbs_gsc_route38_Ch3.sub2
+gbs_gsc_route38_Ch3.loop5:
 	octave 2
 	note B_, 2
 	octave 3
 	note Fs, 2
-	sound_loop 4, gbs_route37_Ch3.loop5
-gbs_route37_Ch3.loop6:
+	sound_loop 4, gbs_gsc_route38_Ch3.loop5
+gbs_gsc_route38_Ch3.loop6:
 	octave 2
 	note A_, 2
 	octave 3
 	note Cs, 2
-	sound_loop 7, gbs_route37_Ch3.loop6
+	sound_loop 7, gbs_gsc_route38_Ch3.loop6
 	note E_, 2
 	note Cs, 2
-	sound_call gbs_route37_Ch3.sub2
-	sound_call gbs_route37_Ch3.sub1
-gbs_route37_Ch3.loop7:
+	sound_call gbs_gsc_route38_Ch3.sub2
+	sound_call gbs_gsc_route38_Ch3.sub1
+gbs_gsc_route38_Ch3.loop7:
 	note Fs, 2
 	rest 6
-	sound_loop 4, gbs_route37_Ch3.loop7
-	sound_loop 0, gbs_route37_Ch3.mainloop
+	sound_loop 4, gbs_gsc_route38_Ch3.loop7
+	sound_loop 0, gbs_gsc_route38_Ch3.mainloop
 
-gbs_route37_Ch3.sub1:
+gbs_gsc_route38_Ch3.sub1:
 	octave 2
 	note Fs, 2
 	note B_, 2
@@ -376,7 +376,7 @@ gbs_route37_Ch3.sub1:
 	note B_, 2
 	sound_ret
 
-gbs_route37_Ch3.sub2:
+gbs_gsc_route38_Ch3.sub2:
 	octave 2
 	note B_, 2
 	octave 3
@@ -395,18 +395,18 @@ gbs_route37_Ch3.sub2:
 	note Ds, 2
 	sound_ret
 
-gbs_route37_Ch4:
+gbs_gsc_route38_Ch4:
 	gbs_switch 3
 	stereo_panning FALSE, TRUE
 	toggle_noise 0
-gbs_route37_Ch4.mainloop:
+gbs_gsc_route38_Ch4.mainloop:
 	drum_speed 12
-	sound_call gbs_route37_Ch4.sub1
+	sound_call gbs_gsc_route38_Ch4.sub1
 	drum_note 3, 1
 	drum_note 4, 1
 	drum_note 4, 1
 	drum_note 3, 1
-	sound_call gbs_route37_Ch4.sub1
+	sound_call gbs_gsc_route38_Ch4.sub1
 	drum_speed 6
 	drum_note 4, 1
 	drum_note 4, 1
@@ -416,9 +416,9 @@ gbs_route37_Ch4.mainloop:
 	drum_note 3, 1
 	drum_note 3, 1
 	drum_note 3, 1
-	sound_loop 0, gbs_route37_Ch4.mainloop
+	sound_loop 0, gbs_gsc_route38_Ch4.mainloop
 
-gbs_route37_Ch4.sub1:
+gbs_gsc_route38_Ch4.sub1:
 	drum_note 3, 2
 	drum_note 4, 1
 	drum_note 4, 1
@@ -431,7 +431,7 @@ gbs_route37_Ch4.sub1:
 	sound_ret
 
 	.align 4
-gbs_route37:
+gbs_gsc_route38:
 	.byte 4	@ NumTrks
 	.byte 0	@ NumBlks
 	.byte 0	@ Priority
@@ -439,7 +439,7 @@ gbs_route37:
 
 	.int voicegroup000
 
-	.int gbs_route37_Ch1
-	.int gbs_route37_Ch2
-	.int gbs_route37_Ch3
-	.int gbs_route37_Ch4
+	.int gbs_gsc_route38_Ch1
+	.int gbs_gsc_route38_Ch2
+	.int gbs_gsc_route38_Ch3
+	.int gbs_gsc_route38_Ch4
