@@ -2305,3 +2305,12 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     ResetInitialPlayerAvatarState();
     return TRUE;
 }
+
+bool8 ScrCmd_playtrainervoice(struct ScriptContext *ctx)
+{
+    u16 trainer = VarGet(ScriptReadHalfword(ctx));
+    u8 voiceLine = ScriptReadByte(ctx);
+
+    PlayTrainerVoice(trainer, voiceLine);
+    return FALSE;
+}

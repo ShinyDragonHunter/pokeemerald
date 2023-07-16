@@ -1548,10 +1548,12 @@
 	.byte \color
 	.endm
 
-	@ Used only in FireRed/LeafGreen, does nothing in Emerald.
-	.macro loadhelp text:req
+	@ Plays the voice of the given trainer. Voice line is any VOICE_LINE* constant.
+	@ You can use waitmoncry to block script execution until the cry finishes.
+	.macro playtrainervoice trainer:req, voiceLine:req
 	.byte 0xc8
-	.4byte \text
+	.2byte \trainer
+	.byte \voiceLine
 	.endm
 
 	@ Used only in FireRed/LeafGreen, does nothing in Emerald.

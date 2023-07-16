@@ -2173,3 +2173,15 @@ DirectSoundWaveData_sd90_classical_whistle::
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
+
+	.align 2
+Voice_SabrinaIntro::
+	.incbin "sound/direct_sound_samples/voice_lines/sabrina_intro.bin"
+
+	.align 2
+Voice_OakIntro::
+	.incbin "sound/direct_sound_samples/voice_lines/oak_intro.bin"
+
+	.align 2
+Voice_OakGiveItem::
+	.incbin "sound/direct_sound_samples/voice_lines/oak_giveitem.bin"

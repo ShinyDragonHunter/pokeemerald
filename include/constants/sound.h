@@ -45,4 +45,10 @@
 #define CRY_VOLUME    120
 #define CRY_VOLUME_RS 125
 
+#define TRAINER_VOICE_SABRINA 0
+#define TRAINER_VOICE_OAK 1
+
+#define VOICE_LINE_INTRO 0 // Trainer introduces themselves
+#define VOICE_LINE_ITEM 1  // Trainer passing the player something
+
 #endif // GUARD_CONSTANTS_SOUND_H
