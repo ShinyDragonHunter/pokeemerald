@@ -76,6 +76,8 @@ void RunBattleScriptCommands_PopCallbacksStack(void);
 void RunBattleScriptCommands(void);
 bool8 TryRunFromBattle(u8 battlerId);
 void SpecialStatusesClear(void);
+void ModifyPersonalityForNature(u32 *personality, u32 newNature);
+u32 GeneratePersonalityForGender(u32 gender, u32 species);
 
 extern struct MultiPartnerMenuPokemon gMultiPartnerParty[MULTI_PARTY_SIZE];
 

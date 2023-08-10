@@ -129,3 +129,35 @@ Std_MsgboxAutoclose::
 	waitbuttonpress
 	release
 	return
+
+EventScript_MultiBattleChooseMon::
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
+	special ChooseHalfPartyForBattle @ Choose 3 Pokémon
+	waitstate
+	goto_if_ne VAR_RESULT, 0, EventScript_MultiBattleReduceParty
+	special LoadPlayerParty
+	return
+
+EventScript_MultiBattleReduceParty::
+	special ReducePlayerPartyToSelectedMons
+	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER @ Save the party order, so the non-selected Pokémon get restored after
+	goto EventScript_StartMultiTrainerBattle
+
+EventScript_StartMultiBattleSaveParty::
+	special SavePlayerParty
+EventScript_StartMultiTrainerBattle::
+	setvar VAR_0x8004, SPECIAL_BATTLE_MULTI
+	special DoSpecialTrainerBattle
+	waitstate
+	frontier_saveparty
+	special LoadPlayerParty
+	switch VAR_RESULT
+	case B_OUTCOME_LOST, EventScript_MultiBattleWhiteOut
+	return
+
+EventScript_MultiBattleWhiteOut::
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	return

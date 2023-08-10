@@ -3,6 +3,7 @@
 
 #include "constants/opponents.h"
 #include "constants/battle_frontier_trainers.h"
+#include "constants/battle_partners.h"
 
 // Special Trainer Ids.
 //      0-299 are frontier trainers
@@ -14,7 +15,7 @@
 #define TRAINER_SECRET_BASE                 1024
 #define TRAINER_LINK_OPPONENT               2048
 #define TRAINER_UNION_ROOM                  3072
-#define TRAINER_STEVEN_PARTNER              3075
+#define TRAINER_PARTNER(partner)           (3075 + partner)
 
 #define TRAINER_PIC_HIKER                  0
 #define TRAINER_PIC_AQUA_GRUNT_M           1
@@ -374,5 +375,10 @@
 // Pokémon.
 #define F_TRAINER_PARTY_CUSTOM_MOVESET (1 << 0)
 #define F_TRAINER_PARTY_HELD_ITEM      (1 << 1)
+#define F_TRAINER_PARTY_EVERYTHING_CUSTOMIZED (1 << 3)
+
+// Trainer party defines
+#define TRAINER_MON_MALE    1
+#define TRAINER_MON_FEMALE  2
 
 #endif  // GUARD_TRAINERS_H

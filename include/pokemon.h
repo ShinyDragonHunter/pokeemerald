@@ -543,5 +543,7 @@ bool8 HasTwoFramesAnimation(u16 species);
 struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 managerId, u8 mode);
 void DestroyMonSpritesGfxManager(u8 managerId);
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum);
+const u8 *GetTrainerPartnerClassNameFromId(u16 partnerId);
+const u8 *GetTrainerPartnerNameFromId(u16 partnerId);
 
 #endif // GUARD_POKEMON_H

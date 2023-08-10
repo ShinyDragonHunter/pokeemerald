@@ -63,6 +63,8 @@ static bool8 ShouldGetStatBadgeBoost(u16 flagId, u8 battlerId);
 static u16 GiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move);
 static bool8 ShouldSkipFriendshipChange(void);
 static u8 SendMonToPC(struct Pokemon *mon);
+static const u8 *GetTrainerClassName(const struct Trainer *trainer);
+const u8 *GetTrainerName(const struct Trainer *trainer);
 
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
 EWRAM_DATA u8 gPlayerPartyCount = 0;
@@ -6671,15 +6673,8 @@ const u8 *GetTrainerPartnerName(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
     {
-        if (gPartnerTrainerId == TRAINER_STEVEN_PARTNER)
-        {
-            return gTrainers[TRAINER_STEVEN].trainerName;
-        }
-        else
-        {
-            GetFrontierTrainerName(gStringVar1, gPartnerTrainerId);
-            return gStringVar1;
-        }
+        GetFrontierTrainerName(gStringVar1, gPartnerTrainerId);
+        return gStringVar1;
     }
     else
     {
@@ -6896,14 +6891,14 @@ const u8 *GetTrainerClassNameFromId(u16 trainerId)
 {
     if (trainerId >= TRAINERS_COUNT)
         trainerId = TRAINER_NONE;
-    return gTrainerClassNames[gTrainers[trainerId].trainerClass];
+    return GetTrainerClassName(&gTrainers[trainerId]);
 }
 
 const u8 *GetTrainerNameFromId(u16 trainerId)
 {
     if (trainerId >= TRAINERS_COUNT)
         trainerId = TRAINER_NONE;
-    return gTrainers[trainerId].trainerName;
+    return GetTrainerName(&gTrainers[trainerId]);
 }
 
 bool8 HasTwoFramesAnimation(u16 species)
@@ -7103,4 +7098,38 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
 
         return gfx->spritePointers[spriteNum];
     }
+}
+
+static const u8 *GetTrainerClassName(const struct Trainer *trainer)
+{
+    return gTrainerClassNames[trainer->trainerClass];
+}
+
+static const u8 sText_BattleRivalName[] = _("{RIVAL}");
+
+const u8 *GetTrainerName(const struct Trainer *trainer)
+{
+    const u8 *trainerName = trainer->trainerName;
+    // Compares trainer name to a string using the rival expanded string and returns
+    // the expanded string function that puts the rival's name into a string placeholder if they match.
+    // This is so the rival's name can be used for trainers without having to hardcode it to specific values.
+    if (!StringCompare(trainerName, sText_BattleRivalName))
+        trainerName = GetExpandedPlaceholder(PLACEHOLDER_ID_RIVAL);
+    return trainerName;
+}
+
+const u8 *GetTrainerPartnerClassNameFromId(u16 partnerId)
+{
+    partnerId -= TRAINER_PARTNER(PARTNER_NONE);
+    if (partnerId >= PARTNERS_COUNT)
+        partnerId = PARTNER_NONE;
+    return GetTrainerClassName(&gBattlePartners[partnerId]);
+}
+
+const u8 *GetTrainerPartnerNameFromId(u16 partnerId)
+{
+    partnerId -= TRAINER_PARTNER(PARTNER_NONE);
+    if (partnerId >= PARTNERS_COUNT)
+        partnerId = PARTNER_NONE;
+    return GetTrainerName(&gBattlePartners[partnerId]);
 }
