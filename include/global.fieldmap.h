@@ -237,12 +237,12 @@ struct ObjectEventGraphicsInfo
              u8 shadowSize:2;
              u8 inanimate:1;
              u8 disableReflectionPaletteLoad:1;
-    /*0x0D*/ u8 tracks;
+    /*0x0D*/ u8 tracks:3;
+             u8 anims:4;
     /*0x10*/ const struct OamData *oam;
     /*0x14*/ const struct SubspriteTable *subspriteTables;
-    /*0x18*/ const union AnimCmd *const *anims;
-    /*0x1C*/ const struct SpriteFrameImage *images;
-    /*0x20*/ const union AffineAnimCmd *const *affineAnims;
+    /*0x18*/ const struct SpriteFrameImage *images;
+    /*0x1C*/ const union AffineAnimCmd *const *affineAnims;
 };
 
 enum {

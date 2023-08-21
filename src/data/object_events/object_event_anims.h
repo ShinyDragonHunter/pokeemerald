@@ -1145,31 +1145,55 @@ static const union AffineAnimCmd *const sAffineAnimTable_KyogreGroudon[] = {
 
 // For animations with alternating steps
 static const struct StepAnimTable sStepAnimTables[] = {
-    {
+    [OBJ_EVENT_ANIM_INANIMATE] = {
+        .anims = sAnimTable_Inanimate,
+    },
+    [OBJ_EVENT_ANIM_QUINTY_PLUMP] = {
         .anims = sAnimTable_QuintyPlump,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_STANDARD] = {
         .anims = sAnimTable_Standard,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_HO_OH] = {
+        .anims = sAnimTable_HoOh,
+    },
+    [OBJ_EVENT_ANIM_RAYQUAZA] = {
+        .anims = sAnimTable_Rayquaza,
+    },
+    [OBJ_EVENT_ANIM_GROUDON_SIDE] = {
+        .anims = sAnimTable_GroudonSide,
+    },
+    [OBJ_EVENT_ANIM_PLAYER] = {
         .anims = sAnimTable_BrendanMayNormal,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_ACRO_BIKE] = {
         .anims = sAnimTable_AcroBike,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_SURFING] = {
         .anims = sAnimTable_Surfing,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_NURSE] = {
         .anims = sAnimTable_Nurse,
         .animPos = {1, 3, 0, 2},
     },
-    {
+    [OBJ_EVENT_ANIM_FIELD_MOVE] = {
+        .anims = sAnimTable_FieldMove,
+    },
+    [OBJ_EVENT_ANIM_BERRY_TREE] = {
+        .anims = sAnimTable_BerryTree,
+    },
+    [OBJ_EVENT_ANIM_BREAKABLE_ROCK] = {
+        .anims = sAnimTable_BreakableRock,
+    },
+    [OBJ_EVENT_ANIM_CUTTABLE_TREE] = {
+        .anims = sAnimTable_CuttableTree,
+    },
+    [OBJ_EVENT_ANIM_FISHING] = {
         .anims = sAnimTable_Fishing,
         .animPos = {1, 3, 0, 2},
     },
