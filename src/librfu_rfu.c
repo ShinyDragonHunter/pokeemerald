@@ -335,7 +335,7 @@ u16 rfu_getRFUStatus(u8 *rfuState)
 u16 rfu_MBOOT_CHILD_inheritanceLinkStatus(void)
 {
     const char *s1 = str_checkMbootLL;
-    char *s2 = (char *)0x30000F0;
+    char *s2 = (char *)(IWRAM_START + 0xF0);
     u16 checksum;
     u16 *mb_buff_iwram_p;
     u8 i;
@@ -344,15 +344,15 @@ u16 rfu_MBOOT_CHILD_inheritanceLinkStatus(void)
     while (*s1 != '\0')
         if (*s1++ != *s2++)
             return 1;
-    mb_buff_iwram_p = (u16 *)0x3000000;
+    mb_buff_iwram_p = (u16 *)IWRAM_START;
 
     // The size of struct RfuLinkStatus is 180
     checksum = 0;
     for (i = 0; i < 180/2; ++i)
         checksum += *mb_buff_iwram_p++;
-    if (checksum != *(u16 *)0x30000FA)
+    if (checksum != *(u16 *)(IWRAM_START + 0xFA))
         return 1;
-    CpuCopy16((u16 *)0x3000000, gRfuLinkStatus, sizeof(struct RfuLinkStatus));
+    CpuCopy16((u16 *)IWRAM_START, gRfuLinkStatus, sizeof(struct RfuLinkStatus));
     gRfuStatic->flags |= 0x80; // mboot
     return 0;
 }
