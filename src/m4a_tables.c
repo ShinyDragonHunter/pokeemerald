@@ -1,4 +1,5 @@
 #include "gba/m4a_internal.h"
+#include "gbs.h"
 
 // Some of these functions have different signatures, so we need to make this
 // an array of void pointers or a struct. It's simpler to just make it an array
@@ -41,27 +42,6 @@ void * const gMPlayJumpTableTemplate[] =
     TrkVolPitSet,
     RealClearChain,
     SoundMainBTM,
-};
-
-// This is a table of deltas between sample values in compressed PCM data.
-const s8 gDeltaEncodingTable[] =
-{
-      0,
-      1,
-      4,
-      9,
-     16,
-     25,
-     36,
-     49,
-    -64,
-    -49,
-    -36,
-    -25,
-    -16,
-     -9,
-     -4,
-     -1,
 };
 
 const u8 gScaleTable[] =

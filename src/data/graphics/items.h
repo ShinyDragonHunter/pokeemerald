@@ -739,5 +739,5 @@ const u32 gItemIconPalette_OldSeaMap[] = INCBIN_U32("graphics/items/icon_palette
 
 // New key items
 
-const u32 gItemIcon_GBPlayer[] = INCBIN_U32("graphics/items/icons/gb_player.4bpp.lz");
-const u32 gItemIconPalette_GBPlayer[] = INCBIN_U32("graphics/items/icon_palettes/gb_player.gbapal.lz");
+const u32 gItemIcon_GBSounds[] = INCBIN_U32("graphics/items/icons/gb_sounds.4bpp.lz");
+const u32 gItemIconPalette_GBSounds[] = INCBIN_U32("graphics/items/icon_palettes/gb_sounds.gbapal.lz");

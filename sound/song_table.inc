@@ -1,278 +1,278 @@
-#include "constants/songs.h"
+#include "constants/gbs_songs.h"
 
 	.align 2
 
 gSongTable::
 	song mus_dummy, 0, 0
-	song se_use_item, 1, 1
-	song se_pc_login, 1, 1
-	song se_pc_off, 1, 1
-	song se_pc_on, 1, 1
-	song se_select, 2, 2
-	song se_win_open, 1, 1
-	song se_wall_hit, 2, 2
-	song se_door, 1, 1
-	song se_exit, 1, 1
-	song se_ledge, 1, 1
-	song se_bike_bell, 1, 1
-	song se_not_effective, 1, 1
-	song se_effective, 1, 1
-	song se_super_effective, 1, 1
-	song se_ball_open, 1, 1
-	song se_faint, 1, 1
-	song se_flee, 1, 1
-	song se_sliding_door, 1, 1
-	song se_ship, 1, 1
-	song se_bang, 1, 1
-	song se_pin, 1, 1
-	song se_boo, 1, 1
-	song se_ball, 1, 1
-	song se_contest_place, 2, 2
-	song se_a, 1, 1
-	song se_i, 1, 1
-	song se_u, 1, 1
-	song se_e, 1, 1
-	song se_o, 1, 1
-	song se_n, 1, 1
-	song se_success, 1, 1
-	song se_failure, 1, 1
-	song se_exp, 1, 1
-	song se_bike_hop, 1, 1
-	song se_switch, 1, 1
-	song se_click, 1, 1
-	song se_fu_zaku, 1, 1
-	song se_contest_condition_lose, 1, 1
-	song se_lavaridge_fall_warp, 1, 1
-	song se_ice_stairs, 1, 1
-	song se_ice_break, 1, 1
-	song se_ice_crack, 1, 1
-	song se_fall, 1, 1
-	song se_unlock, 2, 2
-	song se_warp_in, 1, 1
-	song se_warp_out, 1, 1
-	song se_repel, 1, 1
-	song se_rotating_gate, 1, 1
-	song se_truck_move, 1, 1
-	song se_truck_stop, 1, 1
-	song se_truck_unload, 2, 2
-	song se_truck_door, 1, 1
-	song se_berry_blender, 2, 2
-	song se_card, 1, 1
-	song se_save, 1, 1
-	song se_ball_bounce_1, 1, 1
-	song se_ball_bounce_2, 1, 1
-	song se_ball_bounce_3, 1, 1
-	song se_ball_bounce_4, 1, 1
-	song se_ball_trade, 2, 2
-	song se_ball_throw, 1, 1
-	song se_note_c, 2, 2
-	song se_note_d, 2, 2
-	song se_note_e, 2, 2
-	song se_note_f, 2, 2
-	song se_note_g, 2, 2
-	song se_note_a, 2, 2
-	song se_note_b, 2, 2
-	song se_note_c_high, 2, 2
-	song se_puddle, 2, 2
-	song se_bridge_walk, 2, 2
-	song se_itemfinder, 1, 1
-	song se_ding_dong, 1, 1
-	song se_balloon_red, 2, 2
-	song se_balloon_blue, 2, 2
-	song se_balloon_yellow, 2, 2
-	song se_breakable_door, 2, 2
-	song se_mud_ball, 2, 2
-	song se_field_poison, 1, 1
-	song se_escalator, 1, 1
-	song se_thunderstorm, 3, 3
-	song se_thunderstorm_stop, 3, 3
-	song se_downpour, 3, 3
-	song se_downpour_stop, 3, 3
-	song se_rain, 3, 3
-	song se_rain_stop, 3, 3
-	song se_thunder, 1, 1
-	song se_thunder2, 1, 1
-	song se_elevator, 1, 1
-	song se_low_health, 3, 3
-	song se_exp_max, 1, 1
-	song se_roulette_ball, 2, 2
-	song se_roulette_ball2, 2, 2
-	song se_taillow_wing_flap, 1, 1
-	song se_shop, 1, 1
-	song se_contest_heart, 1, 1
-	song se_contest_curtain_rise, 1, 1
-	song se_contest_curtain_fall, 1, 1
-	song se_contest_icon_change, 1, 1
-	song se_contest_icon_clear, 1, 1
-	song se_contest_mons_turn, 1, 1
-	song se_shiny, 1, 1
-	song se_intro_blast, 1, 1
-	song se_mugshot, 1, 1
-	song se_applause, 1, 1
-	song se_vend, 1, 1
-	song se_orb, 1, 1
-	song se_dex_scroll, 1, 1
-	song se_dex_page, 1, 1
-	song se_pokenav_on, 1, 1
-	song se_pokenav_off, 1, 1
-	song se_dex_search, 1, 1
-	song se_egg_hatch, 1, 1
-	song se_ball_tray_enter, 1, 1
-	song se_ball_tray_ball, 1, 1
-	song se_ball_tray_exit, 2, 2
-	song se_glass_flute, 1, 1
-	song se_m_thunderbolt, 2, 2
-	song se_m_thunderbolt2, 1, 1
-	song se_m_harden, 1, 1
-	song se_m_nightmare, 1, 1
-	song se_m_vital_throw, 1, 1
-	song se_m_vital_throw2, 1, 1
-	song se_m_bubble, 1, 1
-	song se_m_bubble2, 1, 1
-	song se_m_bubble3, 1, 1
-	song se_m_rain_dance, 1, 1
-	song se_m_cut, 1, 1
-	song se_m_string_shot, 1, 1
-	song se_m_string_shot2, 1, 1
-	song se_m_rock_throw, 1, 1
-	song se_m_gust, 2, 2
-	song se_m_gust2, 2, 2
-	song se_m_double_slap, 1, 1
-	song se_m_double_team, 1, 1
-	song se_m_razor_wind, 1, 1
-	song se_m_icy_wind, 1, 1
-	song se_m_thunder_wave, 1, 1
-	song se_m_comet_punch, 1, 1
-	song se_m_mega_kick, 1, 1
-	song se_m_mega_kick2, 1, 1
-	song se_m_crabhammer, 1, 1
-	song se_m_jump_kick, 1, 1
-	song se_m_flame_wheel, 1, 1
-	song se_m_flame_wheel2, 1, 1
-	song se_m_flamethrower, 1, 1
-	song se_m_fire_punch, 1, 1
-	song se_m_toxic, 1, 1
-	song se_m_sacred_fire, 1, 1
-	song se_m_sacred_fire2, 2, 2
-	song se_m_ember, 1, 1
-	song se_m_take_down, 2, 2
-	song se_m_blizzard, 1, 1
-	song se_m_blizzard2, 1, 1
-	song se_m_scratch, 1, 1
-	song se_m_vicegrip, 1, 1
-	song se_m_wing_attack, 1, 1
-	song se_m_fly, 1, 1
-	song se_m_sand_attack, 1, 1
-	song se_m_razor_wind2, 1, 1
-	song se_m_bite, 1, 1
-	song se_m_headbutt, 1, 1
-	song se_m_surf, 1, 1
-	song se_m_hydro_pump, 1, 1
-	song se_m_whirlpool, 1, 1
-	song se_m_horn_attack, 1, 1
-	song se_m_tail_whip, 2, 2
-	song se_m_mist, 1, 1
-	song se_m_poison_powder, 1, 1
-	song se_m_bind, 2, 2
-	song se_m_dragon_rage, 1, 1
-	song se_m_sing, 1, 1
-	song se_m_perish_song, 1, 1
-	song se_m_pay_day, 1, 1
-	song se_m_dig, 1, 1
-	song se_m_dizzy_punch, 1, 1
-	song se_m_self_destruct, 1, 1
-	song se_m_explosion, 1, 1
-	song se_m_absorb_2, 1, 1
-	song se_m_absorb, 1, 1
-	song se_m_screech, 1, 1
-	song se_m_bubble_beam, 1, 1
-	song se_m_bubble_beam2, 1, 1
-	song se_m_supersonic, 1, 1
-	song se_m_belly_drum, 1, 1
-	song se_m_metronome, 1, 1
-	song se_m_bonemerang, 1, 1
-	song se_m_lick, 1, 1
-	song se_m_psybeam, 1, 1
-	song se_m_faint_attack, 1, 1
-	song se_m_swords_dance, 1, 1
-	song se_m_leer, 1, 1
-	song se_m_swagger, 1, 1
-	song se_m_swagger2, 1, 1
-	song se_m_heal_bell, 1, 1
-	song se_m_confuse_ray, 1, 1
-	song se_m_snore, 1, 1
-	song se_m_brick_break, 1, 1
-	song se_m_giga_drain, 1, 1
-	song se_m_psybeam2, 1, 1
-	song se_m_solar_beam, 2, 2
-	song se_m_petal_dance, 1, 1
-	song se_m_teleport, 1, 1
-	song se_m_minimize, 1, 1
-	song se_m_sketch, 1, 1
-	song se_m_swift, 1, 1
-	song se_m_reflect, 1, 1
-	song se_m_barrier, 1, 1
-	song se_m_detect, 2, 2
-	song se_m_lock_on, 1, 1
-	song se_m_moonlight, 1, 1
-	song se_m_charm, 1, 1
-	song se_m_charge, 1, 1
-	song se_m_strength, 1, 1
-	song se_m_hyper_beam, 1, 1
-	song se_m_waterfall, 1, 1
-	song se_m_reversal, 1, 1
-	song se_m_acid_armor, 1, 1
-	song se_m_sandstorm, 1, 1
-	song se_m_tri_attack, 1, 1
-	song se_m_tri_attack2, 1, 1
-	song se_m_encore, 1, 1
-	song se_m_encore2, 2, 2
-	song se_m_baton_pass, 1, 1
-	song se_m_milk_drink, 1, 1
-	song se_m_attract, 1, 1
-	song se_m_attract2, 1, 1
-	song se_m_morning_sun, 1, 1
-	song se_m_flatter, 1, 1
-	song se_m_sand_tomb, 1, 1
-	song se_m_grasswhistle, 1, 1
-	song se_m_spit_up, 1, 1
-	song se_m_dive, 1, 1
-	song se_m_earthquake, 2, 2
-	song se_m_twister, 2, 2
-	song se_m_sweet_scent, 1, 1
-	song se_m_yawn, 1, 1
-	song se_m_sky_uppercut, 2, 2
-	song se_m_stat_increase, 1, 1
-	song se_m_heat_wave, 1, 1
-	song se_m_uproar, 1, 1
-	song se_m_hail, 1, 1
-	song se_m_cosmic_power, 2, 2
-	song se_m_teeter_dance, 1, 1
-	song se_m_stat_decrease, 1, 1
-	song se_m_haze, 1, 1
-	song se_m_hyper_beam2, 1, 1
-	song se_rg_door, 1, 1
-	song se_rg_card_flip, 1, 1
-	song se_rg_card_flipping, 1, 1
-	song se_rg_card_open, 1, 1
-	song se_rg_bag_cursor, 1, 1
-	song se_rg_bag_pocket, 1, 1
-	song se_rg_ball_click, 1, 1
-	song se_rg_shop, 1, 1
-	song se_rg_ss_anne_horn, 1, 1
-	song se_rg_help_open, 1, 1
-	song se_rg_help_close, 1, 1
-	song se_rg_help_error, 1, 1
-	song se_rg_deoxys_move, 1, 1
-	song se_rg_poke_jump_success, 1, 1
-	song se_rg_poke_jump_failure, 1, 1
-	song se_pokenav_call, 1, 1
-	song se_pokenav_hang_up, 1, 1
-	song se_arena_timeup1, 1, 1
-	song se_arena_timeup2, 1, 1
-	song se_pike_curtain_close, 1, 1
-	song se_pike_curtain_open, 1, 1
-	song se_sudowoodo_shake, 1, 1
+	song se_use_item, 1, 0
+	song se_pc_login, 1, 0
+	song se_pc_off, 1, 0
+	song se_pc_on, 1, 0
+	song se_select, 2, 0
+	song se_win_open, 1, 0
+	song se_wall_hit, 2, 0
+	song se_door, 1, 0
+	song se_exit, 1, 0
+	song se_ledge, 1, 0
+	song se_bike_bell, 1, 0
+	song se_not_effective, 1, 0
+	song se_effective, 1, 0
+	song se_super_effective, 1, 0
+	song se_ball_open, 1, 0
+	song se_faint, 1, 0
+	song se_flee, 1, 0
+	song se_sliding_door, 1, 0
+	song se_ship, 1, 0
+	song se_bang, 1, 0
+	song se_pin, 1, 0
+	song se_boo, 1, 0
+	song se_ball, 1, 0
+	song se_contest_place, 2, 0
+	song se_a, 1, 0
+	song se_i, 1, 0
+	song se_u, 1, 0
+	song se_e, 1, 0
+	song se_o, 1, 0
+	song se_n, 1, 0
+	song se_success, 1, 0
+	song se_failure, 1, 0
+	song se_exp, 1, 0
+	song se_bike_hop, 1, 0
+	song se_switch, 1, 0
+	song se_click, 1, 0
+	song se_fu_zaku, 1, 0
+	song se_contest_condition_lose, 1, 0
+	song se_lavaridge_fall_warp, 1, 0
+	song se_ice_stairs, 1, 0
+	song se_ice_break, 1, 0
+	song se_ice_crack, 1, 0
+	song se_fall, 1, 0
+	song se_unlock, 2, 0
+	song se_warp_in, 1, 0
+	song se_warp_out, 1, 0
+	song se_repel, 1, 0
+	song se_rotating_gate, 1, 0
+	song se_truck_move, 1, 0
+	song se_truck_stop, 1, 0
+	song se_truck_unload, 2, 0
+	song se_truck_door, 1, 0
+	song se_berry_blender, 2, 0
+	song se_card, 1, 0
+	song se_save, 1, 0
+	song se_ball_bounce_1, 1, 0
+	song se_ball_bounce_2, 1, 0
+	song se_ball_bounce_3, 1, 0
+	song se_ball_bounce_4, 1, 0
+	song se_ball_trade, 2, 0
+	song se_ball_throw, 1, 0
+	song se_note_c, 2, 0
+	song se_note_d, 2, 0
+	song se_note_e, 2, 0
+	song se_note_f, 2, 0
+	song se_note_g, 2, 0
+	song se_note_a, 2, 0
+	song se_note_b, 2, 0
+	song se_note_c_high, 2, 0
+	song se_puddle, 2, 0
+	song se_bridge_walk, 2, 0
+	song se_itemfinder, 1, 0
+	song se_ding_dong, 1, 0
+	song se_balloon_red, 2, 0
+	song se_balloon_blue, 2, 0
+	song se_balloon_yellow, 2, 0
+	song se_breakable_door, 2, 0
+	song se_mud_ball, 2, 0
+	song se_field_poison, 1, 0
+	song se_escalator, 1, 0
+	song se_thunderstorm, 3, 0
+	song se_thunderstorm_stop, 3, 0
+	song se_downpour, 3, 0
+	song se_downpour_stop, 3, 0
+	song se_rain, 3, 0
+	song se_rain_stop, 3, 0
+	song se_thunder, 1, 0
+	song se_thunder2, 1, 0
+	song se_elevator, 1, 0
+	song se_low_health, 3, 0
+	song se_exp_max, 1, 0
+	song se_roulette_ball, 2, 0
+	song se_roulette_ball2, 2, 0
+	song se_taillow_wing_flap, 1, 0
+	song se_shop, 1, 0
+	song se_contest_heart, 1, 0
+	song se_contest_curtain_rise, 1, 0
+	song se_contest_curtain_fall, 1, 0
+	song se_contest_icon_change, 1, 0
+	song se_contest_icon_clear, 1, 0
+	song se_contest_mons_turn, 1, 0
+	song se_shiny, 1, 0
+	song se_intro_blast, 1, 0
+	song se_mugshot, 1, 0
+	song se_applause, 1, 0
+	song se_vend, 1, 0
+	song se_orb, 1, 0
+	song se_dex_scroll, 1, 0
+	song se_dex_page, 1, 0
+	song se_pokenav_on, 1, 0
+	song se_pokenav_off, 1, 0
+	song se_dex_search, 1, 0
+	song se_egg_hatch, 1, 0
+	song se_ball_tray_enter, 1, 0
+	song se_ball_tray_ball, 1, 0
+	song se_ball_tray_exit, 2, 0
+	song se_glass_flute, 1, 0
+	song se_m_thunderbolt, 2, 0
+	song se_m_thunderbolt2, 1, 0
+	song se_m_harden, 1, 0
+	song se_m_nightmare, 1, 0
+	song se_m_vital_throw, 1, 0
+	song se_m_vital_throw2, 1, 0
+	song se_m_bubble, 1, 0
+	song se_m_bubble2, 1, 0
+	song se_m_bubble3, 1, 0
+	song se_m_rain_dance, 1, 0
+	song se_m_cut, 1, 0
+	song se_m_string_shot, 1, 0
+	song se_m_string_shot2, 1, 0
+	song se_m_rock_throw, 1, 0
+	song se_m_gust, 2, 0
+	song se_m_gust2, 2, 0
+	song se_m_double_slap, 1, 0
+	song se_m_double_team, 1, 0
+	song se_m_razor_wind, 1, 0
+	song se_m_icy_wind, 1, 0
+	song se_m_thunder_wave, 1, 0
+	song se_m_comet_punch, 1, 0
+	song se_m_mega_kick, 1, 0
+	song se_m_mega_kick2, 1, 0
+	song se_m_crabhammer, 1, 0
+	song se_m_jump_kick, 1, 0
+	song se_m_flame_wheel, 1, 0
+	song se_m_flame_wheel2, 1, 0
+	song se_m_flamethrower, 1, 0
+	song se_m_fire_punch, 1, 0
+	song se_m_toxic, 1, 0
+	song se_m_sacred_fire, 1, 0
+	song se_m_sacred_fire2, 2, 0
+	song se_m_ember, 1, 0
+	song se_m_take_down, 2, 0
+	song se_m_blizzard, 1, 0
+	song se_m_blizzard2, 1, 0
+	song se_m_scratch, 1, 0
+	song se_m_vicegrip, 1, 0
+	song se_m_wing_attack, 1, 0
+	song se_m_fly, 1, 0
+	song se_m_sand_attack, 1, 0
+	song se_m_razor_wind2, 1, 0
+	song se_m_bite, 1, 0
+	song se_m_headbutt, 1, 0
+	song se_m_surf, 1, 0
+	song se_m_hydro_pump, 1, 0
+	song se_m_whirlpool, 1, 0
+	song se_m_horn_attack, 1, 0
+	song se_m_tail_whip, 2, 0
+	song se_m_mist, 1, 0
+	song se_m_poison_powder, 1, 0
+	song se_m_bind, 2, 0
+	song se_m_dragon_rage, 1, 0
+	song se_m_sing, 1, 0
+	song se_m_perish_song, 1, 0
+	song se_m_pay_day, 1, 0
+	song se_m_dig, 1, 0
+	song se_m_dizzy_punch, 1, 0
+	song se_m_self_destruct, 1, 0
+	song se_m_explosion, 1, 0
+	song se_m_absorb_2, 1, 0
+	song se_m_absorb, 1, 0
+	song se_m_screech, 1, 0
+	song se_m_bubble_beam, 1, 0
+	song se_m_bubble_beam2, 1, 0
+	song se_m_supersonic, 1, 0
+	song se_m_belly_drum, 1, 0
+	song se_m_metronome, 1, 0
+	song se_m_bonemerang, 1, 0
+	song se_m_lick, 1, 0
+	song se_m_psybeam, 1, 0
+	song se_m_faint_attack, 1, 0
+	song se_m_swords_dance, 1, 0
+	song se_m_leer, 1, 0
+	song se_m_swagger, 1, 0
+	song se_m_swagger2, 1, 0
+	song se_m_heal_bell, 1, 0
+	song se_m_confuse_ray, 1, 0
+	song se_m_snore, 1, 0
+	song se_m_brick_break, 1, 0
+	song se_m_giga_drain, 1, 0
+	song se_m_psybeam2, 1, 0
+	song se_m_solar_beam, 2, 0
+	song se_m_petal_dance, 1, 0
+	song se_m_teleport, 1, 0
+	song se_m_minimize, 1, 0
+	song se_m_sketch, 1, 0
+	song se_m_swift, 1, 0
+	song se_m_reflect, 1, 0
+	song se_m_barrier, 1, 0
+	song se_m_detect, 2, 0
+	song se_m_lock_on, 1, 0
+	song se_m_moonlight, 1, 0
+	song se_m_charm, 1, 0
+	song se_m_charge, 1, 0
+	song se_m_strength, 1, 0
+	song se_m_hyper_beam, 1, 0
+	song se_m_waterfall, 1, 0
+	song se_m_reversal, 1, 0
+	song se_m_acid_armor, 1, 0
+	song se_m_sandstorm, 1, 0
+	song se_m_tri_attack, 1, 0
+	song se_m_tri_attack2, 1, 0
+	song se_m_encore, 1, 0
+	song se_m_encore2, 2, 0
+	song se_m_baton_pass, 1, 0
+	song se_m_milk_drink, 1, 0
+	song se_m_attract, 1, 0
+	song se_m_attract2, 1, 0
+	song se_m_morning_sun, 1, 0
+	song se_m_flatter, 1, 0
+	song se_m_sand_tomb, 1, 0
+	song se_m_grasswhistle, 1, 0
+	song se_m_spit_up, 1, 0
+	song se_m_dive, 1, 0
+	song se_m_earthquake, 2, 0
+	song se_m_twister, 2, 0
+	song se_m_sweet_scent, 1, 0
+	song se_m_yawn, 1, 0
+	song se_m_sky_uppercut, 2, 0
+	song se_m_stat_increase, 1, 0
+	song se_m_heat_wave, 1, 0
+	song se_m_uproar, 1, 0
+	song se_m_hail, 1, 0
+	song se_m_cosmic_power, 2, 0
+	song se_m_teeter_dance, 1, 0
+	song se_m_stat_decrease, 1, 0
+	song se_m_haze, 1, 0
+	song se_m_hyper_beam2, 1, 0
+	song se_rg_door, 1, 0
+	song se_rg_card_flip, 1, 0
+	song se_rg_card_flipping, 1, 0
+	song se_rg_card_open, 1, 0
+	song se_rg_bag_cursor, 1, 0
+	song se_rg_bag_pocket, 1, 0
+	song se_rg_ball_click, 1, 0
+	song se_rg_shop, 1, 0
+	song se_rg_ss_anne_horn, 1, 0
+	song se_rg_help_open, 1, 0
+	song se_rg_help_close, 1, 0
+	song se_rg_help_error, 1, 0
+	song se_rg_deoxys_move, 1, 0
+	song se_rg_poke_jump_success, 1, 0
+	song se_rg_poke_jump_failure, 1, 0
+	song se_pokenav_call, 1, 0
+	song se_pokenav_hang_up, 1, 0
+	song se_arena_timeup1, 1, 0
+	song se_arena_timeup2, 1, 0
+	song se_pike_curtain_close, 1, 0
+	song se_pike_curtain_open, 1, 0
+	song se_sudowoodo_shake, 1, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
@@ -354,15 +354,15 @@ gSongTable::
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song mus_littleroot_test, 0, 0
-	song mus_gsc_route38, 0, 0
+	song mus_gsc_route38, 0, GBS_MUSIC_ROUTE_37
 	song mus_caught, 0, 0
 	song mus_victory_wild, 0, 0
 	song mus_victory_gym_leader, 0, 0
 	song mus_victory_league, 0, 0
-	song mus_c_comm_center, 0, 0
-	song mus_gsc_pewter, 0, 0
-	song mus_c_vs_legend_beast, 0, 0
-	song mus_route101, 0, 0
+	song mus_c_comm_center, 0, GBS_MUSIC_MOBILE_CENTER
+	song mus_gsc_pewter, 0, GBS_MUSIC_VIRIDIAN_CITY
+	song mus_c_vs_legend_beast, 0, GBS_MUSIC_SUICUNE_BATTLE
+	song mus_route101, 0, GBS_MUSIC_ROUTE_101_RSE
 	song mus_route110, 0, 0
 	song mus_route120, 0, 0
 	song mus_petalburg, 0, 0
@@ -370,31 +370,31 @@ gSongTable::
 	song mus_gym, 0, 0
 	song mus_surf, 0, 0
 	song mus_petalburg_woods, 0, 0
-	song mus_level_up, 2, 2
-	song mus_heal, 2, 2
-	song mus_obtain_badge, 2, 2
-	song mus_obtain_item, 2, 2
-	song mus_evolved, 2, 2
-	song mus_obtain_tmhm, 2, 2
+	song mus_level_up, 2, GBS_SFX_LEVEL_UP
+	song mus_heal, 2, 0
+	song mus_obtain_badge, 2, GBS_SFX_GET_BADGE
+	song mus_obtain_item, 2, GBS_SFX_ITEM
+	song mus_evolved, 2, 0
+	song mus_obtain_tmhm, 2, GBS_SFX_GET_TM
 	song mus_lilycove_museum, 0, 0
 	song mus_route122, 0, 0
-	song mus_oceanic_museum, 0, 0
-	song mus_evolution_intro, 2, 2
+	song mus_oceanic_museum, 0, GBS_MUSIC_OCEANIC_MUSEUM_RSE
+	song mus_evolution_intro, 2, 0
 	song mus_evolution, 0, 0
-	song mus_move_deleted, 2, 2
+	song mus_move_deleted, 2, 0
 	song mus_encounter_girl, 0, 0
 	song mus_encounter_male, 0, 0
-	song mus_abandoned_ship, 0, 0
+	song mus_abandoned_ship, 0, GBS_MUSIC_ABANDONED_SHIP_RSE
 	song mus_fortree, 0, 0
 	song mus_birch_lab, 0, 0
 	song mus_b_tower_rs, 0, 0
 	song mus_encounter_swimmer, 0, 0
 	song mus_cave_of_origin, 0, 0
-	song mus_obtain_berry, 2, 2
-	song mus_awaken_legend, 2, 2
-	song mus_slots_jackpot, 2, 2
-	song mus_slots_win, 2, 2
-	song mus_too_bad, 2, 2
+	song mus_obtain_berry, 2, 0
+	song mus_awaken_legend, 2, 0
+	song mus_slots_jackpot, 2, 0
+	song mus_slots_win, 2, 0
+	song mus_too_bad, 2, 0
 	song mus_roulette, 0, 0
 	song mus_link_contest_p1, 0, 0
 	song mus_link_contest_p2, 0, 0
@@ -462,14 +462,14 @@ gSongTable::
 	song mus_end, 0, 0
 	song mus_b_frontier, 0, 0
 	song mus_b_arena, 0, 0
-	song mus_obtain_b_points, 2, 2
-	song mus_register_match_call, 2, 2
+	song mus_obtain_b_points, 2, 0
+	song mus_register_match_call, 2, 0
 	song mus_b_pyramid, 0, 0
 	song mus_b_pyramid_top, 0, 0
 	song mus_b_palace, 0, 0
 	song mus_rayquaza_appears, 0, 0
 	song mus_b_tower, 0, 0
-	song mus_obtain_symbol, 2, 2
+	song mus_obtain_symbol, 2, 0
 	song mus_b_dome, 0, 0
 	song mus_b_pike, 0, 0
 	song mus_b_factory, 0, 0
@@ -491,20 +491,20 @@ gSongTable::
 	song mus_rg_game_corner, 0, 0
 	song mus_rg_rocket_hideout, 0, 0
 	song mus_rg_gym, 0, 0
-	song mus_rg_jigglypuff, 2, 2
+	song mus_rg_jigglypuff, 2, 0
 	song mus_rg_intro_fight, 0, 0
-	song mus_rg_title, 0, 0
+	song mus_rg_title, 0, GBS_MUSIC_RBY_TITLE_SCREEN
 	song mus_rg_cinnabar, 0, 0
-	song mus_rg_lavender, 0, 0
+	song mus_rg_lavender, 0, GBS_MUSIC_LAVENDER
 	song mus_rg_heal, 0, 0
-	song mus_rg_cycling, 0, 0
+	song mus_rg_cycling, 0, GBS_MUSIC_BIKE_RIDING
 	song mus_rg_encounter_rocket, 0, 0
 	song mus_rg_encounter_girl, 0, 0
 	song mus_rg_encounter_boy, 0, 0
 	song mus_rg_hall_of_fame, 0, 0
-	song mus_rg_viridian_forest, 0, 0
+	song mus_rg_viridian_forest, 0, GBS_MUSIC_DUNGEON2
 	song mus_rg_mt_moon, 0, 0
-	song mus_rg_poke_mansion, 0, 0
+	song mus_rg_poke_mansion, 0, GBS_MUSIC_CINNABAR_MANSION
 	song mus_rg_credits, 0, 0
 	song mus_rg_route1, 0, 0
 	song mus_rg_route24, 0, 0
@@ -512,7 +512,7 @@ gSongTable::
 	song mus_rg_route11, 0, 0
 	song mus_rg_victory_road, 0, 0
 	song mus_rg_vs_gym_leader, 0, 0
-	song mus_rg_vs_trainer, 0, 0
+	song mus_rg_vs_trainer, 0, GBS_MUSIC_TRAINER_BATTLE
 	song mus_rg_vs_wild, 0, 0
 	song mus_rg_vs_champion, 0, 0
 	song mus_rg_pallet, 0, 0
@@ -521,7 +521,7 @@ gSongTable::
 	song mus_rg_poke_center, 0, 0
 	song mus_rg_ss_anne, 0, 0
 	song mus_rg_surf, 0, 0
-	song mus_rg_poke_tower, 0, 0
+	song mus_rg_poke_tower, 0, GBS_MUSIC_POKEMON_TOWER
 	song mus_rg_silph, 0, 0
 	song mus_rg_fuchsia, 0, 0
 	song mus_rg_celadon, 0, 0
@@ -532,10 +532,10 @@ gSongTable::
 	song mus_rg_pewter, 0, 0
 	song mus_rg_encounter_rival, 0, 0
 	song mus_rg_rival_exit, 0, 0
-	song mus_rg_dex_rating, 2, 2
-	song mus_rg_obtain_key_item, 2, 2
-	song mus_rg_caught_intro, 2, 2
-	song mus_rg_photo, 2, 2
+	song mus_rg_dex_rating, 2, 0
+	song mus_rg_obtain_key_item, 2, 0
+	song mus_rg_caught_intro, 2, 0
+	song mus_rg_photo, 2, 0
 	song mus_rg_game_freak, 0, 0
 	song mus_rg_caught, 0, 0
 	song mus_rg_new_game_instruct, 0, 0
@@ -548,12 +548,12 @@ gSongTable::
 	song mus_rg_berry_pick, 0, 0
 	song mus_rg_sevii_cave, 0, 0
 	song mus_rg_teachy_tv_show, 0, 0
-	song mus_rg_sevii_route, 0, 0
-	song mus_rg_sevii_dungeon, 0, 0
+	song mus_rg_sevii_route, 0, GBS_MUSIC_LAKE_OF_RAGE
+	song mus_rg_sevii_dungeon, 0, GBS_MUSIC_DUNGEON2
 	song mus_rg_sevii_123, 0, 0
-	song mus_rg_sevii_45, 0, 0
-	song mus_rg_sevii_67, 0, 0
-	song mus_rg_poke_flute, 2, 2
+	song mus_rg_sevii_45, 0, GBS_MUSIC_AZALEA_TOWN
+	song mus_rg_sevii_67, 0, GBS_MUSIC_VIOLET_CITY
+	song mus_rg_poke_flute, 2, 0
 	song mus_rg_vs_deoxys, 0, 0
 	song mus_rg_vs_mewtwo, 0, 0
 	song mus_rg_vs_legend, 0, 0
@@ -562,77 +562,58 @@ gSongTable::
 	song mus_rg_trainer_tower, 0, 0
 	song mus_rg_slow_pallet, 0, 0
 	song mus_rg_teachy_tv_menu, 0, 0
-	song ph_trap_blend, 2, 2
-	song ph_trap_held, 2, 2
-	song ph_trap_solo, 2, 2
-	song ph_face_blend, 2, 2
-	song ph_face_held, 2, 2
-	song ph_face_solo, 2, 2
-	song ph_cloth_blend, 2, 2
-	song ph_cloth_held, 2, 2
-	song ph_cloth_solo, 2, 2
-	song ph_dress_blend, 2, 2
-	song ph_dress_held, 2, 2
-	song ph_dress_solo, 2, 2
-	song ph_fleece_blend, 2, 2
-	song ph_fleece_held, 2, 2
-	song ph_fleece_solo, 2, 2
-	song ph_kit_blend, 2, 2
-	song ph_kit_held, 2, 2
-	song ph_kit_solo, 2, 2
-	song ph_price_blend, 2, 2
-	song ph_price_held, 2, 2
-	song ph_price_solo, 2, 2
-	song ph_lot_blend, 2, 2
-	song ph_lot_held, 2, 2
-	song ph_lot_solo, 2, 2
-	song ph_goat_blend, 2, 2
-	song ph_goat_held, 2, 2
-	song ph_goat_solo, 2, 2
-	song ph_thought_blend, 2, 2
-	song ph_thought_held, 2, 2
-	song ph_thought_solo, 2, 2
-	song ph_choice_blend, 2, 2
-	song ph_choice_held, 2, 2
-	song ph_choice_solo, 2, 2
-	song ph_mouth_blend, 2, 2
-	song ph_mouth_held, 2, 2
-	song ph_mouth_solo, 2, 2
-	song ph_foot_blend, 2, 2
-	song ph_foot_held, 2, 2
-	song ph_foot_solo, 2, 2
-	song ph_goose_blend, 2, 2
-	song ph_goose_held, 2, 2
-	song ph_goose_solo, 2, 2
-	song ph_strut_blend, 2, 2
-	song ph_strut_held, 2, 2
-	song ph_strut_solo, 2, 2
-	song ph_cure_blend, 2, 2
-	song ph_cure_held, 2, 2
-	song ph_cure_solo, 2, 2
-	song ph_nurse_blend, 2, 2
-	song ph_nurse_held, 2, 2
-	song ph_nurse_solo, 2, 2
+	song ph_trap_blend, 2, 0
+	song ph_trap_held, 2, 0
+	song ph_trap_solo, 2, 0
+	song ph_face_blend, 2, 0
+	song ph_face_held, 2, 0
+	song ph_face_solo, 2, 0
+	song ph_cloth_blend, 2, 0
+	song ph_cloth_held, 2, 0
+	song ph_cloth_solo, 2, 0
+	song ph_dress_blend, 2, 0
+	song ph_dress_held, 2, 0
+	song ph_dress_solo, 2, 0
+	song ph_fleece_blend, 2, 0
+	song ph_fleece_held, 2, 0
+	song ph_fleece_solo, 2, 0
+	song ph_kit_blend, 2, 0
+	song ph_kit_held, 2, 0
+	song ph_kit_solo, 2, 0
+	song ph_price_blend, 2, 0
+	song ph_price_held, 2, 0
+	song ph_price_solo, 2, 0
+	song ph_lot_blend, 2, 0
+	song ph_lot_held, 2, 0
+	song ph_lot_solo, 2, 0
+	song ph_goat_blend, 2, 0
+	song ph_goat_held, 2, 0
+	song ph_goat_solo, 2, 0
+	song ph_thought_blend, 2, 0
+	song ph_thought_held, 2, 0
+	song ph_thought_solo, 2, 0
+	song ph_choice_blend, 2, 0
+	song ph_choice_held, 2, 0
+	song ph_choice_solo, 2, 0
+	song ph_mouth_blend, 2, 0
+	song ph_mouth_held, 2, 0
+	song ph_mouth_solo, 2, 0
+	song ph_foot_blend, 2, 0
+	song ph_foot_held, 2, 0
+	song ph_foot_solo, 2, 0
+	song ph_goose_blend, 2, 0
+	song ph_goose_held, 2, 0
+	song ph_goose_solo, 2, 0
+	song ph_strut_blend, 2, 0
+	song ph_strut_held, 2, 0
+	song ph_strut_solo, 2, 0
+	song ph_cure_blend, 2, 0
+	song ph_cure_held, 2, 0
+	song ph_cure_solo, 2, 0
+	song ph_nurse_blend, 2, 0
+	song ph_nurse_held, 2, 0
+	song ph_nurse_solo, 2, 0
 
 	.align 2
 dummy_song_header:
 	.byte 0, 0, 0, 0
-
-	.align 2
-gGBSSongTable::
-	song_gbs MUS_GSC_ROUTE38,       gbs_gsc_route38,        0, 0
-	song_gbs MUS_C_COMM_CENTER,     gbs_c_comm_center,      0, 0
-	song_gbs MUS_GSC_PEWTER,        gbs_gsc_pewter,         0, 0
-	song_gbs MUS_C_VS_LEGEND_BEAST, gbs_c_vs_legend_beast,  0, 0
-	song_gbs MUS_ROUTE101,          gbs_route101,           0, 0
-	song_gbs MUS_OBTAIN_BADGE,      gbs_obtain_badge,       2, 2
-	song_gbs MUS_OBTAIN_ITEM,       gbs_obtain_item,        2, 2
-	song_gbs MUS_OBTAIN_TMHM,       gbs_obtain_tmhm,        2, 2
-	song_gbs MUS_OCEANIC_MUSEUM,    gbs_oceanic_museum,     0, 0
-	song_gbs MUS_ABANDONED_SHIP,    gbs_abandoned_ship,     0, 0
-	song_gbs MUS_RG_POKE_MANSION,   gbs_rg_poke_mansion,    0, 0
-	song_gbs MUS_RG_VS_TRAINER,     gbs_rg_vs_trainer,      0, 0
-	song_gbs MUS_RG_SEVII_ROUTE,    gbs_rg_sevii_route,     0, 0
-	song_gbs MUS_RG_SEVII_45,       gbs_rg_sevii_45,        0, 0
-	song_gbs MUS_RG_SEVII_67,       gbs_rg_sevii_67,        0, 0
-	.4byte 0xFFFFFFFF

@@ -1,6 +1,10 @@
 #ifndef GUARD_GBS_H
 #define GUARD_GBS_H
 
+#include "gba/gba.h"
+#include "gba/m4a_internal.h"
+#include "constants/gbs_config.h"
+
 /*
  * gbs.h
  *
@@ -12,10 +16,7 @@
  *      Author: Sierraffinity
  */
 
-#include "gba/gba.h"
-
-enum GBSCommands
-{
+enum GBSCommands {
     SetOctave7 = 0xD0,
     SetOctave6,
     SetOctave5,
@@ -79,8 +80,7 @@ struct GBSTrack
 {
     u8 flags; // 0x0, m4a engine flags
     u8 noteLength1;
-    u8 patternLevel:4;
-    u8 channelID:4;
+    u8 patternLevel;
     u8 noteUnitLength; // frames per 16th note
     u8 noteLength2; // 0x4
     u8 currentOctave;
@@ -112,11 +112,11 @@ struct GBSTrack
     u8 noiseSampleCountdown; // 0x28
     u8 pitchBendAmount;
     u8 pitchBendDuration;
-    u8 pitchBendFraction; // 0x2C
-    u8 pitchBendFractionAccumulator;
+    u8 pitchBendFraction;
+    u8 pitchBendFractionAccumulator; // 0x2C
 
     // GBS engine flags
-    bool8 pitchBendActivation:1;
+    bool8 pitchBendActivation:1; // 0x2D
     bool8 pitchBendDir:1;
     bool8 modulationActivation:1;
     bool8 modulationDir:1;
@@ -125,7 +125,7 @@ struct GBSTrack
     bool8 noteDutyOverride:1;
     bool8 noteFreqOverride:1;
 
-    bool8 notePitchSweep:1;
+    bool8 notePitchSweep:1; // 0x2E
     bool8 noteNoiseSampling:1;
     bool8 noteRest:1;
     bool8 noteVibratoOverride:1;
@@ -134,12 +134,25 @@ struct GBSTrack
     bool8 shouldReload:1;
     bool8 volumeChange:1;
 
-    bool8 isSFXChannel:1;
+    bool8 isSFXChannel:1; // 0x2F
 
-    u8 padding[15];
+    u8 channelId; // 0x30
+    u8 padding[14];
     const u8 *nextInstruction; // 0x40
     const u8 *returnLocation; // 0x44
     u8 padding3[8]; // 0x48
 };
+
+extern u8 gUsedCGBChannels;
+extern const struct Song gGBSSongTable[];
+#if ENABLE_DEBUG_SOUND_CHECK_MENU == FALSE
+const struct Song *GetSong(u32 n);
+#else
+const struct Song *GetSong(u32 n, bool32 enableGBS);
+void SongNumStart(u16 n, bool32 enableGBS);
+void SongNumStartOrChange(u16 n, bool32 enableGBS);
+void SongNumStop(u16 n, bool32 enableGBS);
+#endif
+void ply_gbs_switch(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 
 #endif //GUARD_GBS_H

@@ -477,7 +477,7 @@
 #define ITEM_OLD_SEA_MAP 376
 
 // New
-#define ITEM_GB_PLAYER 377
+#define ITEM_GB_SOUNDS 377
 
 #define ITEMS_COUNT 378
 

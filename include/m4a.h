@@ -18,15 +18,10 @@ void m4aMPlayFadeOutTemporarily(struct MusicPlayerInfo *mplayInfo, u16 speed);
 void m4aMPlayFadeIn(struct MusicPlayerInfo *mplayInfo, u16 speed);
 void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo);
 
-extern u8 gUsedCGBChannels;
 extern struct MusicPlayerInfo gMPlayInfo_BGM;
 extern struct MusicPlayerInfo gMPlayInfo_SE1;
 extern struct MusicPlayerInfo gMPlayInfo_SE2;
 extern struct MusicPlayerInfo gMPlayInfo_SE3;
 extern struct SoundInfo gSoundInfo;
-
-void m4aSongNumStart_GBS(u16 n, bool32 gbsEnabled);
-void m4aSongNumStartOrChange_GBS(u16 n, bool32 gbsEnabled);
-void m4aSongNumStop_GBS(u16 n, bool32 gbsEnabled);
 
 #endif //GUARD_M4A_H

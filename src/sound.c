@@ -37,7 +37,7 @@ static void Task_DuckBGMForPokemonCry(u8 taskId);
 static void RestoreBGMVolumeAfterPokemonCry(void);
 
 static const struct Fanfare sFanfares[] = {
-    [FANFARE_LEVEL_UP]            = { MUS_LEVEL_UP,             80,  80 },
+    [FANFARE_LEVEL_UP]            = { MUS_LEVEL_UP,             80,  70 },
     [FANFARE_OBTAIN_ITEM]         = { MUS_OBTAIN_ITEM,         160, 140 },
     [FANFARE_EVOLVED]             = { MUS_EVOLVED,             220, 220 },
     [FANFARE_OBTAIN_TMHM]         = { MUS_OBTAIN_TMHM,         220, 180 },

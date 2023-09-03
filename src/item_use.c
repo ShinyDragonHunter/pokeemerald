@@ -743,29 +743,6 @@ static void ItemUseOnFieldCB_WailmerPailSudowoodo(u8 taskId)
     DestroyTask(taskId);
 }
 
-void ItemUseOutOfBattle_GBPlayer(u8 taskId)
-{
-    const u8 *text;
-    if (FlagGet(FLAG_SYS_GBS_ENABLED))
-    {
-        FlagClear(FLAG_SYS_GBS_ENABLED);
-        text = gText_GBSoundsOff;
-    }
-    else
-    {
-        FlagSet(FLAG_SYS_GBS_ENABLED);
-        text = gText_GBSoundsOn;
-    }
-
-    PlayNewMapMusic(MUS_DUMMY);
-    Overworld_PlaySpecialMapMusic();
-
-    if (gTasks[taskId].tUsingRegisteredKeyItem)
-        DisplayItemMessageOnField(taskId, text, Task_CloseCantUseKeyItemMessage);
-    else
-        DisplayItemMessage(taskId, FONT_NORMAL, text, CloseItemMessage);
-}
-
 void ItemUseOutOfBattle_Medicine(u8 taskId)
 {
     gItemUseCB = ItemUseCB_Medicine;
@@ -1148,6 +1125,29 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_GBSounds(u8 taskId)
+{
+    const u8 *text;
+    if (FlagGet(FLAG_SYS_GBS_ENABLED))
+    {
+        FlagClear(FLAG_SYS_GBS_ENABLED);
+        text = gText_GBSoundsOff;
+    }
+    else
+    {
+        FlagSet(FLAG_SYS_GBS_ENABLED);
+        text = gText_GBSoundsOn;
+    }
+
+    PlayNewMapMusic(MUS_DUMMY);
+    Overworld_PlaySpecialMapMusic();
+
+    if (gTasks[taskId].tUsingRegisteredKeyItem)
+        DisplayItemMessageOnField(taskId, text, Task_CloseCantUseKeyItemMessage);
+    else
+        DisplayItemMessage(taskId, FONT_NORMAL, text, CloseItemMessage);
 }
 
 #undef tUsingRegisteredKeyItem

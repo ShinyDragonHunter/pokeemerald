@@ -177,6 +177,7 @@ SECTIONS {
         src/money.o(.text);
         src/contest_effect.o(.text);
         src/record_mixing.o(.text);
+        src/debug/sound_check_menu.o(.text);
         src/secret_base.o(.text);
         src/tv.o(.text);
         src/contest_util.o(.text);
@@ -343,7 +344,6 @@ SECTIONS {
         src/gym_leader_rematch.o(.text);
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
-		src/debug/sound_check_menu.o(.text);
     } =0
 
     script_data :
@@ -365,7 +365,6 @@ SECTIONS {
         src/libgcnmultiboot.o(.text);
         src/m4a_1.o(.text);
         src/m4a.o(.text);
-        src/gbs.o(.text);
         src/agb_flash.o(.text);
         src/agb_flash_1m.o(.text);
         src/agb_flash_mx.o(.text);
@@ -442,6 +441,7 @@ SECTIONS {
         *libc.a:libcfunc.o(.text);
         *libc.a:lseekr.o(.text);
         *libc.a:readr.o(.text);
+        src/gbs.o(.text);
     } =0
 
     .rodata :
@@ -557,6 +557,7 @@ SECTIONS {
         src/money.o(.rodata);
         src/contest_effect.o(.rodata);
         src/record_mixing.o(.rodata);
+        src/debug/sound_check_menu.o(.rodata);
         src/secret_base.o(.rodata);
         src/tv.o(.rodata);
         src/contest_util.o(.rodata);
@@ -707,7 +708,6 @@ SECTIONS {
         data/mystery_gift.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
-		src/debug/sound_check_menu.o(.rodata);
     } =0
 
     song_data :
@@ -1243,29 +1243,12 @@ SECTIONS {
         sound/songs/midi/ph_nurse_blend.o(.rodata);
         sound/songs/midi/ph_nurse_held.o(.rodata);
         sound/songs/midi/ph_nurse_solo.o(.rodata);
-        /* GBS songs */
-        sound/songs/gbs/gbs_gsc_route38.o(.rodata);
-        sound/songs/gbs/gbs_c_comm_center.o(.rodata);
-        sound/songs/gbs/gbs_gsc_pewter.o(.rodata);
-        sound/songs/gbs/gbs_c_vs_legend_beast.o(.rodata);
-        sound/songs/gbs/gbs_route101.o(.rodata);
-        sound/songs/gbs/gbs_obtain_badge.o(.rodata);
-        sound/songs/gbs/gbs_obtain_item.o(.rodata);
-        sound/songs/gbs/gbs_obtain_tmhm.o(.rodata);
-        sound/songs/gbs/gbs_oceanic_museum.o(.rodata);
-        sound/songs/gbs/gbs_abandoned_ship.o(.rodata);
-        sound/songs/gbs/gbs_rg_poke_mansion.o(.rodata);
-        sound/songs/gbs/gbs_rg_vs_trainer.o(.rodata);
-        sound/songs/gbs/gbs_rg_sevii_route.o(.rodata);
-        sound/songs/gbs/gbs_rg_sevii_45.o(.rodata);
-        sound/songs/gbs/gbs_rg_sevii_67.o(.rodata);
     } =0
 
     lib_rodata :
     SUBALIGN(4)
     {
         src/m4a.o(.rodata);
-        src/gbs.o(.text);
         src/agb_flash.o(.rodata);
         src/agb_flash_1m.o(.rodata);
         src/agb_flash_mx.o(.rodata);
@@ -1333,6 +1316,37 @@ SECTIONS {
     ALIGN(4)
     {
         src/graphics.o(.rodata);
+    } =0
+
+    gbs_data :
+    ALIGN(4)
+    {
+        src/gbs.o(.rodata);
+        src/gbs_song_table.o(.rodata);
+
+        /* GBS songs */
+        sound/songs/gbs/gbs_lakeofrage.o(.rodata);
+        sound/songs/gbs/gbs_route37.o(.rodata);
+        sound/songs/gbs/gbs_violetcity.o(.rodata);
+        sound/songs/gbs/gbs_viridiancity.o(.rodata);
+        sound/songs/gbs/gbs_azaleatown.o(.rodata);
+
+        sound/songs/gbs/gbs_suicunebattle.o(.rodata);
+        sound/songs/gbs/gbs_mobilecenter.o(.rodata);
+
+        sound/songs/gbs/gbs_sfx.o(.rodata);
+
+        sound/songs/gbs/gbs_lavender.o(.rodata);
+        sound/songs/gbs/gbs_trainerbattle.o(.rodata);
+        sound/songs/gbs/gbs_bikeriding.o(.rodata);
+        sound/songs/gbs/gbs_rby_titlescreen.o(.rodata);
+        sound/songs/gbs/gbs_dungeon2.o(.rodata);
+        sound/songs/gbs/gbs_cinnabarmansion.o(.rodata);
+        sound/songs/gbs/gbs_pokemontower.o(.rodata);
+
+        sound/songs/gbs/gbs_route101.o(.rodata);
+        sound/songs/gbs/gbs_abandonedship.o(.rodata);
+        sound/songs/gbs/gbs_oceanicmuseum.o(.rodata);
     } =0
 
     extra :

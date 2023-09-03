@@ -12,10 +12,12 @@
 #include "string_util.h"
 #include "title_screen.h"
 #include "sound.h"
-#include "trainer_pokemon_sprites.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/gbs_config.h"
+#include "gbs.h"
 
+#if ENABLE_DEBUG_SOUND_CHECK_MENU
 #define tWindowSelected data[0]
 #define tBgmIndex data[1]
 #define tSeIndex data[2]
@@ -27,6 +29,10 @@
 
 // wonky dim access macro
 #define MULTI_DIM_ARR(x, dim, y) ((x) * dim + (y))
+
+#define SE_END           SE_SUDOWOODO_SHAKE
+#define SONG_TABLE_START MUS_LITTLEROOT_TEST
+#define SONG_TABLE_END   PH_TRAP_BLEND - 1
 
 // dim access enums
 enum
@@ -82,9 +88,6 @@ static EWRAM_DATA u8 sDriverTest_IsCryPlayingOld = 0;
 static EWRAM_DATA int sSoundTestParams[9] = {0};
 static EWRAM_DATA u8 sDriverTest_Reverse = 0;
 static EWRAM_DATA u8 sDriverTest_Stereo = 0;
-
-struct MusicPlayerInfo *sMPlayInfo_Cry;
-extern struct MusicPlayerInfo gMPlayInfo_BGM;
 
 static const struct BgTemplate sSoundCheckMenuBgTemplates[] =
 {
@@ -182,7 +185,7 @@ static void VBlankCB_SoundCheckMenu(void)
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
 
-    if (sIsFastForwarding)
+    if (sIsFastForwarding != 0)
     {
         SoundMain();
         SoundMain();
@@ -260,7 +263,7 @@ void CB2_StartSoundCheckMenu(void)
 static void Task_InitSoundCheckMenu_CreateWindows(u8 taskId)
 {
     const u8 soundcheckStr[] = _("SOUND TEST{CLEAR_TO 121}{A_BUTTON} PLAY  {B_BUTTON} EXIT");
-    const u8 GameBoySoundsStr[] = _("{START_BUTTON} GB SOUNDS");
+    const u8 gbsStr[] = _("{START_BUTTON} GB SOUNDS");
     const u8 bgmStr[] = _("MUSIC");
     const u8 seStr[] = _("SOUND EFFECTS");
     const u8 upDownStr[] = _("{DPAD_LEFT} PREV {DPAD_RIGHT} NEXT");
@@ -270,7 +273,7 @@ static void Task_InitSoundCheckMenu_CreateWindows(u8 taskId)
     {
         SetStandardWindowBorderStyle(WIN_INFO, FALSE);
         AddTextPrinterParameterized(WIN_INFO, FONT_NORMAL, soundcheckStr, 0, 1, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(WIN_INFO, FONT_NORMAL, GameBoySoundsStr, 0, 16, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(WIN_INFO, FONT_NORMAL, gbsStr, 0, 16, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(WIN_INFO, FONT_NORMAL, driverStr, 120, 16, TEXT_SKIP_DRAW, NULL);
         PutWindowTilemapAndCopyWindowToVram(WIN_INFO);
         SetStandardWindowBorderStyle(WIN_MUS, FALSE);
@@ -288,137 +291,146 @@ static void Task_InitSoundCheckMenu_CreateWindows(u8 taskId)
     }
 }
 
-static const u8 *const gBGMNames[];
-static const u8 *const gSENames[];
+static const u8 *const sBGMNames[];
+static const u8 *const sSENames[];
 
 static void Task_HandleDrawingSoundCheckMenuText(u8 taskId)
 {
+    s16 *data = gTasks[taskId].data;
+    u16 soundNumber;
     FillWindowPixelRect(WIN_MUS, PIXEL_FILL(1), 0, 14, 224, 12);
-    PrintSoundNumber(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), WIN_MUS); // print by BGM index
-    PrintPaddedString(gBGMNames[gTasks[taskId].tBgmIndex], WIN_MUS);
+    soundNumber = tBgmIndex;
+    PrintSoundNumber(soundNumber + (SONG_TABLE_START - 1), WIN_MUS); // print by BGM index
+    PrintPaddedString(sBGMNames[soundNumber], WIN_MUS);
     FillWindowPixelRect(WIN_SE, PIXEL_FILL(1), 0, 14, 224, 12);
-    PrintSoundNumber(gTasks[taskId].tSeIndex, WIN_SE);
-    PrintPaddedString(gSENames[gTasks[taskId].tSeIndex], WIN_SE);
+    soundNumber = tSeIndex;
+    PrintSoundNumber(soundNumber, WIN_SE);
+    PrintPaddedString(sSENames[soundNumber], WIN_SE);
     gTasks[taskId].func = Task_ProcessSoundCheckMenuInputAndRedraw;
 }
 
 static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId)
 {
+    s16 *data = gTasks[taskId].data;
+    u16 soundNumber = tBgmIndex + (SONG_TABLE_START - 1);
+    u16 oldSoundNumber = tBgmIndexOld + (SONG_TABLE_START - 1);
+
     if (JOY_NEW(R_BUTTON)) // driver test
     {
-        gTasks[taskId].tWhichSubmenu = 1;
-        gTasks[taskId].tState = 0;
+        tWhichSubmenu = 1;
+        tState = 0;
         gTasks[taskId].func = Task_DrawSubmenu;
     }
     else if (JOY_NEW(L_BUTTON))
     {
-        gTasks[taskId].tWhichSubmenu = 0;
-        gTasks[taskId].tState = 0;
+        tWhichSubmenu = 0;
+        tState = 0;
         gTasks[taskId].func = Task_DrawSubmenu;
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        if (gTasks[taskId].tWindowSelected)
+        if (tWindowSelected != TEST_MUS)
         {
-            if (gTasks[taskId].tSeIndexOld)
+            if (tSeIndexOld != 0)
             {
-                if (gTasks[taskId].tSeIndex)
+                if (tSeIndex != 0)
                 {
-                    m4aSongNumStop_GBS(gTasks[taskId].tSeIndexOld, gTasks[taskId].tGBSounds);
-                    m4aSongNumStart_GBS(gTasks[taskId].tSeIndex, gTasks[taskId].tGBSounds);
-                    gTasks[taskId].tSeIndexOld = gTasks[taskId].tSeIndex;
+                    m4aSongNumStop(tSeIndexOld);
+                    m4aSongNumStart(tSeIndex);
+                    tSeIndexOld = tSeIndex;
                 }
                 else
                 {
-                    m4aSongNumStop_GBS(gTasks[taskId].tSeIndexOld, gTasks[taskId].tGBSounds);
-                    gTasks[taskId].tSeIndexOld = 0;
+                    m4aSongNumStop(tSeIndexOld);
+                    tSeIndexOld = 0;
                 }
             }
-            else if (gTasks[taskId].tSeIndex)
+            else if (tSeIndex != 0)
             {
-                m4aSongNumStart_GBS(gTasks[taskId].tSeIndex, gTasks[taskId].tGBSounds);
-                gTasks[taskId].tSeIndexOld = gTasks[taskId].tSeIndex;
+                m4aSongNumStart(tSeIndex);
+                tSeIndexOld = tSeIndex;
             }
         }
         else
         {
-            if (gTasks[taskId].tBgmIndexOld)
+            if (tBgmIndexOld != 0)
             {
-                if (gTasks[taskId].tBgmIndex)
+                if (gTasks[taskId].tBgmIndex != 0)
                 {
-                    m4aSongNumStop_GBS(gTasks[taskId].tBgmIndexOld + (MUS_LITTLEROOT_TEST - 1), gTasks[taskId].tGBSounds);
-                    m4aSongNumStart_GBS(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), gTasks[taskId].tGBSounds);
-                    gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
+                    SongNumStop(oldSoundNumber, tGBSounds);
+                    SongNumStart(soundNumber, tGBSounds);
+                    tBgmIndexOld = tBgmIndex;
                 }
                 else
                 {
-                    m4aSongNumStop_GBS(gTasks[taskId].tBgmIndexOld + (MUS_LITTLEROOT_TEST - 1), gTasks[taskId].tGBSounds);
-                    gTasks[taskId].tBgmIndexOld = 0;
+                    SongNumStop(oldSoundNumber, tGBSounds);
+                    tBgmIndexOld = 0;
                 }
             }
-            else if (gTasks[taskId].tBgmIndex)
+            else if (tBgmIndex != 0)
             {
-                m4aSongNumStart_GBS(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), gTasks[taskId].tGBSounds);
-                gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
+                SongNumStart(soundNumber, tGBSounds);
+                tBgmIndexOld = tBgmIndex;
             }
         }
     }
     else if (JOY_NEW(B_BUTTON))
     {
+        FadeOutBGM(2);
         m4aSongNumStart(SE_SELECT);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_ExitToTitleScreen;
     }
+    else if (JOY_NEW(START_BUTTON))
+    {
+        tGBSounds = !tGBSounds;
+        if (tBgmIndex != 0 && tBgmIndexOld != 0)
+        {
+            SongNumStop(soundNumber, !tGBSounds);
+            SongNumStart(soundNumber, tGBSounds);
+        }
+    }
     else if (JOY_REPEAT(DPAD_UP | DPAD_DOWN))
     {
-        gTasks[taskId].tWindowSelected ^= 1;
-        HighlightSelectedWindow(gTasks[taskId].tWindowSelected);
+        tWindowSelected ^= 1;
+        HighlightSelectedWindow(tWindowSelected);
         return FALSE;
     }
     else if (JOY_REPEAT(DPAD_LEFT))
     {
-        if (gTasks[taskId].tWindowSelected)
+        if (tWindowSelected != TEST_MUS)
         {
-            if (gTasks[taskId].tSeIndex)
-                gTasks[taskId].tSeIndex--;
+            if (tSeIndex > 0)
+                tSeIndex--;
             else
-                gTasks[taskId].tSeIndex = SE_END;
+                tSeIndex = SE_END;
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex)
-                gTasks[taskId].tBgmIndex--;
+            if (tBgmIndex != 0)
+                tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (SONG_TABLE_END - (MUS_LITTLEROOT_TEST - 1));
+                tBgmIndex = (SONG_TABLE_END - (SONG_TABLE_START - 1));
         }
         return TRUE;
     }
     else if (JOY_REPEAT(DPAD_RIGHT))
     {
-        if (gTasks[taskId].tWindowSelected)
+        if (tWindowSelected != TEST_MUS)
         {
-            if (gTasks[taskId].tSeIndex < SE_END)
-                gTasks[taskId].tSeIndex++;
+            if (tSeIndex < SE_END)
+                tSeIndex++;
             else
-                gTasks[taskId].tSeIndex = 0;
+                tSeIndex = 0;
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (SONG_TABLE_END - (MUS_LITTLEROOT_TEST - 1)))
-                gTasks[taskId].tBgmIndex++;
+            if (tBgmIndex < (SONG_TABLE_END - (SONG_TABLE_START - 1)))
+                tBgmIndex++;
             else
-                gTasks[taskId].tBgmIndex = 0;
+                tBgmIndex = 0;
         }
         return TRUE;
-    }
-    if (JOY_NEW(START_BUTTON))
-    {
-        gTasks[taskId].tGBSounds = !gTasks[taskId].tGBSounds;
-        if (gTasks[taskId].tBgmIndex && gTasks[taskId].tBgmIndexOld)
-        {
-            m4aSongNumStop_GBS(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), !gTasks[taskId].tGBSounds);
-            m4aSongNumStart_GBS(gTasks[taskId].tBgmIndexOld + (MUS_LITTLEROOT_TEST - 1), gTasks[taskId].tGBSounds);
-        }
     }
     else if (JOY_HELD(SELECT_BUTTON))
     {
@@ -433,7 +445,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId)
 
 static void Task_ProcessSoundCheckMenuInputAndRedraw(u8 taskId)
 {
-    if (Task_ProcessSoundCheckMenuInput(taskId))
+    if (Task_ProcessSoundCheckMenuInput(taskId) != FALSE)
         gTasks[taskId].func = Task_HandleDrawingSoundCheckMenuText;
 }
 
@@ -525,13 +537,13 @@ static void Task_DrawSubmenu(u8 taskId)
                                       DISPCNT_BG0_ON |
                                       DISPCNT_OBJ_ON |
                                       DISPCNT_WIN0_ON);
-        if (gTasks[taskId].tWhichSubmenu)
+        if (gTasks[taskId].tWhichSubmenu == 0)
         {
-            gTasks[taskId].func = Task_DrawDriverTestMenu;
+            gTasks[taskId].func = Task_DrawPanTestMenu;
         }
         else
         {
-            gTasks[taskId].func = Task_DrawPanTestMenu;
+            gTasks[taskId].func = Task_DrawDriverTestMenu;
         }
         break;
     }
@@ -573,7 +585,7 @@ static void Task_DrawDriverTestMenu(u8 taskId)
     SetGpuReg(REG_OFFSET_WIN0V, DISPLAY_HEIGHT);
     sDriverTest_IsCryPlaying = 0;
     sDriverTest_IsCryPlayingOld = 0;
-    sMPlayInfo_Cry = NULL;
+    gMPlay_PokemonCry = NULL;
     sDriverTest_Reverse = 0;
     sDriverTest_Stereo = 1;
     sSoundTestParams[CRY_TEST_VOICE] = 0;
@@ -586,7 +598,7 @@ static void Task_DrawDriverTestMenu(u8 taskId)
     sSoundTestParams[CRY_TEST_CHORUS] = 0;
     sSoundTestParams[CRY_TEST_PRIORITY] = 2;
     PrintDriverTestMenuText();
-    InitMenuNormal(WIN_INFO, 2, 0, 0, 16, 9, 0);
+    InitMenuNormal(WIN_INFO, FONT_NORMAL, 0, 0, 16, 9, 0);
     gTasks[taskId].func = Task_ProcessDriverTestInput;
 }
 
@@ -647,7 +659,7 @@ static void Task_ProcessDriverTestInput(u8 taskId)
     }
     if (JOY_NEW(A_BUTTON))
     {
-        u8 divide, remaining;
+        struct ToneData *cryTable;
 
         SetPokemonCryVolume(sSoundTestParams[CRY_TEST_VOLUME]);
         SetPokemonCryPanpot(sSoundTestParams[CRY_TEST_PANPOT]);
@@ -658,41 +670,16 @@ static void Task_ProcessDriverTestInput(u8 taskId)
         SetPokemonCryChorus(sSoundTestParams[CRY_TEST_CHORUS]);
         SetPokemonCryPriority(sSoundTestParams[CRY_TEST_PRIORITY]);
 
-        remaining = sSoundTestParams[CRY_TEST_VOICE] % 128;
-        divide = sSoundTestParams[CRY_TEST_VOICE] / 128;
-
-        switch (divide)
-        {
-        case 0:
-            if (sDriverTest_Reverse)
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable_Reverse[(128 * 0) + remaining]);
-            else
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable[(128 * 0) + remaining]);
-            break;
-        case 1:
-            if (sDriverTest_Reverse)
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable_Reverse[(128 * 1) + remaining]);
-            else
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable[(128 * 1) + remaining]);
-            break;
-        case 2:
-            if (sDriverTest_Reverse)
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable_Reverse[(128 * 2) + remaining]);
-            else
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable[(128 * 2) + remaining]);
-            break;
-        case 3:
-            if (sDriverTest_Reverse)
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable_Reverse[(128 * 3) + remaining]);
-            else
-                sMPlayInfo_Cry = SetPokemonCryTone(&gCryTable[(128 * 3) + remaining]);
-            break;
-        }
+        if (sDriverTest_Reverse)
+            cryTable = gCryTable_Reverse;
+        else
+            cryTable = gCryTable;
+        gMPlay_PokemonCry = SetPokemonCryTone(&cryTable[sSoundTestParams[CRY_TEST_VOICE]]);
     }
 
-    if (sMPlayInfo_Cry)
+    if (gMPlay_PokemonCry != NULL)
     {
-        sDriverTest_IsCryPlaying = IsPokemonCryPlaying(sMPlayInfo_Cry);
+        sDriverTest_IsCryPlaying = IsPokemonCryPlaying(gMPlay_PokemonCry);
 
         if (sDriverTest_IsCryPlaying != sDriverTest_IsCryPlayingOld)
             PrintDriverTestMenuText();
@@ -730,7 +717,7 @@ static void AdjustSelectedDriverParam(s8 delta)
 
 static void PrintDriverTestMenuText(void)
 {
-    PrintSignedNumber(sSoundTestParams[CRY_TEST_VOICE], 80, 0, 5);
+    PrintSignedNumber(sSoundTestParams[CRY_TEST_VOICE] + 1, 80, 0, 5);
     PrintSignedNumber(sSoundTestParams[CRY_TEST_VOLUME], 80, 16, 5);
     PrintSignedNumber(sSoundTestParams[CRY_TEST_PANPOT], 80, 32, 5);
     PrintSignedNumber(sSoundTestParams[CRY_TEST_PITCH], 80, 48, 5);
@@ -755,7 +742,6 @@ static void PrintSignedNumber(int n, u16 x, u16 y, u8 digits)
           10000,
          100000
     };
-
     u8 str[8];
     s32 i;
     s8 negative;
@@ -763,23 +749,19 @@ static void PrintSignedNumber(int n, u16 x, u16 y, u8 digits)
 
     for (i = 0; i <= digits; i++)
         str[i] = CHAR_SPACE;
-
     str[digits + 1] = EOS;
 
-    negative = FALSE;
-    if (n < 0)
-    {
+    negative = n < 0;
+    if (negative)
         n = -n;
-        negative = TRUE;
-    }
 
-    someVar2 = (digits == 1) ? TRUE : FALSE;
+    someVar2 = digits == 1;
 
     for (i = digits - 1; i >= 0; i--)
     {
         s8 d = n / powersOfTen[i];
 
-        if (d || someVar2 || i == 0)
+        if (d != 0 || someVar2 || i == 0)
         {
             if (negative && !someVar2)
                 str[digits - i - 1] = CHAR_HYPHEN;
@@ -805,7 +787,7 @@ static void Task_DrawPanTestMenu(u8 taskId)
 
     SetGpuReg(REG_OFFSET_WIN0H, DISPLAY_WIDTH);
     SetGpuReg(REG_OFFSET_WIN0V, DISPLAY_HEIGHT);
-    sSoundTestParams[CRY_TEST_VOICE] = 1;
+    sSoundTestParams[CRY_TEST_VOICE] = SPECIES_BULBASAUR;
     sSoundTestParams[CRY_TEST_PANPOT] = 0;
     sSoundTestParams[CRY_TEST_CHORUS] = 0;
     sSoundTestParams[CRY_TEST_PROGRESS] = 0;
@@ -994,7 +976,6 @@ static void ClearTasksAndGraphicalStructs(void)
     ScanlineEffect_Stop();
     ResetTasks();
     ResetSpriteData();
-    ResetAllPicSprites();
     ResetPaletteFadeControl();
     FreeAllSpritePalettes();
 }
@@ -1024,7 +1005,6 @@ static void DestroyWindow(u8 windowId)
 }
 
 #define SOUND_LIST_BGM \
-	X(MUS_STOP, "STOP") \
     X(MUS_LITTLEROOT_TEST, "MUS-LITTLEROOT-TEST") \
     X(MUS_GSC_ROUTE38, "MUS-GSC-ROUTE38") \
     X(MUS_CAUGHT, "MUS-CAUGHT") \
@@ -1233,61 +1213,9 @@ static void DestroyWindow(u8 windowId)
     X(MUS_RG_ENCOUNTER_DEOXYS, "MUS-RG-ENCOUNTER-DEOXYS") \
     X(MUS_RG_TRAINER_TOWER, "MUS-RG-TRAINER-TOWER") \
     X(MUS_RG_SLOW_PALLET, "MUS-RG-SLOW-PALLET") \
-    X(MUS_RG_TEACHY_TV_MENU, "MUS-RG-TEACHY-TV-MENU") \
-    X(PH_TRAP_BLEND, "PH-TRAP-BLEND") \
-    X(PH_TRAP_HELD, "PH-TRAP-HELD") \
-    X(PH_TRAP_SOLO, "PH-TRAP-SOLO") \
-    X(PH_FACE_BLEND, "PH-FACE-BLEND") \
-    X(PH_FACE_HELD, "PH-FACE-HELD") \
-    X(PH_FACE_SOLO, "PH-FACE-SOLO") \
-    X(PH_CLOTH_BLEND, "PH-CLOTH-BLEND") \
-    X(PH_CLOTH_HELD, "PH-CLOTH-HELD") \
-    X(PH_CLOTH_SOLO, "PH-CLOTH-SOLO") \
-    X(PH_DRESS_BLEND, "PH-DRESS-BLEND") \
-    X(PH_DRESS_HELD, "PH-DRESS-HELD") \
-    X(PH_DRESS_SOLO, "PH-DRESS-SOLO") \
-    X(PH_FLEECE_BLEND, "PH-FLEECE-BLEND") \
-    X(PH_FLEECE_HELD, "PH-FLEECE-HELD") \
-    X(PH_FLEECE_SOLO, "PH-FLEECE-SOLO") \
-    X(PH_KIT_BLEND, "PH-KIT-BLEND") \
-    X(PH_KIT_HELD, "PH-KIT-HELD") \
-    X(PH_KIT_SOLO, "PH-KIT-SOLO") \
-    X(PH_PRICE_BLEND, "PH-PRICE-BLEND") \
-    X(PH_PRICE_HELD, "PH-PRICE-HELD") \
-    X(PH_PRICE_SOLO, "PH-PRICE-SOLO") \
-    X(PH_LOT_BLEND, "PH-LOT-BLEND") \
-    X(PH_LOT_HELD, "PH-LOT-HELD") \
-    X(PH_LOT_SOLO, "PH-LOT-SOLO") \
-    X(PH_GOAT_BLEND, "PH-GOAT-BLEND") \
-    X(PH_GOAT_HELD, "PH-GOAT-HELD") \
-    X(PH_GOAT_SOLO, "PH-GOAT-SOLO") \
-    X(PH_THOUGHT_BLEND, "PH-THOUGHT-BLEND") \
-    X(PH_THOUGHT_HELD, "PH-THOUGHT-HELD") \
-    X(PH_THOUGHT_SOLO, "PH-THOUGHT-SOLO") \
-    X(PH_CHOICE_BLEND, "PH-CHOICE-BLEND") \
-    X(PH_CHOICE_HELD, "PH-CHOICE-HELD") \
-    X(PH_CHOICE_SOLO, "PH-CHOICE-SOLO") \
-    X(PH_MOUTH_BLEND, "PH-MOUTH-BLEND") \
-    X(PH_MOUTH_HELD, "PH-MOUTH-HELD") \
-    X(PH_MOUTH_SOLO, "PH-MOUTH-SOLO") \
-    X(PH_FOOT_BLEND, "PH-FOOT-BLEND") \
-    X(PH_FOOT_HELD, "PH-FOOT-HELD") \
-    X(PH_FOOT_SOLO, "PH-FOOT-SOLO") \
-    X(PH_GOOSE_BLEND, "PH-GOOSE-BLEND") \
-    X(PH_GOOSE_HELD, "PH-GOOSE-HELD") \
-    X(PH_GOOSE_SOLO, "PH-GOOSE-SOLO") \
-    X(PH_STRUT_BLEND, "PH-STRUT-BLEND") \
-    X(PH_STRUT_HELD, "PH-STRUT-HELD") \
-    X(PH_STRUT_SOLO, "PH-STRUT-SOLO") \
-    X(PH_CURE_BLEND, "PH-CURE-BLEND") \
-    X(PH_CURE_HELD, "PH-CURE-HELD") \
-    X(PH_CURE_SOLO, "PH-CURE-SOLO") \
-    X(PH_NURSE_BLEND, "PH-NURSE-BLEND") \
-    X(PH_NURSE_HELD, "PH-NURSE-HELD") \
-    X(PH_NURSE_SOLO, "PH-NURSE-SOLO")
+    X(MUS_RG_TEACHY_TV_MENU, "MUS-RG-TEACHY-TV-MENU")
 
 #define SOUND_LIST_SE \
-    X(SE_STOP, "STOP") \
     X(SE_USE_ITEM, "SE-USE-ITEM") \
     X(SE_PC_LOGIN, "SE-PC-LOGIN") \
     X(SE_PC_OFF, "SE-PC-OFF") \
@@ -1559,13 +1487,15 @@ static void DestroyWindow(u8 windowId)
     X(SE_SUDOWOODO_SHAKE, "SE-SUDOWOODO-SHAKE")
 
 // Create BGM list
+static const u8 sBGMName_Stop[] = _("STOP");
 #define X(songId, name) static const u8 sBGMName_##songId[] = _(name);
 SOUND_LIST_BGM
 #undef X
 
 #define X(songId, name) sBGMName_##songId,
-static const u8 *const gBGMNames[] =
+static const u8 *const sBGMNames[] =
 {
+sBGMName_Stop,
 SOUND_LIST_BGM
 };
 #undef X
@@ -1576,8 +1506,9 @@ SOUND_LIST_SE
 #undef X
 
 #define X(songId, name) sSEName_##songId,
-static const u8 *const gSENames[] =
+static const u8 *const sSENames[] =
 {
+sBGMName_Stop,
 SOUND_LIST_SE
 };
 #undef X
@@ -1590,3 +1521,5 @@ SOUND_LIST_SE
 #undef tGBSounds
 #undef tWhichSubmenu
 #undef tState
+
+#endif

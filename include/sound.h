@@ -45,4 +45,6 @@ bool8 IsSEPlaying(void);
 bool8 IsBGMPlaying(void);
 bool8 IsSpecialSEPlaying(void);
 
+extern struct MusicPlayerInfo *gMPlay_PokemonCry;
+
 #endif // GUARD_SOUND_H

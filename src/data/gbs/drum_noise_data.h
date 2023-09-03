@@ -1,254 +1,216 @@
-#define NOISE_DATA_END 0xFF
+#define noise_note(a, b, c, d) (a), ((b) << 4) | (c), (d)
+#define sound_ret 0xFF
 
-// Individual noise samples, arranged into groups of 3 bytes, with NOISE_DATA_END
+// Individual noise samples, arranged into groups of 3 bytes, with sound_ret
 // terminating the array when in the first slot.
-static const u8 sDrumNoiseDataDrum00[] =
-{
-    0x20, 0x11, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum00[] = {
+    noise_note(32, 1, 1, 0),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare1[] =
-{
-    0x20, 0xC1, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare1[] = {
+    noise_note(32, 12, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare2[] =
-{
-    0x20, 0xB1, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare2[] = {
+    noise_note(32, 11, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare3[] =
-{
-    0x20, 0xA1, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare3[] = {
+    noise_note(32, 10, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare4[] =
-{
-    0x20, 0x81, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare4[] = {
+    noise_note(32, 8, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum05[] =
-{
-    0x27, 0x84, 0x37, 
-    0x26, 0x84, 0x36, 
-    0x25, 0x83, 0x35, 
-    0x24, 0x83, 0x34, 
-    0x23, 0x82, 0x33, 
-    0x22, 0x81, 0x32,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum05[] = {
+    noise_note(39, 8, 4, 55),
+    noise_note(38, 8, 4, 54),
+    noise_note(37, 8, 3, 53),
+    noise_note(36, 8, 3, 52),
+    noise_note(35, 8, 2, 51),
+    noise_note(34, 8, 1, 50),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataTriangle1[] =
-{
-    0x20, 0x51, 0x2A,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataTriangle1[] = {
+    noise_note(32, 5, 1, 42),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataTriangle2[] =
-{
-    0x21, 0x41, 0x2B, 
-    0x20, 0x61, 0x2A,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataTriangle2[] = {
+    noise_note(33, 4, 1, 43),
+    noise_note(32, 6, 1, 42),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataHiHat1[] =
-{
-    0x20, 0x81, 0x10,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataHiHat1[] = {
+    noise_note(32, 8, 1, 16),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare5[] =
-{
-    0x20, 0x82, 0x23,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare5[] = {
+    noise_note(32, 8, 2, 35),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare6[] =
-{
-    0x20, 0x82, 0x25,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare6[] = {
+    noise_note(32, 8, 2, 37),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare7[] =
-{
-    0x20, 0x82, 0x26,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare7[] = {
+    noise_note(32, 8, 2, 38),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataHiHat2[] =
-{
-    0x20, 0xA1, 0x10,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataHiHat2[] = {
+    noise_note(32, 10, 1, 16),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataHiHat3[] =
-{
-    0x20, 0xA2, 0x11,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataHiHat3[] = {
+    noise_note(32, 10, 2, 17),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare8[] =
-{
-    0x20, 0xA2, 0x50,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare8[] = {
+    noise_note(32, 10, 2, 80),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataTriangle3[] =
-{
-    0x20, 0xA1, 0x18, 
-    0x20, 0x31, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataTriangle3[] = {
+    noise_note(32, 10, 1, 24),
+    noise_note(32, 3, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataTriangle4[] =
-{
-    0x22, 0x91, 0x28, 
-    0x20, 0x71, 0x18,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataTriangle4[] = {
+    noise_note(34, 9, 1, 40),
+    noise_note(32, 7, 1, 24),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare9[] =
-{
-    0x20, 0x91, 0x22,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare9[] = {
+    noise_note(32, 9, 1, 34),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare10[] =
-{
-    0x20, 0x71, 0x22,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare10[] = {
+    noise_note(32, 7, 1, 34),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare11[] =
-{
-    0x20, 0x61, 0x22,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare11[] = {
+    noise_note(32, 6, 1, 34),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum20[] =
-{
-    0x20, 0x11, 0x11,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum20[] = {
+    noise_note(32, 1, 1, 17),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum21[] =
-{
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum21[] = {
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare12[] =
-{
-    0x20, 0x91, 0x33,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare12[] = {
+    noise_note(32, 9, 1, 51),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare13[] =
-{
-    0x20, 0x51, 0x32,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare13[] = {
+    noise_note(32, 5, 1, 50),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataSnare14[] =
-{
-    0x20, 0x81, 0x31,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataSnare14[] = {
+    noise_note(32, 8, 1, 49),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataKick1[] =
-{
-    0x20, 0x88, 0x6B, 
-    0x20, 0x71, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataKick1[] = {
+    noise_note(32, 8, 8, 107),
+    noise_note(32, 7, 1, 0),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataTriangle5[] =
-{
-    0x30, 0x91, 0x18,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataTriangle5[] = {
+    noise_note(48, 9, 1, 24),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum27[] =
-{
-    0x27, 0x92, 0x10,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum27[] = {
+    noise_note(39, 9, 2, 16),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum28[] =
-{
-    0x33, 0x91, 0x00, 
-    0x33, 0x11, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum28[] = {
+    noise_note(51, 9, 1, 0),
+    noise_note(51, 1, 1, 0),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum29[] =
-{
-    0x33, 0x91, 0x11, 
-    0x33, 0x11, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum29[] = {
+    noise_note(51, 9, 1, 17),
+    noise_note(51, 1, 1, 0),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataCrash1[] =
-{
-    0x33, 0x88, 0x15, 
-    0x20, 0x65, 0x12,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataCrash1[] = {
+    noise_note(51, 8, 8, 21),
+    noise_note(32, 6, 5, 18),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum31[] =
-{
-    0x33, 0x51, 0x21, 
-    0x33, 0x11, 0x11,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum31[] = {
+    noise_note(51, 5, 1, 33),
+    noise_note(51, 1, 1, 17),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum32[] =
-{
-    0x33, 0x51, 0x50, 
-    0x33, 0x11, 0x11,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum32[] = {
+    noise_note(51, 5, 1, 80),
+    noise_note(51, 1, 1, 17),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum33[] =
-{
-    0x20, 0xA1, 0x31,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum33[] = {
+    noise_note(32, 10, 1, 49),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataCrash2[] =
-{
-    0x20, 0x84, 0x12,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataCrash2[] = {
+    noise_note(32, 8, 4, 18),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum35[] =
-{
-    0x33, 0x81, 0x00, 
-    0x33, 0x11, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum35[] = {
+    noise_note(51, 8, 1, 0),
+    noise_note(51, 1, 1, 0),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataDrum36[] =
-{
-    0x33, 0x81, 0x21, 
-    0x33, 0x11, 0x11,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataDrum36[] = {
+    noise_note(51, 8, 1, 33),
+    noise_note(51, 1, 1, 17),
+    sound_ret
 };
 
-static const u8 sDrumNoiseDataKick2[] =
-{
-    0x20, 0xA8, 0x6B, 
-    0x20, 0x71, 0x00,
-    NOISE_DATA_END
+static const u8 sDrumNoiseDataKick2[] = {
+    noise_note(32, 10, 8, 107),
+    noise_note(32, 7, 1, 0),
+    sound_ret
 };
 
 // Groups the separate samples into sample groups
-static const u8 *const sDrumkitData0[] =
-{
+static const u8 *const sDrumkitData0[] = {
     sDrumNoiseDataDrum00,
     sDrumNoiseDataSnare1,
     sDrumNoiseDataSnare2,
@@ -264,8 +226,7 @@ static const u8 *const sDrumkitData0[] =
     sDrumNoiseDataHiHat2
 };
 
-static const u8 *const sDrumkitData1[] =
-{
+static const u8 *const sDrumkitData1[] = {
     sDrumNoiseDataDrum00,
     sDrumNoiseDataHiHat1,
     sDrumNoiseDataSnare5,
@@ -281,8 +242,7 @@ static const u8 *const sDrumkitData1[] =
     sDrumNoiseDataSnare11
 };
 
-static const u8 *const sDrumkitData2[] =
-{
+static const u8 *const sDrumkitData2[] = {
     sDrumNoiseDataDrum00,
     sDrumNoiseDataSnare1,
     sDrumNoiseDataSnare9,
@@ -298,8 +258,7 @@ static const u8 *const sDrumkitData2[] =
     sDrumNoiseDataHiHat2
 };
 
-static const u8 *const sDrumkitData3[] =
-{
+static const u8 *const sDrumkitData3[] = {
     sDrumNoiseDataDrum21,
     sDrumNoiseDataSnare12,
     sDrumNoiseDataSnare13,
@@ -315,8 +274,7 @@ static const u8 *const sDrumkitData3[] =
     sDrumNoiseDataCrash2
 };
 
-static const u8 *const sDrumkitData4[] =
-{
+static const u8 *const sDrumkitData4[] = {
     sDrumNoiseDataDrum21,
     sDrumNoiseDataDrum20,
     sDrumNoiseDataSnare13,
@@ -332,8 +290,7 @@ static const u8 *const sDrumkitData4[] =
     sDrumNoiseDataCrash1
 };
 
-static const u8 *const sDrumkitData5[] =
-{
+static const u8 *const sDrumkitData5[] = {
     sDrumNoiseDataDrum00,
     sDrumNoiseDataSnare9,
     sDrumNoiseDataSnare10,
@@ -350,8 +307,7 @@ static const u8 *const sDrumkitData5[] =
 };
 
 // A simple table pointing to each of the sample groups
-static const u8 *const *const sDrumkitDataTable[] =
-{
+static const u8 *const *const sDrumkitDataTable[] = {
     sDrumkitData0,
     sDrumkitData1,
     sDrumkitData2,

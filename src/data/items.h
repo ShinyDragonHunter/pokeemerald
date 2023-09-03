@@ -4540,16 +4540,16 @@ const struct Item gItems[] =
 
 // New key items
 
-    [ITEM_GB_PLAYER] =
+    [ITEM_GB_SOUNDS] =
     {
-        .name = _("GB PLAYER"),
-        .itemId = ITEM_GB_PLAYER,
+        .name = _("GB SOUNDS"),
+        .itemId = ITEM_GB_SOUNDS,
         .price = 0,
-        .description = sGBPlayerDesc,
+        .description = sGBSoundsDesc,
         .importance = 1,
         .registrability = TRUE,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_GBPlayer,
+        .fieldUseFunc = ItemUseOutOfBattle_GBSounds,
     },
 };

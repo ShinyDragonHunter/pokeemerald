@@ -1551,7 +1551,7 @@ static const u8 sOldSeaMapDesc[] = _(
     "to a certain island.");
 
 // New key items
-static const u8 sGBPlayerDesc[] = _(
+static const u8 sGBSoundsDesc[] = _(
     "Listen to nostalgic\n"
     "songs with the use\n"
     "of a single switch.");

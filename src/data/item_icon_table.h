@@ -402,7 +402,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_MAGMA_EMBLEM] = {gItemIcon_MagmaEmblem, gItemIconPalette_MagmaEmblem},
     [ITEM_OLD_SEA_MAP] = {gItemIcon_OldSeaMap, gItemIconPalette_OldSeaMap},
     // New key items
-    [ITEM_GB_PLAYER] = {gItemIcon_GBPlayer, gItemIconPalette_GBPlayer},
+    [ITEM_GB_SOUNDS] = {gItemIcon_GBSounds, gItemIconPalette_GBSounds},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
