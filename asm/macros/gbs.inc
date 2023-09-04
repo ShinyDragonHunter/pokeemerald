@@ -1,5 +1,7 @@
 	.include "sound/MPlayDef.s"
-	.include "constants/constants.inc"
+
+	.set TRUE, 1
+	.set FALSE, 0
 
 @ sFrequencyTable indexes (see src/data/gbs/note_frequency_table.h)
 	enum_start 1
