@@ -75,7 +75,7 @@ static bool32 GBSTrack_Update(struct MusicPlayerInfo *info, struct GBSTrack *tra
     else
         track->noteLength1--;
 
-    if (channel == CGBCHANNEL_TONE1)
+    if (channel != CGBCHANNEL_NOISE)
         ApplyPitchBend(track);
     #undef channel
 
@@ -574,7 +574,12 @@ static void UpdateCGBTone2(struct GBSTrack *track, u16 pitch)
     }
     else
     {
-        if (track->noteVibratoOverride)
+        if (track->noteFreqOverride)
+        {
+            *frequencyControl = pitch;
+            track->noteDutyOverride = TRUE;
+        }
+        else if (track->noteVibratoOverride)
         {
             // Original engine chooses to clamp calculation at nearest multiple of 0x100
             // Because of this, it only writes the lower byte if noteVibratoOverride is set
@@ -603,6 +608,11 @@ static void UpdateCGBWave(struct GBSTrack *track, u16 pitch)
         UpdateStereoPan(track);
         LoadWavePattern(track);
         *frequencyControl = pitch | 0x8000;
+    }
+    else if (track->noteFreqOverride)
+    {
+        *frequencyControl = pitch;
+        track->noteDutyOverride = TRUE;
     }
     else if (track->noteVibratoOverride)
     {
