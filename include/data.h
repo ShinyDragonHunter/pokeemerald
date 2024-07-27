@@ -32,63 +32,63 @@ struct MonCoords
 #define GET_MON_COORDS_WIDTH(size)((size >> 4) * 8)
 #define GET_MON_COORDS_HEIGHT(size)((size & 0xF) * 8)
 
-struct TrainerMonNoItemDefaultMoves
+struct TrainerMon
 {
-    u16 iv;
+    u32 iv;
     u8 lvl;
-    u16 species;
-};
-
-struct TrainerMonItemDefaultMoves
-{
-    u16 iv;
-    u8 lvl;
-    u16 species;
-    u16 heldItem;
-};
-
-struct TrainerMonNoItemCustomMoves
-{
-    u16 iv;
-    u8 lvl;
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-};
-
-struct TrainerMonItemCustomMoves
-{
-    u16 iv;
-    u8 lvl;
+    bool8 gender:2;
+    bool8 isShiny:1;
+    bool8 abilityNum:1;
     u16 species;
     u16 heldItem;
     u16 moves[MAX_MON_MOVES];
+    u16 nature:11;
+    u16 pokeball:5;
+    const u8 *ev;
 };
 
-#define NO_ITEM_DEFAULT_MOVES(party) { .NoItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = 0
-#define NO_ITEM_CUSTOM_MOVES(party) { .NoItemCustomMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET
-#define ITEM_DEFAULT_MOVES(party) { .ItemDefaultMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_HELD_ITEM
-#define ITEM_CUSTOM_MOVES(party) { .ItemCustomMoves = party }, .partySize = ARRAY_COUNT(party), .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM
-
-union TrainerMonPtr
+struct TrainerTypeTrainer
 {
-    const struct TrainerMonNoItemDefaultMoves *NoItemDefaultMoves;
-    const struct TrainerMonNoItemCustomMoves *NoItemCustomMoves;
-    const struct TrainerMonItemDefaultMoves *ItemDefaultMoves;
-    const struct TrainerMonItemCustomMoves *ItemCustomMoves;
+    /*0x08*/ u16 items[MAX_TRAINER_ITEMS];
+    /*0x10*/ u32 aiFlags;
+};
+
+struct TrainerTypePartner
+{
+    /*0x08*/ u32 otId;
+    /*0x0C*/ u8 padding[4];
+    /*0x10*/ u32 aiFlags;
+};
+
+struct TrainerTypeFrontierBrain
+{
+    /*0x08*/ u8 streakAppearances[4];
+    // Flags to change the conversation when the Frontier Brain is encountered for a battle
+    // First bit is has battled them before and not won yet, second bit is has battled them and won (obtained a Symbol)
+    /*0x0C*/ u16 battledBrainBitFlags[2];
+    /*0x10*/ u8 objectEventGfxId;
+    /*0x11*/ u8 padding[3];
+};
+
+#define TRAINER_PARTY(party) party, .partySize = ARRAY_COUNT(party)
+
+union TrainerTypePtr
+{
+    struct TrainerTypeTrainer trainer;
+    struct TrainerTypePartner partner;
+    struct TrainerTypeFrontierBrain frontierBrain;
 };
 
 struct Trainer
 {
-    /*0x00*/ u8 partyFlags;
+    /*0x00*/ u8 partySize:7;
+             bool8 doubleBattle:1;
     /*0x01*/ u8 trainerClass;
     /*0x02*/ u8 encounterMusic_gender; // last bit is gender
     /*0x03*/ u8 trainerPic;
-    /*0x04*/ u8 trainerName[TRAINER_NAME_LENGTH + 1];
-    /*0x10*/ u16 items[MAX_TRAINER_ITEMS];
-    /*0x18*/ bool8 doubleBattle;
-    /*0x1C*/ u32 aiFlags;
-    /*0x20*/ u8 partySize;
-    /*0x24*/ union TrainerMonPtr party;
+    /*0x04*/ const u8 *trainerName;
+    /*0x08*/ union TrainerTypePtr trainerType;
+    /*0x14*/ const struct TrainerMon *party;
 };
 
 #define TRAINER_ENCOUNTER_MUSIC(trainer)((gTrainers[trainer].encounterMusic_gender & 0x7F))
@@ -138,5 +138,7 @@ extern const struct Trainer gTrainers[];
 extern const u8 gTrainerClassNames[][13];
 extern const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1];
 extern const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1];
+
+#include "trainer_control.h"
 
 #endif // GUARD_DATA_H

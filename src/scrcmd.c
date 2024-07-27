@@ -1387,14 +1387,9 @@ bool8 ScrCmd_multichoicedefault(struct ScriptContext *ctx)
     }
 }
 
-bool8 ScrCmd_drawbox(struct ScriptContext *ctx)
+bool8 ScrCmd_setpartner(struct ScriptContext *ctx)
 {
-    /*u8 left = ScriptReadByte(ctx);
-    u8 top = ScriptReadByte(ctx);
-    u8 right = ScriptReadByte(ctx);
-    u8 bottom = ScriptReadByte(ctx);
-
-    MenuDrawTextWindow(left, top, right, bottom);*/
+    gPartnerTrainerId = ScriptReadHalfword(ctx);
     return FALSE;
 }
 

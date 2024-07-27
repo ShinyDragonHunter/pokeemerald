@@ -6158,19 +6158,15 @@ static void CopyDomeTrainerName(u8 *str, u16 trainerId)
 
 static u8 GetDomeBrainTrainerPicId(void)
 {
-    return gTrainers[TRAINER_TUCKER].trainerPic;
+    return gFrontierBrains[FRONTIER_FACILITY_DOME].trainerPic;
 }
 
 static u8 GetDomeBrainTrainerClass(void)
 {
-    return gTrainers[TRAINER_TUCKER].trainerClass;
+    return gFrontierBrains[FRONTIER_FACILITY_DOME].trainerClass;
 }
 
 static void CopyDomeBrainTrainerName(u8 *str)
 {
-    int i;
-
-    for (i = 0; i < PLAYER_NAME_LENGTH; i++)
-        str[i] = gTrainers[TRAINER_TUCKER].trainerName[i];
-    str[i] = EOS;
+    CopyFrontierBrainTrainerNameByFacilityIndex(str, FRONTIER_FACILITY_DOME);
 }

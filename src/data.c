@@ -7,6 +7,7 @@
 #include "constants/moves.h"
 #include "constants/trainers.h"
 #include "constants/battle_ai.h"
+#include "strings.h"
 
 const u16 gMinigameDigits_Pal[] = INCBIN_U16("graphics/link/minigame_digits.gbapal");
 const u32 gMinigameDigits_Gfx[] = INCBIN_U32("graphics/link/minigame_digits.4bpp.lz");

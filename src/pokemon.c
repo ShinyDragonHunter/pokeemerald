@@ -6708,9 +6708,9 @@ const u8 *GetTrainerPartnerName(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
     {
-        if (gPartnerTrainerId == TRAINER_STEVEN_PARTNER)
+        if (gPartnerTrainerId >= TRAINER_PARTNER(PARTNER_NONE))
         {
-            return gTrainers[TRAINER_STEVEN].trainerName;
+            return gPartners[gPartnerTrainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName;
         }
         else
         {

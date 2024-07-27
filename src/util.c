@@ -261,6 +261,25 @@ u32 CalcByteArraySum(const u8 *data, u32 length)
     return sum;
 }
 
+u32 CalcCRC32(const u8 *data, u32 length)
+{
+    s32 i, j;
+    u32 crc = 0xFFFFFFFF;
+    u32 byte;
+
+    for (i = 0; i < length; i++)
+    {
+        byte = data[i];
+        crc = crc ^ byte;
+        for (j = 7; j >= 0; j--)
+        {
+            u32 mask = -(crc & 1);
+            crc = (crc >> 1) ^ (0xEDB88320 & mask);
+        }
+    }
+    return ~crc;
+}
+
 void BlendPalette(u16 palOffset, u16 numEntries, u8 coeff, u16 blendColor)
 {
     u16 i;
