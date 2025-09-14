@@ -190,7 +190,7 @@ struct SoundInfo
     // race conditions.
     u32 ident;
 
-    vu8 pcmDmaCounter;
+    vu8 ALIGNED(4) pcmDmaCounter;
 
     // Direct Sound
     u8 reverb;

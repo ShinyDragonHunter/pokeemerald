@@ -231,8 +231,15 @@ void m4aMPlayFadeIn(struct MusicPlayerInfo *mplayInfo, u16 speed)
 
 void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
 {
-    s32 trackCount = mplayInfo->trackCount;
-    struct MusicPlayerTrack *track = mplayInfo->tracks;
+    s32 trackCount;
+    struct MusicPlayerTrack *track;
+
+    if (mplayInfo->ident != ID_NUMBER)
+        return;
+
+    mplayInfo->ident++;
+    trackCount = mplayInfo->trackCount;
+    track = mplayInfo->tracks;
 
     while (trackCount > 0)
     {
@@ -252,6 +259,7 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
         trackCount--;
         track++;
     }
+    mplayInfo->ident = ID_NUMBER;
 }
 
 void MPlayExtender(struct CgbChannel *cgbChans)
@@ -399,7 +407,11 @@ void SoundInit(struct SoundInfo *soundInfo)
 
 void SampleFreqSet(u32 freq)
 {
-    struct SoundInfo *soundInfo = SOUND_INFO_PTR;
+    struct SoundInfo *soundInfo;
+
+    m4aSoundVSyncOff();
+
+    soundInfo = SOUND_INFO_PTR;
 
     freq = (freq & 0xF0000) >> 16;
     soundInfo->freq = freq;
@@ -412,21 +424,7 @@ void SampleFreqSet(u32 freq)
     // CPU frequency 16.78Mhz
     soundInfo->divFreq = (16777216 / soundInfo->pcmFreq + 1) >> 1;
 
-    // Turn off timer 0.
-    REG_TM0CNT_H = 0;
-
-    // cycles per LCD fresh 280896
-    REG_TM0CNT_L = -(280896 / soundInfo->pcmSamplesPerVBlank);
-
     m4aSoundVSyncOn();
-
-    while (*(vu8 *)REG_ADDR_VCOUNT == 159)
-        ;
-
-    while (*(vu8 *)REG_ADDR_VCOUNT != 159)
-        ;
-
-    REG_TM0CNT_H = TIMER_ENABLE | TIMER_1CLK;
 }
 
 void m4aSoundMode(u32 mode)
@@ -480,7 +478,6 @@ void m4aSoundMode(u32 mode)
 
     if (temp)
     {
-        m4aSoundVSyncOff();
         SampleFreqSet(temp);
     }
 
@@ -534,6 +531,9 @@ void m4aSoundVSyncOff(void)
     {
         soundInfo->ident += 10;
 
+        // Turn off timer 0.
+        REG_TM0CNT_H = 0;
+
         if (REG_DMA1CNT & (DMA_REPEAT << 16))
             REG_DMA1CNT = ((DMA_ENABLE | DMA_START_NOW | DMA_32BIT | DMA_SRC_INC | DMA_DEST_FIXED) << 16) | 4;
 
@@ -560,6 +560,48 @@ void m4aSoundVSyncOn(void)
 
     soundInfo->pcmDmaCounter = 0;
     soundInfo->ident = ident - 10;
+
+    while (*(vu8 *)REG_ADDR_VCOUNT == 159)
+        ;
+
+    while (*(vu8 *)REG_ADDR_VCOUNT != 159)
+        ;
+
+    // cycles per LCD fresh 280896
+    REG_TM0CNT_L = -(280896 / soundInfo->pcmSamplesPerVBlank);
+
+    REG_TM0CNT_H = TIMER_ENABLE | TIMER_1CLK;
+}
+
+void m4aSoundVSync(void)
+{
+    struct SoundInfo *soundInfo = SOUND_INFO_PTR;
+
+    // Exit the function if ident is not ID_NUMBER or ID_NUMBER + 1.
+    if (soundInfo->ident >= ID_NUMBER && soundInfo->ident <= ID_NUMBER + 1)
+    {
+        // Decrement the PCM DMA counter. If it reaches 0, we need to do a DMA.
+        soundInfo->pcmDmaCounter--;
+        if ((s8)soundInfo->pcmDmaCounter <= 0)
+        {
+            // Reload the PCM DMA counter.
+            soundInfo->pcmDmaCounter = soundInfo->pcmDmaPeriod;
+
+            // Turn off DMA1/DMA2.
+            if (REG_DMA1CNT & (DMA_REPEAT << 16))
+                REG_DMA1CNT = ((DMA_ENABLE | DMA_START_NOW | DMA_32BIT | DMA_SRC_INC | DMA_DEST_FIXED) << 16) | 4;
+
+            if (REG_DMA2CNT & (DMA_REPEAT << 16))
+                REG_DMA2CNT = ((DMA_ENABLE | DMA_START_NOW | DMA_32BIT | DMA_SRC_INC | DMA_DEST_FIXED) << 16) | 4;
+
+            REG_DMA1CNT_H = DMA_32BIT;
+            REG_DMA2CNT_H = DMA_32BIT;
+
+            // Turn on DMA1/DMA2 direct-sound FIFO mode.
+            REG_DMA1CNT_H = DMA_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT;
+            REG_DMA2CNT_H = DMA_ENABLE | DMA_START_SPECIAL | DMA_32BIT | DMA_REPEAT;
+        }
+    }
 }
 
 void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tracks, u8 trackCount)
@@ -617,6 +659,7 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
     if (mplayInfo->ident != ID_NUMBER)
         return;
 
+    mplayInfo->ident++;
     unk_B = mplayInfo->unk_B;
 
     if (!unk_B
@@ -625,7 +668,6 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
                 || (mplayInfo->status & MUSICPLAYER_STATUS_PAUSE)))
         || (mplayInfo->priority <= songHeader->priority))
     {
-        mplayInfo->ident++;
         mplayInfo->status = 0;
         mplayInfo->songHeader = songHeader;
         mplayInfo->tone = songHeader->tone;
@@ -660,9 +702,8 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
 
         if (songHeader->reverb & SOUND_MODE_REVERB_SET)
             m4aSoundMode(songHeader->reverb);
-
-        mplayInfo->ident = ID_NUMBER;
     }
+    mplayInfo->ident = ID_NUMBER;
 }
 
 void m4aMPlayStop(struct MusicPlayerInfo *mplayInfo)
@@ -723,8 +764,8 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
                 TrackStop(mplayInfo, track);
 
-                val = TEMPORARY_FADE;
                 fadeOV = mplayInfo->fadeOV;
+                val = TEMPORARY_FADE;
                 val &= fadeOV;
 
                 if (!val)
@@ -933,6 +974,7 @@ void CgbSound(void)
     vu8 *nrx2ptr;
     vu8 *nrx3ptr;
     vu8 *nrx4ptr;
+    vu8 chanIndex;
     s32 envelopeStepTimeAndDir;
 
     // Most comparision operations that cast to s8 perform 'and' by 0xFF.
@@ -957,6 +999,7 @@ void CgbSound(void)
             nrx2ptr = (vu8 *)(REG_ADDR_NR12);
             nrx3ptr = (vu8 *)(REG_ADDR_NR13);
             nrx4ptr = (vu8 *)(REG_ADDR_NR14);
+            chanIndex = 0;
             break;
         case 2:
             nrx0ptr = (vu8 *)(REG_ADDR_NR10+1);
@@ -964,6 +1007,7 @@ void CgbSound(void)
             nrx2ptr = (vu8 *)(REG_ADDR_NR22);
             nrx3ptr = (vu8 *)(REG_ADDR_NR23);
             nrx4ptr = (vu8 *)(REG_ADDR_NR24);
+            chanIndex = 1;
             break;
         case 3:
             nrx0ptr = (vu8 *)(REG_ADDR_NR30);
@@ -971,6 +1015,7 @@ void CgbSound(void)
             nrx2ptr = (vu8 *)(REG_ADDR_NR32);
             nrx3ptr = (vu8 *)(REG_ADDR_NR33);
             nrx4ptr = (vu8 *)(REG_ADDR_NR34);
+            chanIndex = 2;
             break;
         default:
             nrx0ptr = (vu8 *)(REG_ADDR_NR30+1);
@@ -978,6 +1023,7 @@ void CgbSound(void)
             nrx2ptr = (vu8 *)(REG_ADDR_NR42);
             nrx3ptr = (vu8 *)(REG_ADDR_NR43);
             nrx4ptr = (vu8 *)(REG_ADDR_NR44);
+            chanIndex = 3;
             break;
         }
 
@@ -1045,7 +1091,7 @@ void CgbSound(void)
                 goto oscillator_off;
             }
         }
-        else if (channels->statusFlags & SOUND_CHANNEL_SF_IEC)
+        else if (channels->statusFlags & SOUND_CHANNEL_SF_IEC || !((REG_NR52 >> chanIndex) & 1))
         {
             channels->pseudoEchoLength--;
             if ((s8)(channels->pseudoEchoLength & mask) <= 0)
@@ -1186,11 +1232,11 @@ void CgbSound(void)
         {
             if (ch < 4 && (channels->type & TONEDATA_TYPE_FIX))
             {
-                int dac_pwm_rate = REG_SOUNDBIAS_H;
+                s64 dac_pwm_rate = REG_SOUNDBIAS_H;
 
-                if (dac_pwm_rate < 0x40)        // if PWM rate = 32768 Hz
+                if ((s32)dac_pwm_rate < 0x40)        // if PWM rate = 32768 Hz
                     channels->frequency = (channels->frequency + 2) & 0x7fc;
-                else if (dac_pwm_rate < 0x80)   // if PWM rate = 65536 Hz
+                else if ((s32)dac_pwm_rate < 0x80)   // if PWM rate = 65536 Hz
                     channels->frequency = (channels->frequency + 1) & 0x7fe;
             }
 
@@ -1198,7 +1244,7 @@ void CgbSound(void)
                 *nrx3ptr = channels->frequency;
             else
                 *nrx3ptr = (*nrx3ptr & 0x08) | channels->frequency;
-            channels->n4 = (channels->n4 & 0xC0) + (*((u8 *)(&channels->frequency) + 1));
+            channels->n4 = (channels->n4 & 0xC0) + ((channels->frequency & 0x3F00) >> 8);
             *nrx4ptr = (s8)(channels->n4 & mask);
         }
 
