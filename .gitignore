@@ -17,8 +17,6 @@
 *.latfont
 *.hwjpnfont
 *.fwjpnfont
-sound/**/*.bin
-sound/songs/midi/*.s
 tools/agbcc
 *.map
 *.bat
