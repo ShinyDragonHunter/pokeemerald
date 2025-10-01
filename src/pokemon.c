@@ -16,6 +16,7 @@
 #include "item.h"
 #include "link.h"
 #include "main.h"
+#include "new_game.h"
 #include "overworld.h"
 #include "m4a.h"
 #include "party_menu.h"
@@ -2237,10 +2238,7 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     }
     else // Player is the OT
     {
-        value = gSaveBlock2Ptr->playerTrainerId[0]
-              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+        value = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
     }
 
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
@@ -6584,11 +6582,7 @@ bool8 IsTradedMon(struct Pokemon *mon)
 
 bool8 IsOtherTrainer(u32 otId, u8 *otName)
 {
-    if (otId ==
-        (gSaveBlock2Ptr->playerTrainerId[0]
-      | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-      | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-      | (gSaveBlock2Ptr->playerTrainerId[3] << 24)))
+    if (otId == GetTrainerId(gSaveBlock2Ptr->playerTrainerId))
     {
         int i;
         for (i = 0; otName[i] != EOS; i++)

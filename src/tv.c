@@ -45,6 +45,7 @@
 #include "constants/metatile_labels.h"
 #include "constants/moves.h"
 #include "constants/region_map_sections.h"
+#include "new_game.h"
 
 #define LAST_TVSHOW_IDX (TV_SHOWS_COUNT - 1)
 
@@ -3353,7 +3354,7 @@ static u8 GetTVGroupByShowId(u8 kind)
 
 u32 GetPlayerIDAsU32(void)
 {
-    return (gSaveBlock2Ptr->playerTrainerId[3] << 24) | (gSaveBlock2Ptr->playerTrainerId[2] << 16) | (gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0];
+    return GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
 }
 
 u8 CheckForPlayersHouseNews(void)

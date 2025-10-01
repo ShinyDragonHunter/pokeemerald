@@ -18,6 +18,7 @@
 #include "constants/trainers.h"
 #include "constants/moves.h"
 #include "constants/items.h"
+#include "new_game.h"
 
 static bool8 sPerformedRentalSwap;
 
@@ -772,7 +773,7 @@ void FillFactoryBrainParty(void)
     fixedIV = GetFactoryMonFixedIV(challengeNum + 2, FALSE);
     monLevel = SetFacilityPtrsGetLevel();
     i = 0;
-    otId = T1_READ_32(gSaveBlock2Ptr->playerTrainerId);
+    otId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
 
     while (i != FRONTIER_PARTY_SIZE)
     {

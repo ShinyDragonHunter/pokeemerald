@@ -19,6 +19,7 @@
 #include "frontier_util.h"
 #include "constants/trainers.h"
 #include "constants/rgb.h"
+#include "new_game.h"
 
 #define BATTLER_RECORD_SIZE 664
 
@@ -172,10 +173,7 @@ void RecordedBattle_SetTrainerInfo(void)
     else
     {
         // Local battle, just record own info
-        sPlayers[0].trainerId = (gSaveBlock2Ptr->playerTrainerId[0])
-                              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
-                              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
-                              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+        sPlayers[0].trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
 
         sPlayers[0].gender = gSaveBlock2Ptr->playerGender;
         sPlayers[0].battler = 0;

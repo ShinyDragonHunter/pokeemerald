@@ -27,6 +27,7 @@
 #include "link_rfu.h"
 #include "constants/rgb.h"
 #include "constants/trade.h"
+#include "new_game.h"
 
 // Window IDs for the link error screens
 enum {
@@ -323,7 +324,7 @@ void SetLocalLinkPlayerId(u8 playerId)
 
 static void InitLocalLinkPlayer(void)
 {
-    gLocalLinkPlayer.trainerId = gSaveBlock2Ptr->playerTrainerId[0] | (gSaveBlock2Ptr->playerTrainerId[1] << 8) | (gSaveBlock2Ptr->playerTrainerId[2] << 16) | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+    gLocalLinkPlayer.trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
     StringCopy(gLocalLinkPlayer.name, gSaveBlock2Ptr->playerName);
     gLocalLinkPlayer.gender = gSaveBlock2Ptr->playerGender;
     gLocalLinkPlayer.linkType = gLinkType;
