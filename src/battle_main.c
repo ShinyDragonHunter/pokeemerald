@@ -71,7 +71,7 @@ static void CB2_HandleStartMultiPartnerBattle(void);
 static void CB2_HandleStartMultiBattle(void);
 static void CB2_HandleStartBattle(void);
 static void TryCorrectShedinjaLanguage(struct Pokemon *mon);
-static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer);
+static void CreateNPCTrainerParty(struct Pokemon *party, u32 trainerNum);
 static void BattleMainCB1(void);
 static void CB2_EndLinkBattle(void);
 static void EndLinkBattleInSteps(void);
@@ -694,10 +694,28 @@ static void CB2_InitBattleInternal(void)
 
     if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED)))
     {
-        CreateNPCTrainerParty(&gEnemyParty[0], gTrainerBattleOpponent_A, TRUE);
-        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            CreateNPCTrainerParty(&gEnemyParty[PARTY_SIZE / 2], gTrainerBattleOpponent_B, FALSE);
-        SetWildMonHeldItem();
+        if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        {
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_TRAINER_HILL | BATTLE_TYPE_SECRET_BASE)))
+            {
+                ZeroEnemyPartyMons();
+                CreateNPCTrainerParty(&gEnemyParty[0], gTrainerBattleOpponent_A);
+                if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+                    CreateNPCTrainerParty(&gEnemyParty[MULTI_PARTY_SIZE], gTrainerBattleOpponent_B);
+            }
+        }
+        else if (!(gBattleTypeFlags & (BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_PYRAMID | BATTLE_TYPE_PIKE)))
+        {
+            u32 chanceNoItem = 45;
+            u32 chanceNotRare = 95;
+            if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG)
+                && GetMonAbility(&gPlayerParty[0]) == ABILITY_COMPOUND_EYES)
+            {
+                chanceNoItem = 20;
+                chanceNotRare = 80;
+            }
+            SetWildMonHeldItemToPartyIndex(0, chanceNoItem, chanceNotRare);
+        }
     }
 
     gMain.inBattle = TRUE;
@@ -1957,54 +1975,40 @@ static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite)
     }
 }
 
-static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
+static void CreateNPCTrainerParty(struct Pokemon *party, u32 trainerNum)
 {
     u32 nameHash = 0;
     u32 personalityValue;
     u8 fixedIV;
     s32 i, j;
-    u8 monsCount;
+    u32 monsCount;
+    const struct Trainer *NPCTrainer = &gTrainers[trainerNum];
 
-    if (trainerNum == TRAINER_SECRET_BASE)
-        return 0;
-
-    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & (BATTLE_TYPE_FRONTIER
-                                                                        | BATTLE_TYPE_EREADER_TRAINER
-                                                                        | BATTLE_TYPE_TRAINER_HILL)))
+    monsCount = NPCTrainer->partySize;
+    if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
     {
-        if (firstTrainer == TRUE)
-            ZeroEnemyPartyMons();
+        if (monsCount > MULTI_PARTY_SIZE)
+            monsCount = MULTI_PARTY_SIZE;
+    }
 
-        if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-        {
-            if (gTrainers[trainerNum].partySize > PARTY_SIZE / 2)
-                monsCount = PARTY_SIZE / 2;
-            else
-                monsCount = gTrainers[trainerNum].partySize;
-        }
+    for (i = 0; i < monsCount; i++)
+    {
+
+        if (NPCTrainer->doubleBattle == TRUE)
+            personalityValue = 0x80;
+        else if (NPCTrainer->encounterMusic_gender & F_TRAINER_FEMALE)
+            personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
         else
+            personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
+
+        for (j = 0; NPCTrainer->trainerName[j] != EOS; j++)
+            nameHash += NPCTrainer->trainerName[j];
+
+        switch (NPCTrainer->partyFlags)
         {
-            monsCount = gTrainers[trainerNum].partySize;
-        }
-
-        for (i = 0; i < monsCount; i++)
-        {
-
-            if (gTrainers[trainerNum].doubleBattle == TRUE)
-                personalityValue = 0x80;
-            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
-            else
-                personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
-
-            for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
-                nameHash += gTrainers[trainerNum].trainerName[j];
-
-            switch (gTrainers[trainerNum].partyFlags)
-            {
             case 0:
             {
-                const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
+                const struct TrainerMonNoItemDefaultMoves *partyData = NPCTrainer->party.NoItemDefaultMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2016,7 +2020,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
-                const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
+                const struct TrainerMonNoItemCustomMoves *partyData = NPCTrainer->party.NoItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2034,7 +2038,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
+                const struct TrainerMonItemDefaultMoves *partyData = NPCTrainer->party.ItemDefaultMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2048,7 +2052,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
-                const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
+                const struct TrainerMonItemCustomMoves *partyData = NPCTrainer->party.ItemCustomMoves;
 
                 for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
                     nameHash += gSpeciesNames[partyData[i].species][j];
@@ -2066,13 +2070,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
                 break;
             }
-            }
         }
-
-        gBattleTypeFlags |= gTrainers[trainerNum].doubleBattle;
     }
 
-    return gTrainers[trainerNum].partySize;
+    gBattleTypeFlags |= NPCTrainer->doubleBattle;
 }
 
 static void UNUSED HBlankCB_Battle(void)

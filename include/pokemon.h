@@ -524,7 +524,7 @@ bool8 IsOtherTrainer(u32 otId, u8 *otName);
 void MonRestorePP(struct Pokemon *mon);
 void BoxMonRestorePP(struct BoxPokemon *boxMon);
 void SetMonPreventsSwitchingString(void);
-void SetWildMonHeldItem(void);
+void SetWildMonHeldItemToPartyIndex(u32 partyIndex, u32 chanceNoItem, u32 chanceNotRare);
 bool8 IsMonShiny(struct Pokemon *mon);
 bool8 IsShinyOtIdPersonality(u32 otId, u32 personality);
 const u8 *GetTrainerPartnerName(void);
