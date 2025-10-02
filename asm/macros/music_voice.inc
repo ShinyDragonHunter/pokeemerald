@@ -139,14 +139,30 @@
 	.4byte 0
 	.endm
 
-	.macro cry sample:req
-	.byte 0x20, 60, 0, 0
-	.4byte \sample
-	.byte 0xff, 0, 0xff, 0
+	@ see: https://sourceware.org/binutils/docs-2.35/as/Sub_002dSections.html
+	enum_start
+	enum subsection_cry
+	enum subsection_cry_reverse
+
+	.macro cry_table label:req, label_reverse:req
+	.subsection subsection_cry
+\label\():
+	.global \label
+
+	.subsection subsection_cry_reverse
+\label_reverse\():
+	.global \label_reverse
 	.endm
 
-	.macro cry_reverse sample:req
-	.byte 0x30, 60, 0, 0
+	.macro cry sample:req
+	.subsection subsection_cry
+	_cry 0x20, \sample
+	.subsection subsection_cry_reverse
+	_cry 0x30, \sample
+	.endm
+
+	.macro _cry type:req, sample:req
+	.byte \type, 60, 0, 0
 	.4byte \sample
 	.byte 0xff, 0, 0xff, 0
 	.endm
