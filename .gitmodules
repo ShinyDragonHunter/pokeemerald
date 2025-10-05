@@ -1,4 +1,0 @@
-[submodule "sound/gba_hq_mixer"]
-	path = sound/gba_hq_mixer
-	url = https://github.com/ipatix/gba-hq-mixer.git
-	branch = main
