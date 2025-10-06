@@ -1,2 +1,3 @@
 direct_sound_samples/**/*.bin
 songs/midi/*.s
+direct_sound_samples/**/*.s
