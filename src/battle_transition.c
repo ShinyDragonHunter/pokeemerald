@@ -285,9 +285,6 @@ static void SpriteCB_FldEffPokeballTrail(struct Sprite *);
 static void SpriteCB_MugshotTrainerPic(struct Sprite *);
 static void SpriteCB_WhiteBarFade(struct Sprite *);
 
-static s16 sDebug_RectangularSpiralData;
-static u8 sTestingTransitionId;
-static u8 sTestingTransitionState;
 static struct RectangularSpiralLine sRectangularSpiralLines[4];
 
 EWRAM_DATA static struct TransitionData *sTransitionData = NULL;
@@ -1000,35 +997,6 @@ static const u8 sFrontierSquaresScroll_Positions[] = {
 //---------------------------
 // Main transition functions
 //---------------------------
-
-static void CB2_TestBattleTransition(void)
-{
-    switch (sTestingTransitionState)
-    {
-    case 0:
-        LaunchBattleTransitionTask(sTestingTransitionId);
-        sTestingTransitionState++;
-        break;
-    case 1:
-        if (IsBattleTransitionDone())
-        {
-            sTestingTransitionState = 0;
-            SetMainCallback2(CB2_ReturnToField);
-        }
-        break;
-    }
-
-    RunTasks();
-    AnimateSprites();
-    BuildOamBuffer();
-    UpdatePaletteFade();
-}
-
-static void UNUSED TestBattleTransition(u8 transitionId)
-{
-    sTestingTransitionId = transitionId;
-    SetMainCallback2(CB2_TestBattleTransition);
-}
 
 void BattleTransition_StartOnField(u8 transitionId)
 {
@@ -3522,12 +3490,6 @@ static bool16 UpdateRectangularSpiralLine(const s16 *const *moveDataTable, struc
     // only ever reached on the final array of spiraling outward.
     if (moveData[line->moveIndex] == SPIRAL_END)
         return FALSE;
-
-    // Presumably saving data for debug.
-    sDebug_RectangularSpiralData = moveData[0];
-    sDebug_RectangularSpiralData = moveData[1];
-    sDebug_RectangularSpiralData = moveData[2];
-    sDebug_RectangularSpiralData = moveData[3];
 
     // Note that for the two lines originating at the bottom the
     // position is inverted, so the directions are flipped.
