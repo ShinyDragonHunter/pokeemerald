@@ -270,7 +270,6 @@ static void VBlankCB_MugshotsFadeOut(void);
 static void HBlankCB_Mugshots(void);
 static void InitTransitionData(void);
 static void FadeScreenBlack(void);
-static void CreateIntroTask(s16, s16, s16, s16, s16);
 static void SetCircularMask(u16 *, s16, s16, s16);
 static void SetSinWave(s16 *, s16, s16, s16, s16, s16);
 static void GetBg0TilemapDst(u16 **);
@@ -281,7 +280,6 @@ static void IncrementTrainerPicState(s16);
 static s16 IsTrainerPicSlideDone(s16);
 static bool8 TransitionIntro_FadeToGray(struct Task *);
 static bool8 TransitionIntro_FadeFromGray(struct Task *);
-static bool8 IsIntroTaskDone(void);
 static bool16 UpdateRectangularSpiralLine(const s16 *const *, struct RectangularSpiralLine *);
 static void SpriteCB_FldEffPokeballTrail(struct Sprite *);
 static void SpriteCB_MugshotTrainerPic(struct Sprite *);
@@ -339,12 +337,6 @@ static const u32 sFrontierSquares_EmptyBg_Tileset[] = INCBIN_U32("graphics/battl
 static const u32 sFrontierSquares_Shrink1_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_3.4bpp.lz");
 static const u32 sFrontierSquares_Shrink2_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_4.4bpp.lz");
 static const u32 sFrontierSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/frontier_squares.bin");
-
-// All battle transitions use the same intro
-static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
-{
-    [0 ... B_TRANSITION_COUNT - 1] = &Task_Intro
-};
 
 // After the intro each transition has a unique main task.
 // This task will call the functions that do the transition effects.
@@ -1100,9 +1092,9 @@ static bool8 Transition_StartIntro(struct Task *task)
 {
     SetWeatherScreenFadeOut();
     CpuCopy32(gPlttBufferFaded, gPlttBufferUnfaded, PLTT_SIZE);
-    if (sTasks_Intro[task->tTransitionId] != NULL)
+    if (task->func != NULL)
     {
-        CreateTask(sTasks_Intro[task->tTransitionId], 4);
+        CreateTask(&Task_Intro, 4);
         task->tState++;
         return FALSE;
     }
@@ -1115,7 +1107,7 @@ static bool8 Transition_StartIntro(struct Task *task)
 
 static bool8 Transition_WaitForIntro(struct Task *task)
 {
-    if (FindTaskIdByFunc(sTasks_Intro[task->tTransitionId]) == TASK_NONE)
+    if (FindTaskIdByFunc(&Task_Intro) == TASK_NONE)
     {
         task->tState++;
         return TRUE;
@@ -1143,19 +1135,6 @@ static bool8 Transition_WaitForMain(struct Task *task)
 
 #undef tTransitionId
 #undef tTransitionDone
-
-static void Task_Intro(u8 taskId)
-{
-    if (gTasks[taskId].tState == 0)
-    {
-        gTasks[taskId].tState++;
-        CreateIntroTask(0, 0, 3, 2, 2);
-    }
-    else if (IsIntroTaskDone())
-    {
-        DestroyTask(taskId);
-    }
-}
 
 //--------------------
 // B_TRANSITION_BLUR
@@ -4253,31 +4232,41 @@ static void VBlankCB_AngledWipes(void)
 // Transition intro
 //-----------------------------------
 
-#define tFadeToGrayDelay       data[1]
-#define tFadeFromGrayDelay     data[2]
-#define tNumFades              data[3]
-#define tFadeToGrayIncrement   data[4]
-#define tFadeFromGrayIncrement data[5]
-#define tDelayTimer            data[6]
-#define tBlend                 data[7]
+#define tNumFades              data[1]
+#define tDelayTimer            data[2]
+#define tBlend                 data[3]
 
-static void CreateIntroTask(s16 fadeToGrayDelay, s16 fadeFromGrayDelay, s16 numFades, s16 fadeToGrayIncrement, s16 fadeFromGrayIncrement)
-{
-    u8 taskId = CreateTask(Task_BattleTransition_Intro, 3);
-    gTasks[taskId].tFadeToGrayDelay = fadeToGrayDelay;
-    gTasks[taskId].tFadeFromGrayDelay = fadeFromGrayDelay;
-    gTasks[taskId].tNumFades = numFades;
-    gTasks[taskId].tFadeToGrayIncrement = fadeToGrayIncrement;
-    gTasks[taskId].tFadeFromGrayIncrement = fadeFromGrayIncrement;
-    gTasks[taskId].tDelayTimer = fadeToGrayDelay;
-}
+#define FADE_TO_GRAY_DELAY       0
+#define FADE_FROM_GRAY_DELAY     0
+#define NUMBER_OF_FADES          3 // Emerald: 3, FRLG: 2
+#define FADE_TO_GRAY_INCREMENT   2
+#define FADE_FROM_GRAY_INCREMENT 2
 
-static bool8 IsIntroTaskDone(void)
+static void Task_Intro(u8 taskId)
 {
-    if (FindTaskIdByFunc(Task_BattleTransition_Intro) == TASK_NONE)
-        return TRUE;
-    else
-        return FALSE;
+    if (gTasks[taskId].tState == 0)
+    {
+        u8 taskId2;
+        gTasks[taskId].tState++;
+        /*
+          The task logic would loop forever if we started it with a zero
+          fade count. Other parts of the battle transition code just poll
+          to see if the task has ceased to exist, so if we never create
+          it in the first place, then the main transition should play
+          seamlessly.
+        */
+        #if NUMBER_OF_FADES > 0
+        taskId2 = CreateTask(Task_BattleTransition_Intro, 3);
+        gTasks[taskId2].tNumFades = NUMBER_OF_FADES;
+        #if FADE_TO_GRAY_DELAY > 0
+        gTasks[taskId2].tDelayTimer = FADE_TO_GRAY_DELAY;
+        #endif
+        #endif
+    }
+    else if (FindTaskIdByFunc(Task_BattleTransition_Intro) == TASK_NONE)
+    {
+        DestroyTask(taskId);
+    }
 }
 
 void Task_BattleTransition_Intro(u8 taskId)
@@ -4287,55 +4276,63 @@ void Task_BattleTransition_Intro(u8 taskId)
 
 static bool8 TransitionIntro_FadeToGray(struct Task *task)
 {
+    #if FADE_TO_GRAY_DELAY > 0
     if (task->tDelayTimer == 0 || --task->tDelayTimer == 0)
     {
-        task->tDelayTimer = task->tFadeToGrayDelay;
-        task->tBlend += task->tFadeToGrayIncrement;
+        task->tDelayTimer = FADE_TO_GRAY_DELAY;
+    #endif
+        task->tBlend += FADE_TO_GRAY_INCREMENT;
         if (task->tBlend > 16)
             task->tBlend = 16;
         BlendPalettes(PALETTES_ALL, task->tBlend, RGB(11, 11, 11));
+    #if FADE_TO_GRAY_DELAY > 0
     }
+    #endif
     if (task->tBlend >= 16)
     {
         // Fade to gray complete, start fade back
         task->tState++;
-        task->tDelayTimer = task->tFadeFromGrayDelay;
+    #if FADE_FROM_GRAY_DELAY > 0
+        task->tDelayTimer = FADE_FROM_GRAY_DELAY;
+    #endif
     }
     return FALSE;
 }
 
 static bool8 TransitionIntro_FadeFromGray(struct Task *task)
 {
+    #if FADE_FROM_GRAY_DELAY > 0
     if (task->tDelayTimer == 0 || --task->tDelayTimer == 0)
     {
-        task->tDelayTimer = task->tFadeFromGrayDelay;
-        task->tBlend -= task->tFadeFromGrayIncrement;
+        task->tDelayTimer = FADE_FROM_GRAY_DELAY;
+    #endif
+        task->tBlend -= FADE_FROM_GRAY_INCREMENT;
         if (task->tBlend < 0)
             task->tBlend = 0;
         BlendPalettes(PALETTES_ALL, task->tBlend, RGB(11, 11, 11));
+    #if FADE_FROM_GRAY_DELAY > 0
     }
+    #endif
     if (task->tBlend == 0)
     {
         if (--task->tNumFades == 0)
         {
             // All fades done, end intro
-            DestroyTask(FindTaskIdByFunc(Task_BattleTransition_Intro));
+            DestroyTask(FindTaskIdByFunc(task->func));
         }
         else
         {
+    #if FADE_TO_GRAY_DELAY > 0
             // Fade from gray complete, start new fade
-            task->tDelayTimer = task->tFadeToGrayDelay;
+            task->tDelayTimer = FADE_TO_GRAY_DELAY;
+    #endif
             task->tState = 0;
         }
     }
     return FALSE;
 }
 
-#undef tFadeToGrayDelay
-#undef tFadeFromGrayDelay
 #undef tNumFades
-#undef tFadeToGrayIncrement
-#undef tFadeFromGrayIncrement
 #undef tDelayTimer
 #undef tBlend
 
