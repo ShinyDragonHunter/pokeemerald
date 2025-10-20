@@ -284,11 +284,6 @@ static bool16 UpdateRectangularSpiralLine(const s16 *const *, struct Rectangular
 static void SpriteCB_FldEffPokeballTrail(struct Sprite *);
 static void SpriteCB_MugshotTrainerPic(struct Sprite *);
 static void SpriteCB_WhiteBarFade(struct Sprite *);
-static bool8 MugshotTrainerPic_Pause(struct Sprite *);
-static bool8 MugshotTrainerPic_Init(struct Sprite *);
-static bool8 MugshotTrainerPic_Slide(struct Sprite *);
-static bool8 MugshotTrainerPic_SlideSlow(struct Sprite *);
-static bool8 MugshotTrainerPic_SlideOffscreen(struct Sprite *);
 
 static s16 sDebug_RectangularSpiralData;
 static u8 sTestingTransitionId;
@@ -572,32 +567,21 @@ static const u8 sMugshotsTrainerPicIDsTable[MUGSHOTS_COUNT] =
     [MUGSHOT_DRAKE]    = TRAINER_PIC_ELITE_FOUR_DRAKE,
     [MUGSHOT_CHAMPION] = TRAINER_PIC_CHAMPION_WALLACE,
 };
-static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT][2] =
+static const s16 sMugshotsOpponentRotationScales[MUGSHOTS_COUNT] =
 {
-    [MUGSHOT_SIDNEY] =   {0x200, 0x200},
-    [MUGSHOT_PHOEBE] =   {0x200, 0x200},
-    [MUGSHOT_GLACIA] =   {0x1B0, 0x1B0},
-    [MUGSHOT_DRAKE] =    {0x1A0, 0x1A0},
-    [MUGSHOT_CHAMPION] = {0x188, 0x188},
+    [MUGSHOT_SIDNEY] =   0x200,
+    [MUGSHOT_PHOEBE] =   0x200,
+    [MUGSHOT_GLACIA] =   0x1B0,
+    [MUGSHOT_DRAKE] =    0x1A0,
+    [MUGSHOT_CHAMPION] = 0x188,
 };
-static const s16 sMugshotsOpponentCoords[MUGSHOTS_COUNT][2] =
+static const struct Coords16 sMugshotsOpponentCoords[MUGSHOTS_COUNT] =
 {
     [MUGSHOT_SIDNEY] =   { 0,  0},
     [MUGSHOT_PHOEBE] =   { 0,  0},
     [MUGSHOT_GLACIA] =   {-4,  4},
     [MUGSHOT_DRAKE] =    { 0,  5},
     [MUGSHOT_CHAMPION] = {-8,  7},
-};
-
-static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =
-{
-    MugshotTrainerPic_Pause,
-    MugshotTrainerPic_Init,
-    MugshotTrainerPic_Slide,
-    MugshotTrainerPic_SlideSlow,
-    MugshotTrainerPic_Pause,
-    MugshotTrainerPic_SlideOffscreen,
-    MugshotTrainerPic_Pause
 };
 
 // One element per slide direction.
@@ -2573,13 +2557,34 @@ static void DoMugshotTransition(u8 taskId)
     while (sMugshot_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
+static void Mugshots_SetTrainerPicOamData(struct Sprite *sprite, s32 xScale, s32 yScale)
+{
+    sprite->callback = SpriteCB_MugshotTrainerPic;
+    sprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
+    sprite->oam.matrixNum = AllocOamMatrix();
+    sprite->oam.shape = SPRITE_SHAPE(64x32);
+    sprite->oam.size = SPRITE_SIZE(64x32);
+    CalcCenterToCornerVec(sprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
+    SetOamMatrixRotationScaling(sprite->oam.matrixNum, xScale, yScale, 0);
+}
+
 static bool8 Mugshot_Init(struct Task *task)
 {
     u8 i;
 
     InitTransitionData();
     ScanlineEffect_Clear();
-    Mugshots_CreateTrainerPics(task);
+    task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[task->tMugshotId],
+                                                  sMugshotsOpponentCoords[task->tMugshotId].x - 32,
+                                                  sMugshotsOpponentCoords[task->tMugshotId].y + 42,
+                                                  0, gDecompressionBuffer);
+    task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender),
+                                                DISPLAY_WIDTH + 32,
+                                                106,
+                                                0, gDecompressionBuffer);
+
+    Mugshots_SetTrainerPicOamData(&gSprites[task->tOpponentSpriteId], sMugshotsOpponentRotationScales[task->tMugshotId], sMugshotsOpponentRotationScales[task->tMugshotId]);
+    Mugshots_SetTrainerPicOamData(&gSprites[task->tPlayerSpriteId], -512, 512);
 
     task->tSinIndex = 0;
     task->tTopBannerX = 1;
@@ -2853,109 +2858,61 @@ static void HBlankCB_Mugshots(void)
         REG_BG0HOFS = sTransitionData->BG0HOFS_Upper;
 }
 
-static void Mugshots_CreateTrainerPics(struct Task *task)
-{
-    struct Sprite *opponentSprite, *playerSprite;
+#define TRAINER_PIC_SLIDE_SPEED (12)
+#define TRAINER_PIC_SLIDE_ACCEL (-1)
 
-    s16 mugshotId = task->tMugshotId;
-    task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[mugshotId],
-                                                  sMugshotsOpponentCoords[mugshotId][0] - 32,
-                                                  sMugshotsOpponentCoords[mugshotId][1] + 42,
-                                                  0, gDecompressionBuffer);
-    task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender),
-                                                DISPLAY_WIDTH + 32,
-                                                106,
-                                                0, gDecompressionBuffer);
-
-    opponentSprite = &gSprites[task->tOpponentSpriteId];
-    playerSprite = &gSprites[task->tPlayerSpriteId];
-
-    opponentSprite->callback = SpriteCB_MugshotTrainerPic;
-    playerSprite->callback = SpriteCB_MugshotTrainerPic;
-
-    opponentSprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-    playerSprite->oam.affineMode = ST_OAM_AFFINE_DOUBLE;
-
-    opponentSprite->oam.matrixNum = AllocOamMatrix();
-    playerSprite->oam.matrixNum = AllocOamMatrix();
-
-    opponentSprite->oam.shape = SPRITE_SHAPE(64x32);
-    playerSprite->oam.shape = SPRITE_SHAPE(64x32);
-
-    opponentSprite->oam.size = SPRITE_SIZE(64x32);
-    playerSprite->oam.size = SPRITE_SIZE(64x32);
-
-    CalcCenterToCornerVec(opponentSprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
-    CalcCenterToCornerVec(playerSprite, SPRITE_SHAPE(64x32), SPRITE_SIZE(64x32), ST_OAM_AFFINE_DOUBLE);
-
-    SetOamMatrixRotationScaling(opponentSprite->oam.matrixNum, sMugshotsOpponentRotationScales[mugshotId][0], sMugshotsOpponentRotationScales[mugshotId][1], 0);
-    SetOamMatrixRotationScaling(playerSprite->oam.matrixNum, -512, 512, 0);
-}
+enum MugshotSpriteState {
+    SPRITE_STATE_INITIAL_WAIT,
+    SPRITE_STATE_INIT,
+    SPRITE_STATE_SLIDE_IN,
+    SPRITE_STATE_SLIDE_IN_SLOW,
+    SPRITE_STATE_PAUSE,
+};
 
 static void SpriteCB_MugshotTrainerPic(struct Sprite *sprite)
 {
-    while (sMugshotTrainerPicFuncs[sprite->sState](sprite));
-}
-
-// Wait until IncrementTrainerPicState is called
-static bool8 MugshotTrainerPic_Pause(struct Sprite *sprite)
-{
-    return FALSE;
-}
-
-static bool8 MugshotTrainerPic_Init(struct Sprite *sprite)
-{
-    s16 speeds[ARRAY_COUNT(sTrainerPicSlideSpeeds)];
-    s16 accels[ARRAY_COUNT(sTrainerPicSlideAccels)];
-
-    memcpy(speeds, sTrainerPicSlideSpeeds, sizeof(sTrainerPicSlideSpeeds));
-    memcpy(accels, sTrainerPicSlideAccels, sizeof(sTrainerPicSlideAccels));
-
-    sprite->sState++;
-    sprite->sSlideSpeed = speeds[sprite->sSlideDir];
-    sprite->sSlideAccel = accels[sprite->sSlideDir];
-    return TRUE;
-}
-
-static bool8 MugshotTrainerPic_Slide(struct Sprite *sprite)
-{
-    sprite->x += sprite->sSlideSpeed;
-
-    // Advance state when pic passes ~40% of screen
-    if (sprite->sSlideDir && sprite->x < DISPLAY_WIDTH - 107)
-        sprite->sState++;
-    else if (!sprite->sSlideDir && sprite->x > 103)
-        sprite->sState++;
-    return FALSE;
-}
-
-static bool8 MugshotTrainerPic_SlideSlow(struct Sprite *sprite)
-{
-    // Add acceleration value to speed, then add speed.
-    // For both sides acceleration is opposite speed, so slide slows down.
-    sprite->sSlideSpeed += sprite->sSlideAccel;
-    sprite->x += sprite->sSlideSpeed;
-
-    // Advance state when slide comes to a stop
-    if (sprite->sSlideSpeed == 0)
+    switch (sprite->sState)
     {
+    // Wait until IncrementTrainerPicState is called
+    default:
+        break;
+    case SPRITE_STATE_INIT:
+        if (sprite->sSlideDir == 0)
+        {
+            sprite->sSlideSpeed = TRAINER_PIC_SLIDE_SPEED;
+            sprite->sSlideAccel = TRAINER_PIC_SLIDE_ACCEL;
+        } 
+        else
+        {
+            sprite->sSlideSpeed = -TRAINER_PIC_SLIDE_SPEED;
+            sprite->sSlideAccel = -TRAINER_PIC_SLIDE_ACCEL;
+        }
         sprite->sState++;
-        sprite->sSlideAccel = -sprite->sSlideAccel;
-        sprite->sDone = TRUE;
-    }
-    return FALSE;
-}
+        break;
+    case SPRITE_STATE_SLIDE_IN:
+        sprite->x += sprite->sSlideSpeed;
+ 
+        // Advance state when pic passes ~40% of screen
+        if (sprite->sSlideDir && sprite->x < DISPLAY_WIDTH - 107)
+            sprite->sState++;
+        else if (!sprite->sSlideDir && sprite->x > 103)
+            sprite->sState++;
+        break;
+    case SPRITE_STATE_SLIDE_IN_SLOW:
+        // Add acceleration value to speed, then add speed.
+        // For both sides acceleration is opposite speed, so slide slows down.
+        sprite->sSlideSpeed += sprite->sSlideAccel;
+        sprite->x += sprite->sSlideSpeed;
 
-// Slides trainer pic offscreen. This is never reached, because it's preceded
-// by a second MugshotTrainerPic_Pause, and IncrementTrainerPicState is
-// only called once per trainer pic.
-static bool8 MugshotTrainerPic_SlideOffscreen(struct Sprite *sprite)
-{
-    sprite->sSlideSpeed += sprite->sSlideAccel;
-    sprite->x += sprite->sSlideSpeed;
-    if (sprite->x < -31 || sprite->x > DISPLAY_WIDTH + 31)
-        sprite->sState++;
-    return FALSE;
+        // Advance state when slide comes to a stop
+        if (sprite->sSlideSpeed == 0)
+        {
+            sprite->sState++;
+            sprite->sSlideAccel = -sprite->sSlideAccel;
+            sprite->sDone = TRUE;
+        }
+        break;
+    }
 }
 
 static void SetTrainerPicSlideDirection(s16 spriteId, s16 dirId)
