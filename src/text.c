@@ -18,9 +18,6 @@ static u32 RenderFont(struct TextPrinter *);
 static u16 FontFunc_Small(struct TextPrinter *);
 static u16 FontFunc_Normal(struct TextPrinter *);
 static u16 FontFunc_Short(struct TextPrinter *);
-static u16 FontFunc_ShortCopy1(struct TextPrinter *);
-static u16 FontFunc_ShortCopy2(struct TextPrinter *);
-static u16 FontFunc_ShortCopy3(struct TextPrinter *);
 static u16 FontFunc_Narrow(struct TextPrinter *);
 static u16 FontFunc_SmallNarrow(struct TextPrinter *);
 static void DecompressGlyph_Small(u16, bool32);
@@ -84,9 +81,6 @@ static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
     { FONT_SMALL,        GetGlyphWidth_Small },
     { FONT_NORMAL,       GetGlyphWidth_Normal },
     { FONT_SHORT,        GetGlyphWidth_Short },
-    { FONT_SHORT_COPY_1, GetGlyphWidth_Short },
-    { FONT_SHORT_COPY_2, GetGlyphWidth_Short },
-    { FONT_SHORT_COPY_3, GetGlyphWidth_Short },
     { FONT_BRAILLE,      GetGlyphWidth_Braille },
     { FONT_NARROW,       GetGlyphWidth_Narrow },
     { FONT_SMALL_NARROW, GetGlyphWidth_SmallNarrow }
@@ -148,36 +142,6 @@ static const struct FontInfo sFontInfos[] =
         .bgColor = 1,
         .shadowColor = 3,
     },
-    [FONT_SHORT_COPY_1] = {
-        .fontFunction = FontFunc_ShortCopy1,
-        .maxLetterWidth = 6,
-        .maxLetterHeight =  14,
-        .letterSpacing = 0,
-        .lineSpacing = 0,
-        .fgColor = 2,
-        .bgColor = 1,
-        .shadowColor = 3,
-    },
-    [FONT_SHORT_COPY_2] = {
-        .fontFunction = FontFunc_ShortCopy2,
-        .maxLetterWidth = 6,
-        .maxLetterHeight =  14,
-        .letterSpacing = 0,
-        .lineSpacing = 0,
-        .fgColor = 2,
-        .bgColor = 1,
-        .shadowColor = 3,
-    },
-    [FONT_SHORT_COPY_3] = {
-        .fontFunction = FontFunc_ShortCopy3,
-        .maxLetterWidth = 6,
-        .maxLetterHeight =  14,
-        .letterSpacing = 0,
-        .lineSpacing = 0,
-        .fgColor = 2,
-        .bgColor = 1,
-        .shadowColor = 3,
-    },
     [FONT_BRAILLE] = {
         .fontFunction = FontFunc_Braille,
         .maxLetterWidth = 8,
@@ -225,9 +189,6 @@ static const u8 sMenuCursorDimensions[][2] =
     [FONT_SMALL]        = { 8,  12 },
     [FONT_NORMAL]       = { 8,  15 },
     [FONT_SHORT]        = { 8,  14 },
-    [FONT_SHORT_COPY_1] = { 8,  14 },
-    [FONT_SHORT_COPY_2] = { 8,  14 },
-    [FONT_SHORT_COPY_3] = { 8,  14 },
     [FONT_BRAILLE]      = { 8,  16 },
     [FONT_NARROW]       = { 8,  15 },
     [FONT_SMALL_NARROW] = { 8,   8 },
@@ -709,42 +670,6 @@ static u16 FontFunc_Short(struct TextPrinter *textPrinter)
     return RenderText(textPrinter);
 }
 
-static u16 FontFunc_ShortCopy1(struct TextPrinter *textPrinter)
-{
-    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
-
-    if (subStruct->hasFontIdBeenSet == FALSE)
-    {
-        subStruct->fontId = FONT_SHORT_COPY_1;
-        subStruct->hasFontIdBeenSet = TRUE;
-    }
-    return RenderText(textPrinter);
-}
-
-static u16 FontFunc_ShortCopy2(struct TextPrinter *textPrinter)
-{
-    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
-
-    if (subStruct->hasFontIdBeenSet == FALSE)
-    {
-        subStruct->fontId = FONT_SHORT_COPY_2;
-        subStruct->hasFontIdBeenSet = TRUE;
-    }
-    return RenderText(textPrinter);
-}
-
-static u16 FontFunc_ShortCopy3(struct TextPrinter *textPrinter)
-{
-    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
-
-    if (subStruct->hasFontIdBeenSet == FALSE)
-    {
-        subStruct->fontId = FONT_SHORT_COPY_3;
-        subStruct->hasFontIdBeenSet = TRUE;
-    }
-    return RenderText(textPrinter);
-}
-
 static u16 FontFunc_Narrow(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
@@ -1129,9 +1054,6 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             DecompressGlyph_Normal(currChar, textPrinter->japanese);
             break;
         case FONT_SHORT:
-        case FONT_SHORT_COPY_1:
-        case FONT_SHORT_COPY_2:
-        case FONT_SHORT_COPY_3:
             DecompressGlyph_Short(currChar, textPrinter->japanese);
             break;
         case FONT_NARROW:

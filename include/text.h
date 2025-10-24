@@ -11,9 +11,6 @@ enum {
     FONT_SMALL,
     FONT_NORMAL,
     FONT_SHORT,
-    FONT_SHORT_COPY_1,
-    FONT_SHORT_COPY_2,
-    FONT_SHORT_COPY_3,
     FONT_BRAILLE,
     FONT_NARROW,
     FONT_SMALL_NARROW, // Very similar to FONT_SMALL, some glyphs are narrower
