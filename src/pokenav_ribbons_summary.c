@@ -951,7 +951,7 @@ static void ResetSpritesAndDrawMonFrontPic(struct Pokenav_RibbonsSummaryMenu *me
 
 static void DestroyRibbonsMonFrontPic(struct Pokenav_RibbonsSummaryMenu *menu)
 {
-    FreeAndDestroyMonPicSprite(menu->monSpriteId);
+    FreeAndDestroyPicSprite(menu->monSpriteId);
 }
 
 // x and y arguments are ignored
@@ -963,7 +963,7 @@ static u16 DrawRibbonsMonFrontPic(s32 x, s32 y)
     u32 personality, otId;
 
     GetMonSpeciesPersonalityOtId(&species, &personality, &otId);
-    spriteId = CreateMonPicSprite_HandleDeoxys(species, otId, personality, TRUE, MON_SPRITE_X_ON, MON_SPRITE_Y, 15, TAG_NONE);
+    spriteId = CreateMonPicSprite(species, otId, personality, TRUE, MON_SPRITE_X_ON, MON_SPRITE_Y, 15, TAG_NONE);
     gSprites[spriteId].oam.priority = 0;
     return spriteId;
 }
@@ -976,7 +976,7 @@ static void SlideMonSpriteOff(struct Pokenav_RibbonsSummaryMenu *menu)
 static void SlideMonSpriteOn(struct Pokenav_RibbonsSummaryMenu *menu)
 {
     // Switch to new mon sprite
-    FreeAndDestroyMonPicSprite(menu->monSpriteId);
+    FreeAndDestroyPicSprite(menu->monSpriteId);
     menu->monSpriteId = DrawRibbonsMonFrontPic(MON_SPRITE_X_OFF, MON_SPRITE_Y);
 
     // Slide on

@@ -3187,7 +3187,7 @@ static void SpriteCB_TrainerIconCardScrollUp(struct Sprite *sprite)
         if (sprite->y >= 192)
         {
             sInfoCard->spriteIds[sprite->data[2]] = SPRITE_NONE;
-            FreeAndDestroyTrainerPicSprite(sprite->data[3]);
+            FreeAndDestroyPicSprite(sprite->data[3]);
         }
     }
 }
@@ -3207,7 +3207,7 @@ static void SpriteCB_TrainerIconCardScrollDown(struct Sprite *sprite)
         if (sprite->y <= -32)
         {
             sInfoCard->spriteIds[sprite->data[2]] = SPRITE_NONE;
-            FreeAndDestroyTrainerPicSprite(sprite->data[3]);
+            FreeAndDestroyPicSprite(sprite->data[3]);
         }
     }
 }
@@ -3227,7 +3227,7 @@ static void SpriteCB_TrainerIconCardScrollLeft(struct Sprite *sprite)
         if (sprite->x >= DISPLAY_WIDTH + 32)
         {
             sInfoCard->spriteIds[sprite->data[2]] = SPRITE_NONE;
-            FreeAndDestroyTrainerPicSprite(sprite->data[3]);
+            FreeAndDestroyPicSprite(sprite->data[3]);
         }
     }
 }
@@ -3247,7 +3247,7 @@ static void SpriteCB_TrainerIconCardScrollRight(struct Sprite *sprite)
         if (sprite->x <= -32)
         {
             sInfoCard->spriteIds[sprite->data[2]] = SPRITE_NONE;
-            FreeAndDestroyTrainerPicSprite(sprite->data[3]);
+            FreeAndDestroyPicSprite(sprite->data[3]);
         }
     }
 }
@@ -4133,7 +4133,7 @@ static void Task_HandleInfoCardInput(u8 taskId)
                 if (i < 2)
                 {
                     if (sInfoCard->spriteIds[i] != SPRITE_NONE)
-                        FreeAndDestroyTrainerPicSprite(sInfoCard->spriteIds[i]);
+                        FreeAndDestroyPicSprite(sInfoCard->spriteIds[i]);
                 }
                 else
                 {
@@ -4146,7 +4146,7 @@ static void Task_HandleInfoCardInput(u8 taskId)
                 if (i < 10)
                 {
                     if (sInfoCard->spriteIds[i] != SPRITE_NONE)
-                        FreeAndDestroyTrainerPicSprite(sInfoCard->spriteIds[i]);
+                        FreeAndDestroyPicSprite(sInfoCard->spriteIds[i]);
                 }
                 else
                 {

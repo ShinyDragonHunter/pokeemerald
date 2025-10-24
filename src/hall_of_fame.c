@@ -698,7 +698,7 @@ static void Task_Hof_DisplayPlayer(u8 taskId)
     ShowBg(0);
     ShowBg(1);
     ShowBg(3);
-    gTasks[taskId].tPlayerSpriteID = CreateTrainerPicSprite(PlayerGenderToFrontTrainerPicId_Debug(gSaveBlock2Ptr->playerGender, TRUE), TRUE, 120, 72, 6, TAG_NONE);
+    gTasks[taskId].tPlayerSpriteID = CreateTrainerPicSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender), TRUE, 120, 72, 6, TAG_NONE);
     AddWindow(&sHof_WindowTemplate);
     LoadWindowGfx(1, gSaveBlock2Ptr->optionsWindowFrameType, 0x21D, BG_PLTT_ID(13));
     LoadPalette(GetTextWindowPalette(1), BG_PLTT_ID(14), PLTT_SIZE_4BPP);
@@ -755,11 +755,11 @@ static void Task_Hof_HandleExit(u8 taskId)
             if (spriteId != SPRITE_NONE)
             {
                 FreeOamMatrix(gSprites[spriteId].oam.matrixNum);
-                FreeAndDestroyMonPicSprite(spriteId);
+                FreeAndDestroyPicSprite(spriteId);
             }
         }
 
-        FreeAndDestroyTrainerPicSprite(gTasks[taskId].tPlayerSpriteID);
+        FreeAndDestroyPicSprite(gTasks[taskId].tPlayerSpriteID);
         HideBg(0);
         HideBg(1);
         HideBg(3);
@@ -929,7 +929,7 @@ static void Task_HofPC_DrawSpritesPrintText(u8 taskId)
             if (currMon->species == SPECIES_EGG)
                 posY += 10;
 
-            spriteId = CreateMonPicSprite_HandleDeoxys(currMon->species, currMon->tid, currMon->personality, TRUE, posX, posY, i, TAG_NONE);
+            spriteId = CreateMonPicSprite(currMon->species, currMon->tid, currMon->personality, TRUE, posX, posY, i, TAG_NONE);
             gSprites[spriteId].oam.priority = 1;
             gTasks[taskId].tMonSpriteId(i) = spriteId;
         }
@@ -999,7 +999,7 @@ static void Task_HofPC_HandleInput(u8 taskId)
                 u8 spriteId = gTasks[taskId].tMonSpriteId(i);
                 if (spriteId != SPRITE_NONE)
                 {
-                    FreeAndDestroyMonPicSprite(spriteId);
+                    FreeAndDestroyPicSprite(spriteId);
                     gTasks[taskId].tMonSpriteId(i) = SPRITE_NONE;
                 }
             }
@@ -1060,7 +1060,7 @@ static void Task_HofPC_HandleExit(u8 taskId)
             u16 spriteId = gTasks[taskId].tMonSpriteId(i);
             if (spriteId != SPRITE_NONE)
             {
-                FreeAndDestroyMonPicSprite(spriteId);
+                FreeAndDestroyPicSprite(spriteId);
                 gTasks[taskId].tMonSpriteId(i) = SPRITE_NONE;
             }
         }
