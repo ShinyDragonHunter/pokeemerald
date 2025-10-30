@@ -122,7 +122,6 @@ static void ResumeMap(bool32);
 static void SetCameraToTrackPlayer(void);
 static void InitObjectEventsReturnToField(void);
 static void InitViewGraphics(void);
-static void SetCameraToTrackGuestPlayer_2(void);
 static void CreateLinkPlayerSprites(void);
 static void ClearAllPlayerKeys(void);
 static void ResetAllPlayerLinkStates(void);
@@ -520,7 +519,7 @@ void SetObjEventTemplateMovementType(u8 localId, u8 movementType)
     }
 }
 
-static void InitMapView(void)
+static inline void InitMapView(void)
 {
     ResetFieldCamera();
     CopyMapTilesetsToVram(gMapHeader.mapLayout);
@@ -1398,8 +1397,14 @@ u8 GetCurrentMapBattleScene(void)
     return Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum)->battleType;
 }
 
-static void InitOverworldBgs(void)
+static void InitOverworldBgs(bool32 resetHeap)
 {
+    if (resetHeap)
+    {
+        ClearMirageTowerPulseBlend();
+        MoveSaveBlocks_ResetHeap();
+        ResetScreenForMapLoad();
+    }
     InitBgsFromTemplates(0, sOverworldBgTemplates, ARRAY_COUNT(sOverworldBgTemplates));
     SetBgAttribute(1, BG_ATTR_MOSAIC, 1);
     SetBgAttribute(2, BG_ATTR_MOSAIC, 1);
@@ -1411,6 +1416,8 @@ static void InitOverworldBgs(void)
     SetBgTilemapBuffer(2, gOverworldTilemapBuffer_Bg2);
     SetBgTilemapBuffer(3, gOverworldTilemapBuffer_Bg3);
     InitStandardTextBoxWindows();
+    InitTextBoxGfxAndPrinters();
+    InitFieldMessageBox();
 }
 
 void CleanupOverworldWindowsAndTilemaps(void)
@@ -1765,11 +1772,8 @@ static void FieldClearVBlankHBlankCallbacks(void)
     }
     else
     {
-        u16 savedIme = REG_IME;
-        REG_IME = 0;
-        REG_IE &= ~INTR_FLAG_HBLANK;
-        REG_IE |= INTR_FLAG_VBLANK;
-        REG_IME = savedIme;
+        DisableInterrupts(INTR_FLAG_HBLANK);
+        EnableInterrupts(INTR_FLAG_VBLANK);
     }
 
     SetVBlankCallback(NULL);
@@ -1812,11 +1816,9 @@ static bool32 LoadMapInStepsLink(u8 *state)
     switch (*state)
     {
     case 0:
-        InitOverworldBgs();
+        InitOverworldBgs(TRUE);
         ScriptContext_Init();
         UnlockPlayerFieldControls();
-        ResetMirageTowerAndSaveBlockPtrs();
-        ResetScreenForMapLoad();
         (*state)++;
         break;
     case 1:
@@ -1835,9 +1837,7 @@ static bool32 LoadMapInStepsLink(u8 *state)
         (*state)++;
         break;
     case 4:
-        InitCurrentFlashLevelScanlineEffect();
-        InitOverworldGraphicsRegisters();
-        InitTextBoxGfxAndPrinters();
+        InitViewGraphics();
         (*state)++;
         break;
     case 5:
@@ -1891,67 +1891,61 @@ static bool32 LoadMapInStepsLocal(u8 *state, bool32 a2)
     switch (*state)
     {
     case 0:
+        InitOverworldBgs(TRUE);
         FieldClearVBlankHBlankCallbacks();
         LoadMapFromWarp(a2);
         (*state)++;
         break;
     case 1:
-        ResetMirageTowerAndSaveBlockPtrs();
-        ResetScreenForMapLoad();
-        (*state)++;
-        break;
-    case 2:
         ResumeMap(a2);
         (*state)++;
         break;
-    case 3:
+    case 2:
         InitObjectEventsLocal();
         SetCameraToTrackPlayer();
         (*state)++;
         break;
-    case 4:
-        InitCurrentFlashLevelScanlineEffect();
-        InitOverworldGraphicsRegisters();
-        InitTextBoxGfxAndPrinters();
+    case 3:
+        InitViewGraphics();
         (*state)++;
         break;
-    case 5:
+    case 4:
         ResetFieldCamera();
         (*state)++;
         break;
-    case 6:
+    case 5:
         CopyPrimaryTilesetToVram(gMapHeader.mapLayout);
         (*state)++;
         break;
-    case 7:
+    case 6:
         CopySecondaryTilesetToVram(gMapHeader.mapLayout);
         (*state)++;
         break;
-    case 8:
+    case 7:
         if (FreeTempTileDataBuffersIfPossible() != TRUE)
         {
             LoadMapTilesetPalettes(gMapHeader.mapLayout);
             (*state)++;
         }
         break;
-    case 9:
+    case 8:
         DrawWholeMapView();
         (*state)++;
         break;
-    case 10:
+    case 9:
         InitTilesetAnimations();
         (*state)++;
         break;
-    case 11:
+    case 10:
         if (gMapHeader.showMapName == TRUE && SecretBaseMapPopupEnabled() == TRUE)
             ShowMapNamePopup();
         (*state)++;
         break;
-    case 12:
+    case 11:
         if (RunFieldCallback())
             (*state)++;
         break;
-    case 13:
+    case 12:
         return TRUE;
     }
 
@@ -1963,8 +1957,7 @@ static bool32 ReturnToFieldLocal(u8 *state)
     switch (*state)
     {
     case 0:
-        ResetMirageTowerAndSaveBlockPtrs();
-        ResetScreenForMapLoad();
+        InitOverworldBgs(TRUE);
         ResumeMap(FALSE);
         InitObjectEventsReturnToField();
         SetCameraToTrackPlayer();
@@ -1972,6 +1965,7 @@ static bool32 ReturnToFieldLocal(u8 *state)
         break;
     case 1:
         InitViewGraphics();
+        InitMapView();
         TryLoadTrainerHillEReaderPalette();
         (*state)++;
         break;
@@ -1991,9 +1985,8 @@ static bool32 ReturnToFieldLink(u8 *state)
     switch (*state)
     {
     case 0:
+        InitOverworldBgs(TRUE);
         FieldClearVBlankHBlankCallbacks();
-        ResetMirageTowerAndSaveBlockPtrs();
-        ResetScreenForMapLoad();
         (*state)++;
         break;
     case 1:
@@ -2003,13 +1996,11 @@ static bool32 ReturnToFieldLink(u8 *state)
     case 2:
         CreateLinkPlayerSprites();
         InitObjectEventsReturnToField();
-        SetCameraToTrackGuestPlayer_2();
+        SetCameraToTrackGuestPlayer();
         (*state)++;
         break;
     case 3:
-        InitCurrentFlashLevelScanlineEffect();
-        InitOverworldGraphicsRegisters();
-        InitTextBoxGfxAndPrinters();
+        InitViewGraphics();
         (*state)++;
         break;
     case 4:
@@ -2072,6 +2063,7 @@ static void ResetMirageTowerAndSaveBlockPtrs(void)
 {
     ClearMirageTowerPulseBlend();
     MoveSaveBlocks_ResetHeap();
+    ResetScreenForMapLoad();
 }
 
 static void ResetScreenForMapLoad(void)
@@ -2089,8 +2081,6 @@ static void InitViewGraphics(void)
 {
     InitCurrentFlashLevelScanlineEffect();
     InitOverworldGraphicsRegisters();
-    InitTextBoxGfxAndPrinters();
-    InitMapView();
 }
 
 static void InitOverworldGraphicsRegisters(void)
@@ -2107,7 +2097,6 @@ static void InitOverworldGraphicsRegisters(void)
     SetGpuReg(REG_OFFSET_BLDCNT, gOverworldBackgroundLayerFlags[1] | gOverworldBackgroundLayerFlags[2] | gOverworldBackgroundLayerFlags[3]
                                | BLDCNT_TGT2_OBJ | BLDCNT_EFFECT_BLEND);
     SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(13, 7));
-    InitOverworldBgs();
     ScheduleBgCopyTilemapToVram(1);
     ScheduleBgCopyTilemapToVram(2);
     ScheduleBgCopyTilemapToVram(3);
@@ -2125,7 +2114,6 @@ static void InitOverworldGraphicsRegisters(void)
     ShowBg(1);
     ShowBg(2);
     ShowBg(3);
-    InitFieldMessageBox();
 }
 
 static void ResumeMap(bool32 a1)
@@ -2191,12 +2179,6 @@ static void SetCameraToTrackPlayer(void)
 }
 
 static void SetCameraToTrackGuestPlayer(void)
-{
-    InitCameraUpdateCallback(GetSpriteForLinkedPlayer(gLocalLinkPlayerId));
-}
-
-// Duplicate function.
-static void SetCameraToTrackGuestPlayer_2(void)
 {
     InitCameraUpdateCallback(GetSpriteForLinkedPlayer(gLocalLinkPlayerId));
 }
