@@ -949,7 +949,7 @@ struct ExternalEventData
     u32 unknownExternalDataFields3:4;
     u32 totalEarnedPokeCoupons:24; // Used by the JP Colosseum bonus disc. Determines PokéCoupon rank to distribute rewards. Unread in International games. Colosseum/XD caps this at 9,999,999.
     u8 unknownExternalDataFields4[5]; // if actually used, may be broken up into different fields.
-} __attribute__((packed)); /*size = 0x14*/
+} PACKED; /*size = 0x14*/
 
 // For external event flags. The majority of these may have never been used.
 // In Emerald, Jirachi cannot normally be received, but hacking the distribution discs allows Emerald to receive Jirachi and set the flag
@@ -979,7 +979,7 @@ struct ExternalEventFlags
     u8 unknownFlag19;
     u8 unknownFlag20;
 
-} __attribute__((packed));/*size = 0x15*/
+} PACKED;/*size = 0x15*/
 
 struct SaveBlock1
 {

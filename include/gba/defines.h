@@ -10,6 +10,7 @@
 #define EWRAM_DATA __attribute__((section("ewram_data")))
 #define COMMON_DATA __attribute__((section("common_data")))
 #define UNUSED __attribute__((unused))
+#define PACKED __attribute__((packed))
 
 #if MODERN
 #define NOINLINE __attribute__((noinline))
