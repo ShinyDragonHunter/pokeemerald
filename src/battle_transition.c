@@ -2477,11 +2477,13 @@ static bool8 Mugshot_Init(struct Task *task)
     task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[task->tMugshotId],
                                                   sMugshotsOpponentCoords[task->tMugshotId].x - 32,
                                                   sMugshotsOpponentCoords[task->tMugshotId].y + 42,
+    gReservedSpritePaletteCount = 10;
                                                   0, gDecompressionBuffer);
     task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender),
                                                 DISPLAY_WIDTH + 32,
                                                 106,
                                                 0, gDecompressionBuffer);
+    gReservedSpritePaletteCount = 12;
 
     Mugshots_SetTrainerPicOamData(&gSprites[task->tOpponentSpriteId], sMugshotsOpponentRotationScales[task->tMugshotId], sMugshotsOpponentRotationScales[task->tMugshotId]);
     Mugshots_SetTrainerPicOamData(&gSprites[task->tPlayerSpriteId], -512, 512);
@@ -3831,7 +3833,10 @@ static void VBlankCB_WhiteBarsFade_Blend(void)
 
 static void HBlankCB_WhiteBarsFade(void)
 {
-    REG_BLDY = gScanlineEffectRegBuffers[1][REG_VCOUNT];
+    u16 index = REG_VCOUNT;
+    if (index == 227)
+        index = 0;
+    REG_BLDY = gScanlineEffectRegBuffers[1][index];
 }
 
 static void SpriteCB_WhiteBarFade(struct Sprite *sprite)
@@ -4240,11 +4245,15 @@ static void SetCircularMask(u16 *buffer, s16 centerX, s16 centerY, s16 radius)
     s16 i;
 
     memset(buffer, 10, DISPLAY_HEIGHT * sizeof(u16));
+    // 64 iterations because we only want to cover [0, π/2) discretely.
     for (i = 0; i < 64; i++)
     {
         s16 sinResult, cosResult;
         s16 drawXLeft, drawYBottNext, drawYTopNext, drawX, drawYTop, drawYBott;
 
+        // The loop variable i here does not stand for rotation angle, 
+        // but is the angle between segment (center, pointOnCircle) 
+        // and vertical line.
         sinResult = Sin(i, radius);
         cosResult = Cos(i, radius);
 
@@ -4275,6 +4284,7 @@ static void SetCircularMask(u16 *buffer, s16 centerX, s16 centerY, s16 radius)
         if (drawYBottNext > DISPLAY_HEIGHT - 1)
             drawYBottNext = DISPLAY_HEIGHT - 1;
 
+        // fill everything in between with the same WIN0H value
         while (drawYTop > drawYTopNext)
             buffer[--drawYTop] = drawX;
         while (drawYTop < drawYTopNext)
