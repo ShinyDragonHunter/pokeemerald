@@ -2474,10 +2474,10 @@ static bool8 Mugshot_Init(struct Task *task)
 
     InitTransitionData();
     ScanlineEffect_Clear();
+    gReservedSpritePaletteCount = 10;
     task->tOpponentSpriteId = CreateTrainerSprite(sMugshotsTrainerPicIDsTable[task->tMugshotId],
                                                   sMugshotsOpponentCoords[task->tMugshotId].x - 32,
                                                   sMugshotsOpponentCoords[task->tMugshotId].y + 42,
-    gReservedSpritePaletteCount = 10;
                                                   0, gDecompressionBuffer);
     task->tPlayerSpriteId = CreateTrainerSprite(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender),
                                                 DISPLAY_WIDTH + 32,
