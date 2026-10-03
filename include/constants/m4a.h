@@ -12,6 +12,8 @@
 
 #define NUM_DIRECTSOUND_CHANNELS 5 // usable directsound channels
 
+#define CHANNEL_MASTER_VOLUME 12 // master volume
+
 #define MAX_DIRECTSOUND_CHANNELS 12 // allocated directsound channels
 
 #define PCM_DMA_BUF_SIZE 1584 // size of Direct Sound buffer
