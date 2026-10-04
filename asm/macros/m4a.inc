@@ -4,10 +4,10 @@
 	.2byte \music_player
 	.endm
 
-	.macro music_player label:req, unknown:req
-	.4byte gMPlayInfo_\label
-	.4byte gMPlayTrack_\label
-	.byte NUM_TRACKS_\label
+	.macro music_player info_struct:req, track_struct:req, unknown:req
+	.4byte \info_struct
+	.4byte \track_struct
+	.byte NUM_TRACKS_\track_struct
 	.space 1  @ Padding
 	.2byte \unknown
 	.endm
@@ -52,8 +52,8 @@
 
 	.macro mplay_track label:req, num_tracks:req
 	.set NUM_TRACKS_\label, \num_tracks
-	.global gMPlayTrack_\label
-	gMPlayTrack_\label:
+	.global \label
+	\label:
 	.space \num_tracks * MusicPlayerTrack_size
-	.size gMPlayTrack_\label, .-gMPlayTrack_\label
+	.size \label, .-\label
 	.endm
