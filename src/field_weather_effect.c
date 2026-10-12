@@ -22,8 +22,7 @@ const u16 gSandstormWeatherPalette[] = INCGFX_U16("graphics/weather/sandstorm.pn
 const u8 gWeatherFogDiagonalTiles[] = INCGFX_U8("graphics/weather/fog_diagonal.png", ".4bpp");
 const u8 gWeatherFogHorizontalTiles[] = INCGFX_U8("graphics/weather/fog_horizontal.png", ".4bpp");
 const u8 gWeatherCloudTiles[] = INCGFX_U8("graphics/weather/cloud.png", ".4bpp");
-const u8 gWeatherSnow1Tiles[] = INCGFX_U8("graphics/weather/snow0.png", ".4bpp");
-const u8 gWeatherSnow2Tiles[] = INCGFX_U8("graphics/weather/snow1.png", ".4bpp");
+const u8 gWeatherSnowTiles[] = INCGFX_U8("graphics/weather/snow.png", ".4bpp", "-mwidth 1 -mheight 1");
 const u8 gWeatherBubbleTiles[] = INCGFX_U8("graphics/weather/bubble.png", ".4bpp");
 const u8 gWeatherAshTiles[] = INCGFX_U8("graphics/weather/ash.png", ".4bpp");
 const u8 gWeatherRainTiles[] = INCGFX_U8("graphics/weather/rain.png", ".4bpp");
@@ -853,8 +852,7 @@ static const struct OamData sSnowflakeSpriteOamData =
 
 static const struct SpriteFrameImage sSnowflakeSpriteImages[] =
 {
-    {gWeatherSnow1Tiles, sizeof(gWeatherSnow1Tiles)},
-    {gWeatherSnow2Tiles, sizeof(gWeatherSnow2Tiles)},
+    overworld_ascending_frames(gWeatherSnowTiles, 1, 1),
 };
 
 static const union AnimCmd sSnowflakeAnimCmd0[] =

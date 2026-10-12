@@ -391,25 +391,25 @@ static const union AnimCmd sAnim_FieldMove[] =
 
 static const union AnimCmd sAnim_GetOnOffSurfBlobSouth[] =
 {
-    ANIMCMD_FRAME(9, 32),
+    ANIMCMD_FRAME(3, 32),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_GetOnOffSurfBlobNorth[] =
 {
-    ANIMCMD_FRAME(10, 32),
+    ANIMCMD_FRAME(4, 32),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_GetOnOffSurfBlobWest[] =
 {
-    ANIMCMD_FRAME(11, 32),
+    ANIMCMD_FRAME(5, 32),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_GetOnOffSurfBlobEast[] =
 {
-    ANIMCMD_FRAME(11, 32, .hFlip = TRUE),
+    ANIMCMD_FRAME(5, 32, .hFlip = TRUE),
     ANIMCMD_JUMP(0),
 };
 
@@ -782,16 +782,14 @@ static const union AffineAnimCmd sAffineAnim_KyogreGroudon_DipWest[] =
 
 static const union AnimCmd sAnim_HoOhFlapWings[] =
 {
-    ANIMCMD_FRAME(3, 8),
-    ANIMCMD_FRAME(4, 8),
-    ANIMCMD_FRAME(3, 8),
-    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(1, 8),
     ANIMCMD_JUMP(0),
 };
 
 static const union AnimCmd sAnim_HoOhStayStill[] =
 {
-    ANIMCMD_FRAME(3, 16),
+    ANIMCMD_FRAME(0, 16),
     ANIMCMD_JUMP(0),
 };
 
@@ -846,14 +844,14 @@ static const union AnimCmd *const sAnimTable_Standard[] = {
 };
 
 static const union AnimCmd *const sAnimTable_HoOh[] = {
-    [ANIM_STD_FACE_SOUTH] = sAnim_FaceSouth,
-    [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
-    [ANIM_STD_FACE_WEST] = sAnim_FaceWest,
-    [ANIM_STD_FACE_EAST] = sAnim_FaceEast,
+    [ANIM_STD_FACE_SOUTH] = sAnim_HoOhStayStill,
+    [ANIM_STD_FACE_NORTH] = sAnim_HoOhStayStill,
+    [ANIM_STD_FACE_WEST] = sAnim_HoOhStayStill,
+    [ANIM_STD_FACE_EAST] = sAnim_HoOhStayStill,
     [ANIM_STD_GO_SOUTH] = sAnim_HoOhFlapWings,
     [ANIM_STD_GO_NORTH] = sAnim_HoOhStayStill,
-    [ANIM_STD_GO_WEST] = sAnim_GoWest,
-    [ANIM_STD_GO_EAST] = sAnim_GoEast,
+    [ANIM_STD_GO_WEST] = sAnim_HoOhFlapWings,
+    [ANIM_STD_GO_EAST] = sAnim_HoOhFlapWings,
     [ANIM_STD_GO_FAST_SOUTH] = sAnim_GoFastSouth,
     [ANIM_STD_GO_FAST_NORTH] = sAnim_GoFastNorth,
     [ANIM_STD_GO_FAST_WEST] = sAnim_GoFastWest,
@@ -1051,22 +1049,22 @@ static const union AnimCmd *const sAnimTable_Surfing[] = {
     [ANIM_STD_FACE_NORTH] = sAnim_FaceNorth,
     [ANIM_STD_FACE_WEST] = sAnim_FaceWest,
     [ANIM_STD_FACE_EAST] = sAnim_FaceEast,
-    [ANIM_STD_GO_SOUTH] = sAnim_GoSouth,
-    [ANIM_STD_GO_NORTH] = sAnim_GoNorth,
-    [ANIM_STD_GO_WEST] = sAnim_GoWest,
-    [ANIM_STD_GO_EAST] = sAnim_GoEast,
-    [ANIM_STD_GO_FAST_SOUTH] = sAnim_GoFastSouth,
-    [ANIM_STD_GO_FAST_NORTH] = sAnim_GoFastNorth,
-    [ANIM_STD_GO_FAST_WEST] = sAnim_GoFastWest,
-    [ANIM_STD_GO_FAST_EAST] = sAnim_GoFastEast,
-    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_GoFasterSouth,
-    [ANIM_STD_GO_FASTER_NORTH] = sAnim_GoFasterNorth,
-    [ANIM_STD_GO_FASTER_WEST] = sAnim_GoFasterWest,
-    [ANIM_STD_GO_FASTER_EAST] = sAnim_GoFasterEast,
-    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_GoFastestSouth,
-    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_GoFastestNorth,
-    [ANIM_STD_GO_FASTEST_WEST] = sAnim_GoFastestWest,
-    [ANIM_STD_GO_FASTEST_EAST] = sAnim_GoFastestEast,
+    [ANIM_STD_GO_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_WEST] = sAnim_FaceWest,
+    [ANIM_STD_GO_EAST] = sAnim_FaceEast,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_FaceWest,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_FaceEast,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_FaceWest,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_FaceEast,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_FaceSouth,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_FaceNorth,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_FaceWest,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_FaceEast,
     [ANIM_GET_ON_OFF_POKEMON_SOUTH] = sAnim_GetOnOffSurfBlobSouth,
     [ANIM_GET_ON_OFF_POKEMON_NORTH] = sAnim_GetOnOffSurfBlobNorth,
     [ANIM_GET_ON_OFF_POKEMON_WEST] = sAnim_GetOnOffSurfBlobWest,
@@ -1143,6 +1141,147 @@ static const union AffineAnimCmd *const sAffineAnimTable_KyogreGroudon[] = {
     sAffineAnim_KyogreGroudon_DipEast,      // Unused
 };
 
+static const union AnimCmd sAnim_WateringFaceEast[] =
+{
+    ANIMCMD_FRAME(4, 32, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoSouth[] =
+{
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoNorth[] =
+{
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoWest[] =
+{
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoEast[] =
+{
+    ANIMCMD_FRAME(5, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(4, 8, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastSouth[] =
+{
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastNorth[] =
+{
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastWest[] =
+{
+    ANIMCMD_FRAME(5, 4),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastEast[] =
+{
+    ANIMCMD_FRAME(5, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(4, 4, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFasterSouth[] =
+{
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFasterNorth[] =
+{
+    ANIMCMD_FRAME(3, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFasterWest[] =
+{
+    ANIMCMD_FRAME(5, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFasterEast[] =
+{
+    ANIMCMD_FRAME(5, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(4, 2, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastestSouth[] =
+{
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastestNorth[] =
+{
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastestWest[] =
+{
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd sAnim_WateringGoFastestEast[] =
+{
+    ANIMCMD_FRAME(5, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(4, 1, .hFlip = TRUE),
+    ANIMCMD_JUMP(0),
+};
+
+static const union AnimCmd *const sAnimTable_Watering[] = {
+    [ANIM_STD_FACE_SOUTH] = sAnim_QuintyPlumpFaceSouth,
+    [ANIM_STD_FACE_NORTH] = sAnim_QuintyPlumpFaceWest,
+    [ANIM_STD_FACE_WEST] = sAnim_GetOnOffSurfBlobNorth,
+    [ANIM_STD_FACE_EAST] = sAnim_WateringFaceEast,
+    [ANIM_STD_GO_SOUTH] = sAnim_WateringGoSouth,
+    [ANIM_STD_GO_NORTH] = sAnim_WateringGoNorth,
+    [ANIM_STD_GO_WEST] = sAnim_WateringGoWest,
+    [ANIM_STD_GO_EAST] = sAnim_WateringGoEast,
+    [ANIM_STD_GO_FAST_SOUTH] = sAnim_WateringGoFastSouth,
+    [ANIM_STD_GO_FAST_NORTH] = sAnim_WateringGoFastNorth,
+    [ANIM_STD_GO_FAST_WEST] = sAnim_WateringGoFastWest,
+    [ANIM_STD_GO_FAST_EAST] = sAnim_WateringGoFastEast,
+    [ANIM_STD_GO_FASTER_SOUTH] = sAnim_WateringGoFasterSouth,
+    [ANIM_STD_GO_FASTER_NORTH] = sAnim_WateringGoFasterNorth,
+    [ANIM_STD_GO_FASTER_WEST] = sAnim_WateringGoFasterWest,
+    [ANIM_STD_GO_FASTER_EAST] = sAnim_WateringGoFasterEast,
+    [ANIM_STD_GO_FASTEST_SOUTH] = sAnim_WateringGoFastestSouth,
+    [ANIM_STD_GO_FASTEST_NORTH] = sAnim_WateringGoFastestNorth,
+    [ANIM_STD_GO_FASTEST_WEST] = sAnim_WateringGoFastestWest,
+    [ANIM_STD_GO_FASTEST_EAST] = sAnim_WateringGoFastestEast,
+};
+
 // For animations with alternating steps
 static const struct StepAnimTable sStepAnimTables[] = {
     {
@@ -1172,6 +1311,10 @@ static const struct StepAnimTable sStepAnimTables[] = {
     {
         .anims = sAnimTable_Fishing,
         .animPos = {1, 3, 0, 2},
+    },
+    {
+        .anims = sAnimTable_Watering,
+        .animPos = {1, 1, 0, 0},
     },
     {},
 };

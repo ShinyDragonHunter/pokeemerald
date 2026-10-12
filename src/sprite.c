@@ -803,9 +803,18 @@ void RequestSpriteFrameImageCopy(u16 index, u16 tileNum, const struct SpriteFram
 {
     if (sSpriteCopyRequestCount < MAX_SPRITE_COPY_REQUESTS)
     {
-        sSpriteCopyRequests[sSpriteCopyRequestCount].src = images[index].data;
-        sSpriteCopyRequests[sSpriteCopyRequestCount].dest = (u8 *)OBJ_VRAM0 + TILE_SIZE_4BPP * tileNum;
-        sSpriteCopyRequests[sSpriteCopyRequestCount].size = images[index].size;
+        struct SpriteCopyRequest *spriteCopyRequest = &sSpriteCopyRequests[sSpriteCopyRequestCount];
+        if (images[0].relativeFrames)
+        {
+            spriteCopyRequest->src = images[0].data + images[0].size * index;
+            spriteCopyRequest->size = images[0].size;
+        }
+        else
+        {
+            spriteCopyRequest->src = images[index].data;
+            spriteCopyRequest->size = images[index].size;
+        }
+        spriteCopyRequest->dest = (u8 *)OBJ_VRAM0 + TILE_SIZE_4BPP * tileNum;
         sSpriteCopyRequestCount++;
     }
 }

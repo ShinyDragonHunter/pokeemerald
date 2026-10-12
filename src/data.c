@@ -12,104 +12,66 @@ const u16 gMinigameDigits_Pal[] = INCGFX_U16("graphics/link/minigame_digits.png"
 const u32 gMinigameDigits_Gfx[] = INCGFX_U32("graphics/link/minigame_digits.png", ".4bpp.lz");
 static const u32 sMinigameDigitsThin_Gfx[] = INCGFX_U32("graphics/link/minigame_digits2.png", ".4bpp.lz"); // Unused
 
-#define BATTLER_OFFSET(i) (gHeap + 0x8000 + MON_PIC_SIZE * (i))
+#define BATTLER_OFFSET(i) (gHeap + 0x8000 + MON_PIC_SIZE * (i * MAX_MON_PIC_FRAMES))
 
 const struct SpriteFrameImage gBattlerPicTable_PlayerLeft[] =
 {
-    {BATTLER_OFFSET(0), MON_PIC_SIZE},
-    {BATTLER_OFFSET(1), MON_PIC_SIZE},
-    {BATTLER_OFFSET(2), MON_PIC_SIZE},
-    {BATTLER_OFFSET(3), MON_PIC_SIZE},
+    {BATTLER_OFFSET(B_POSITION_PLAYER_LEFT), MON_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gBattlerPicTable_OpponentLeft[] =
 {
-    {BATTLER_OFFSET(4), MON_PIC_SIZE},
-    {BATTLER_OFFSET(5), MON_PIC_SIZE},
-    {BATTLER_OFFSET(6), MON_PIC_SIZE},
-    {BATTLER_OFFSET(7), MON_PIC_SIZE},
+    {BATTLER_OFFSET(B_POSITION_OPPONENT_LEFT), MON_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gBattlerPicTable_PlayerRight[] =
 {
-    {BATTLER_OFFSET(8),  MON_PIC_SIZE},
-    {BATTLER_OFFSET(9),  MON_PIC_SIZE},
-    {BATTLER_OFFSET(10), MON_PIC_SIZE},
-    {BATTLER_OFFSET(11), MON_PIC_SIZE},
+    {BATTLER_OFFSET(B_POSITION_PLAYER_RIGHT), MON_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gBattlerPicTable_OpponentRight[] =
 {
-    {BATTLER_OFFSET(12), MON_PIC_SIZE},
-    {BATTLER_OFFSET(13), MON_PIC_SIZE},
-    {BATTLER_OFFSET(14), MON_PIC_SIZE},
-    {BATTLER_OFFSET(15), MON_PIC_SIZE},
+    {BATTLER_OFFSET(B_POSITION_OPPONENT_RIGHT), MON_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_Brendan[] =
 {
-    {gTrainerBackPic_Brendan + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Brendan + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Brendan + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Brendan + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Brendan, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_May[] =
 {
-    {gTrainerBackPic_May + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_May + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_May + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_May + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_May, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_Red[] =
 {
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Red + TRAINER_PIC_SIZE * 4, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Red, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_Leaf[] =
 {
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Leaf + TRAINER_PIC_SIZE * 4, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Leaf, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireBrendan[] =
 {
-    {gTrainerBackPic_RubySapphireBrendan + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireBrendan + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireBrendan + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireBrendan + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_RubySapphireBrendan, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_RubySapphireMay[] =
 {
-    {gTrainerBackPic_RubySapphireMay + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireMay + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireMay + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_RubySapphireMay + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_RubySapphireMay, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_Wally[] =
 {
-    {gTrainerBackPic_Wally + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Wally + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Wally + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Wally + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Wally, TRAINER_PIC_SIZE, TRUE},
 };
 
 const struct SpriteFrameImage gTrainerBackPicTable_Steven[] =
 {
-    {gTrainerBackPic_Steven + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Steven + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Steven + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
-    {gTrainerBackPic_Steven + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Steven, TRAINER_PIC_SIZE, TRUE},
 };
 
 static const union AnimCmd sAnim_GeneralFrame0[] =
