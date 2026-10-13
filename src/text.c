@@ -1694,7 +1694,7 @@ static void DecompressGlyph_Small(u16 glyphId, bool32 isJapanese)
     }
     else
     {
-        glyphs = gFontSmallLatinGlyphs + (0x20 * glyphId);
+        glyphs = gFontSmallLatinGlyphs + (0x10 * glyphId);
         gCurGlyph.width = gFontSmallLatinGlyphWidths[glyphId];
 
         DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
