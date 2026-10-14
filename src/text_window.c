@@ -48,13 +48,14 @@ static const u16 sTextWindowFrame18_Pal[] = INCGFX_U16("graphics/text_window/18.
 static const u16 sTextWindowFrame19_Pal[] = INCGFX_U16("graphics/text_window/19.png", ".gbapal");
 static const u16 sTextWindowFrame20_Pal[] = INCGFX_U16("graphics/text_window/20.png", ".gbapal");
 
-static const u16 sTextWindowPalettes[][16] =
+// Names taken from usage in FRLG
+static const u16 sTextWindowPalettes[TEXT_WINDOW_PAL_COUNT][16] =
 {
-    INCGFX_U16("graphics/text_window/message_box.png", ".gbapal"),
-    INCGFX_U16("graphics/text_window/text_pal1.pal", ".gbapal"),
-    INCGFX_U16("graphics/text_window/text_pal2.pal", ".gbapal"),
-    INCGFX_U16("graphics/text_window/text_pal3.pal", ".gbapal"),
-    INCGFX_U16("graphics/text_window/text_pal4.pal", ".gbapal")
+    [TEXT_WINDOW_PAL_MESSAGE] = INCGFX_U16("graphics/text_window/message_box.png", ".gbapal"),
+    [TEXT_WINDOW_PAL_SIGN_MESSAGE] = INCGFX_U16("graphics/text_window/sign_message_box.pal", ".gbapal"),
+    [TEXT_WINDOW_PAL_HELP_MESSAGE] = INCGFX_U16("graphics/text_window/help_message.pal", ".gbapal"),
+    [TEXT_WINDOW_PAL_STD_MESSAGE] = INCGFX_U16("graphics/text_window/std_message.pal", ".gbapal"),
+    [TEXT_WINDOW_PAL_QUEST_LOG] = INCGFX_U16("graphics/text_window/quest_log.pal", ".gbapal"),
 };
 
 static const struct TilesPal sWindowFrames[WINDOW_FRAMES_COUNT] =
@@ -163,21 +164,21 @@ const u16 *GetTextWindowPalette(u8 id)
 {
     switch (id)
     {
-    case 0:
-        id = 0x00;
+    case TEXT_WINDOW_PAL_MESSAGE:
+        id = PLTT_ID(TEXT_WINDOW_PAL_MESSAGE);
         break;
-    case 1:
-        id = 0x10;
+    case TEXT_WINDOW_PAL_SIGN_MESSAGE:
+        id = PLTT_ID(TEXT_WINDOW_PAL_SIGN_MESSAGE);
         break;
-    case 2:
-        id = 0x20;
+    case TEXT_WINDOW_PAL_HELP_MESSAGE:
+        id = PLTT_ID(TEXT_WINDOW_PAL_HELP_MESSAGE);
         break;
-    case 3:
-        id = 0x30;
+    case TEXT_WINDOW_PAL_STD_MESSAGE:
+        id = PLTT_ID(TEXT_WINDOW_PAL_STD_MESSAGE);
         break;
-    case 4:
+    case TEXT_WINDOW_PAL_QUEST_LOG:
     default:
-        id = 0x40;
+        id = PLTT_ID(TEXT_WINDOW_PAL_QUEST_LOG);
         break;
     }
 

@@ -240,7 +240,7 @@ s32 WonderCard_Enter(void)
     case 3:
         if (FreeTempTileDataBuffersIfPossible())
             return 0;
-        LoadPalette(GetTextWindowPalette(1), BG_PLTT_ID(2), PLTT_SIZE_4BPP);
+        LoadPalette(GetTextWindowPalette(TEXT_WINDOW_PAL_SIGN_MESSAGE), BG_PLTT_ID(2), PLTT_SIZE_4BPP);
         gPaletteFade.bufferTransferDisabled = TRUE;
         LoadPalette(sWonderCardData->gfx->pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         LZ77UnCompWram(sWonderCardData->gfx->map, sWonderCardData->bgTilemapBuffer);
@@ -703,7 +703,7 @@ s32 WonderNews_Enter(void)
     case 3:
         if (FreeTempTileDataBuffersIfPossible())
             return 0;
-        LoadPalette(GetTextWindowPalette(1), BG_PLTT_ID(2), PLTT_SIZE_4BPP);
+        LoadPalette(GetTextWindowPalette(TEXT_WINDOW_PAL_SIGN_MESSAGE), BG_PLTT_ID(2), PLTT_SIZE_4BPP);
         gPaletteFade.bufferTransferDisabled = TRUE;
         LoadPalette(sWonderNewsData->gfx->pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         LZ77UnCompWram(sWonderNewsData->gfx->map, sWonderNewsData->bgTilemapBuffer);
