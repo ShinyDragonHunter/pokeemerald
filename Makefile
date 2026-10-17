@@ -370,11 +370,10 @@ endif
 # Linker script
 ifeq ($(MODERN),0)
 LD_SCRIPT := ld_script.ld
-LD_SCRIPT_DEPS := $(OBJ_DIR)/sym_bss.ld $(OBJ_DIR)/sym_common.ld $(OBJ_DIR)/sym_ewram.ld $(OBJ_DIR)/memory.ld
 else
 LD_SCRIPT := ld_script_modern.ld
-LD_SCRIPT_DEPS := $(OBJ_DIR)/memory.ld
 endif
+LD_SCRIPT_DEPS := $(OBJ_DIR)/sym_bss.ld $(OBJ_DIR)/sym_common.ld $(OBJ_DIR)/sym_ewram.ld $(OBJ_DIR)/memory.ld
 
 # Final rules
 
