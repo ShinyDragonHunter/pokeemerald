@@ -1,20 +1,17 @@
 ENTRY(Start)
 
-gNumMusicPlayers = 4;
-gMaxLines = 0;
-
 INCLUDE "memory.ld"
 
 SECTIONS {
 
-    ewram 0x2000000 (NOLOAD) :
+    ewram ORIGIN(EWRAM) (NOLOAD) :
     ALIGN(4)
     {
         INCLUDE "sym_ewram.ld"
         src/*.o(ewram_data);
     } > EWRAM
 
-    iwram 0x3000000 (NOLOAD) :
+    iwram ORIGIN(IWRAM) (NOLOAD) :
     ALIGN(4)
     {
         INCLUDE "sym_bss.ld"
@@ -32,9 +29,8 @@ SECTIONS {
     } > IWRAM
 
     /* BEGIN ROM DATA */
-    . = 0x8000000;
 
-    .text :
+    .text ORIGIN(ROM) :
     ALIGN(4)
     {
         src/rom_header.o(.text*);

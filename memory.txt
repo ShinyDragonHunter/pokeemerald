@@ -1,5 +1,9 @@
 #include "gba/defines.h"
 #include "save.h"
+#include "constants/m4a.h"
+
+gNumMusicPlayers = MUSIC_PLAYER_COUNT;
+gMaxLines = MAX_SCANLINES;
 
 /* WARNING: 'cpp' cannot resolve 'offsetof' so this won't stay in sync
  * if 'struct SaveSector's 'counter' member moves. */
