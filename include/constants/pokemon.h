@@ -274,6 +274,11 @@
 // - Unown has 1 frame, presumably to avoid the work of animating all 28 of its forms
 #define MAX_MON_PIC_FRAMES 4
 
+// used by ShouldIgnoreDeoxysForm
+#define DEOXYS_CHECK_BATTLE_SPRITE      1 // Player's side in battle
+#define DEOXYS_CHECK_TRADE_MAIN         3 // Summary Screen
+#define DEOXYS_CHECK_BATTLE_ANIM        5 // In move animation, e.g. in Role Play or Snatch
+
 #define BATTLE_ALIVE_EXCEPT_ACTIVE  0
 #define BATTLE_ALIVE_ATK_SIDE       1
 #define BATTLE_ALIVE_DEF_SIDE       2
