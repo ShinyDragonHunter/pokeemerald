@@ -485,6 +485,7 @@ gSongTable::
 	song mus_vs_rival, MUSIC_PLAYER_BGM
 	song mus_vs_elite_four, MUSIC_PLAYER_BGM
 	song mus_vs_aqua_magma_leader, MUSIC_PLAYER_BGM
+	song mus_radio_tower_takeover, MUSIC_PLAYER_BGM
 	song mus_rg_follow_me, MUSIC_PLAYER_BGM
 	song mus_rg_game_corner, MUSIC_PLAYER_BGM
 	song mus_rg_rocket_hideout, MUSIC_PLAYER_BGM
