@@ -664,16 +664,19 @@ static const struct WindowTemplate sRankingHallRecordsWindowTemplate =
     .baseBlock = 1
 };
 
-// Second field - whether the character is female.
-static const u8 sFrontierBrainObjEventGfx[NUM_FRONTIER_FACILITIES][2] =
+static const struct __attribute__((packed))
 {
-    [FRONTIER_FACILITY_TOWER]   = {OBJ_EVENT_GFX_ANABEL,  TRUE},
-    [FRONTIER_FACILITY_DOME]    = {OBJ_EVENT_GFX_TUCKER,  FALSE},
-    [FRONTIER_FACILITY_PALACE]  = {OBJ_EVENT_GFX_SPENSER, FALSE},
-    [FRONTIER_FACILITY_ARENA]   = {OBJ_EVENT_GFX_GRETA,   TRUE},
-    [FRONTIER_FACILITY_FACTORY] = {OBJ_EVENT_GFX_NOLAND,  FALSE},
-    [FRONTIER_FACILITY_PIKE]    = {OBJ_EVENT_GFX_LUCY,    TRUE},
-    [FRONTIER_FACILITY_PYRAMID] = {OBJ_EVENT_GFX_BRANDON, FALSE},
+    u16 graphicsId;
+    u8 gender;
+} sFrontierBrainObjEventGfx[NUM_FRONTIER_FACILITIES] =
+{
+    [FRONTIER_FACILITY_TOWER]   = {OBJ_EVENT_GFX_ANABEL,  FEMALE},
+    [FRONTIER_FACILITY_DOME]    = {OBJ_EVENT_GFX_TUCKER,  MALE},
+    [FRONTIER_FACILITY_PALACE]  = {OBJ_EVENT_GFX_SPENSER, MALE},
+    [FRONTIER_FACILITY_ARENA]   = {OBJ_EVENT_GFX_GRETA,   FEMALE},
+    [FRONTIER_FACILITY_FACTORY] = {OBJ_EVENT_GFX_NOLAND,  MALE},
+    [FRONTIER_FACILITY_PIKE]    = {OBJ_EVENT_GFX_LUCY,    FEMALE},
+    [FRONTIER_FACILITY_PYRAMID] = {OBJ_EVENT_GFX_BRANDON, MALE},
 };
 
 const u16 gFrontierBannedSpecies[] =
@@ -2483,13 +2486,13 @@ void CopyFrontierBrainTrainerName(u8 *dst)
 bool8 IsFrontierBrainFemale(void)
 {
     s32 facility = VarGet(VAR_FRONTIER_FACILITY);
-    return sFrontierBrainObjEventGfx[facility][1];
+    return sFrontierBrainObjEventGfx[facility].gender;
 }
 
 void SetFrontierBrainObjEventGfx_2(void)
 {
     s32 facility = VarGet(VAR_FRONTIER_FACILITY);
-    VarSet(VAR_OBJ_GFX_ID_0, sFrontierBrainObjEventGfx[facility][0]);
+    VarSet(VAR_OBJ_GFX_ID_0, sFrontierBrainObjEventGfx[facility].graphicsId);
 }
 
 #define FRONTIER_BRAIN_OTID 61226
@@ -2557,7 +2560,7 @@ u16 GetFrontierBrainMonSpecies(u8 monId)
 void SetFrontierBrainObjEventGfx(u8 facility)
 {
     gTrainerBattleOpponent_A = TRAINER_FRONTIER_BRAIN;
-    VarSet(VAR_OBJ_GFX_ID_0, sFrontierBrainObjEventGfx[facility][0]);
+    VarSet(VAR_OBJ_GFX_ID_0, sFrontierBrainObjEventGfx[facility].graphicsId);
 }
 
 u16 GetFrontierBrainMonMove(u8 monId, u8 moveSlotId)
