@@ -445,13 +445,13 @@ bool32 AreBattleTowerLinkSpeciesSame(u16 *speciesList1, u16 *speciesList2)
             {
                 if (numSameSpecies == 0)
                 {
-                    StringCopy(gStringVar1, gSpeciesNames[speciesList1[i]]);
+                    GetSpeciesName(gStringVar1, speciesList1[i]);
                     haveSameSpecies = TRUE;
                 }
 
                 if (numSameSpecies == 1)
                 {
-                    StringCopy(gStringVar2, gSpeciesNames[speciesList1[i]]);
+                    GetSpeciesName(gStringVar2, speciesList1[i]);
                     haveSameSpecies = TRUE;
                 }
 

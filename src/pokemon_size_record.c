@@ -142,7 +142,7 @@ static void GetMonSizeRecordInfo(u16 species, u16 *sizeRecord)
     u32 size = GetMonSize(species, *sizeRecord);
 
     FormatMonSizeRecord(gStringVar3, size);
-    StringCopy(gStringVar1, gSpeciesNames[species]);
+    GetSpeciesName(gStringVar1, species);
     if (*sizeRecord == DEFAULT_MAX_SIZE)
         StringCopy(gStringVar2, gText_Marco);
     else

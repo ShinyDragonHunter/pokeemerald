@@ -2449,7 +2449,7 @@ static u8 CreateMonName(u16 num, u8 left, u8 top)
 
     num = NationalPokedexNumToSpecies(num);
     if (num)
-        str = gSpeciesNames[num];
+        str = GetSpeciesNameString(num);
     else
         str = sText_TenDashes;
     PrintMonDexNumAndName(0, FONT_NARROW, str, left, top);
@@ -4118,7 +4118,7 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
     PrintInfoScreenText(str, 0x60, 0x19);
     natNum = NationalPokedexNumToSpecies(num);
     if (natNum)
-        name = gSpeciesNames[natNum];
+        name = GetSpeciesNameString(natNum);
     else
         name = sText_TenDashes2;
     PrintInfoScreenText(name, 0x84, 0x19);
@@ -4508,11 +4508,10 @@ static u8 PrintCryScreenSpeciesName(u8 windowId, u16 num, u8 left, u8 top)
     switch (num)
     {
     default:
-        for (i = 0; gSpeciesNames[num][i] != EOS && i < POKEMON_NAME_LENGTH; i++)
-            str[i] = gSpeciesNames[num][i];
+        GetSpeciesName(str, num);
         break;
     case 0:
-        for (i = 0; i < 5; i++)
+        for (i = 0; i < JAPANESE_NAME_LENGTH; i++)
             str[i] = CHAR_HYPHEN;
         break;
     }
@@ -4704,7 +4703,7 @@ static int DoPokedexSearch(u8 dexMode, u8 order, u8 abcGroup, u8 bodyColor, u8 t
             u8 firstLetter;
 
             species = NationalPokedexNumToSpecies(sPokedexView->pokedexList[i].dexNum);
-            firstLetter = gSpeciesNames[species][0];
+            firstLetter = GetSpeciesNameString(species)[0];
             if (LETTER_IN_RANGE_UPPER(firstLetter, abcGroup) || LETTER_IN_RANGE_LOWER(firstLetter, abcGroup))
             {
                 sPokedexView->pokedexList[resultsCount] = sPokedexView->pokedexList[i];

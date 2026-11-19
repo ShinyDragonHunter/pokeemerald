@@ -1917,6 +1917,7 @@ static void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
     u8 *windowTileData;
     u16 species;
     u8 gender;
+    u8 language;
 
     StringCopy(gDisplayedStringBattle, gText_HealthboxNickname);
     GetMonData(mon, MON_DATA_NICKNAME, nickname);
@@ -1925,8 +1926,9 @@ static void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 
     gender = GetMonGender(mon);
     species = GetMonData(mon, MON_DATA_SPECIES);
+    language = GetMonData(mon, MON_DATA_LANGUAGE);
 
-    if ((species == SPECIES_NIDORAN_F || species == SPECIES_NIDORAN_M) && StringCompare(nickname, gSpeciesNames[species]) == 0)
+    if (IsMonNidoranAndNotNicknamed(nickname, species, language))
         gender = 100;
 
     // AddTextPrinterAndCreateWindowOnHealthbox's arguments are the same in all 3 cases.

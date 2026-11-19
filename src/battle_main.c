@@ -269,8 +269,6 @@ const struct SpriteTemplate gUnusedBattleInitSprite =
     .callback = SpriteCB_UnusedBattleInit,
 };
 
-static const u8 sText_ShedinjaJpnName[] = _("ヌケニン"); // Nukenin
-
 const struct OamData gOamData_BattleSpriteOpponentSide =
 {
     .y = 0,
@@ -2005,9 +2003,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case 0:
             {
                 const struct TrainerMonNoItemDefaultMoves *partyData = gTrainers[trainerNum].party.NoItemDefaultMoves;
+                const u8 *speciesName = GetSpeciesNameString(partyData[i].species);
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                for (j = 0; speciesName[j] != EOS; j++)
+                    nameHash += speciesName[j];
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -2017,9 +2016,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
             {
                 const struct TrainerMonNoItemCustomMoves *partyData = gTrainers[trainerNum].party.NoItemCustomMoves;
+                const u8 *speciesName = GetSpeciesNameString(partyData[i].species);
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                for (j = 0; speciesName[j] != EOS; j++)
+                    nameHash += speciesName[j];
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -2035,9 +2035,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case F_TRAINER_PARTY_HELD_ITEM:
             {
                 const struct TrainerMonItemDefaultMoves *partyData = gTrainers[trainerNum].party.ItemDefaultMoves;
+                const u8 *speciesName = GetSpeciesNameString(partyData[i].species);
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                for (j = 0; speciesName[j] != EOS; j++)
+                    nameHash += speciesName[j];
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -2049,9 +2050,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
             {
                 const struct TrainerMonItemCustomMoves *partyData = gTrainers[trainerNum].party.ItemCustomMoves;
+                const u8 *speciesName = GetSpeciesNameString(partyData[i].species);
 
-                for (j = 0; gSpeciesNames[partyData[i].species][j] != EOS; j++)
-                    nameHash += gSpeciesNames[partyData[i].species][j];
+                for (j = 0; speciesName[j] != EOS; j++)
+                    nameHash += speciesName[j];
 
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
@@ -2651,7 +2653,7 @@ static void TryCorrectShedinjaLanguage(struct Pokemon *mon)
      && GetMonData(mon, MON_DATA_LANGUAGE) != language)
     {
         GetMonData(mon, MON_DATA_NICKNAME, nickname);
-        if (StringCompareWithoutExtCtrlCodes(nickname, sText_ShedinjaJpnName) == 0)
+        if (IsMonNotNicknamed(nickname, SPECIES_SHEDINJA, LANGUAGE_JAPANESE))
             SetMonData(mon, MON_DATA_LANGUAGE, &language);
     }
 }

@@ -123,15 +123,7 @@ u16 StringLength(const u8 *str)
 
 s32 StringCompare(const u8 *str1, const u8 *str2)
 {
-    while (*str1 == *str2)
-    {
-        if (*str1 == EOS)
-            return 0;
-        str1++;
-        str2++;
-    }
-
-    return *str1 - *str2;
+    return StringCompareOfLanguage(str1, str2, LANGUAGE_ENGLISH);
 }
 
 s32 StringCompareN(const u8 *str1, const u8 *str2, u32 n)
@@ -704,36 +696,7 @@ static const u8 *SkipExtCtrlCode(const u8 *s)
 
 s32 StringCompareWithoutExtCtrlCodes(const u8 *str1, const u8 *str2)
 {
-    s32 retVal = 0;
-
-    while (1)
-    {
-        str1 = SkipExtCtrlCode(str1);
-        str2 = SkipExtCtrlCode(str2);
-
-        if (*str1 > *str2)
-            break;
-
-        if (*str1 < *str2)
-        {
-            retVal = -1;
-            if (*str2 == EOS)
-                retVal = 1;
-        }
-
-        if (*str1 == EOS)
-            return retVal;
-
-        str1++;
-        str2++;
-    }
-
-    retVal = 1;
-
-    if (*str1 == EOS)
-        retVal = -1;
-
-    return retVal;
+    return StringCompareOfLanguage(str1, str2, LANGUAGE_JAPANESE);
 }
 
 void ConvertInternationalString(u8 *s, u8 language)
@@ -778,4 +741,53 @@ void StripExtCtrlCodes(u8 *str)
         }
     }
     str[destIndex] = EOS;
+}
+
+s32 StringCompareOfLanguage(const u8 *str1, const u8 *str2, u8 language)
+{
+    if (language == LANGUAGE_JAPANESE)
+    {
+        s32 retVal = 0;
+
+        while (1)
+        {
+            str1 = SkipExtCtrlCode(str1);
+            str2 = SkipExtCtrlCode(str2);
+
+            if (*str1 > *str2)
+                break;
+
+            if (*str1 < *str2)
+            {
+                 retVal = -1;
+                if (*str2 == EOS)
+                    retVal = 1;
+            }
+
+            if (*str1 == EOS)
+                return retVal;
+
+            str1++;
+            str2++;
+        }
+
+        retVal = 1;
+
+        if (*str1 == EOS)
+            retVal = -1;
+
+        return retVal;
+    }
+    else
+    {
+        while (*str1 == *str2)
+        {
+            if (*str1 == EOS)
+                return 0;
+            str1++;
+            str2++;
+        }
+
+        return *str1 - *str2;
+    }
 }

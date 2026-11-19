@@ -1968,7 +1968,7 @@ static u8 AppendCaughtBannedMonSpeciesName(u16 species, u8 count, s32 numBannedM
             StringAppend(gStringVar1, gText_LineBreak);
             break;
         }
-        StringAppend(gStringVar1, gSpeciesNames[species]);
+        StringAppend(gStringVar1, GetSpeciesNameString(species));
     }
 
     return count;

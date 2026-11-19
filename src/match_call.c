@@ -1779,7 +1779,7 @@ static void PopulateSpeciesFromTrainerLocation(int matchCallId, u8 *destStr)
         if (numSpecies)
         {
             slot = Random() % numSpecies;
-            StringCopy(destStr, gSpeciesNames[species[slot]]);
+            GetSpeciesName(destStr, species[slot]);
             return;
         }
     }
@@ -1792,7 +1792,7 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
     u16 trainerId;
     union TrainerMonPtr party;
     u8 monId;
-    const u8 *speciesName;
+    u16 species;
 
     trainerId = GetLastBeatenRematchTrainerId(sMatchCallTrainers[matchCallId].trainerId);
     party = gTrainers[trainerId].party;
@@ -1802,20 +1802,20 @@ static void PopulateSpeciesFromTrainerParty(int matchCallId, u8 *destStr)
     {
     case 0:
     default:
-        speciesName = gSpeciesNames[party.NoItemDefaultMoves[monId].species];
+        species = party.NoItemDefaultMoves[monId].species;
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET:
-        speciesName = gSpeciesNames[party.NoItemCustomMoves[monId].species];
+        species = party.NoItemCustomMoves[monId].species;
         break;
     case F_TRAINER_PARTY_HELD_ITEM:
-        speciesName = gSpeciesNames[party.ItemDefaultMoves[monId].species];
+        species = party.ItemDefaultMoves[monId].species;
         break;
     case F_TRAINER_PARTY_CUSTOM_MOVESET | F_TRAINER_PARTY_HELD_ITEM:
-        speciesName = gSpeciesNames[party.ItemCustomMoves[monId].species];
+        species = party.ItemCustomMoves[monId].species;
         break;
     }
 
-    StringCopy(destStr, speciesName);
+    GetSpeciesName(destStr, species);
 }
 
 static const u8 *const sBattleFrontierFacilityNames[NUM_FRONTIER_FACILITIES] =

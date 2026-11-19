@@ -614,7 +614,6 @@ static const struct WindowTemplate sTradeYesNoWindowTemplate =
     .baseBlock = 582
 };
 
-static const u8 sText_ShedinjaJP[] = _("ヌケニン");
 static const u8 sSelectedMonLevelGenderCoords[3][2] =
 {
     [TRADE_PLAYER]  = {4,  3},

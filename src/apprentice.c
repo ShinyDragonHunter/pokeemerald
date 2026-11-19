@@ -591,7 +591,7 @@ static void CreateApprenticeMenu(u8 menu)
 
             speciesTableId = APPRENTICE_SPECIES_ID(i);
             species =  gApprentices[PLAYER_APPRENTICE.id].species[speciesTableId];
-            strings[i] = gSpeciesNames[species];
+            strings[i] = GetSpeciesNameString(species);
         }
         break;
     case APPRENTICE_ASK_2SPECIES:
@@ -599,8 +599,8 @@ static void CreateApprenticeMenu(u8 menu)
         top = 8;
         if (PLAYER_APPRENTICE.questionsAnswered >= NUM_WHICH_MON_QUESTIONS)
             return;
-        strings[1] = gSpeciesNames[gApprenticeQuestionData->altSpeciesId];
-        strings[0] = gSpeciesNames[gApprenticeQuestionData->speciesId];
+        strings[1] = GetSpeciesNameString(gApprenticeQuestionData->altSpeciesId);
+        strings[0] = GetSpeciesNameString(gApprenticeQuestionData->speciesId);
         break;
     case APPRENTICE_ASK_MOVES:
         left = 17;
@@ -1053,13 +1053,13 @@ static void ApprenticeBufferString(void)
     switch (gSpecialVar_0x8006)
     {
     case APPRENTICE_BUFF_SPECIES1:
-        StringCopy(stringDst, gSpeciesNames[gApprenticeQuestionData->speciesId]);
+        StringCopy(stringDst, GetSpeciesNameString(gApprenticeQuestionData->speciesId));
         break;
     case APPRENTICE_BUFF_SPECIES2:
-        StringCopy(stringDst, gSpeciesNames[gApprenticeQuestionData->altSpeciesId]);
+        StringCopy(stringDst, GetSpeciesNameString(gApprenticeQuestionData->altSpeciesId));
         break;
     case APPRENTICE_BUFF_SPECIES3:
-        StringCopy(stringDst, gSpeciesNames[gApprenticeQuestionData->speciesId]);
+        StringCopy(stringDst, GetSpeciesNameString(gApprenticeQuestionData->speciesId));
         break;
     case APPRENTICE_BUFF_MOVE1:
         StringCopy(stringDst, gMoveNames[gApprenticeQuestionData->move1]);
@@ -1086,7 +1086,7 @@ static void ApprenticeBufferString(void)
         break;
     case APPRENTICE_BUFF_LEAD_MON_SPECIES:
         speciesArrayId = APPRENTICE_SPECIES_ID(PLAYER_APPRENTICE.leadMonId);
-        StringCopy(stringDst, gSpeciesNames[gApprentices[PLAYER_APPRENTICE.id].species[speciesArrayId]]);
+        GetSpeciesName(stringDst, gApprentices[PLAYER_APPRENTICE.id].species[speciesArrayId]);
         break;
     }
 }

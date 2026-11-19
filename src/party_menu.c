@@ -273,7 +273,7 @@ static void DisplayPartyPokemonDataToTeachMove(u8, u16, u8);
 static u8 CanMonLearnTMTutor(struct Pokemon *, u16, u8);
 static void DisplayPartyPokemonBarDetail(u8, const u8 *, u8, const u8 *);
 static void DisplayPartyPokemonLevel(u8, struct PartyMenuBox *);
-static void DisplayPartyPokemonGender(u8, u16, u8 *, struct PartyMenuBox *);
+static void DisplayPartyPokemonGender(u8, u16, u8 *, struct PartyMenuBox *, u8);
 static void DisplayPartyPokemonHP(u16, struct PartyMenuBox *);
 static void DisplayPartyPokemonMaxHP(u16, struct PartyMenuBox *);
 static void DisplayPartyPokemonHPBar(u16, u16, struct PartyMenuBox *);
@@ -1034,7 +1034,7 @@ static void DisplayPartyPokemonDataForMultiBattle(u8 slot)
         ConvertInternationalPlayerName(gStringVar1);
         DisplayPartyPokemonBarDetail(menuBox->windowId, gStringVar1, 0, menuBox->infoRects->dimensions);
         DisplayPartyPokemonLevel(gMultiPartnerParty[actualSlot].level, menuBox);
-        DisplayPartyPokemonGender(gMultiPartnerParty[actualSlot].gender, gMultiPartnerParty[actualSlot].species, gMultiPartnerParty[actualSlot].nickname, menuBox);
+        DisplayPartyPokemonGender(gMultiPartnerParty[actualSlot].gender, gMultiPartnerParty[actualSlot].species, gMultiPartnerParty[actualSlot].nickname, menuBox, gMultiPartnerParty[actualSlot].language);
         DisplayPartyPokemonHP(gMultiPartnerParty[actualSlot].hp, menuBox);
         DisplayPartyPokemonMaxHP(gMultiPartnerParty[actualSlot].maxhp, menuBox);
         DisplayPartyPokemonHPBar(gMultiPartnerParty[actualSlot].hp, gMultiPartnerParty[actualSlot].maxhp, menuBox);
@@ -2327,16 +2327,16 @@ static void DisplayPartyPokemonGenderNidoranCheck(struct Pokemon *mon, struct Pa
     if (c == 1)
         menuBox->infoRects->blitFunc(menuBox->windowId, menuBox->infoRects->dimensions[8] >> 3, (menuBox->infoRects->dimensions[9] >> 3) + 1, menuBox->infoRects->dimensions[10] >> 3, menuBox->infoRects->dimensions[11] >> 3, FALSE);
     GetMonNickname(mon, nickname);
-    DisplayPartyPokemonGender(GetMonGender(mon), GetMonData(mon, MON_DATA_SPECIES), nickname, menuBox);
+    DisplayPartyPokemonGender(GetMonGender(mon), GetMonData(mon, MON_DATA_SPECIES), nickname, menuBox, GetMonData(mon, MON_DATA_LANGUAGE));
 }
 
-static void DisplayPartyPokemonGender(u8 gender, u16 species, u8 *nickname, struct PartyMenuBox *menuBox)
+static void DisplayPartyPokemonGender(u8 gender, u16 species, u8 *nickname, struct PartyMenuBox *menuBox, u8 language)
 {
     u8 palOffset = BG_PLTT_ID(GetWindowAttribute(menuBox->windowId, WINDOW_PALETTE_NUM));
 
     if (species == SPECIES_NONE)
         return;
-    if ((species == SPECIES_NIDORAN_M || species == SPECIES_NIDORAN_F) && StringCompare(nickname, gSpeciesNames[species]) == 0)
+    if (IsMonNidoranAndNotNicknamed(nickname, species, language))
         return;
     switch (gender)
     {

@@ -3776,7 +3776,7 @@ u32 GetBoxMonData3(struct BoxPokemon *boxMon, s32 field, u8 *data)
             data[1] = EXT_CTRL_CODE_JPN;
 
             for (retVal = 2, i = 0;
-                i < 5 && boxMon->nickname[i] != EOS;
+                i < JAPANESE_NAME_LENGTH && boxMon->nickname[i] != EOS;
                 data[retVal] = boxMon->nickname[i], retVal++, i++) {}
 
             data[retVal++] = EXT_CTRL_CODE_BEGIN;
@@ -4629,22 +4629,9 @@ bool8 IsPokemonStorageFull(void)
     return TRUE;
 }
 
-void GetSpeciesName(u8 *name, u16 species)
+u8 *GetSpeciesName(u8 *name, u16 species)
 {
-    s32 i;
-
-    for (i = 0; i <= POKEMON_NAME_LENGTH; i++)
-    {
-        if (species > NUM_SPECIES)
-            name[i] = gSpeciesNames[SPECIES_NONE][i];
-        else
-            name[i] = gSpeciesNames[species][i];
-
-        if (name[i] == EOS)
-            break;
-    }
-
-    name[i] = EOS;
+    return StringCopy(name, GetSpeciesNameString(species));
 }
 
 u8 CalculatePPWithBonus(u16 move, u8 ppBonuses, u8 moveIndex)
@@ -5816,8 +5803,8 @@ void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)
     u8 language;
     GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
     language = GetMonData(mon, MON_DATA_LANGUAGE, &language);
-    if (language == GAME_LANGUAGE && !StringCompare(gSpeciesNames[oldSpecies], gStringVar1))
-        SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[newSpecies]);
+    if (IsMonNotNicknamed(gStringVar1, oldSpecies, language))
+        SetMonData(mon, MON_DATA_NICKNAME, GetSpeciesNameStringInLanguage(newSpecies, language));
 }
 
 // The below two functions determine which side of a multi battle the trainer battles on
@@ -6626,6 +6613,28 @@ bool8 IsOtherTrainer(u32 otId, u8 *otName)
     return TRUE;
 }
 
+// Returns TRUE if the Pokémon's nickname matches the species name of the game language it was obtained in.
+// Used to check names of Pokémon when they evolve when updating the set "nickname" to the Pokémon it's evolving into.
+bool32 IsMonNotNicknamed(u8 *nickname, u16 species, u8 language)
+{
+    const u8 *speciesName = GetSpeciesNameStringInLanguage(species, language);
+
+    if (StringCompareOfLanguage(nickname, speciesName, language) == 0)
+        return TRUE;
+    else
+        return FALSE;
+}
+
+bool32 IsMonNidoranAndNotNicknamed(u8 *nickname, u16 species, u8 language)
+{
+    if (species == SPECIES_NIDORAN_F || species == SPECIES_NIDORAN_M)
+    {
+        if (IsMonNotNicknamed(nickname, species, language))
+            return TRUE;
+    }
+    return FALSE;
+}
+
 void MonRestorePP(struct Pokemon *mon)
 {
     BoxMonRestorePP(&mon->box);
@@ -6765,6 +6774,30 @@ const u8 *GetTrainerPartnerName(void)
         u8 id = GetMultiplayerId();
         return gLinkPlayers[GetBattlerMultiplayerId(gLinkPlayers[id].id ^ 2)].name;
     }
+}
+
+// Returns the species name string depending on language.
+// Anything that isn't a valid language defaults to English.
+const u8 *GetSpeciesNameStringInLanguage(u16 species, u8 language)
+{
+    if (species > NUM_SPECIES)
+        species = SPECIES_NONE;
+
+    switch (language)
+    {
+    case LANGUAGE_JAPANESE:
+        return gJapaneseSpeciesNames[species];
+    case LANGUAGE_FRENCH:
+        return gFrenchSpeciesNames[species];
+    case LANGUAGE_GERMAN:
+        return gGermanSpeciesNames[species];
+    }
+    return gSpeciesNames[species];
+}
+
+const u8 *GetSpeciesNameString(u16 species)
+{
+    return GetSpeciesNameStringInLanguage(species, GAME_LANGUAGE);
 }
 
 #define READ_PTR_FROM_TASK(taskId, dataId)                      \

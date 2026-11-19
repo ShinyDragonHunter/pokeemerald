@@ -77,8 +77,6 @@ static const u16 sUnusedPal3[]  = INCGFX_U16("graphics/evolution_scene/unused_3.
 static const u16 sUnusedPal4[] = INCGFX_U16("graphics/evolution_scene/unused_4.pal", ".gbapal");
 static const u16 sBgAnim_Pal[] = INCGFX_U16("graphics/evolution_scene/bg_anim.pal", ".gbapal");
 
-static const u8 sText_ShedinjaJapaneseName[] = _("ヌケニン");
-
 // The below table is used by Task_UpdateBgPalette to control the speed at which the bg color updates.
 // The first two values are indexes into sBgAnim_PalIndexes (indirectly, via sBgAnimPal), and are
 // the start and end of the range of colors in sBgAnim_PalIndexes it will move through incrementally
@@ -253,7 +251,7 @@ void EvolutionScene(struct Pokemon *mon, u16 postEvoSpecies, bool8 canStopEvo, u
 
     GetMonData(mon, MON_DATA_NICKNAME, name);
     StringCopy_Nickname(gStringVar1, name);
-    StringCopy(gStringVar2, gSpeciesNames[postEvoSpecies]);
+    GetSpeciesName(gStringVar2, postEvoSpecies);
 
     // preEvo sprite
     currSpecies = GetMonData(mon, MON_DATA_SPECIES);
@@ -475,7 +473,7 @@ void TradeEvolutionScene(struct Pokemon *mon, u16 postEvoSpecies, u8 preEvoSprit
 
     GetMonData(mon, MON_DATA_NICKNAME, name);
     StringCopy_Nickname(gStringVar1, name);
-    StringCopy(gStringVar2, gSpeciesNames[postEvoSpecies]);
+    GetSpeciesName(gStringVar2, postEvoSpecies);
 
     gAffineAnimsDisabled = TRUE;
 
@@ -555,7 +553,7 @@ static void CreateShedinja(u16 preEvoSpecies, struct Pokemon *mon)
 
         CopyMon(&gPlayerParty[gPlayerPartyCount], mon, sizeof(struct Pokemon));
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, &gEvolutionTable[preEvoSpecies][1].targetSpecies);
-        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_NICKNAME, gSpeciesNames[gEvolutionTable[preEvoSpecies][1].targetSpecies]);
+        SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_NICKNAME, GetSpeciesNameString(gEvolutionTable[preEvoSpecies][1].targetSpecies));
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_HELD_ITEM, &data);
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_MARKINGS, &data);
         SetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_ENCRYPT_SEPARATOR, &data);
@@ -576,9 +574,8 @@ static void CreateShedinja(u16 preEvoSpecies, struct Pokemon *mon)
         GetSetPokedexFlag(SpeciesToNationalPokedexNum(gEvolutionTable[preEvoSpecies][1].targetSpecies), FLAG_SET_CAUGHT);
 
         if (GetMonData(shedinja, MON_DATA_SPECIES) == SPECIES_SHEDINJA
-            && GetMonData(shedinja, MON_DATA_LANGUAGE) == LANGUAGE_JAPANESE
             && GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NINJASK)
-                SetMonData(shedinja, MON_DATA_NICKNAME, sText_ShedinjaJapaneseName);
+                SetMonData(shedinja, MON_DATA_NICKNAME, GetSpeciesNameStringInLanguage(SPECIES_SHEDINJA, GetMonData(shedinja, MON_DATA_LANGUAGE)));
     }
 }
 

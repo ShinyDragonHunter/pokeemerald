@@ -908,6 +908,7 @@ static u8 *GetConditionMenuMonString(u8 *dst, u16 boxId, u16 monId)
     u16 box, mon, species, level, gender;
     struct BoxPokemon *boxMon;
     u8 *str;
+    u8 language;
 
     box = boxId;
     mon = monId;
@@ -932,8 +933,9 @@ static u8 *GetConditionMenuMonString(u8 *dst, u16 boxId, u16 monId)
         gender = GetBoxMonGender(boxMon);
         level = GetLevelFromBoxMonExp(boxMon);
     }
+    language = GetBoxOrPartyMonData(box, mon, MON_DATA_LANGUAGE, NULL);
 
-    if ((species == SPECIES_NIDORAN_F || species == SPECIES_NIDORAN_M) && !StringCompare(dst, gSpeciesNames[species]))
+    if (IsMonNidoranAndNotNicknamed(dst, species, language))
         gender = MON_GENDERLESS;
 
     for (str = dst; *str != EOS; str++)

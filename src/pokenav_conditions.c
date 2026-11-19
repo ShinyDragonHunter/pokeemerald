@@ -338,6 +338,7 @@ static u8 *CopyConditionMonNameGender(u8 *str, u16 listId, bool8 skipPadding)
     struct BoxPokemon *boxMon;
     u8 *txtPtr, *str_;
     struct PokenavMonList *monListPtr = GetSubstructPtr(POKENAV_SUBSTRUCT_MON_LIST);
+    u16 language;
 
     boxId = monListPtr->monData[listId].boxId;
     monId = monListPtr->monData[listId].monId;
@@ -364,8 +365,9 @@ static u8 *CopyConditionMonNameGender(u8 *str, u16 listId, bool8 skipPadding)
         gender = GetBoxMonGender(boxMon);
         level = GetLevelFromBoxMonExp(boxMon);
     }
+    language = GetBoxOrPartyMonData(boxId, monId, MON_DATA_LANGUAGE, NULL);
 
-    if ((species == SPECIES_NIDORAN_F || species == SPECIES_NIDORAN_M) && !StringCompare(str, gSpeciesNames[species]))
+    if (IsMonNidoranAndNotNicknamed(str, species, language))
         gender = MON_GENDERLESS;
 
     str_ = str; // For some reason, a variable is needed to match.

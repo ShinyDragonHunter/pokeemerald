@@ -91,6 +91,7 @@
 #define CONTEST_CATEGORIES_COUNT  5
 
 // string lengths
+#define JAPANESE_NAME_LENGTH 5
 #define ITEM_NAME_LENGTH 14
 #define POKEMON_NAME_LENGTH 10
 #define POKEMON_NAME_BUFFER_SIZE max(20, POKEMON_NAME_LENGTH + 1) // Frequently used buffer size. Larger than necessary
