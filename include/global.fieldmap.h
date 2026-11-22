@@ -234,7 +234,7 @@ struct ObjectEvent
     /*0x14*/ struct Coords16 previousCoords;
     /*0x18*/ u16 facingDirection:4; // current direction?
              u16 movementDirection:4;
-             struct __attribute__((packed))
+             struct PACKED
              {
                 u8 rangeX:4;
                 u8 rangeY:4;

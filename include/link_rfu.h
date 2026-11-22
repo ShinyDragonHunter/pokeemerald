@@ -99,7 +99,7 @@ struct RfuGameCompatibilityData
 // It can be up to 13 bytes in size (RFU_GAME_NAME_LENGTH).
 // The player's name is sent separately as the username ("uname"), and does not
 // use a struct (gHostRfuUsername).
-struct __attribute__((packed, aligned(2))) RfuGameData
+struct PACKED_ALIGNED(2) RfuGameData
 {
     struct RfuGameCompatibilityData compatibility;
     u8 partnerInfo[RFU_CHILD_MAX];

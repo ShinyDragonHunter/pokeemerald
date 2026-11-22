@@ -664,7 +664,7 @@ static const struct WindowTemplate sRankingHallRecordsWindowTemplate =
     .baseBlock = 1
 };
 
-static const struct __attribute__((packed))
+static const struct PACKED
 {
     u16 graphicsId;
     u8 gender;

@@ -346,7 +346,7 @@ struct SpindaSpot
     u16 image[SPINDA_SPOT_HEIGHT];
 };
 
-struct __attribute__((packed)) LevelUpMove
+struct PACKED LevelUpMove
 {
     u16 move:9;
     u16 level:7;
